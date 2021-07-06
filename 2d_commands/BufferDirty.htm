@@ -1,86 +1,89 @@
 <html>
+
 <head>
-<title>Blitz3D Docs</title>
-<link rel=stylesheet href=../css/commands.css type=text/css>
+  <link rel=stylesheet href=../css/commands.css type=text/css>
 </head>
+
 <body>
-<h1>BufferDirty buffer</h1>
-<h1>Parameters</h1>
-<table>
-<tr>
-<td>
-buffer - any valid screen/image buffer
-</td>
-</tr>
-</table>
-<h1>Description</h1>
-<table>
-<tr>
-<td>
-A dirty buffer is a buffer that has been dynamically modified in the original system memory. BufferDirty tells DirectX to update the video memory copy of the buffer. This ensures the buffer is not lost when minimizing in fullscreen mode.
-<br />
-<br />
-2D images that have been manually modified using WritePixel/WritePixelFast should be declared
-'dirty' after you have finished modifying them. You can do this using the new
-BufferDirty() command, eg: BufferDirty ImageBuffer(image). If you don't care if such
-images survive loss of graphics, you can skip this.
-<br />
-<br />
-See also: <a class=small href=GraphicsLost.htm>GraphicsLost</a>.
-</td>
-</tr>
-</table>
-<h1><a href=../2d_examples/BufferDirty.bb>Example</a></h1>
-<table>
-<tr>
-<td>
-; BufferDirty
-<br />
-<br />
-Graphics 640,480,0,1
-<br />
-SetBuffer BackBuffer()
-<br />
-<br />
-image=CreateImage(64,64)
-<br />
-<br />
-For iy=0 To ImageHeight(image)-1
-<br />
- For ix=0 To ImageWidth(image)-1
-<br />
-  rgb=(ix*4) Or (iy*4 Shl 16)
-<br />
-  WritePixel ix,iy,rgb,ImageBuffer(image)
-<br />
- Next
-<br />
-Next
-<br />
-<br />
-BufferDirty ImageBuffer(image) ;Comment this out to see the difference
-<br />
-<br />
-While Not KeyDown(1)
-<br />
- Cls
-<br />
-<br />
- Text 0,0,"Press Alt-Tab to minimize the window"
-<br />
- DrawImage image,50,50
-<br />
-<br />
- Flip
-<br />
-Wend
-<br />
-End
-</td>
-</tr>
-</table>
-<br>
-<a target=_top href=../index.htm>Index</a><br>
-<br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=BufferDirty&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+  <h1>BufferDirty buffer</h1>
+  <h1>Parameters</h1>
+  <table>
+    <tr>
+      <td>
+        buffer - any valid screen/image buffer
+      </td>
+    </tr>
+  </table>
+  <h1>Description</h1>
+  <table>
+    <tr>
+      <td>
+        A dirty buffer is a buffer that has been dynamically modified in the original system memory. BufferDirty tells
+        DirectX to update the video memory copy of the buffer. This ensures the buffer is not lost when minimizing in
+        fullscreen mode.
+        <br />
+        <br />
+        2D images that have been manually modified using WritePixel/WritePixelFast should be declared
+        'dirty' after you have finished modifying them. You can do this using the new
+        BufferDirty() command, eg: BufferDirty ImageBuffer(image). If you don't care if such
+        images survive loss of graphics, you can skip this.
+        <br />
+        <br />
+        See also: <a class=small href=GraphicsLost.htm>GraphicsLost</a>.
+      </td>
+    </tr>
+  </table>
+  <h1><a href=../2d_examples/BufferDirty.bb>Example</a></h1>
+  <table>
+    <tr>
+      <td>
+        ; BufferDirty
+        <br />
+        <br />
+        Graphics 640,480,0,1
+        <br />
+        SetBuffer BackBuffer()
+        <br />
+        <br />
+        image=CreateImage(64,64)
+        <br />
+        <br />
+        For iy=0 To ImageHeight(image)-1
+        <br />
+        For ix=0 To ImageWidth(image)-1
+        <br />
+        rgb=(ix*4) Or (iy*4 Shl 16)
+        <br />
+        WritePixel ix,iy,rgb,ImageBuffer(image)
+        <br />
+        Next
+        <br />
+        Next
+        <br />
+        <br />
+        BufferDirty ImageBuffer(image) ;Comment this out to see the difference
+        <br />
+        <br />
+        While Not KeyDown(1)
+        <br />
+        Cls
+        <br />
+        <br />
+        Text 0,0,"Press Alt-Tab to minimize the window"
+        <br />
+        DrawImage image,50,50
+        <br />
+        <br />
+        Flip
+        <br />
+        Wend
+        <br />
+        End
+      </td>
+    </tr>
+  </table>
+  <br>
+  <a target=_top href=../index.htm>Index</a><br>
+</body>
+
 </html>
