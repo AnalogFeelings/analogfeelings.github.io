@@ -12,17 +12,20 @@ h1{
 }
 
 .box{
-    width:300px;
-    float:left; 
+    width:25%;
+    float:left;
+	margin-right: 2%;
 }
-.box2 {
-	width:200px;
-	float:right;
+
+.box2{
+    width:73%;
+    float:left;
 }
 
 .clear{
     clear:both;
 }
+
 h1.allsolid {
     color: #e4e4e4;
 	font: bold 30pt verdana;
