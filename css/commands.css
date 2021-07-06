@@ -2,7 +2,7 @@ body
 {
 	color: #ffffff;
 	font: 10pt verdana;
-	background: #003d78;
+	background: #003445;
 }
 
 h1
@@ -13,7 +13,7 @@ h1
 table
 {
 	font: 8pt verdana;	
-	background: #003566;
+	background: #00212b;
 	width: 100%;
 }
 
@@ -28,7 +28,7 @@ a:hover
 {
 	color: #fff000;
 	font: 10pt verdana;
-	background: #0088ee;
+	background: #006f91;
 	text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ a.small:hover
 {
 	color: #fff000;
 	font: 8pt verdana;
-	background: #0088ee;
+	background: #006f91;
 	text-decoration: none;
 }
 

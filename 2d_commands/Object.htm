@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Blitz3D Docs</title>
+<link rel=stylesheet href=../css/commands.css type=text/css>
+</head>
+<body>
+<h1>Object.typename(objecthandle)</h1>
+<h1>Parameters</h1>
+<table>
+<tr>
+<td>
+typename - the custom type the Object function should return
+<br />
+objecthandle - an integer handle produced by the Handle function
+</td>
+</tr>
+</table>
+<h1>Description</h1>
+<table>
+<tr>
+<td>
+The Object function takes the integer handle of an object and if it exists
+returns an actual reference to the object given it is of the Type specified.
+<br />
+<br />
+See also: <a class=small href=Type.htm>Type</a>, <a class=small href=Handle.htm>Handle</a>.
+</td>
+</tr>
+</table>
+<h1><a href=../2d_examples/Object.bb>Example</a></h1>
+<table>
+<tr>
+<td>
+; Object
+<br />
+<br />
+Type MYTYPE
+<br />
+ Field myint
+<br />
+End Type
+<br />
+<br />
+Dim HandleArray(4)
+<br />
+<br />
+For count=1 To 3
+<br />
+ temp.MYTYPE=New MYTYPE
+<br />
+ HandleArray(count)=Handle(temp)
+<br />
+ Print "HandleArray("+count+")="+HandleArray(count)
+<br />
+Next
+<br />
+<br />
+Delete Object.MYTYPE(HandleArray(2))
+<br />
+Print "Deleted 2nd MYTYPE"
+<br />
+temp.MYTYPE=New MYTYPE
+<br />
+HandleArray(4)=Handle(temp)
+<br />
+<br />
+For count=1 To 4
+<br />
+ temp.MYTYPE=Object.MYTYPE(HandleArray(count))
+<br />
+ Print "temp="+Handle(temp)
+<br />
+Next
+<br />
+<br />
+WaitKey()
+<br />
+End
+</td>
+</tr>
+</table>
+<br>
+<a target=_top href=../index.htm>Index</a><br>
+<br>
+Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=Object&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</html>
