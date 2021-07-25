@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+.container {
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+body{
+	color: #ffffff;
+	font: 10pt verdana;
+	background: #008080;
+	margin: 32px;
+	padding-bottom: 115px;
+}
