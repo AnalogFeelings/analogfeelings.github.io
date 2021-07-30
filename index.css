@@ -1,21 +1,22 @@
 html {
-	min-height: 100%;
+	height: 100%;
+	width: 100%;
 }
 
 body{
 	color: #ffffff;
-	font: 10pt verdana;
 	background: #008080;
-	margin: 30px;
-	min-height: 100%;
+	padding: 5px;
 }
 
 .containerBanner {
     margin-bottom: 5px;
+	height: auto;
+	width: auto;
 }
 
 .containerFrontpageHeader {
-	height: 20px;
+	height: 21.6px;
 
 	border-top:5px solid #DEE4E4;
     border-bottom:5px solid #767E83;
@@ -33,21 +34,41 @@ body{
 	position: relative;
 }
 
-.containerFrontpageContent {
-	width: 85%;
+.frontpageContainer {
+	padding: 0px;
+	width: 100%;
 	height: 100%;
-	margin-right: 10px;
-	display: inline-block;
+}
+
+.containerFrontpageContent {
+	width: auto;
+	height: 100%;
+	margin-right: 5px;
+	float: left;
 }
 
 .containerFrontpageSidebar {
-	width: 14%;
+	width: auto;
 	height: 100%;
-	display: inline-block;
+	float: left;
+}
+
+.iframeClass {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: none;
 }
 
 .frontpageLabel {
 	margin-right: 20px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.frontpageTSSLabel {
+	position: relative;
+	vertical-align: middle;
 }
 
 .imgBanner {

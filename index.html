@@ -3,6 +3,7 @@
     <head>
         <title>Aesthetical's Hideout</title>
         <link rel="stylesheet" href="index.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div class="containerBanner">
@@ -12,14 +13,17 @@
             <a href="index.html" class="frontpageLabel">Home</a>
             <a href="index.html" class="frontpageLabel">Posts</a>
             <a href="index.html" class="frontpageLabel">About</a>
+            <a href="BlitzDocs/index.htm" class="frontpageTSSLabel" style="float: right;">B3D TSS Docs</a>
         </div>
-        <div class="containerFrontpageContent">
-            <iframe src="index.html" height="100%" width="100%" align="left" frameBorder="1" name="main" target="_self">
-            </iframe>
-        </div>
-        <div class="containerFrontpageSidebar">
-            <iframe src="index.html" height="100%" width="100%" align="right" frameBorder="1" name="sidebar" target="_self">
-            </iframe>
+        <div class="frontpageContainer">
+            <div class="containerFrontpageContent">
+                <iframe src="sidebar.html" align="left" class="iframeClass" name="main" target="_self">
+                </iframe>
+            </div>
+            <div class="containerFrontpageSidebar">
+                <iframe src="sidebar.html" align="right" class="iframeClass" name="sidebar" target="_self">
+                </iframe>
+            </div>
         </div>
     </body>
 </html>

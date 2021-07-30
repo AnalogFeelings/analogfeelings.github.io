@@ -1,0 +1,18 @@
+body{
+	color: #ffffff;
+	font: 10pt verdana;
+	background: #004d4d;
+	margin: 10px;
+}
+
+.imgClass {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+h3 {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
