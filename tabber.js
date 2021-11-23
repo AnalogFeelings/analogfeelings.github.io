@@ -40,4 +40,5 @@ function OpenTab(event, tab)
   });
   const article = tab.parentNode.querySelector(`[role="tabpanel"]#${event.target.getAttribute("aria-controls")}`);
   article.removeAttribute("hidden");
+  window.location.hash = event.target.getAttribute("aria-controls");
 }

@@ -22,10 +22,10 @@
         </div>
         <div class="window-body">
             <menu role="tablist">
-                <button role="tab" aria-selected="true" aria-controls="tabHome">Home</button>
-                <button role="tab" aria-controls="tabPosts">Posts</button>
-                <button role="tab" aria-controls="tabProjects">Projects</button>
-                <button role="tab" aria-controls="tabAbout">About</button>
+                <button id="homeTab" role="tab" aria-selected="true" aria-controls="tabHome">Home</button>
+                <button id="postsTab" role="tab" aria-controls="tabPosts">Posts</button>
+                <button id="projectsTab" role="tab" aria-controls="tabProjects">Projects</button>
+                <button id="aboutTab" role="tab" aria-controls="tabAbout">About</button>
             </menu>
             <article role="tabpanel" id="tabHome">
                 <img src="banner.png" style="margin-bottom: 10px; width: 100%;">
@@ -52,6 +52,21 @@
             <article role="tabpanel" hidden id="tabProjects">
             </article>
             <article role="tabpanel" hidden id="tabAbout">
+                <p>
+                    <h4>Welcome to the About page!</h4>
+                    This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
+                    <br>
+                    It's pretty lightweight, I tried to keep JavaScript usage to minimum.
+                    <br><br>
+                    <b>Well, let's get to the point.</b>
+                    <br>
+                    This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
+                    <ul>
+                        <li>The "Posts" tag will pretty much have random blog posts about random things that I decide to randomly
+                        write about at random intervals.</li>
+                        <li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't many).</li>
+                    </ul>
+                </p>
             </article>
 
             <section class="field-row" style="justify-content: flex-start;">
