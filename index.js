@@ -43,6 +43,11 @@ function ChangeTheme()
     location.reload();
 }
 
+function CloseWindow()
+{
+    window.close();
+}
+
 function GetCookie(cname) 
 {
   let name = cname + "=";

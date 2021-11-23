@@ -13,7 +13,7 @@
             <div class="title-bar-text">Aesthetical's Hideout</div>
             <div class="title-bar-controls">
                 <button aria-label="Help"></button>
-                <button aria-label="Close"></button>
+                <button aria-label="Close" onclick="CloseWindow()"></button>
             </div>
         </div>
         <div class="window-body">
@@ -24,7 +24,7 @@
                 <button role="tab" aria-controls="tabAbout">About</button>
             </menu>
             <article role="tabpanel" id="tabHome">
-                <img src="banner.png" style="margin-bottom: 10px;">
+                <img src="banner.png" style="margin-bottom: 10px; width: 100%;">
                 <img src="flag.gif" style="vertical-align: middle; padding-right: 10px;">
                 <h4 style="display: inline; vertical-align: middle;">Welcome to my website!</h4>
                 <p>
@@ -68,6 +68,9 @@
                 <button onclick="location.href='BlitzDocs/index.htm'">Blitz3D TSS Docs</button>
                 <button onclick="ChangeTheme()">Change Theme</button>
             </section>
+        </div>
+        <div class="status-bar">
+            <p class="status-bar-field">2021 AestheticalZ</p>
         </div>
     </div>
 </body>
