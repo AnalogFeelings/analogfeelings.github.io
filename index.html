@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Aesthetical's Hideout</title>
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="parentDiv">
-            <div class="containerBanner">
-                <img src="banner.png" alt="Banner" class="imgBanner">
-            </div>
-            <div class="containerFrontpageHeader">
-                <a href="index.html" class="frontpageLabel">Home</a>
-                <a href="index.html" class="frontpageLabel">Posts</a>
-                <a href="index.html" class="frontpageLabel">About</a>
-                <a href="BlitzDocs/index.htm" class="frontpageTSSLabel" style="float: right;">B3D TSS Docs</a>
-            </div>
-            <div class="frontpageContainer">
-                <div class="containerFrontpageContent">
-                    <iframe src="sidebar.html" align="left" class="iframeClass" name="main" target="_self">
-                    </iframe>
-                </div>
-                <div class="containerFrontpageSidebar">
-                    <iframe src="sidebar.html" align="right" class="iframeClass" name="sidebar" target="_self">
-                    </iframe>
-                </div>
+
+<head>
+    <title>Aesthetical's Hideout</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="window centeredDiv" style="width: 50%">
+        <div class="title-bar">
+            <div class="title-bar-text">Aesthetical's Hideout</div>
+            <div class="title-bar-controls">
+                <button aria-label="Help"></button>
+                <button aria-label="Close"></button>
             </div>
         </div>
-    </body>
+        <div class="window-body">
+            <menu role="tablist">
+                <button role="tab" aria-selected="true" aria-controls="tabHome">Home</button>
+                <button role="tab" aria-controls="tabPosts">Posts</button>
+                <button role="tab" aria-controls="tabProjects">Projects</button>
+                <button role="tab" aria-controls="tabAbout">About</button>
+            </menu>
+            <article role="tabpanel" id="tabHome">
+                <img src="banner.png" style="margin-bottom: 10px;">
+                <img src="flag.gif" style="vertical-align: middle; padding-right: 10px;">
+                <h4 style="display: inline; vertical-align: middle;">Welcome to my website!</h4>
+            </article>
+            <article role="tabpanel" hidden id="tabPosts">
+            </article>
+            <article role="tabpanel" hidden id="tabProjects">
+            </article>
+            <article role="tabpanel" hidden id="tabAbout">
+            </article>
+            <section class="field-row" style="justify-content: flex-end">
+                <button onclick="ChangeTheme()">Change Theme</button>
+            </section>
+        </div>
+    </div>
+</body>
+
 </html>
