@@ -4,7 +4,7 @@ document.onload = CheckCss();
 function CheckCss()
 {
     var cookieValue = GetCookie("theme");
-    var finalCss = "https://unpkg.com/xp.css@0.2.3/dist/98.css";
+    var finalCss = "https://unpkg.com/xp.css@0.3.0/dist/98.css";
     var finalTheme = "98;"
 
     switch(cookieValue)
