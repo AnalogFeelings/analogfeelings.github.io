@@ -1,0 +1,38 @@
+body {
+    background-color: #002ca5;
+}
+
+p {
+    font-family: 'Perfect DOS VGA 437';
+    color: white;
+    font-size: x-large;
+    user-select: none;
+    margin: 0;
+}
+
+a {
+    color: white;
+}
+
+.cursor {
+    animation: cursor 1s infinite step-end;
+}
+
+@keyframes cursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+.textDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 55%;
+}
+
+@font-face {
+    font-family: 'Perfect DOS VGA 437';
+    src: url('./Fonts/vga.woff2') format('woff2');
+}
