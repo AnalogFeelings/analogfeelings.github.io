@@ -11,6 +11,7 @@ function CheckCss()
 {
   var cookieValue = GetCookie("theme");
   var finalCss = "https://unpkg.com/xp.css@0.3.0/dist/98.css";
+  var finalImages = "sprites98.css";
   var finalTheme = "98;"
 
   switch (cookieValue)
@@ -18,6 +19,7 @@ function CheckCss()
     case "xp":
       finalTheme = "xp";
       finalCss = "https://unpkg.com/xp.css";
+      finalImages = "spritesXP.css";
       break;
     default:
       break;
@@ -30,6 +32,12 @@ function CheckCss()
   cssElement.href = finalCss;
 
   document.head.appendChild(cssElement);
+
+  var iconCssElement = document.createElement("link");
+  iconCssElement.rel = "stylesheet";
+  iconCssElement.href = finalImages;
+
+  document.head.appendChild(iconCssElement);
 }
 
 function CheckTabHash()

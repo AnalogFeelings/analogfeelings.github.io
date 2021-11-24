@@ -29,31 +29,48 @@
                 <button id="projectsTab" role="tab" aria-controls="tabProjects">Projects</button>
                 <button id="aboutTab" role="tab" aria-controls="tabAbout">About</button>
             </menu>
+
             <article role="tabpanel" id="tabHome">
                 <img src="banner.png" style="margin-bottom: 10px; width: 100%;">
+
                 <img src="flag.gif" style="vertical-align: middle; padding-right: 10px;">
-                <h4 style="display: inline; vertical-align: middle;">Welcome to my website!</h4>
+                <h4 style="display: inline; vertical-align: middle;">Welcome To My Website!</h4>
+
                 <p>
                     Hi! I'm <a href="https://github.com/AestheticalZ">AestheticalZ</a>, but you
                     can call me <b>Nora</b>.
                     <br><br>
                     I'm a transgender pansexual programmer gal who loves computers! I know <b>C#</b>,
                     <b>JavaScript</b>, barebones <b>C++/C</b>, and a tiny bit of <b>BlitzBasic</b>!
-                    <br><br>
-                <ul>
-                    <li><b>Pronouns</b>: she/her</li>
-                    <li><b>Operating System</b>: Windows 11 Pro</li>
-                    <li><b>Second Operating System</b>: Gentoo Linux (OpenRC)</li>
-                    <li><b>IDE</b>: Visual Studio 2022</li>
-                    <li><b>Misc Editor</b>: Visual Studio Code Insiders</li>
-                </ul>
+                    <br>
+                    <ul>
+                        <li><b>Pronouns</b>: she/her</li>
+                        <li><b>Operating System</b>: Windows 11 Pro</li>
+                        <li><b>Second Operating System</b>: Gentoo Linux (OpenRC)</li>
+                        <li><b>IDE</b>: Visual Studio 2022</li>
+                        <li><b>Misc Editor</b>: Visual Studio Code Insiders</li>
+                    </ul>
+                    <b>Recent Posts</b>
+                    <ul>
+                        <li>No posts yet!</li>
+                    </ul>
                 </p>
             </article>
+
             <article role="tabpanel" hidden id="tabPosts">
-                <h4>Oh no!</h4>
-                <p>There are no posts yet!</p>
+                <div>
+                    <img class="postsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
+                    <h4 class="inlineCenteredText">My Blog Posts!</h4>
+                </div>
+                <p>No posts!</p>
             </article>
+
             <article role="tabpanel" hidden id="tabProjects">
+                <div>
+                    <img class="projectsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
+                    <h4 class="inlineCenteredText">My Open Source Projects!</h4>
+                </div>
+
                 <ul class="tree-view">
                     <li>
                         <details open>
@@ -126,23 +143,25 @@
                     </li>
                 </ul>
             </article>
+
             <article role="tabpanel" hidden id="tabAbout">
+                <img class="aboutSprite" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
+                <h4 class="inlineCenteredText">About My Website!</h4>
                 <p>
-                <h4>About my website!</h4>
-                This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
-                <br>
-                It's pretty lightweight, I tried to keep JavaScript usage to minimum.
-                <br><br>
-                <b>Well, let's get to the point.</b>
-                <br>
-                This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
-                <ul>
-                    <li>The "Posts" tag will pretty much have random blog posts about random things that I decide to
-                        randomly
-                        write about at random intervals.</li>
-                    <li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't
-                        many).</li>
-                </ul>
+                    This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
+                    <br>
+                    It's pretty lightweight, I tried to keep JavaScript usage to minimum.
+                    <br><br>
+                    <b>Well, let's get to the point.</b>
+                    <br>
+                    This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
+                    <ul>
+                        <li>The "Posts" tag will pretty much have random blog posts about random things that I decide to
+                            randomly
+                            write about at random intervals.</li>
+                        <li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't
+                            many).</li>
+                    </ul>
                 </p>
             </article>
 
@@ -154,10 +173,6 @@
                 <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm"
                     class="flexSizeOverride">
                     <img border="0" src="./NetGifs/iexplorer.gif" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://windows95.com"
-                    class="flexSizeOverride">
-                    <img border="0" src="./NetGifs/win95.gif" style="width: 100%;">
                 </a>
                 <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/"
                     class="flexSizeOverride">
@@ -171,7 +186,7 @@
         </div>
         <div class="status-bar">
             <p class="status-bar-field">2021 <b>AestheticalZ</b>
-                , released under <b>GPL 3.0</b>!</p>
+                , released under <b>GPL v3.0</b></p>
             <p class="status-bar-field">Using <a href="https://github.com/botoxparty/XP.css">XP.css</a> by
                 <b>botoxparty</b></p>
             <p class="status-bar-field">Star me on <a
