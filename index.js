@@ -20,6 +20,7 @@ function GetPosts()
 
   function LoadPosts(fileContent)
   {
+    console.log(fileContent);
     let i = 0;
     for(var post in fileContent)
     {
