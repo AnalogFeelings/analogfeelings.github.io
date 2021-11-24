@@ -26,10 +26,12 @@ function GetPosts()
     fileContent.forEach(function (currentValue)
     {
       let createdPost = document.createElement("li");
+      let createdPostRecent = document.createElement("li");
       createdPost.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
+      createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
 
       postsList.appendChild(createdPost);
-      if (i < 5) recentPosts.appendChild(createdPost);
+      if (i < 5) recentPosts.appendChild(createdPostRecent);
       i++;
     });
   }
