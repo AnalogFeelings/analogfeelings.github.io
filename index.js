@@ -21,7 +21,7 @@ function GetPosts()
   function LoadPosts(fileContent)
   {
     let i = 0;
-    for(var post in parsedPosts)
+    for(var post in fileContent)
     {
       let createdPost = document.createElement("li");
       createdPost.innerHTML = `<b>${post.date}</b> <a href="${post.url}">${post.title}</a>`;
