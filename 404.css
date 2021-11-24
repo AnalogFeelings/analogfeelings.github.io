@@ -2,12 +2,17 @@ body {
     background-color: #002ca5;
 }
 
-p {
+.p98 {
     font-family: 'Perfect DOS VGA 437';
     color: white;
     font-size: x-large;
     user-select: none;
     margin: 0;
+}
+
+.pXP {
+    color: white;
+    font-family: Lucida Console, Lucida Sans Typewriter, monaco, Bitstream Vera Sans Mono, monospace;
 }
 
 a {
