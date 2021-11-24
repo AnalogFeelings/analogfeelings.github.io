@@ -22,15 +22,14 @@ function GetPosts()
   {
     console.log(fileContent);
     let i = 0;
-    for(var post in fileContent)
-    {
+    fileContent.forEach(function(currentValue){
       let createdPost = document.createElement("li");
-      createdPost.innerHTML = `<b>${post.date}</b> <a href="${post.url}">${post.title}</a>`;
+      createdPost.innerHTML = `<b>${ post.date }</b> <a href="${ post.url }">${ post.title }</a>`;
 
       postsList.appendChild(createdPost);
-      if(i < 5) recentPosts.appendChild(createdPost);
+      if (i < 5) recentPosts.appendChild(createdPost);
       i++;
-    }
+    });
   }
 }
 
