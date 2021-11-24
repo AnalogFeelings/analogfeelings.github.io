@@ -11,9 +11,10 @@ function GetPosts()
 {
   var recentPosts = document.getElementById("recentPostsList");
   var postsList = document.getElementById("postsList");
-  
+
   $.getJSON("/posts.json",
-    function (data, textStatus, jqXHR) {
+    function (data, textStatus, jqXHR)
+    {
       LoadPosts(data);
     }
   );
@@ -22,9 +23,10 @@ function GetPosts()
   {
     console.log(fileContent);
     let i = 0;
-    fileContent.forEach(function(currentValue){
+    fileContent.forEach(function (currentValue)
+    {
       let createdPost = document.createElement("li");
-      createdPost.innerHTML = `<b>${ post.date }</b> <a href="${ post.url }">${ post.title }</a>`;
+      createdPost.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
 
       postsList.appendChild(createdPost);
       if (i < 5) recentPosts.appendChild(createdPost);
@@ -82,7 +84,7 @@ function CheckTabHash()
   var projectsPanel = document.getElementById("tabProjects");
   var aboutPanel = document.getElementById("tabAbout");
 
-  switch(tab)
+  switch (tab)
   {
     case "tabPosts":
       postsButton.setAttribute("aria-selected", true);
