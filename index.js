@@ -4,6 +4,38 @@ function PageStartup()
 {
   CheckCss();
   CheckTabHash();
+  GetPosts();
+}
+
+function GetPosts()
+{
+  var recentPosts = document.getElementById("recentPostsList");
+  var postsList = document.getElementById("postsList");
+  const reader = new FileReader();
+  var postsJson = new File([""], "./posts.json", { type: "text/plain" });
+
+  reader.addEventListener('load', () =>
+  {
+    LoadPosts(reader.result);
+  }, false);
+  
+  reader.readAsText(postsJson);
+
+  function LoadPosts(fileContent)
+  {
+    console.log(fileContent);
+    let parsedPosts = JSON.parse(fileContent);
+    let i = 0;
+    for(var post in parsedPosts)
+    {
+      let createdPost = document.createElement("li");
+      createdPost.innerHTML = `<b>${post.date}</b> <a href="${post.url}">${post.title}</a>`;
+
+      postsList.appendChild(createdPost);
+      if(i < 5) recentPosts.appendChild(createdPost);
+      i++;
+    }
+  }
 }
 
 //I hate JavaScript please do not make me write javascript ever again.
