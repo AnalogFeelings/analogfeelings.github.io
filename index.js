@@ -20,8 +20,6 @@ function GetPosts()
 
   function LoadPosts(fileContent)
   {
-    console.log(fileContent);
-    let parsedPosts = JSON.parse(fileContent);
     let i = 0;
     for(var post in parsedPosts)
     {
