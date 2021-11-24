@@ -11,15 +11,12 @@ function GetPosts()
 {
   var recentPosts = document.getElementById("recentPostsList");
   var postsList = document.getElementById("postsList");
-  const reader = new FileReader();
-  var postsJson = new File([""], "./posts.json", { type: "text/plain" });
-
-  reader.addEventListener('load', () =>
-  {
-    LoadPosts(reader.result);
-  }, false);
   
-  reader.readAsText(postsJson);
+  $.getJSON("/posts.json",
+    function (data, textStatus, jqXHR) {
+      LoadPosts(data);
+    }
+  );
 
   function LoadPosts(fileContent)
   {
