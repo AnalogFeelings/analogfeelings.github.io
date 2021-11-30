@@ -41,16 +41,16 @@ function GetPosts()
 function CheckCss()
 {
   var cookieValue = GetCookie("theme");
-  var finalCss = "https://unpkg.com/xp.css@0.3.0/dist/98.css";
-  var finalImages = "sprites98.css";
+  var finalCss = "../../XP.css/dist/98.css";
+  var finalImages = "../../sprites98.css";
   var finalTheme = "98;"
 
   switch (cookieValue)
   {
     case "xp":
       finalTheme = "xp";
-      finalCss = "https://unpkg.com/xp.css";
-      finalImages = "spritesXP.css";
+      finalCss = "../../XP.css/dist/XP.css";
+      finalImages = "../../spritesXP.css";
       break;
     default:
       break;

@@ -20,12 +20,16 @@
 </head>
 
 <body>
-    <!--Guys I figured out how to center a div :D-->
+    <!--Window, core object of the entire website.-->
     <div class="window centeredDiv" style="width: 50%;">
+
         <div class="title-bar">
             <div class="title-bar-text" style="user-select: none;">Aesthetical's Hideout : Nora's Personal Website</div>
         </div>
+
         <div class="window-body">
+
+            <!--Create tab view.-->
             <menu role="tablist">
                 <button id="homeTab" role="tab" aria-selected="true" aria-controls="tabHome">Home</button>
                 <button id="postsTab" role="tab" aria-controls="tabPosts">Posts</button>
@@ -33,6 +37,7 @@
                 <button id="aboutTab" role="tab" aria-controls="tabAbout">About</button>
             </menu>
 
+            <!--Home Tab-->
             <article role="tabpanel" id="tabHome">
                 <img src="banner.png" style="margin-bottom: 10px; width: 100%;">
 
@@ -60,6 +65,7 @@
                 </p>
             </article>
 
+            <!--Posts Tab-->
             <article role="tabpanel" hidden id="tabPosts">
                 <div>
                     <img class="postsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
@@ -71,6 +77,7 @@
                 </div>
             </article>
 
+            <!--Projects Tab-->
             <article role="tabpanel" hidden id="tabProjects">
                 <div>
                     <img class="projectsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
@@ -150,6 +157,7 @@
                 </ul>
             </article>
 
+            <!--About Tab-->
             <article role="tabpanel" hidden id="tabAbout">
                 <img class="aboutSprite" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
                 <h4 class="inlineCenteredText">About My Website!</h4>
@@ -193,6 +201,7 @@
                 </p>
             </article>
 
+            <!--Old Web GIFs-->
             <section class="field-row" style="justify-content: flex-start;">
                 <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com"
                     class="flexSizeOverride">
@@ -207,16 +216,20 @@
                     <img border="0" src="./NetGifs/frontpg.gif" style="width: 100%;">
                 </a>
             </section>
+
+            <!--Bottom right buttons.-->
             <section class="field-row" style="justify-content: flex-end">
                 <button onclick="location.href='BlitzDocs/index.htm'">Blitz3D TSS Docs</button>
                 <button onclick="ChangeTheme()">Change Theme</button>
             </section>
         </div>
+
+        <!--Credits and copyright information at the bottom.s-->
         <div class="status-bar">
             <p class="status-bar-field">2021 <b>AestheticalZ</b>
                 , released under <b>GPL v3.0</b></p>
-            <p class="status-bar-field">Using <a href="https://github.com/botoxparty/XP.css">XP.css</a> by
-                <b>botoxparty</b></p>
+            <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                originally by <b>botoxparty</b>.</p>
             <p class="status-bar-field">Star me on <a
                     href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
         </div>
