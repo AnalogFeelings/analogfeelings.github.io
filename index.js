@@ -21,17 +21,26 @@ function GetPosts()
 
   function LoadPosts(fileContent)
   {
-    console.log(fileContent);
     let i = 0;
+
     fileContent.forEach(function (currentValue)
     {
+      //The post in the "Posts" tab.
       let createdPost = document.createElement("li");
+      //The post you see in the "Recent Posts" part of the home tab.
       let createdPostRecent = document.createElement("li");
+      //Bottom margin for each list element.
+      let marginStyle = "margin-bottom: 2px;";
+
+      createdPost.setAttribute("style", marginStyle);
+      createdPostRecent.setAttribute("style", marginStyle);
+
       createdPost.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
       createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
 
       postsList.appendChild(createdPost);
       if (i < 5) recentPosts.appendChild(createdPostRecent);
+
       i++;
     });
   }
@@ -40,10 +49,10 @@ function GetPosts()
 //I hate JavaScript please do not make me write javascript ever again.
 function CheckCss()
 {
-  var cookieValue = GetCookie("theme");
-  var finalCss = "../../XP.css/dist/98.css";
-  var finalImages = "../../sprites98.css";
-  var finalTheme = "98;"
+  let cookieValue = GetCookie("theme");
+  let finalCss = "../../XP.css/dist/98.css";
+  let finalImages = "../../sprites98.css";
+  let finalTheme = "98;"
 
   switch (cookieValue)
   {
@@ -58,13 +67,13 @@ function CheckCss()
 
   SetCookie("theme", finalTheme, 365);
 
-  var cssElement = document.createElement("link");
+  let cssElement = document.createElement("link");
   cssElement.rel = "stylesheet";
   cssElement.href = finalCss;
 
   document.head.appendChild(cssElement);
 
-  var iconCssElement = document.createElement("link");
+  let iconCssElement = document.createElement("link");
   iconCssElement.rel = "stylesheet";
   iconCssElement.href = finalImages;
 
@@ -73,18 +82,17 @@ function CheckCss()
 
 function CheckTabHash()
 {
-  var tab = window.location.hash.substring(1);
-  console.log(tab);
+  let tab = window.location.hash.substring(1);
 
-  var homeButton = document.getElementById("homeTab");
-  var postsButton = document.getElementById("postsTab");
-  var projectsButton = document.getElementById("projectsTab");
-  var aboutButton = document.getElementById("aboutTab");
+  let homeButton = document.getElementById("homeTab");
+  let postsButton = document.getElementById("postsTab");
+  let projectsButton = document.getElementById("projectsTab");
+  let aboutButton = document.getElementById("aboutTab");
 
-  var homePanel = document.getElementById("tabHome");
-  var postsPanel = document.getElementById("tabPosts");
-  var projectsPanel = document.getElementById("tabProjects");
-  var aboutPanel = document.getElementById("tabAbout");
+  let homePanel = document.getElementById("tabHome");
+  let postsPanel = document.getElementById("tabPosts");
+  let projectsPanel = document.getElementById("tabProjects");
+  let aboutPanel = document.getElementById("tabAbout");
 
   switch (tab)
   {
@@ -128,7 +136,8 @@ function CheckTabHash()
 
 function ChangeTheme()
 {
-  var cookieValue = GetCookie("theme");
+  let cookieValue = GetCookie("theme");
+
   switch (cookieValue)
   {
     case "xp":
@@ -143,30 +152,34 @@ function ChangeTheme()
   location.reload();
 }
 
-function GetCookie(cname) 
+function GetCookie(cookieName) 
 {
-  let name = cname + "=";
+  let name = cookieName + "=";
   let decodedCookie = decodeURIComponent(document.cookie);
-  let ca = decodedCookie.split(';');
-  for (let i = 0; i < ca.length; i++) 
+  let cookieArray = decodedCookie.split(';');
+
+  for (let i = 0; i < cookieArray.length; i++) 
   {
-    let c = ca[i];
-    while (c.charAt(0) == ' ') 
+    let cookie = cookieArray[i];
+
+    while (cookie.charAt(0) == ' ') 
     {
-      c = c.substring(1);
+      cookie = cookie.substring(1);
     }
-    if (c.indexOf(name) == 0) 
+    if (cookie.indexOf(name) == 0) 
     {
-      return c.substring(name.length, c.length);
+      return cookie.substring(name.length, cookie.length);
     }
   }
+
   return "";
 }
 
-function SetCookie(cname, cvalue, exdays) 
+function SetCookie(cookieName, cookieValue, expireIn) 
 {
-  const d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  let expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + "; path=/";
+  const date = new Date();
+  date.setTime(date.getTime() + (expireIn * 24 * 60 * 60 * 1000));
+
+  let expires = "expires=" + date.toUTCString();
+  document.cookie = cookieName + "=" + cookieValue + ";" + expires + "; path=/";
 }
