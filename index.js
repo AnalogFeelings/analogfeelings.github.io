@@ -50,16 +50,16 @@ function GetPosts()
 function CheckCss()
 {
   let cookieValue = GetCookie("theme");
-  let finalCss = "../../XP.css/dist/98.css";
-  let finalImages = "../../sprites98.css";
+  let finalCss = "/Libraries/XP.css/dist/98.css";
+  let finalImages = "/sprites98.css";
   let finalTheme = "98;"
 
   switch (cookieValue)
   {
     case "xp":
       finalTheme = "xp";
-      finalCss = "../../XP.css/dist/XP.css";
-      finalImages = "../../spritesXP.css";
+      finalCss = "/Libraries/XP.css/dist/XP.css";
+      finalImages = "/spritesXP.css";
       break;
     default:
       break;

@@ -39,5 +39,5 @@ a {
 
 @font-face {
     font-family: 'Perfect DOS VGA 437';
-    src: url('./Fonts/vga.woff2') format('woff2');
+    src: url('/Resources/Fonts/vga.woff2') format('woff2');
 }

@@ -3,16 +3,16 @@ window.onload = CheckCss;
 function CheckCss()
 {
     var cookieValue = GetCookie("theme");
-    var finalCss = "../../XP.css/dist/98.css";
-    var finalImages = "../../sprites98.css";
+    var finalCss = "/Libraries/XP.css/dist/98.css";
+    var finalImages = "/sprites98.css";
     var finalTheme = "98;"
 
     switch (cookieValue)
     {
         case "xp":
             finalTheme = "xp";
-            finalCss = "../../XP.css/dist/XP.css";
-            finalImages = "../../spritesXP.css";
+            finalCss = "/Libraries/XP.css/dist/XP.css";
+            finalImages = "/spritesXP.css";
             break;
         default:
             break;

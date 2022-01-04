@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Aesthetical's Hideout</title>
+        <link>https://aestheticalz.github.io/</link>
+        <description>Nora's personal website for programming and misc.</description>
+
+        <item>
+            <title>Added GitHub Discussions And A Favicon!</title>
+            <link>https://aestheticalz.github.io/Posts/DiscussionsAndIconPost/Added-GitHub-Discussions-And-A-Favicon.html</link>
+            <pubDate>Sat, 01 Jan 2022 04:46 GMT</pubDate>
+            <description>Added GitHub Discussions to act as a comment section. Also added an icon that displays in the tab header of your browser.</description>
+        </item>
+        <item>
+            <title>Happy New Year 2022!</title>
+            <link>https://aestheticalz.github.io/Posts/NewYear22Post/Happy-New-Year-2022.html</link>
+            <pubDate>Sat, 01 Jan 2022 03:50 GMT</pubDate>
+            <description>I hope you have a great year!</description>
+        </item>
+        <item>
+            <title>Raising bugchecks from userspace in NT.</title>
+            <link>https://aestheticalz.github.io/Posts/BsodPost/BsodPost.html</link>
+            <pubDate>Tue, 30 Nov 2021 07:31 GMT</pubDate>
+            <description>Why did Microsoft decide to allow ANY userspace program without admin rights to bugcheck the system with 2 function calls?</description>
+        </item>
+        <item>
+            <title>The First Post!</title>
+            <link>https://aestheticalz.github.io/Posts/FirstPost/FirstPost.html</link>
+            <pubDate>Wed, 24 Nov 2021 11:06 GMT</pubDate>
+            <description>The first ever blog post for my new website!</description>
+        </item>
+    </channel>
+</rss>

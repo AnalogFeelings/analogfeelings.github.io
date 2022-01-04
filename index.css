@@ -14,3 +14,8 @@
     display: inline;
     -webkit-font-smoothing: none;
 }
+
+.marginBlocks {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+}

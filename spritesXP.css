@@ -3,13 +3,13 @@ body {
 }
 
 .postsSprite {
-    content: url("/Icons/XP/wordpad.png");
+    content: url("/Resources/Icons/XP/wordpad.png");
 }
 
 .projectsSprite {
-    content: url("/Icons/XP/worlddirectories.png");
+    content: url("/Resources/Icons/XP/worlddirectories.png");
 }
 
 .aboutSprite {
-    content: url("/Icons/XP/help.png");
+    content: url("/Resources/Icons/XP/help.png");
 }
