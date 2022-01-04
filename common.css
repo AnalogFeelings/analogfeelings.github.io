@@ -1,0 +1,21 @@
+.centeredDiv {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.flexSizeOverride {
+	min-width: 0;
+	min-height: 0;
+}
+
+.inlineCenteredText {
+	display: inline;
+	-webkit-font-smoothing: none;
+}
+
+.marginBlocks {
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+}

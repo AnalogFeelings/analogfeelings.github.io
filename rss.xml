@@ -6,6 +6,12 @@
         <description>Nora's personal website for programming and misc.</description>
 
         <item>
+            <title>Added RSS Feeds and Social Media!</title>
+            <link>https://aestheticalz.github.io/Posts/RssPost/Added-RSS-Feeds.html</link>
+            <pubDate>Tue, 04 Jan 2022 09:30 GMT</pubDate>
+            <description>Now you can follow the blog (and my social media) without manually checking the website!</description>
+        </item>
+        <item>
             <title>Added GitHub Discussions And A Favicon!</title>
             <link>https://aestheticalz.github.io/Posts/DiscussionsAndIconPost/Added-GitHub-Discussions-And-A-Favicon.html</link>
             <pubDate>Sat, 01 Jan 2022 04:46 GMT</pubDate>

@@ -3,11 +3,14 @@
 
 <head>
     <title>Aesthetical's Hideout</title>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="common.js"></script>
     <script src="index.js"></script>
     <script src="tabber.js"></script>
-    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="common.css">
     <link rel="icon" href="/Resources/favicon.png">
     <link rel="alternate" type="application/rss+xml" title="Subscribe to the blog feed!" href="/rss.xml"/>
 
@@ -40,14 +43,14 @@
         <div class="window-body">
             <!--Create tab view.-->
             <menu role="tablist">
-                <button id="homeTab" role="tab" aria-selected="true" aria-controls="tabHome">Home</button>
-                <button id="postsTab" role="tab" aria-controls="tabPosts">Posts</button>
-                <button id="projectsTab" role="tab" aria-controls="tabProjects">Projects</button>
-                <button id="aboutTab" role="tab" aria-controls="tabAbout">About</button>
+                <button id="homeTab" role="tab" aria-selected="true" aria-controls="Home">Home</button>
+                <button id="postsTab" role="tab" aria-controls="Posts">Posts</button>
+                <button id="projectsTab" role="tab" aria-controls="Projects">Projects</button>
+                <button id="aboutTab" role="tab" aria-controls="About">About</button>
             </menu>
 
             <!--Home Tab-->
-            <article role="tabpanel" id="tabHome">
+            <article role="tabpanel" id="Home">
                 <img src="./Resources/banner.png" style="margin-bottom: 10px; width: 100%;">
 
                 <img src="./Resources/flag.gif" style="vertical-align: middle; padding-right: 10px;">
@@ -79,11 +82,15 @@
             </article>
 
             <!--Posts Tab-->
-            <article role="tabpanel" hidden id="tabPosts">
+            <article role="tabpanel" hidden id="Posts">
                 <div>
                     <img class="postsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
                     <h4 class="inlineCenteredText">My Blog Posts!</h4>
                 </div>
+                <p>
+                    Follow the <a href="/rss.xml">RSS feed</a> for updates on your device!<br>
+                    These are ordered by <b>newest to oldest</b>.
+                </p>
                 <div style="overflow: auto;">
                     <ul id="postsList">
                     </ul>
@@ -91,7 +98,7 @@
             </article>
 
             <!--Projects Tab-->
-            <article role="tabpanel" hidden id="tabProjects">
+            <article role="tabpanel" hidden id="Projects">
                 <div>
                     <img class="projectsSprite" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
                     <h4 class="inlineCenteredText">My Open Source Projects!</h4>
@@ -171,7 +178,7 @@
             </article>
 
             <!--About Tab-->
-            <article role="tabpanel" hidden id="tabAbout">
+            <article role="tabpanel" hidden id="About">
                 <img class="aboutSprite" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
                 <h4 class="inlineCenteredText">About My Website!</h4>
                 <p>
