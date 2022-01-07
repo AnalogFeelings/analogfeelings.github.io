@@ -19,3 +19,7 @@
 	margin-block-start: 1em;
 	margin-block-end: 1em;
 }
+
+.disableFiltering {
+	image-rendering: pixelated;
+}
