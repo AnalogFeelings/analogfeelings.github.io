@@ -1,4 +1,5 @@
 window.onload = PageStartup;
+window.onhashchange = CheckTabHash;
 
 function PageStartup()
 {
