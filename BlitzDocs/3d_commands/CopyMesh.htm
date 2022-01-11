@@ -9,7 +9,8 @@
 <table>
 <tr>
 <td>
-mesh - handle of mesh to be copied<br />
+mesh - handle of mesh to be copied
+<br />
 parent (optional) - handle of entity to be made parent of mesh
 </td>
 </tr>
@@ -18,10 +19,16 @@ parent (optional) - handle of entity to be made parent of mesh
 <table>
 <tr>
 <td>
-Creates a copy of a mesh and returns the newly-created mesh's handle.<br />
-<br />
-The difference between CopyMesh and CopyEntity  is that CopyMesh performs a 'deep' copy of a mesh. <br />
-<br />
+Creates a copy of a mesh and returns the newly-created mesh's handle.
+
+<br />
+
+<br />
+The difference between CopyMesh and CopyEntity  is that CopyMesh performs a 'deep' copy of a mesh. 
+
+<br />
+
+<br />
 CopyMesh is identical to performing new_mesh=CreateMesh() : AddMesh mesh,new_mesh
 </td>
 </tr>
@@ -30,33 +37,60 @@ CopyMesh is identical to performing new_mesh=CreateMesh() : AddMesh mesh,new_mes
 <table>
 <tr>
 <td>
-; CopyMesh Example<br />
-; ----------------<br />
-<br />
-Graphics3D 640,480<br />
-SetBuffer BackBuffer()<br />
-<br />
-camera=CreateCamera()<br />
-<br />
-light=CreateLight()<br />
-RotateEntity light,90,0,0<br />
-<br />
-crate1=LoadMesh("media/wood-crate/wcrate1.3ds")<br />
-PositionEntity crate1,-40,0,100<br />
-<br />
-crate2=CopyMesh(crate1)<br />
-PositionEntity crate2,40,0,100<br />
-<br />
-While Not KeyDown(1)<br />
-<br />
-TurnEntity crate1,1,1,1<br />
-TurnEntity crate2,1,1,-1<br />
-<br />
-RenderWorld<br />
-Flip<br />
-<br />
-Wend<br />
-<br />
+; CopyMesh Example
+<br />
+; ----------------
+<br />
+
+<br />
+Graphics3D 640,480
+<br />
+SetBuffer BackBuffer()
+<br />
+
+<br />
+camera=CreateCamera()
+<br />
+
+<br />
+light=CreateLight()
+<br />
+RotateEntity light,90,0,0
+<br />
+
+<br />
+crate1=LoadMesh("media/wood-crate/wcrate1.3ds")
+<br />
+PositionEntity crate1,-40,0,100
+<br />
+
+
+crate2=CopyMesh(crate1)
+<br />
+PositionEntity crate2,40,0,100
+<br />
+
+<br />
+While Not KeyDown(1)
+<br />
+
+<br />
+TurnEntity crate1,1,1,1
+<br />
+TurnEntity crate2,1,1,-1
+<br />
+
+<br />
+RenderWorld
+<br />
+Flip
+<br />
+
+<br />
+Wend
+<br />
+
+<br />
 End
 </td>
 </tr>
@@ -64,5 +98,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=CopyMesh&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

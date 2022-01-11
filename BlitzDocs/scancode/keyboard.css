@@ -1,0 +1,16 @@
+body {
+    color: #000000;
+    font: 10pt verdana;
+    background: #003445;
+    margin: 32px;
+}
+
+a {
+    color: #ffff00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00ff44;
+    text-decoration: underline;
+}

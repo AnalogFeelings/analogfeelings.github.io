@@ -9,7 +9,8 @@
 <table>
 <tr>
 <td>
-sprite - sprite handle<br />
+sprite - sprite handle
+<br />
 angle# - absolute angle of sprite rotation
 </td>
 </tr>
@@ -29,19 +30,32 @@ See also: <a class=small href=CreateSprite.htm>CreateSprite</a>, <a class=small 
 <table>
 <tr>
 <td>
-Graphics3D 640,480<br />
-<br />
-cam = CreateCamera()<br />
-MoveEntity cam,0,0,-5<br />
-<br />
-sp = CreateSprite()<br />
-<br />
-ang# = 0<br />
-While Not KeyDown(1)<br />
-RenderWorld:Flip<br />
-RotateSprite sp,ang<br />
-ang = ang +3<br />
-Wend<br />
+Graphics3D 640,480
+<br />
+
+<br />
+cam = CreateCamera()
+<br />
+MoveEntity cam,0,0,-5
+<br />
+
+<br />
+sp = CreateSprite()
+<br />
+
+<br />
+ang# = 0
+<br />
+While Not KeyDown(1)
+<br />
+RenderWorld:Flip
+
+RotateSprite sp,ang
+<br />
+ang = ang +3
+<br />
+Wend
+<br />
 End
 </td>
 </tr>
@@ -49,5 +63,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=RotateSprite&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

@@ -17,11 +17,19 @@ None.
 <table>
 <tr>
 <td>
-Returns the 'caps level' of the current graphics driver. Values are:<br />
-<br />
-100: card supports all 'standard' Blitz3D operations.<br />
-110: card supports all standard ops plus cubic environment mapping.<br />
-<br />
+Returns the 'caps level' of the current graphics driver. Values are:
+
+<br />
+
+<br />
+100: card supports all 'standard' Blitz3D operations.
+
+<br />
+110: card supports all standard ops plus cubic environment mapping.
+
+<br />
+
+<br />
 3D Graphics code must be set before you call this command in order for it to work.
 <br>
 <br>
@@ -33,20 +41,34 @@ See also: <a class=small href=CreateTexture.htm>CreateTexture</a>, <a class=smal
 <table>
 <tr>
 <td>
-Graphics3D 640,480,0,2<br />
-<br />
-caps=GfxDriverCaps3D()<br />
-<br />
-Select caps<br />
-<br />
-	Case 100 msg$="Your graphics card does not support cubic environment mapping."<br />
-<br />
-	Case 110 msg$="Your graphics card does support cubic environment mapping."<br />
-<br />
-End Select<br />
-<br />
-Print msg$<br />
-<br />
+Graphics3D 640,480,0,2
+<br />
+
+<br />
+caps=GfxDriverCaps3D()
+<br />
+
+<br />
+Select caps
+<br />
+
+<br />
+	Case 100 msg$="Your graphics card does not support cubic environment mapping."
+
+
+<br />
+	Case 110 msg$="Your graphics card does support cubic environment mapping."
+<br />
+
+<br />
+End Select
+<br />
+
+<br />
+Print msg$
+<br />
+
+<br />
 WaitKey()
 </td>
 </tr>
@@ -54,5 +76,5 @@ WaitKey()
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=GfxDriverCaps3D&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

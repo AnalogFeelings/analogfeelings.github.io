@@ -17,8 +17,11 @@ None.
 <table>
 <tr>
 <td>
-Returns the number of triangles rendered during the most recent RenderWorld.<br />
-<br />
+Returns the number of triangles rendered during the most recent RenderWorld.
+
+<br />
+
+<br />
 Useful for debugging purposes -  to see if you're displaying, too many, or too little, polygons. 
 </td>
 </tr>
@@ -27,42 +30,78 @@ Useful for debugging purposes -  to see if you're displaying, too many, or too l
 <table>
 <tr>
 <td>
-; TrisRendered Example<br />
-; --------------------<br />
-<br />
-Graphics3D 640,480<br />
-SetBuffer BackBuffer()<br />
-<br />
-camera=CreateCamera()<br />
-PositionEntity camera,0,0,-2<br />
-<br />
-light=CreateLight()<br />
-RotateEntity light,90,0,0<br />
-<br />
-segs=Rand( 2,16 )<br />
-sphere=CreateSphere(segs)<br />
-<br />
-While Not KeyDown( 1 )<br />
-<br />
-If KeyHit( 57 )=True<br />
-<br />
-FreeEntity sphere<br />
-segs=Rand( 2,16 )<br />
-sphere=CreateSphere( segs )<br />
-<br />
-EndIf<br />
-<br />
-RenderWorld<br />
-<br />
-Text 0,0,"Press space to create a sphere with a random segments value"<br />
-<br />
-; Display triangles rendered<br />
-Text 0,20,"Triangles Rendered: "+TrisRendered()<br />
-<br />
-Flip<br />
-<br />
-Wend<br />
-<br />
+; TrisRendered Example
+<br />
+; --------------------
+<br />
+
+<br />
+Graphics3D 640,480
+<br />
+SetBuffer BackBuffer()
+<br />
+
+<br />
+camera=CreateCamera()
+<br />
+PositionEntity camera,0,0,-2
+<br />
+
+<br />
+light=CreateLight()
+<br />
+RotateEntity light,90,0,0
+<br />
+
+<br />
+segs=Rand( 2,16 )
+<br />
+sphere=CreateSphere(segs)
+<br />
+
+<br />
+While Not KeyDown( 1 )
+<br />
+
+<br />
+If KeyHit( 57 )=True
+<br />
+
+<br />
+FreeEntity sphere
+<br />
+
+<br />
+sphere=CreateSphere( segs )
+<br />
+
+<br />
+EndIf
+<br />
+
+<br />
+RenderWorld
+<br />
+
+<br />
+Text 0,0,"Press space to create a sphere with a random segments value"
+<br />
+
+<br />
+; Display triangles rendered
+<br />
+Text 0,20,"Triangles Rendered: "+TrisRendered()
+<br />
+
+<br />
+Flip
+<br />
+
+<br />
+Wend
+<br />
+
+<br />
 End
 </td>
 </tr>
@@ -70,5 +109,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=TrisRendered&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

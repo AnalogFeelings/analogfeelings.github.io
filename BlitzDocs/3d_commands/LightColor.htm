@@ -9,9 +9,12 @@
 <table>
 <tr>
 <td>
-light - light handle<br />
-red# - red value of light<br />
-green# - green value of light<br />
+light - light handle
+<br />
+red# - red value of light
+<br />
+green# - green value of light
+<br />
 blue# - blue value of light
 </td>
 </tr>
@@ -20,12 +23,21 @@ blue# - blue value of light
 <table>
 <tr>
 <td>
-Sets the color of a light.<br />
-<br />
-An r,g,b value of 255,255,255 will brighten  anything the light shines on.<br />
-<br />
-An r,g,b value of 0,0,0 will have no affect on anything it shines on.<br />
-<br />
+Sets the color of a light.
+
+<br />
+
+<br />
+An r,g,b value of 255,255,255 will brighten  anything the light shines on.
+
+<br />
+
+<br />
+An r,g,b value of 0,0,0 will have no affect on anything it shines on.
+
+<br />
+
+<br />
 An r,g,b value of -255,-255,-255 will darken anything it shines on. This is  known as 'negative lighting', and is useful for shadow effects.
 <br>
 <br>
@@ -37,22 +49,38 @@ See also: <a class=small href=CreateLight.htm>CreateLight</a>, <a class=small hr
 <table>
 <tr>
 <td>
-Graphics3D 640,480<br />
-<br />
-camera = CreateCamera()<br />
-MoveEntity camera,0,0,-3<br />
-<br />
-ball = CreateSphere()<br />
-<br />
-lite = CreateLight() ; try different lights 1 to 3<br />
-MoveEntity lite,5,0,-15<br />
-PointEntity lite,ball<br />
-<br />
-<br />
-While Not KeyDown(1)<br />
-RenderWorld:Flip<br />
-If KeyHit(57) Then LightColor lite,Rnd(255),Rnd(255),Rnd(255) ; press SPACEBAR to try different light colors<br />
-Wend<br />
+Graphics3D 640,480
+<br />
+
+<br />
+camera = CreateCamera()
+<br />
+MoveEntity camera,0,0,-3
+<br />
+
+<br />
+ball = CreateSphere()
+
+
+<br />
+lite = CreateLight() ; try different lights 1 to 3
+<br />
+MoveEntity lite,5,0,-15
+<br />
+PointEntity lite,ball
+<br />
+
+<br />
+
+<br />
+While Not KeyDown(1)
+<br />
+RenderWorld:Flip
+<br />
+If KeyHit(57) Then LightColor lite,Rnd(255),Rnd(255),Rnd(255) ; press SPACEBAR to try different light colors
+<br />
+Wend
+<br />
 End
 </td>
 </tr>
@@ -60,5 +88,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=LightColor&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

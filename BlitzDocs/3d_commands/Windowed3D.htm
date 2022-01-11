@@ -17,8 +17,11 @@ None.
 <table>
 <tr>
 <td>
-Windowed3D returns true if the host machine's selected graphics card is capable of rendering 3D graphics in a window using the current desktop colour depth.<br />
-<br />
+Windowed3D returns true if the host machine's selected graphics card is capable of rendering 3D graphics in a window using the current desktop colour depth.
+
+<br />
+
+<br />
 This mainly concerns older graphics cards, some of which may not be able to render 3D in a window at all, while others maybe be able to only render in a window if the user's desktop is set to a certain colour depth such as 16.
 </td>
 </tr>
@@ -27,15 +30,24 @@ This mainly concerns older graphics cards, some of which may not be able to rend
 <table>
 <tr>
 <td>
-If Windowed3D ()<br />
-Graphics3D 640, 480, 0, 2<br />
-Print "Windowed mode!"<br />
-Else<br />
-Graphics3D 640, 480, 0, 1<br />
-Print "Full screen modes only!"<br />
-EndIf<br />
-<br />
-MouseWait<br />
+If Windowed3D ()
+<br />
+Graphics3D 640, 480, 0, 2
+<br />
+Print "Windowed mode!"
+<br />
+Else
+<br />
+Graphics3D 640, 480, 0, 1
+<br />
+Print "Full screen modes only!"
+<br />
+EndIf
+
+
+<br />
+MouseWait
+<br />
 End
 </td>
 </tr>
@@ -43,5 +55,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=Windowed3D&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

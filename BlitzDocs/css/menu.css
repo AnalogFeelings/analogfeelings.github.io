@@ -34,7 +34,7 @@ a:hover
 	color: #fff000;
 	font: 8pt verdana;
 	background: #006f91;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 pre.code

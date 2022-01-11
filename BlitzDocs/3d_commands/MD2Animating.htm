@@ -25,46 +25,86 @@ Returns 1 (True) if md2 is currently animating, 0 (False) if not.
 <table>
 <tr>
 <td>
-; MD2Animating Example<br />
-; --------------------<br />
-<br />
-Graphics3D 640,480<br />
-SetBuffer BackBuffer()<br />
-<br />
-camera=CreateCamera()<br />
-<br />
-light=CreateLight()<br />
-RotateEntity light,90,0,0<br />
-<br />
-; Load md2<br />
-gargoyle=LoadMD2( "media/gargoyle/gargoyle.md2")<br />
-<br />
-; Load md2 texture<br />
-garg_tex=LoadTexture( "media/gargoyle/gargoyle.bmp" )<br />
-<br />
-; Apply md2 texture to md2<br />
-EntityTexture gargoyle,garg_tex<br />
-<br />
-PositionEntity gargoyle,0,-45,100<br />
-RotateEntity gargoyle,0,180,0<br />
-<br />
-While Not KeyDown( 1 )<br />
-<br />
-; Toggle animation stop/start when spacebar pressed<br />
-If KeyHit( 57 )=True start=1-start : AnimateMD2 gargoyle,start,0.1,32,46<br />
-<br />
-UpdateWorld<br />
-RenderWorld<br />
-<br />
-Text 0,0,"Press spacebar to stop/start md2 animation"<br />
-<br />
-; Output current md2 animation status to screen<br />
-Text 0,20,"MD2Animating: "+MD2Animating( gargoyle )<br />
-<br />
-Flip<br />
-<br />
-Wend<br />
-<br />
+; MD2Animating Example
+<br />
+; --------------------
+<br />
+
+<br />
+Graphics3D 640,480
+<br />
+SetBuffer BackBuffer()
+<br />
+
+<br />
+camera=CreateCamera()
+<br />
+
+<br />
+light=CreateLight()
+<br />
+RotateEntity light,90,0,0
+<br />
+
+<br />
+; Load md2
+<br />
+gargoyle=LoadMD2( "media/gargoyle/gargoyle.md2")
+<br />
+
+<br />
+; Load md2 texture
+<br />
+garg_tex=LoadTexture( "media/gargoyle/gargoyle.bmp" )
+<br />
+
+<br />
+; Apply md2 texture to md2
+<br />
+EntityTexture gargoyle,garg_tex
+<br />
+
+<br />
+PositionEntity gargoyle,0,-45,100
+<br />
+RotateEntity gargoyle,0,180,0
+<br />
+
+<br />
+While Not KeyDown( 1 )
+
+
+<br />
+; Toggle animation stop/start when spacebar pressed
+<br />
+If KeyHit( 57 )=True start=1-start : AnimateMD2 gargoyle,start,0.1,32,46
+<br />
+
+<br />
+UpdateWorld
+<br />
+RenderWorld
+<br />
+
+<br />
+Text 0,0,"Press spacebar to stop/start md2 animation"
+<br />
+
+<br />
+; Output current md2 animation status to screen
+<br />
+Text 0,20,"MD2Animating: "+MD2Animating( gargoyle )
+<br />
+
+<br />
+Flip
+<br />
+
+<br />
+Wend
+<br />
+
+<br />
 End
 </td>
 </tr>
@@ -72,5 +112,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=MD2Animating&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>

@@ -9,8 +9,10 @@
 <table>
 <tr>
 <td>
-light - light handle<br />
-inner_angle# - inner angle of cone<br />
+light - light handle
+<br />
+inner_angle# - inner angle of cone
+<br />
 outer_angle# - outer angle of cone
 </td>
 </tr>
@@ -19,8 +21,11 @@ outer_angle# - outer angle of cone
 <table>
 <tr>
 <td>
-Sets the 'cone' angle for a 'spot' light.<br />
-<br />
+Sets the 'cone' angle for a 'spot' light.
+
+<br />
+
+<br />
 The default light cone angles setting  is 0,90.
 <br>
 <br>
@@ -32,23 +37,40 @@ See also: <a class=small href=CreateLight.htm>CreateLight</a>, <a class=small hr
 <table>
 <tr>
 <td>
-Graphics3D 640,480<br />
-<br />
-camera = CreateCamera()<br />
-MoveEntity camera,0,0,-40<br />
-<br />
-flat = CreatePlane(10)<br />
-TurnEntity flat,-90,0,0<br />
-<br />
-lite = CreateLight(3) ; try different lights 1 to 3<br />
-MoveEntity lite,0,0,-15<br />
-<br />
-While Not KeyDown(1)<br />
-RenderWorld:Flip<br />
-If KeyHit(57) Then ; press SPACEBAR to randomly change the 'cone' of light<br />
-LightConeAngles lite, Rand(120),Rand(120)<br />
-EndIf<br />
-Wend<br />
+Graphics3D 640,480
+<br />
+
+<br />
+camera = CreateCamera()
+<br />
+MoveEntity camera,0,0,-40
+<br />
+
+<br />
+flat = CreatePlane(10)
+<br />
+TurnEntity flat,-90,0,0
+<br />
+
+<br />
+lite = CreateLight(3) ; try different lights 1 to 3
+<br />
+MoveEntity lite,0,0,-15
+
+
+<br />
+While Not KeyDown(1)
+<br />
+RenderWorld:Flip
+<br />
+If KeyHit(57) Then ; press SPACEBAR to randomly change the 'cone' of light
+<br />
+LightConeAngles lite, Rand(120),Rand(120)
+<br />
+EndIf
+<br />
+Wend
+<br />
 End
 </td>
 </tr>
@@ -56,5 +78,5 @@ End
 <br>
 <a target=_top href=../index.htm>Index</a><br>
 <br>
-Click <a href=http://www.blitzbasic.co.nz/b3ddocs/command.php?name=LightConeAngles&ref=comments target=_blank>here</a> to view the latest version of this page online</body>
+</body>
 </html>
