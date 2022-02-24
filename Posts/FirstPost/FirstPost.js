@@ -1,1 +1,7 @@
-window.onload = CheckCss;
+window.onload = PageLoad;
+
+function PageLoad()
+{
+	PromptCookies();
+	CheckCss();
+}

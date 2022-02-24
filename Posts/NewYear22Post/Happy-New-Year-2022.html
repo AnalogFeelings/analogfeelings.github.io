@@ -25,6 +25,66 @@
             <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
         </noscript>
 
+        <div id="cookiesOverlay" class="messageBox" style="display: none;">
+            <div class="window centeredDiv" style="width: 25%;">
+                <div class="title-bar">
+                    <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Help" title="Why do I have to do this?" onclick="window.open('https://gdpr.eu/cookies/', '_blank')"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="marginBlocks" style="display: flex;">
+                        <div style="flex: 0 0">
+                            <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                        </div>
+                        <div style="flex: 1">
+                            <p class="inlineCenteredText">
+                                Heya!<br><br>
+                                My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
+                                If you consent, I will only use that cookie to keep track of the website's look (Windows 98 or XP theme).<br>
+                                If you don't consent instead, the website will always display the Windows 98 theme (or maybe Windows XP if the
+                                prompt cookie expired before the theme cookie).
+                            </p>
+                        </div>
+                    </div>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button onclick="ConsentCookies()">Consent</button>
+                        <button onclick="RejectCookies()">Disallow</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <div id="themeWarningOverlay" class="messageBox" style="display: none;">
+            <div class="window centeredDiv" style="width: 25%;">
+                <div class="title-bar">
+                    <div class="title-bar-text" style="user-select: none;">Error!</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Close" onclick="HideBox('themeWarningOverlay')"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="marginBlocks" style="display: flex;">
+                        <div style="flex: 0 0">
+                            <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                        </div>
+                        <div style="flex: 1">
+                            <p class="inlineCenteredText">
+                                You need to consent to cookies before you can change your theme!<br>
+                                You will be prompted for cookie consent every 2 months.<br><br>
+                                As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow 
+                                the guide and edit the "AcceptedCookies" value to "Yes".
+                            </p>
+                        </div>
+                    </div>
+                    <section class="field-row" style="justify-content: flex-end">
+                        <button onclick="HideBox('themeWarningOverlay')">OK</button>
+                    </section>
+                </div>
+            </div>
+        </div>
+
         <div class="window centeredDiv" style="width: 75%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Aesthetical's Hideout : Happy New Year 2022</div>
@@ -99,6 +159,14 @@
                     <button onclick="ChangeTheme()">Change Theme</button>
                 </section>
             </div>
+
+            <div class="bottomBar" style="background-color: #003a99;">
+                <img class="msgInformationSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
+                <p style="color: white;">
+                    This website will receive a full revamp in URL structure in the future. Please be careful when linking this website externally.
+                </p>
+            </div>
+
             <div class="status-bar">
                 <p class="status-bar-field">2022 <b>AestheticalZ</b>
                     , released under <b>GPL v3.0</b></p>

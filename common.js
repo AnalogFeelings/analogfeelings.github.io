@@ -3,7 +3,7 @@ function CheckCss()
     let cookieValue = GetCookie("theme");
     let finalCss = "/Libraries/XP.css/dist/98.css";
     let finalImages = "/sprites98.css";
-    let finalTheme = "98;"
+    let finalTheme = "98";
 
     switch (cookieValue)
     {
@@ -31,8 +31,66 @@ function CheckCss()
     document.head.appendChild(iconCssElement);
 }
 
+function PromptCookies()
+{
+    let theyConsented = GetCookie("AcceptedCookies");
+    if (theyConsented == "Yes" || theyConsented == "No") return;
+
+    let cookiesOverlay = document.getElementById("cookiesOverlay");
+    cookiesOverlay.removeAttribute("style");
+}
+
+function ConsentCookies()
+{
+    let cookiesOverlay = document.getElementById("cookiesOverlay");
+    cookiesOverlay.style.display = "none";
+
+    SetCookie("AcceptedCookies", "Yes", 60, true);
+
+    let finalTheme = "98";
+    let cookieValue = GetCookie("theme");
+
+    switch (cookieValue)
+    {
+        case "xp":
+            finalTheme = "xp";
+            break;
+        default:
+            break;
+    }
+
+    SetCookie("theme", finalTheme, 365);
+}
+
+function RejectCookies()
+{
+    let cookiesOverlay = document.getElementById("cookiesOverlay");
+    cookiesOverlay.style.display = "none";
+
+    SetCookie("AcceptedCookies", "No", 60, true);
+}
+
+function ShowBox(boxId)
+{
+    let messageBox = document.getElementById(boxId);
+    messageBox.removeAttribute("style");
+}
+
+function HideBox(boxId)
+{
+    let messageBox = document.getElementById(boxId);
+    messageBox.style.display = "none";
+}
+
 function ChangeTheme()
 {
+    let theyConsented = GetCookie("AcceptedCookies");
+    if (theyConsented == "No" || theyConsented == "")
+    {
+        ShowBox("themeWarningOverlay");
+        return;
+    }
+
     let cookieValue = GetCookie("theme");
 
     switch (cookieValue)
@@ -72,8 +130,14 @@ function GetCookie(cookieName)
     return "";
 }
 
-function SetCookie(cookieName, cookieValue, expireIn) 
+function SetCookie(cookieName, cookieValue, expireIn, overrideCheck = false) 
 {
+    if(overrideCheck != true)
+    {
+        let theyConsented = GetCookie("AcceptedCookies");
+        if (theyConsented == "No" || theyConsented == "") return;
+    }
+
     const date = new Date();
     date.setTime(date.getTime() + (expireIn * 24 * 60 * 60 * 1000));
 

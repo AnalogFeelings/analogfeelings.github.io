@@ -3,6 +3,7 @@ window.onhashchange = CheckTabHash;
 
 function PageStartup()
 {
+	PromptCookies();
 	CheckCss();
 	CheckTabHash();
 	GetPosts();

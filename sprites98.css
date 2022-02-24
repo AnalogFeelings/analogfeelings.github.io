@@ -17,3 +17,19 @@ body {
 .msgErrorSprite {
     content: url("/Resources/Icons/98/MessageBox/error.png")
 }
+
+.msgQuestionSprite {
+    content: url("/Resources/Icons/98/MessageBox/question.png")
+}
+
+.msgInformationSprite {
+    content: url("/Resources/Icons/98/MessageBox/information.png")
+}
+
+.bottomBar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 1px;
+    margin-left: 1px;
+}
