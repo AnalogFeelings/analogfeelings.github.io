@@ -1,17 +1,5 @@
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    background: linear-gradient(180deg,
-            #005bbb 0%,
-            #005bbb 50%,
-            #ffd500 50%,
-            #ffd500 100%);
+    background-color: #008080;
 }
 
 .postsSprite {
