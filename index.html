@@ -32,7 +32,7 @@
         <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
     </noscript>
 
-    <div id="cookiesOverlay" class="messageBox" hidden>
+    <div id="cookiesOverlay" class="messageBox" style="display: none;">
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
@@ -49,9 +49,8 @@
                         <p class="inlineCenteredText">
                             Heya!<br><br>
                             My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
-                            If you consent, I will only use that cookie to keep track of the website's look (Windows 98 or XP theme).<br>
-                            If you don't consent instead, the website will always display the Windows 98 theme (or maybe Windows XP if the
-                            prompt cookie expired before the theme cookie).
+                            If you consent, I will only use that cookie to keep track of the website's look (Windows 2000 or XP theme).<br><br>
+                            If you don't consent instead, the website will always display the Windows 2000 theme.
                         </p>
                     </div>
                 </div>
@@ -63,7 +62,7 @@
         </div>
     </div>
 
-    <div id="themeWarningOverlay" class="messageBox" hidden>
+    <div id="themeWarningOverlay" class="messageBox" style="display: none;">
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
@@ -80,13 +79,41 @@
                         <p class="inlineCenteredText">
                             You need to consent to cookies before you can change your theme!<br>
                             You will be prompted for cookie consent every 2 months.<br><br>
-                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow
-                            the guide and edit the "AcceptedCookies" value to "Yes".
+                            
+                            Change your cookie settings in the website's sidebar.
                         </p>
                     </div>
                 </div>
                 <section class="field-row" style="justify-content: flex-end">
                     <button onclick="HideBox('themeWarningOverlay')">OK</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookieSuccessOverlay" class="messageBox" style="display: none;">
+        <div class="window centeredDiv" style="width: 25%;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Success!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close" onclick="location.reload()"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="marginBlocks" style="display: flex;">
+                    <div style="flex: 0 0">
+                        <img class="msgInformationSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            Set your cookie preferences successfully!<br><br>
+
+                            The page will now reload.
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="location.reload()">OK</button>
                 </section>
             </div>
         </div>
@@ -318,7 +345,29 @@
 
                             <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
                                 <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
-                                    Funny sidebar WIP
+                                    <b><u>Information</u></b>
+                                    <ul>
+                                        <li><a href="https://www.cookielaw.org/the-cookie-law/" target="_blank">Why the cookie popup?</a></li>
+                                        <li><a href="https://github.com/AestheticalZ/aestheticalz.github.io" target="_blank">The site's repository.</a></li>
+                                    </ul>
+                                    <p>
+                                        <b>Warning!</b> This website does not look correct on really tiny window sizes.
+                                    </p>
+                                    
+                                    <b><u>Cookie Settings</u></b>
+                                    <p>
+                                        The website will always use the Windows 2000 theme if cookies are turned off.
+                                    </p>
+                                    <div class="field-row">
+                                        <button onclick="ConsentCookies(true)">Consent</button>
+                                        <button onclick="RejectCookies(true)">Reject</button>
+                                    </div>
+
+                                    <br>
+                                    <b><u>Side Note</u></b>
+                                    <p>
+                                        Please do not open issues about the scaling being fucked up on small browser sizes, I already know about it.
+                                    </p>
                                 </div>
                                 <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
                                     <div style="margin-right: auto;">
