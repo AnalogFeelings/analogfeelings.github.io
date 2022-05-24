@@ -2,31 +2,37 @@
     {
         "date": "2022-02-24 06:05AM",
         "url": "/Posts/Im-Back",
-        "title": "I'm back!"
+        "title": "I'm back!",
+        "description": "Sorry for the long downtime!"
     },
     {
         "date": "2022-01-04 10:30PM",
         "url": "/Posts/Added-RSS-Feeds-and-Social-Media",
-        "title": "Added RSS Feeds and Social Media!"
+        "title": "Added RSS Feeds and Social Media!",
+        "description": "Now you can follow the blog (and my social media) without manually checking the website!"
     },
     {
         "date": "2022-01-01 05:46AM",
         "url": "/Posts/Added-GitHub-Discussions-And-A-Favicon",
-        "title": "Added GitHub Discussions And A Favicon!"
+        "title": "Added GitHub Discussions And A Favicon!",
+        "description": "Added GitHub Discussions to act as a comment section. Also added an icon that displays in the tab header of your browser."
     },
     {
         "date": "2022-01-01 04:50AM",
         "url": "/Posts/Happy-New-Year-2022",
-        "title": "Happy New Year 2022!"
+        "title": "Happy New Year 2022!",
+        "description": "I hope you have a great year!"
     },
     {
         "date": "2021-11-30 08:31PM",
         "url": "/Posts/Raising-bugchecks-from-userspace-in-NT",
-        "title": "Raising bugchecks from userspace in NT."
+        "title": "Raising bugchecks from userspace in NT.",
+        "description": "Why did Microsoft decide to allow ANY userspace program without admin rights to bugcheck the system with 2 function calls?"
     },
     {
         "date": "2021-11-24 12:06PM",
         "url": "/Posts/The-First-Post",
-        "title": "The First Post!"
+        "title": "The First Post!",
+        "description": "The first ever blog post for my new website!"
     }
 ]

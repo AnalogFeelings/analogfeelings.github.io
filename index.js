@@ -29,19 +29,32 @@ function GetPosts()
 		{
 			//The post in the "Posts" tab.
 			let createdPost = document.createElement("li");
+			let createdPostDesc = document.createElement("p");
 			//The post you see in the "Recent Posts" part of the home tab.
 			let createdPostRecent = document.createElement("li");
+			let createdPostRecentDesc = document.createElement("p");
 			//Bottom margin for each list element.
 			let marginStyle = "margin-bottom: 2px;";
+			let marginStyleDesc = "margin-left: 8px; margin-top: 3px; margin-bottom: 3px;";
 
 			createdPost.setAttribute("style", marginStyle);
+			createdPostDesc.setAttribute("style", marginStyleDesc);
 			createdPostRecent.setAttribute("style", marginStyle);
+			createdPostRecentDesc.setAttribute("style", marginStyleDesc);
 
 			createdPost.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
+			createdPostDesc.innerHTML = currentValue.description;
 			createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> <a href="${ currentValue.url }">${ currentValue.title }</a>`;
+			createdPostRecentDesc.innerHTML = currentValue.description;
 
 			postsList.appendChild(createdPost);
-			if (i < 5) recentPosts.appendChild(createdPostRecent);
+			postsList.appendChild(createdPostDesc);
+
+			if (i < 5)
+			{
+				recentPosts.appendChild(createdPostRecent);
+				recentPosts.appendChild(createdPostRecentDesc);
+			}
 
 			i++;
 		});
