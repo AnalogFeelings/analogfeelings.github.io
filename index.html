@@ -2,35 +2,37 @@
 <html>
 
 <head>
-    <title>Aesthetical's Hideout</title>
+    <title>Nora's Hideout</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="common.js"></script>
     <script src="index.js"></script>
     <script src="tabber.js"></script>
 
     <link rel="stylesheet" href="common.css">
     <link rel="icon" href="/Resources/favicon.png">
-    <link rel="alternate" type="application/rss+xml" title="Subscribe to the blog feed!" href="/rss.xml"/>
+    <link rel="alternate" type="application/rss+xml" title="Subscribe to the blog feed!" href="/rss.xml" />
 
-    <meta name="og:title" content="Aesthetical's Hideout">
+    <meta name="og:title" content="Nora's Hideout">
     <meta name="og:url" content="https://aestheticalz.github.io/">
     <meta name="og:description" content="Hi! This is Nora's personal website! I post blogs and random stuff here. Hope you enjoy it!">
     <meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#008080">
-    <link type="application/json+oembed"
-        href="https://gist.githubusercontent.com/AestheticalZ/b2866747178201fc1487a714ffc5c40a/raw/9daac1bdcab80971be142f5cfca03bcc54b26a70/aestheticalshideout.json" />
+    <link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/b2866747178201fc1487a714ffc5c40a/raw/9daac1bdcab80971be142f5cfca03bcc54b26a70/aestheticalshideout.json" />
 </head>
 
 <body>
     <noscript>
-        <style>html {display: none;}</style>
+        <style>
+            html {
+                display: none;
+            }
+        </style>
         <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
     </noscript>
 
-    <div id="cookiesOverlay" class="messageBox" style="display: none;">
+    <div id="cookiesOverlay" class="messageBox" hidden>
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
@@ -61,7 +63,7 @@
         </div>
     </div>
 
-    <div id="themeWarningOverlay" class="messageBox" style="display: none;">
+    <div id="themeWarningOverlay" class="messageBox" hidden>
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
@@ -78,7 +80,7 @@
                         <p class="inlineCenteredText">
                             You need to consent to cookies before you can change your theme!<br>
                             You will be prompted for cookie consent every 2 months.<br><br>
-                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow 
+                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow
                             the guide and edit the "AcceptedCookies" value to "Yes".
                         </p>
                     </div>
@@ -91,259 +93,285 @@
     </div>
 
     <!--Window, core object of the entire website.-->
-    <div class="window centeredDiv" style="width: 60%;">
-        <div class="title-bar">
-            <div class="title-bar-text" style="user-select: none;">Aesthetical's Hideout : Nora's Personal Website</div>
-            <div class="title-bar-controls">
-                <button aria-label="Help"
-                    onclick="window.location='/index.html#About'"></button>
-                <button aria-label="Close"
-                    onclick="window.location='/index.html'"></button>
-            </div>
-        </div>
-
-        <div class="window-body">
-            <!--Create tab view.-->
-            <menu role="tablist">
-                <button id="homeTab" role="tab" aria-selected="true" aria-controls="Home">Home</button>
-                <button id="postsTab" role="tab" aria-controls="Posts">Posts</button>
-                <button id="projectsTab" role="tab" aria-controls="Projects">Projects</button>
-                <button id="aboutTab" role="tab" aria-controls="About">About</button>
-            </menu>
-
-            <!--Home Tab-->
-            <article role="tabpanel" id="Home">
-                <img src="./Resources/banner.png" style="margin-bottom: 10px; width: 100%;">
-
-                <img src="./Resources/flag.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px;">
-                <h4 style="display: inline; vertical-align: middle;">Welcome To My Website!</h4>
-
-                <p>
-                    Hi! I'm <a href="https://github.com/AestheticalZ">AestheticalZ</a>, but you
-                    can call me <b>Nora</b>.
-                    <br><br>
-                    I'm a transgender pansexual programmer gal who loves computers! I know <b>C#</b>,
-                    <b>JavaScript</b>, barebones <b>C/C++</b>, and a tiny bit of <b>BlitzBasic</b>!
-                    <br>
-                    <ul>
-                        <li><b>Pronouns</b>: she/her</li>
-                        <li><b>Primary Operating System</b>: Windows 11 Pro</li>
-                        <li><b>Secondary Operating System</b>: Currently none!</li>
-                        <li><b>IDE</b>: Visual Studio 2022</li>
-                        <li><b>Misc Editor</b>: Visual Studio Code Insiders</li>
-                    </ul>
-                    Be sure to check out the 
-                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/announcements">announcements page</a>
-                    for announcements or news!<br><br>
-                    
-                    <b>Recent Posts</b>
-                    <ul id="recentPostsList">
-                        
-                    </ul>
-                </p>
-            </article>
-
-            <!--Posts Tab-->
-            <article role="tabpanel" hidden id="Posts">
-                <div>
-                    <img class="postsSprite disableFiltering" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
-                    <h4 class="inlineCenteredText">My Blog Posts!</h4>
-                </div>
-                <p>
-                    Follow the <a href="/rss.xml">RSS feed</a> for updates on your device!<br>
-                    These are ordered by <b>newest to oldest</b>.
-                </p>
-                <div style="overflow: auto;">
-                    <ul id="postsList">
-                    </ul>
-                </div>
-            </article>
-
-            <!--Projects Tab-->
-            <article role="tabpanel" hidden id="Projects">
-                <div>
-                    <img class="projectsSprite disableFiltering" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;">
-                    <h4 class="inlineCenteredText">My Open Source Projects!</h4>
-                </div>
-
-                <ul class="tree-view">
-                    <li>
-                        <details open>
-                            <summary>Tools</summary>
-                            <ul>
-                                <li><u><a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a></u> :
-                                    Generate sentences from the beloved Black Mesa announcer, VOX!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a></u> :
-                                    Piece of software not suitable for wide usage; made for specific purpose.</li>
-                                <li><u><a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a></u> :
-                                    Store your favourite GIFs and Videos in an unfinished Windows Forms app.</li>
-                                <li><u><a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a></u> :
-                                    Add multiple pride flags as a circular frame to images.</li>
-                                <li><u><a href="https://github.com/AestheticalZ/cbre">CBRE-X</a></u> :
-                                    Fork of <a href="https://github.com/juanjp600/cbre">CBRE</a> by juanjp600, with QOL features.</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details open>
-                            <summary>Fun</summary>
-                            <ul>
-                                <li><u><a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a></u> :
-                                    The website you are watching right now!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a></u> :
-                                    Nuke your computer with one wrong guess!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a></u> :
-                                    Similar to Half-Life VOX Generator, but realtime!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/kmdf-bugchecker">KMDF-Bugchecker</a></u> :
-                                    Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a></u> :
-                                    Communicate with KMDF-Bugchecker from a simple program!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a></u> :
-                                    Program that exploits NtRaiseHardError to raise a BSOD easily!</li>
-                                <li><u><a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a></u> :
-                                    Kills svchost.exe and BSODs the system.</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details open>
-                            <summary>Libraries</summary>
-                            <ul>
-                                <li><u><a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a></u> :
-                                    The core of FlagPFP-GUI.</li>
-                                <li><u><a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a></u> :
-                                    Get cute cat and dog images from the web.</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details open>
-                            <summary>Blitz Userlibs</summary>
-                            <ul>
-                                <li><u><a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a></u> :
-                                    Blitz userlib that allows BlitzBasic to use the Discord Game SDK.</li>
-                                <li><u><a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a></u> :
-                                    Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.</li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details open>
-                            <summary>Discord Bots</summary>
-                            <ul>
-                                <li><u><a href="https://github.com/AestheticalZ/SammBot">Samm-Bot</a></u> :
-                                    SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.</li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
-            </article>
-
-            <!--About Tab-->
-            <article role="tabpanel" hidden id="About">
-                <img class="aboutSprite disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
-                <h4 class="inlineCenteredText">About My Website!</h4>
-                <p>
-                    This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
-                    <br>
-                    It's pretty lightweight, I tried to keep JavaScript usage to minimum.
-                    <br><br>
-                    <b>Well, let's get to the point.</b>
-                    <br>
-                    This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
-                    <ul>
-                        <li>The "Posts" tag will pretty much have random blog posts about random things that I decide to
-                            randomly
-                            write about at random intervals.</li>
-                        <li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't
-                            many).</li>
-                        <li> The "Home" tab is, well, the home tab.</li>
-                        <li> And the "About" tab is what you are reading now!</li>
-                    </ul>
-
-                    Do you have any opinions on my website? Head over 
-                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/general-comments-opinions">here</a> 
-                    and create a discussion!
-                </p>
-                <img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
-                <h4 class="inlineCenteredText">In Memory of Ekaterina "BerkeliumAsset"</h4>
-                <img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
-                <p>
-                    Suicide is something that can happen to the people closest to you. Unfortunately, it has happened to us
-                    with our dearest friend BerkeliumAsset.
-                    <br><br>
-                    Today, 25th of November, 2021, CaptainCrunch has received a WhatsApp message from BerkeliumAsset's mother
-                    telling us about her suicide.
-                    <br><br>
-                    Berk was a sweet person, with dreams, loving friends, and a nice personality, but she has committed suicide.
-                    <br>
-                    We didn't help her because she seemed okay the night before, but it seems that she had personal problems she
-                    did not want to tell us about.
-                    <br>
-                    Berk was a great friend, and she helped me in sad times, especially when I discovered my gender identity.
-                    <br><br>
-                    May she rest in peace.
-                </p>
-            </article>
-
-            <!--Old Web GIFs-->
-            <div class="field-row" style="justify-content: flex-start;">
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
-                    <a href="/rss.xml">
-                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
-                    </a>
-                    <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
-                        <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
-                    </a>
-                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
-                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
-                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
-                    </a>
+    <div style="width: calc(100vw - 80px); height: calc(100vh - 80px); padding: 40px; display: flex;">
+        <div class="window" style="width: 100%; display: flex; flex-direction: column;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Nora's Hideout : Nora's Personal Website</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help" onclick="window.location='/index.html#About'"></button>
+                    <button aria-label="Close" onclick="window.location='/index.html'"></button>
                 </div>
             </div>
 
-            <!--Bottom right buttons.-->
-            <section class="field-row" style="justify-content: flex-end">
-                <button onclick="location.href='BlitzDocs/index.htm'">Blitz3D TSS Docs</button>
-                <button onclick="ChangeTheme()">Change Theme</button>
-            </section>
-        </div>
+            <div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                <div style="flex: 0 1 auto;">
+                    <div class="container">
+                        <img src="./Resources/banner.png" class="disableFiltering" style="width: 100%;">
+                        <div class="field-row bottom-left" style="justify-content: flex-start;">
+                            <img id="bannerSprite" class="disableFiltering headerSprite">
+                            <div id="bannerText" style="font-size: 2vw;"><b>Home Page</b></div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div class="field-row" style="justify-content: flex-start;">
+                            <button id="homeButton" class="active" onclick="ChangeTab('Home')">Home</button>
+                            <button id="postsButton" onclick="ChangeTab('Posts')">Posts</button>
+                            <button id="projectsButton" onclick="ChangeTab('Projects')">Projects</button>
+                            <button id="aboutButton" onclick="ChangeTab('About')">About</button>
+                            <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
+                                <button>Blitz3D TSS Documentation</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
 
-        <div class="bottomBar" style="background-color: #003a99;">
-            <img class="msgInformationSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
-            <p style="color: white;">
-                This website will receive a full revamp in URL structure in the future. Please be careful when linking this website externally.
-            </p>
-        </div>
+                <!--Page Content-->
+                <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                    <!--Field Row To Contain Sidebar And Content-->
+                    <div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; flex: 1 1 auto;">
+                        <!--Content-->
+                        <div style="width: 85%; margin-right: 1%;">
+                            <div style="overflow-y: auto;">
+                                <!--Home Tab-->
+                                <div id="Home">
+                                    <p>
+                                        Hi! I'm <a href="https://github.com/AestheticalZ">AestheticalZ</a>, but you
+                                        can call me <b>Nora</b>.
+                                        <br><br>
+                                        I'm a transgender pansexual programmer gal who loves computers! I know <b>C#</b>,
+                                        <b>JavaScript</b>, barebones <b>C/C++</b>, and a tiny bit of <b>BlitzBasic</b>!
+                                        <br>
+                                    <ul>
+                                        <li><b>Pronouns</b>: she/her</li>
+                                        <li><b>Primary Operating System</b>: Windows 11 Pro</li>
+                                        <li><b>Secondary Operating System</b>: Currently none!</li>
+                                        <li><b>IDE</b>: Visual Studio 2022</li>
+                                        <li><b>Misc Editor</b>: Visual Studio Code Insiders</li>
+                                    </ul>
+                                    Be sure to check out the
+                                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/announcements">announcements page</a>
+                                    for announcements or news!<br><br>
 
-        <!--Credits and copyright information at the bottom.-->
-        <div class="status-bar">
-            <p class="status-bar-field">2022 <b>AestheticalZ</b>
-                , released under <b>GPL v3.0</b></p>
-            <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
-                originally by <b>botoxparty</b>.</p>
-            <p class="status-bar-field">Star me on <a
-                    href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
+                                    <fieldset style="margin: 0;">
+                                        <legend>Recent Posts</legend>
+                                        <ul id="recentPostsList" style="margin: 0; padding-left: 20px;">
+
+                                        </ul>
+                                    </fieldset>
+                                </div>
+
+                                <!--Posts Tab-->
+                                <div id="Posts" hidden>
+                                    <p>
+                                        Follow the <a href="/rss.xml">RSS feed</a> for updates on your device!<br>
+                                        These are ordered by <b>newest to oldest</b>.
+                                    </p>
+                                    <fieldset style="margin: 0;">
+                                        <legend>Post List</legend>
+                                        <div style="overflow: auto;">
+                                            <ul id="postsList" style="margin: 0; padding-left: 20px;">
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <!--Projects Tab-->
+                                <div id="Projects" style="flex: 1; overflow-y: auto;" hidden>
+                                    <ul class="tree-view">
+                                        <li>
+                                            <details open>
+                                                <summary>Tools</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a></u> :
+                                                        Generate sentences from the beloved Black Mesa announcer, VOX!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a></u> :
+                                                        Piece of software not suitable for wide usage; made for specific purpose.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a></u> :
+                                                        Store your favourite GIFs and Videos in an unfinished Windows Forms app.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a></u> :
+                                                        Add multiple pride flags as a circular frame to images.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a></u> :
+                                                        Fork of <b><a href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details open>
+                                                <summary>Fun</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a></u> :
+                                                        The website you are watching right now!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a></u> :
+                                                        Nuke your computer with one wrong guess!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a></u> :
+                                                        Similar to Half-Life VOX Generator, but realtime!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/kmdf-bugchecker">KMDF-Bugchecker</a></u> :
+                                                        Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a></u> :
+                                                        Communicate with KMDF-Bugchecker from a simple program!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a></u> :
+                                                        Program that exploits NtRaiseHardError to raise a BSOD easily!</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a></u> :
+                                                        Kills svchost.exe and BSODs the system.</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details open>
+                                                <summary>Libraries</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a></u> :
+                                                        The core of FlagPFP-GUI.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a></u> :
+                                                        Get cute cat and dog images from the web.</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details open>
+                                                <summary>Blitz Userlibs</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a></u> :
+                                                        Blitz userlib that allows BlitzBasic to use the Discord Game SDK.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a></u> :
+                                                        Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.</li>
+                                                    <li><u><a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a></u> :
+                                                        Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details open>
+                                                <summary>Discord Bots</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/SammBot">Samm-Bot</a></u> :
+                                                        SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.</li>
+                                                    <li>All the other bots are private!</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                        <li>
+                                            <details open>
+                                                <summary>Operating Systems</summary>
+                                                <ul>
+                                                    <li><u><a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a></u> :
+                                                        Megalithic kernel thing idk its weird</li>
+                                                    <li>This is probably gonna be the only thing here lol</li>
+                                                </ul>
+                                            </details>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--About Tab-->
+                                <div id="About" hidden>
+                                    <p>
+                                        This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
+                                        <br>
+                                        It's pretty lightweight, I tried to keep JavaScript usage to minimum.
+                                        <br><br>
+                                        <b>Well, let's get to the point.</b>
+                                        <br>
+                                        This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
+                                    <ul>
+                                        <li>The "Posts" tag will pretty much have random blog posts about random things that I decide to
+                                            randomly
+                                            write about at random intervals.</li>
+                                        <li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't
+                                            many).</li>
+                                        <li> The "Home" tab is, well, the home tab.</li>
+                                        <li> And the "About" tab is what you are reading now!</li>
+                                    </ul>
+
+                                    Do you have any opinions on my website? Head over
+                                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/general-comments-opinions">here</a>
+                                    and create a discussion!
+                                    </p>
+                                    <img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
+                                    <h4 class="inlineCenteredText">In Memory of Ekaterina "BerkeliumAsset"</h4>
+                                    <img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
+                                    <p>
+                                        Suicide is something that can happen to the people closest to you. Unfortunately, it has happened to us
+                                        with our dearest friend BerkeliumAsset.
+                                        <br><br>
+                                        Today, 25th of November, 2021, CaptainCrunch has received a WhatsApp message from BerkeliumAsset's mother
+                                        telling us about her suicide.
+                                        <br><br>
+                                        Berk was a sweet person, with dreams, loving friends, and a nice personality, but she has committed suicide.
+                                        <br>
+                                        We didn't help her because she seemed okay the night before, but it seems that she had personal problems she
+                                        did not want to tell us about.
+                                        <br>
+                                        Berk was a great friend, and she helped me in sad times, especially when I discovered my gender identity.
+                                        <br><br>
+                                        May she rest in peace.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Sidebar-->
+                        <fieldset style="width: 14%; margin: 0;">
+                            <legend>Sidebar</legend>
+
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
+                                <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
+                                    Funny sidebar WIP
+                                </div>
+                                <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
+                                    <a href="/rss.xml">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    </a>
+                                    <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
+                                        <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
+                                    </a>
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
+                                    </a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!--Old Web GIFs-->
+                    <div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 0 1 auto;">
+                <div class="bottomBar" style="background-color: #003a99;">
+                    <img class="msgInformationSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
+                    <p style="color: white;">
+                        This website will receive a full revamp in URL structure in the future. Please be careful when linking this website externally.
+                    </p>
+                </div>
+
+                <!--Credits and copyright information at the bottom.-->
+                <div class="status-bar">
+                    <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
+                        , released under <b>GPL v3.0</b></p>
+                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                        originally by <b>botoxparty</b>.</p>
+                    <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
+                </div>
+            </div>
         </div>
-    </div>
 </body>
 
 </html>

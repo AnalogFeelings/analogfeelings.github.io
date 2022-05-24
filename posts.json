@@ -1,32 +1,32 @@
 [
     {
         "date": "2022-02-24 06:05AM",
-        "url": "/Posts/BackPost/BackPost.html",
+        "url": "/Posts/Im-Back",
         "title": "I'm back!"
     },
     {
         "date": "2022-01-04 10:30PM",
-        "url": "/Posts/RssPost/Added-RSS-Feeds.html",
+        "url": "/Posts/Added-RSS-Feeds-and-Social-Media",
         "title": "Added RSS Feeds and Social Media!"
     },
     {
         "date": "2022-01-01 05:46AM",
-        "url": "/Posts/DiscussionsAndIconPost/Added-GitHub-Discussions-And-A-Favicon.html",
+        "url": "/Posts/Added-GitHub-Discussions-And-A-Favicon",
         "title": "Added GitHub Discussions And A Favicon!"
     },
     {
         "date": "2022-01-01 04:50AM",
-        "url": "/Posts/NewYear22Post/Happy-New-Year-2022.html",
+        "url": "/Posts/Happy-New-Year-2022",
         "title": "Happy New Year 2022!"
     },
     {
         "date": "2021-11-30 08:31PM",
-        "url": "/Posts/BsodPost/BsodPost.html",
+        "url": "/Posts/Raising-bugchecks-from-userspace-in-NT",
         "title": "Raising bugchecks from userspace in NT."
     },
     {
         "date": "2021-11-24 12:06PM",
-        "url": "/Posts/FirstPost/FirstPost.html",
+        "url": "/Posts/The-First-Post",
         "title": "The First Post!"
     }
 ]

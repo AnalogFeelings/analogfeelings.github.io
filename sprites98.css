@@ -1,5 +1,9 @@
-body {
-    background-color: #008080;
+fieldset {
+    padding-bottom: 8px;
+}
+
+.homeSprite {
+    content: url("/Resources/Icons/98/home.png");
 }
 
 .postsSprite {

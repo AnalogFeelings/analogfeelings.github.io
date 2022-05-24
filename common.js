@@ -82,6 +82,11 @@ function HideBox(boxId)
     messageBox.style.display = "none";
 }
 
+function ChangeTab(name)
+{
+    window.location.hash = name;
+}
+
 function ChangeTheme()
 {
     let theyConsented = GetCookie("AcceptedCookies");

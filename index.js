@@ -51,25 +51,47 @@ function GetPosts()
 //I hate JavaScript please do not make me write javascript ever again.
 function CheckTabHash()
 {
+	let bannerSpriteDefaults = "disableFiltering headerSprite";
 	let tab = window.location.hash.substring(1);
 
-	let homeButton = document.getElementById("homeTab");
-	let postsButton = document.getElementById("postsTab");
-	let projectsButton = document.getElementById("projectsTab");
-	let aboutButton = document.getElementById("aboutTab");
+	let homeButton = document.getElementById("homeButton");
+	let postsButton = document.getElementById("postsButton");
+	let projectsButton = document.getElementById("projectsButton");
+	let aboutButton = document.getElementById("aboutButton");
 
 	let homePanel = document.getElementById("Home");
 	let postsPanel = document.getElementById("Posts");
 	let projectsPanel = document.getElementById("Projects");
 	let aboutPanel = document.getElementById("About");
 
+	let bannerText = document.getElementById("bannerText");
+	let bannerSprite = document.getElementById("bannerSprite");
+
 	switch (tab)
 	{
+		default:
+		case "Home":
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " homeSprite");
+			bannerText.innerHTML = `<b>Welcome To My Website!</b>`;
+
+			homeButton.setAttribute("class", "active");
+			projectsButton.removeAttribute("class");
+			aboutButton.removeAttribute("class");
+			postsButton.removeAttribute("class");
+
+			homePanel.removeAttribute("hidden");
+			postsPanel.setAttribute("hidden", true);
+			projectsPanel.setAttribute("hidden", true);
+			aboutPanel.setAttribute("hidden", true);
+			break;
 		case "Posts":
-			postsButton.setAttribute("aria-selected", true);
-			projectsButton.setAttribute("aria-selected", false);
-			aboutButton.setAttribute("aria-selected", false);
-			homeButton.setAttribute("aria-selected", false);
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " postsSprite");
+			bannerText.innerHTML = `<b>My Blog Posts!</b>`;
+
+			postsButton.setAttribute("class", "active");
+			projectsButton.removeAttribute("class");
+			aboutButton.removeAttribute("class");
+			homeButton.removeAttribute("class");
 
 			postsPanel.removeAttribute("hidden");
 			homePanel.setAttribute("hidden", true);
@@ -77,10 +99,13 @@ function CheckTabHash()
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "Projects":
-			projectsButton.setAttribute("aria-selected", true);
-			postsButton.setAttribute("aria-selected", false);
-			aboutButton.setAttribute("aria-selected", false);
-			homeButton.setAttribute("aria-selected", false);
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " projectsSprite");
+			bannerText.innerHTML = `<b>My Open Source Projects!</b>`;
+
+			projectsButton.setAttribute("class", "active");
+			postsButton.removeAttribute("class");
+			aboutButton.removeAttribute("class");
+			homeButton.removeAttribute("class");
 
 			projectsPanel.removeAttribute("hidden");
 			homePanel.setAttribute("hidden", true);
@@ -88,17 +113,18 @@ function CheckTabHash()
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "About":
-			aboutButton.setAttribute("aria-selected", true);
-			projectsButton.setAttribute("aria-selected", false);
-			postsButton.setAttribute("aria-selected", false);
-			homeButton.setAttribute("aria-selected", false);
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " aboutSprite");
+			bannerText.innerHTML = `<b>About My Website!</b>`;
+
+			aboutButton.setAttribute("class", "active");
+			projectsButton.removeAttribute("class");
+			postsButton.removeAttribute("class");
+			homeButton.removeAttribute("class");
 
 			aboutPanel.removeAttribute("hidden");
 			homePanel.setAttribute("hidden", true);
 			postsPanel.setAttribute("hidden", true);
 			projectsPanel.setAttribute("hidden", true);
-			break;
-		default:
 			break;
 	}
 }
