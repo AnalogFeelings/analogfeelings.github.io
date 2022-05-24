@@ -18,6 +18,10 @@
     content: url("/Resources/Icons/XP/MessageBox/error.png")
 }
 
+.msgWarningSprite {
+    content: url("/Resources/Icons/XP/MessageBox/warning.png")
+}
+
 .msgQuestionSprite {
     content: url("/Resources/Icons/XP/MessageBox/question.png")
 }

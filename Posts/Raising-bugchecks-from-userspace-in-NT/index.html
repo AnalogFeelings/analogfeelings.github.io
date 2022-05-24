@@ -4,14 +4,14 @@
 <head>
     <title>Raising bugchecks from userspace in NT.</title>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="/common.js"></script>
     <script src="BsodPost.js"></script>
-    <script src="/Libraries/Prism/prism.js"></script>
 
     <link rel="stylesheet" href="/common.css">
     <link rel="stylesheet" href="BsodPost.css">
     <link rel="icon" href="/Resources/favicon.png">
-    <link href="/Libraries/Prism/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/Libraries/Prism/prism.css">
 
     <meta name="og:title" content="Raising bugchecks from userspace in NT.">
     <meta name="og:url" content="https://aestheticalz.github.io/">
@@ -19,17 +19,20 @@
     <meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="theme-color" content="#008080">
-    <link type="application/json+oembed"
-        href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/c128e4c4b250039c3de6f5a02317720ba162b95a/aestheticalshideoutfirstpost.json" />
+    <link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/c128e4c4b250039c3de6f5a02317720ba162b95a/aestheticalshideoutfirstpost.json" />
 </head>
 
 <body>
     <noscript>
-        <style>html {display: none;}</style>
+        <style>
+            html {
+                display: none;
+            }
+        </style>
         <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
     </noscript>
 
-    <div id="cookiesOverlay" class="messageBox" style="display: none;">
+    <div id="cookiesOverlay" class="messageBox" hidden>
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
@@ -59,8 +62,8 @@
             </div>
         </div>
     </div>
-
-    <div id="themeWarningOverlay" class="messageBox" style="display: none;">
+    
+    <div id="themeWarningOverlay" class="messageBox" hidden>
         <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
@@ -77,7 +80,7 @@
                         <p class="inlineCenteredText">
                             You need to consent to cookies before you can change your theme!<br>
                             You will be prompted for cookie consent every 2 months.<br><br>
-                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow 
+                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow
                             the guide and edit the "AcceptedCookies" value to "Yes".
                         </p>
                     </div>
@@ -88,203 +91,229 @@
             </div>
         </div>
     </div>
-
-    <div class="window centeredDiv" style="width: 75%;">
-        <div class="title-bar">
-            <div class="title-bar-text" style="user-select: none;">Aesthetical's Hideout : Raising bugchecks from userspace in NT.</div>
-            <div class="title-bar-controls">
-                <button aria-label="Close"
-                    onclick="window.location='/index.html#tabPosts'"></button>
-            </div>
-        </div>
-        <div class="window-body">
-            <div style="overflow-y: scroll; height: 50vh; margin-bottom: 5px;">
-                <img src="/Resources/flag.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px;">
-                <h4 style="display: inline; vertical-align: middle;">Raising bugchecks from userspace in NT.</h4>
-
-                <p>
-                    If you are reading this post right here and right now, congratulations! You are interested in how to nuke
-                    computers from a simple userspace program.
-                    <br>
-                    In this post I will show some example code, and attempt to shine a light into this mysterious function.
-                    <br><br>
-                    So, let's get into it!
-                </p>
-
-                <h4 style="margin-bottom: 15px;">Analyzing the code</h4>
-
-                <!--START CODE BLOCK-->
-                <div class="codeDiv">
-                    <pre class="fullWidth"><code class="language-cs">using System;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-                    
-class Program
-{
-    [DllImport("ntdll.dll")]
-    private static extern uint RtlAdjustPrivilege(int Privilege, bool bEnablePrivilege, bool IsThreadPrivilege,
-                                                    out bool PreviousValue);
-    [DllImport("ntdll.dll")]
-    private static extern uint NtRaiseHardError(uint ErrorStatus, uint NumberOfParameters, uint UnicodeStringParameterMask,
-                                                IntPtr Parameters,
-                                                uint ValidResponseOption, out uint Response);
-                    
-    static void Main(string[] args)
-    {
-        RtlAdjustPrivilege(19, true, false, out bool idk);
-        NtRaiseHardError(0xc0000420, 0, 0, IntPtr.Zero, 6, out uint output);
-    }
-}</code></pre>
-                </div>
-                <!--END CODE BLOCK-->
-
-                <p>
-                    <br>
-                    You may be wondering, <i>Is it really that easy to nuke a computer?</i>
-                    <br>
-                    The answer is <b>yes</b>! You may also be wondering, <i>Why would Microsoft make it so easy?</i>
-                    <br>
-                    The answer for that is, <b>nobody knows</b>!
-                    <br><br>
-                    Oh, wait! I can't believe I forgot to comment what each part of the code does...
-                    <br><br>
-                </p>
-
-                <!--START CODE BLOCK-->
-                <div class="codeDiv">
-                    <pre class="fullWidth"><code class="language-cs">[DllImport("ntdll.dll")]
-private static extern uint RtlAdjustPrivilege(int Privilege, bool bEnablePrivilege, bool IsThreadPrivilege,
-                                                    out bool PreviousValue);
-[DllImport("ntdll.dll")]
-private static extern uint NtRaiseHardError(uint ErrorStatus, uint NumberOfParameters, uint UnicodeStringParameterMask,
-                                            IntPtr Parameters,
-                                            uint ValidResponseOption, out uint Response);</code></pre>
-                </div>
-                <!--END CODE BLOCK-->
-
-                <p>
-                    <br>
-                    In a nutshell, these import the "RtlAdjustPrivilege" and "NtRaiseHardError" functions from
-                    the ntdll.dll DLL. These are of course needed to make the system throw a bugcheck.
-                    <br><br>
-                </p>
-
-                <!--START CODE BLOCK-->
-                <div class="codeDiv">
-                    <pre class="fullWidth"><code class="language-cs">RtlAdjustPrivilege(19, true, false, out bool idk);</code></pre>
-                </div>
-                <!--END CODE BLOCK-->
-
-                <p>
-                    <br>
-                    Let's split this into parts:
-                    <ul>
-                        <li><b>First parameter (Privilege):</b> the privilege to enable, in this case 19, which is <b>SeShutdownPrivilege</b>.
-                            This is required, otherwise NtRaiseHardError will not throw a bugcheck.</li>
-                        <li><b>Second parameter (EnablePrivilege):</b> enables the privilege if <b>true</b>, disables it if <b>false</b>.</li>
-                        <li><b>Third parameter (IsThreadPrivilege):</b> enables the privilege for the current thread if <b>true</b>, otherwise, the whole process.</li>
-                        <li><b>Fourth parameter (PreviousValue):</b> outputs a boolean that tells us if the privilege was enabled before or not.</li>
-                    </ul>
-                    <br>
-                </p>
-
-                <!--START CODE BLOCK-->
-                <div class="codeDiv">
-                    <pre class="fullWidth"><code class="language-cs">NtRaiseHardError(0xc0000420, 0, 0, IntPtr.Zero, 6, out uint output);</code></pre>
-                </div>
-                <!--END CODE BLOCK-->
-
-                <p>
-                    <br>
-                    Let's ALSO split this into parts:
-                    <ul>
-                        <li><b>First parameter (ErrorStatus):</b> the stop code to pass. <b>0xC0000420</b> means <b>STATUS_ASSERTION_FAILURE</b>.
-                            I haven't tried ALL of the NTSTATUS codes, but it seems that this is the only one that works.</li>
-                        <li><b>Second parameter (NumberOfParameters):</b> number of <b>optional</b> parameters in the "Parameters" parameter.
-                            <b>0</b> since we don't pass any.</li>
-                        <li><b>Third parameter (UnicodeStringParameterMask):</b> according to a ReactOS contributor, <i>it serves to tell the function which element(s)
-                            in the given parameters array are pointers to unicode strings</i>.</li>
-                        <li><b>Fourth parameter (Parameters):</b> an array of DWORDs that will be shown when displaying the stop code.
-                            <b>IntPtr.Zero</b> since we don't need any.</li>
-                        <li><b>Fifth parameter (ValidResponseOption):</b> the system response to the hard error. 6 is <b>OptionShutdownSystem</b>.
-                            It must be 6, otherwise it will not work.</li>
-                        <li><b>Sixth parameter (Response):</b> pointer to HARDERROR_RESPONSE struct. Not needed here since bugchecks do not set a response.</li>
-                    </ul>
-                </p>
-
-                <h4 style="margin-bottom: 15px;">Going deeper</h4>
-                <p>
-                    So, why is this exposed to every user-space program? We may never know.
-                    <br>
-                    Who knows? Maybe its a poor decision for backwards compatibility for some old, weird, business program. What is true is that
-                    ReactOS supposedly does not suffer from this.
-                    <br><br>
-                    I have tried <a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a> under Windows XP, Vista, 7, 8.1, 10 and 11. I 
-                    have yet to try 2000 and ReactOS.
-                </p>
-            </div>
-            <fieldset>
-                Any comments or opinions? Head over 
-                <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/userspace-bugchecks-comments">here</a> 
-                and create a discussion!
-            </fieldset>
-            <div class="field-row" style="justify-content: flex-start;">
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com"
-                    class="flexSizeOverride">
-                    <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
-                </a>
-                <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
-                    <a href="/rss.xml">
-                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
-                    </a>
-                    <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
-                        <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
-                    </a>
-                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
-                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
-                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
-                    </a>
+    
+    <!--Window, core object of the entire website.-->
+    <div style="width: calc(100vw - 80px); height: calc(100vh - 80px); padding: 40px; display: flex;">
+        <div class="window" style="width: 100%; display: flex; flex-direction: column;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Nora's Hideout : Raising bugchecks from userspace in NT.</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help" onclick="window.location='/index.html#About'"></button>
+                    <button aria-label="Close" onclick="window.location='/index.html'"></button>
                 </div>
             </div>
-            <section class="field-row" style="justify-content: flex-end">
-                <button onclick="window.location='/index.html#Posts'">Go Back</button>
-                <button onclick="ChangeTheme()">Change Theme</button>
-            </section>
+    
+            <div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                <div style="flex: 0 1 auto;">
+                    <div class="container">
+                        <img src="/Resources/banner.png" class="disableFiltering" style="width: 100%;">
+                        <div class="field-row bottom-left" style="justify-content: flex-start;">
+                            <img id="bannerSprite" src="/Resources/flag.gif" class="disableFiltering headerSprite">
+                            <div id="bannerText" style="font-size: 300%;"><b>Raising bugchecks from userspace in NT.</b></div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div class="field-row" style="justify-content: flex-start;">
+                            <button id="homeButton" onclick="GoToHomeTab('Home')">Home</button>
+                            <button id="postsButton" onclick="GoToHomeTab('Posts')">Posts</button>
+                            <button id="projectsButton" onclick="GoToHomeTab('Projects')">Projects</button>
+                            <button id="aboutButton" onclick="GoToHomeTab('About')">About</button>
+                            <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
+                                <button>Blitz3D TSS Documentation</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+    
+                <!--Page Content-->
+                <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                    <!--Field Row To Contain Sidebar And Content-->
+                    <div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
+                        <!--Content-->
+                        <div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
+                            <div id="contentContainer" style="flex: 1 0 0; overflow-y: auto;">
+                                <p>
+                                    If you are reading this post right here and right now, congratulations! You are interested in how to nuke
+                                    computers from a simple userspace program.
+                                    <br>
+                                    In this post I will show some example code, and attempt to shine a light into this mysterious function.
+                                    <br><br>
+                                    So, let's get into it!
+                                </p>
+                                
+                                <h4 style="margin-bottom: 15px;">Analyzing the code</h4>
+                                
+                                <!--START CODE BLOCK-->
+                                <div class="codeDiv">
+                                    <pre class="fullWidth line-numbers" data-src="FullCode.cs"></pre>
+                                </div>
+                                <!--END CODE BLOCK-->
+                                
+                                <p>
+                                    <br>
+                                    You may be wondering, <i>Is it really that easy to nuke a computer?</i>
+                                    <br>
+                                    The answer is <b>yes</b>! You may also be wondering, <i>Why would Microsoft make it so easy?</i>
+                                    <br>
+                                    The answer for that is, <b>nobody knows</b>!
+                                    <br><br>
+                                    Oh, wait! I can't believe I forgot to comment what each part of the code does...
+                                    <br><br>
+                                </p>
+                                
+                                <!--START CODE BLOCK-->
+                                <div class="codeDiv">
+                                    <pre data-src="Imports.cs" class="fullWidth line-numbers"></pre>
+                                </div>
+                                <!--END CODE BLOCK-->
+                                
+                                <p>
+                                    <br>
+                                    In a nutshell, these import the "RtlAdjustPrivilege" and "NtRaiseHardError" functions from
+                                    the ntdll.dll DLL. These are of course needed to make the system throw a bugcheck.
+                                    <br><br>
+                                </p>
+                                
+                                <!--START CODE BLOCK-->
+                                <div class="codeDiv">
+                                    <pre data-src="RtlAdjustPrivilege.cs" class="fullWidth line-numbers"></pre>
+                                </div>
+                                <!--END CODE BLOCK-->
+                                
+                                <p>
+                                    <br>
+                                    Let's split this into parts:
+                                <ul>
+                                    <li><b>First parameter (Privilege):</b> the privilege to enable, in this case 19, which is <b>SeShutdownPrivilege</b>.
+                                        This is required, otherwise NtRaiseHardError will not throw a bugcheck.</li>
+                                    <li><b>Second parameter (EnablePrivilege):</b> enables the privilege if <b>true</b>, disables it if <b>false</b>.</li>
+                                    <li><b>Third parameter (IsThreadPrivilege):</b> enables the privilege for the current thread if <b>true</b>, otherwise, the whole process.</li>
+                                    <li><b>Fourth parameter (PreviousValue):</b> outputs a boolean that tells us if the privilege was enabled before or not.</li>
+                                </ul>
+                                <br>
+                                </p>
+                                
+                                <!--START CODE BLOCK-->
+                                <div class="codeDiv">
+                                    <pre data-src="NtRaiseHardError.cs" class="fullWidth line-numbers"></pre>
+                                </div>
+                                <!--END CODE BLOCK-->
+                                
+                                <p>
+                                    <br>
+                                    Let's ALSO split this into parts:
+                                <ul>
+                                    <li><b>First parameter (ErrorStatus):</b> the stop code to pass. <b>0xC0000420</b> means <b>STATUS_ASSERTION_FAILURE</b>.
+                                        I haven't tried ALL of the NTSTATUS codes, but it seems that this is the only one that works.</li>
+                                    <li><b>Second parameter (NumberOfParameters):</b> number of <b>optional</b> parameters in the "Parameters" parameter.
+                                        <b>0</b> since we don't pass any.
+                                    </li>
+                                    <li><b>Third parameter (UnicodeStringParameterMask):</b> according to a ReactOS contributor, <i>it serves to tell the function which element(s)
+                                            in the given parameters array are pointers to unicode strings</i>.</li>
+                                    <li><b>Fourth parameter (Parameters):</b> an array of DWORDs that will be shown when displaying the stop code.
+                                        <b>IntPtr.Zero</b> since we don't need any.
+                                    </li>
+                                    <li><b>Fifth parameter (ValidResponseOption):</b> the system response to the hard error. 6 is <b>OptionShutdownSystem</b>.
+                                        It must be 6, otherwise it will not work.</li>
+                                    <li><b>Sixth parameter (Response):</b> pointer to HARDERROR_RESPONSE struct. Not needed here since bugchecks do not set a response.</li>
+                                </ul>
+                                </p>
+                                
+                                <h4 style="margin-bottom: 15px;">Going deeper</h4>
+                                <p>
+                                    So, why is this exposed to every user-space program? We may never know.
+                                    <br>
+                                    Who knows? Maybe its a poor decision for backwards compatibility for some old, weird, business program. What is true is that
+                                    ReactOS supposedly does not suffer from this.
+                                    <br><br>
+                                    I have tried <a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a> under Windows XP, Vista, 7, 8.1, 10 and 11. I
+                                    have yet to try 2000 and ReactOS.
+                                </p>
+                            </div>
+                            <!--Comments or opinions?-->
+                            <div style="flex: 0 1 auto; margin-top: 1%;">
+                                <fieldset style="margin-bottom: 0;">
+                                    Any comments or opinions? Head over
+                                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/userspace-bugchecks-comments">here</a>
+                                    and create a discussion!
+                                </fieldset>
+                            </div>
+                        </div>
+    
+                        <!--Sidebar-->
+                        <fieldset style="width: 14%; margin: 0;">
+                            <legend>Sidebar</legend>
+    
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
+                                <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
+                                    Funny sidebar WIP
+                                </div>
+                                <!--Social Media Buttons-->
+                                <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
+                                    <div style="margin-right: auto;">
+                                        <button onclick="ChangeTheme()">Change Theme</button>
+                                    </div>
+                                    <a href="/rss.xml">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    </a>
+                                    <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
+                                        <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
+                                    </a>
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
+                                    </a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+    
+                    <!--Old Web GIFs-->
+                    <div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/aol" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <div style="flex: 0 1 auto;">
+                <!--Message Box-->
+                <div class="bottomBar warning">
+                    <img class="msgWarningSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
+                    <p style="color: white;">
+                        The redesign has changed the URL structure of posts. Please rewrite any external website that contains those URLs to use the new ones.
+                    </p>
+                </div>
+    
+                <!--Credits and copyright information at the bottom.-->
+                <div class="status-bar">
+                    <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
+                        , released under <b>GPL v3.0</b></p>
+                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                        originally by <b>botoxparty</b>.</p>
+                    <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
+                    <p class="status-bar-field">Created: <b>2021-11-30 08:31PM</b></p>
+                    <p class="status-bar-field">Edited: <b>2022-05-24 11:16AM</b></p>
+                </div>
+            </div>
         </div>
 
-        <div class="bottomBar" style="background-color: #003a99;">
-            <img class="msgInformationSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
-            <p style="color: white;">
-                This website will receive a full revamp in URL structure in the future. Please be careful when linking this website externally.
-            </p>
-        </div>
-
-        <div class="status-bar">
-            <p class="status-bar-field">2022 <b>AestheticalZ</b>
-                , released under <b>GPL v3.0</b></p>
-            <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
-            originally by <b>botoxparty</b>.</p>
-            <p class="status-bar-field">Star me on <a
-                    href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!
-            </p>
-            <p class="status-bar-field">Created: <b>2021-11-30 08:31PM</b></p>
-            <p class="status-bar-field">Edited: <b>2022-01-01 05:50AM</b></p>
-        </div>
-    </div>
+        <script src="/Libraries/Prism/prism.js"></script>
 </body>
 
 </html>

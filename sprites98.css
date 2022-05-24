@@ -22,6 +22,10 @@ fieldset {
     content: url("/Resources/Icons/98/MessageBox/error.png")
 }
 
+.msgWarningSprite {
+    content: url("/Resources/Icons/98/MessageBox/warning.png")
+}
+
 .msgQuestionSprite {
     content: url("/Resources/Icons/98/MessageBox/question.png")
 }

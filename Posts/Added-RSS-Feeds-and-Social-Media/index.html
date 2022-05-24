@@ -1,183 +1,237 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Added RSS Feeds and Social Media!</title>
-        
-        <script src="/common.js"></script>
-        <script src="RssPost.js"></script>
 
-        <link rel="stylesheet" href="/common.css">
-        <link rel="icon" href="/Resources/favicon.png">
+<head>
+    <title>Added RSS Feeds and Social Media!</title>
 
-        <meta name="og:title" content="Added RSS Feeds and Social Media!">
-        <meta name="og:url" content="https://aestheticalz.github.io/">
-        <meta name="og:description"
-            content="Now you can follow the blog (and my social media) without manually checking the website!">
-        <meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="theme-color" content="#008080">
-        <link type="application/json+oembed"
-            href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/c128e4c4b250039c3de6f5a02317720ba162b95a/aestheticalshideoutfirstpost.json" />
-    </head>
-    <body>
-        <noscript>
-            <style>html {display: none;}</style>
-            <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
-        </noscript>
+    <script src="/common.js"></script>
+    <script src="RssPost.js"></script>
 
-        <div id="cookiesOverlay" class="messageBox" style="display: none;">
-            <div class="window centeredDiv" style="width: 25%;">
-                <div class="title-bar">
-                    <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Help" title="Why do I have to do this?" onclick="window.open('https://gdpr.eu/cookies/', '_blank')"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <div class="marginBlocks" style="display: flex;">
-                        <div style="flex: 0 0">
-                            <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
-                        </div>
-                        <div style="flex: 1">
-                            <p class="inlineCenteredText">
-                                Heya!<br><br>
-                                My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
-                                If you consent, I will only use that cookie to keep track of the website's look (Windows 98 or XP theme).<br>
-                                If you don't consent instead, the website will always display the Windows 98 theme (or maybe Windows XP if the
-                                prompt cookie expired before the theme cookie).
-                            </p>
-                        </div>
-                    </div>
-                    <section class="field-row" style="justify-content: flex-end">
-                        <button onclick="ConsentCookies()">Consent</button>
-                        <button onclick="RejectCookies()">Disallow</button>
-                    </section>
-                </div>
-            </div>
-        </div>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="icon" href="/Resources/favicon.png">
 
-        <div id="themeWarningOverlay" class="messageBox" style="display: none;">
-            <div class="window centeredDiv" style="width: 25%;">
-                <div class="title-bar">
-                    <div class="title-bar-text" style="user-select: none;">Error!</div>
-                    <div class="title-bar-controls">
-                        <button aria-label="Close" onclick="HideBox('themeWarningOverlay')"></button>
-                    </div>
-                </div>
-                <div class="window-body">
-                    <div class="marginBlocks" style="display: flex;">
-                        <div style="flex: 0 0">
-                            <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
-                        </div>
-                        <div style="flex: 1">
-                            <p class="inlineCenteredText">
-                                You need to consent to cookies before you can change your theme!<br>
-                                You will be prompted for cookie consent every 2 months.<br><br>
-                                As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow 
-                                the guide and edit the "AcceptedCookies" value to "Yes".
-                            </p>
-                        </div>
-                    </div>
-                    <section class="field-row" style="justify-content: flex-end">
-                        <button onclick="HideBox('themeWarningOverlay')">OK</button>
-                    </section>
-                </div>
-            </div>
-        </div>
+    <meta name="og:title" content="Added RSS Feeds and Social Media!">
+    <meta name="og:url" content="https://aestheticalz.github.io/">
+    <meta name="og:description" content="Now you can follow the blog (and my social media) without manually checking the website!">
+    <meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#008080">
+    <link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/c128e4c4b250039c3de6f5a02317720ba162b95a/aestheticalshideoutfirstpost.json" />
+</head>
 
-        <div class="window centeredDiv" style="width: 75%;">
+<body>
+    <noscript>
+        <style>
+            html {
+                display: none;
+            }
+        </style>
+        <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
+    </noscript>
+
+    <div id="cookiesOverlay" class="messageBox" hidden>
+        <div class="window centeredDiv" style="width: 25%;">
             <div class="title-bar">
-                <div class="title-bar-text" style="user-select: none;">Aesthetical's Hideout : Added RSS Feeds and Social Media!</div>
+                <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
                 <div class="title-bar-controls">
-                    <button aria-label="Close" onclick="window.location='/index.html#tabPosts'"></button>
+                    <button aria-label="Help" title="Why do I have to do this?" onclick="window.open('https://gdpr.eu/cookies/', '_blank')"></button>
                 </div>
             </div>
             <div class="window-body">
-                <div style="overflow-y: scroll; height: 50vh; margin-bottom: 5px;">
-                    <img src="/Resources/flag.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px;">
-                    <h4 style="display: inline; vertical-align: middle;">Added RSS Feeds and Social Media!</h4>
-
-                    <p>
-                        I have added an RSS feed to my website! What does this mean, you may ask.<br>
-						Well, now you will be able to see new posts from your device! Android, iOS, Haiku, Windows, whatever that has an
-						RSS client!<br><br>
-
-						I know RSS is kind of outdated nowadays, but hey, it was pretty easy to add.<br><br>
-
-						I have also added some social media icons like Discord, Twitter and YouTube. They are clickable!
-
-						<h4 style="margin-bottom: 15px;">A (very tiny) rant about RSS readers</h4>
-						The current state of RSS readers is horrible.<br>
-						Why do I have to use a (sometimes paid) bloated website, that looks like an oversimplified Android-level 
-						piece of garbage?<br><br>
-
-						This really motivates me to make a <b>decent</b> client for RSS thats not a bloated and modern-looking piece of
-						crap. And I will probably look into making one.<br><br>
-
-						Please, never make UI that looks like a Google/Android 12 clone for serious things.<br>
-						<b>Please.</b>
-                    </p>
-                </div>
-                <fieldset>
-                    Any comments or opinions? Head over 
-                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/added-rss-feeds-comments">here</a> 
-                    and create a discussion!
-                </fieldset>
-                <div class="field-row" style="justify-content: flex-start;">
-                    <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com"
-                        class="flexSizeOverride">
-                        <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
-                    </a>
-                    <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm"
-                        class="flexSizeOverride">
-                        <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
-                    </a>
-                    <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/"
-                        class="flexSizeOverride">
-                        <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
-                    </a>
-                    <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com"
-                        class="flexSizeOverride">
-                        <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
-                    </a>
-                    <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
-                        <a href="/rss.xml">
-                            <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
-                        </a>
-                        <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
-                            <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
-                        </a>
-                        <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
-                            <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
-                        </a>
-                        <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
-                            <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
-                        </a>
+                <div class="marginBlocks" style="display: flex;">
+                    <div style="flex: 0 0">
+                        <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            Heya!<br><br>
+                            My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
+                            If you consent, I will only use that cookie to keep track of the website's look (Windows 98 or XP theme).<br>
+                            If you don't consent instead, the website will always display the Windows 98 theme (or maybe Windows XP if the
+                            prompt cookie expired before the theme cookie).
+                        </p>
                     </div>
                 </div>
                 <section class="field-row" style="justify-content: flex-end">
-                    <button onclick="window.location='/index.html#Posts'">Go Back</button>
-                    <button onclick="ChangeTheme()">Change Theme</button>
+                    <button onclick="ConsentCookies()">Consent</button>
+                    <button onclick="RejectCookies()">Disallow</button>
                 </section>
             </div>
+        </div>
+    </div>
 
-            <div class="bottomBar" style="background-color: #003a99;">
-                <img class="msgInformationSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
-                <p style="color: white;">
-                    This website will receive a full revamp in URL structure in the future. Please be careful when linking this website externally.
-                </p>
+    <div id="themeWarningOverlay" class="messageBox" hidden>
+        <div class="window centeredDiv" style="width: 25%;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Error!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close" onclick="HideBox('themeWarningOverlay')"></button>
+                </div>
             </div>
-
-            <div class="status-bar">
-                <p class="status-bar-field">2022 <b>AestheticalZ</b>
-                    , released under <b>GPL v3.0</b></p>
-                <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
-                    originally by <b>botoxparty</b>.</p>
-                <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!
-                </p>
-                <p class="status-bar-field">Created: <b>2022-01-04 10:30PM</b></p>
-                <p class="status-bar-field">Edited: <b>Never</b></p>
+            <div class="window-body">
+                <div class="marginBlocks" style="display: flex;">
+                    <div style="flex: 0 0">
+                        <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            You need to consent to cookies before you can change your theme!<br>
+                            You will be prompted for cookie consent every 2 months.<br><br>
+                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow
+                            the guide and edit the "AcceptedCookies" value to "Yes".
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="HideBox('themeWarningOverlay')">OK</button>
+                </section>
             </div>
         </div>
-    </body>
+    </div>
+
+    <!--Window, core object of the entire website.-->
+    <div style="width: calc(100vw - 80px); height: calc(100vh - 80px); padding: 40px; display: flex;">
+        <div class="window" style="width: 100%; display: flex; flex-direction: column;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Nora's Hideout : Added RSS Feeds and Social Media!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help" onclick="window.location='/index.html#About'"></button>
+                    <button aria-label="Close" onclick="window.location='/index.html'"></button>
+                </div>
+            </div>
+
+            <div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                <div style="flex: 0 1 auto;">
+                    <div class="container">
+                        <img src="/Resources/banner.png" class="disableFiltering" style="width: 100%;">
+                        <div class="field-row bottom-left" style="justify-content: flex-start;">
+                            <img id="bannerSprite" src="/Resources/flag.gif" class="disableFiltering headerSprite">
+                            <div id="bannerText" style="font-size: 300%;"><b>Added RSS Feeds and Social Media!</b></div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div class="field-row" style="justify-content: flex-start;">
+                            <button id="homeButton" onclick="GoToHomeTab('Home')">Home</button>
+                            <button id="postsButton" onclick="GoToHomeTab('Posts')">Posts</button>
+                            <button id="projectsButton" onclick="GoToHomeTab('Projects')">Projects</button>
+                            <button id="aboutButton" onclick="GoToHomeTab('About')">About</button>
+                            <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
+                                <button>Blitz3D TSS Documentation</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <!--Page Content-->
+                <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                    <!--Field Row To Contain Sidebar And Content-->
+                    <div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
+                        <!--Content-->
+                        <div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
+                            <div id="contentContainer" style="flex: 1 0 0; overflow-y: auto;">
+                                <p>
+                                    I have added an RSS feed to my website! What does this mean, you may ask.<br>
+                                    Well, now you will be able to see new posts from your device! Android, iOS, Haiku, Windows, whatever that has an
+                                    RSS client!<br><br>
+
+                                    I know RSS is kind of outdated nowadays, but hey, it was pretty easy to add.<br><br>
+
+                                    I have also added some social media icons like Discord, Twitter and YouTube. They are clickable!
+
+                                    <h4 style="margin-bottom: 15px;">A (very tiny) rant about RSS readers</h4>
+                                    The current state of RSS readers is horrible.<br>
+                                    Why do I have to use a (sometimes paid) bloated website, that looks like an oversimplified Android-level
+                                    piece of garbage?<br><br>
+
+                                    This really motivates me to make a <b>decent</b> client for RSS thats not a bloated and modern-looking piece of
+                                    crap. And I will probably look into making one.<br><br>
+
+                                    Please, never make UI that looks like a Google/Android 12 clone for serious things.<br>
+                                    <b>Please.</b>
+                                </p>
+                            </div>
+                            <!--Comments or opinions?-->
+                            <div style="flex: 0 1 auto; margin-top: 1%;">
+                                <fieldset style="margin-bottom: 0;">
+                                    Any comments or opinions? Head over
+                                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/new-year-2022-comments">here</a>
+                                    and create a discussion!
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <!--Sidebar-->
+                        <fieldset style="width: 14%; margin: 0;">
+                            <legend>Sidebar</legend>
+
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
+                                <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
+                                    Funny sidebar WIP
+                                </div>
+                                <!--Social Media Buttons-->
+                                <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
+                                    <div style="margin-right: auto;">
+                                        <button onclick="ChangeTheme()">Change Theme</button>
+                                    </div>
+                                    <a href="/rss.xml">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    </a>
+                                    <a href="https://discords.com/bio/p/analogfeelings" title="Add me on Discord!">
+                                        <img border="0" src="/Resources/SocialMedia/discord.png" width="16" height="16">
+                                    </a>
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
+                                    </a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!--Old Web GIFs-->
+                    <div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/aol" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 0 1 auto;">
+                <!--Message Box-->
+                <div class="bottomBar warning">
+                    <img class="msgWarningSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
+                    <p style="color: white;">
+                        The redesign has changed the URL structure of posts. Please rewrite any external website that contains those URLs to use the new ones.
+                    </p>
+                </div>
+
+                <!--Credits and copyright information at the bottom.-->
+                <div class="status-bar">
+                    <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
+                        , released under <b>GPL v3.0</b></p>
+                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                        originally by <b>botoxparty</b>.</p>
+                    <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
+                    <p class="status-bar-field">Created: <b>2022-01-04 10:30PM</b></p>
+                    <p class="status-bar-field">Edited: <b>2022-05-24 01:21AM</b></p>
+                </div>
+            </div>
+        </div>
+</body>
+
 </html>

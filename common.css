@@ -9,11 +9,23 @@ body {
 	width: 48px;
 }
 
+pre {
+	margin: 0px;
+}
+
 .centeredDiv {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.message {
+	background-color: #003a99;
+}
+
+.warning {
+	background-color: #af8811;
 }
 
 .container {
