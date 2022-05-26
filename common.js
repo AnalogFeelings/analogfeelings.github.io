@@ -1,13 +1,14 @@
 function CheckCss()
 {
-    let cookieValue = GetCookie("theme");
     let finalCss = "/Libraries/XP.css/dist/2000.css";
     let finalImages = "/sprites2000.css";
     let finalTheme = "2000";
     let theyConsented = GetCookie("AcceptedCookies");
 
-    if (theyConsented != "No" && theyConsented != "")
+    if (theyConsented == "Yes")
     {
+        let cookieValue = GetCookie("theme");
+
         switch (cookieValue)
         {
             case "xp":
