@@ -1,8 +1,43 @@
+body {
+	margin: 0;
+}
+
+.headerSprite {
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 48px;
+}
+
+pre {
+	margin: 0px;
+}
+
 .centeredDiv {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.message {
+	background-color: #003a99;
+}
+
+.warning {
+	background-color: #af8811;
+}
+
+.container {
+	position: relative;
+	text-align: center;
+	color: white;
+	margin-bottom: 5px;
+}
+
+.bottom-left {
+	position: absolute;
+	bottom: 18px;
+	left: 16px;
 }
 
 .flexSizeOverride {

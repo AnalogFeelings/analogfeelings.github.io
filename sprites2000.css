@@ -1,0 +1,47 @@
+body {
+    background-color: #396ba5;
+}
+
+fieldset {
+    padding-bottom: 8px;
+}
+
+.homeSprite {
+    content: url("/Resources/Icons/2000/home.png");
+}
+
+.postsSprite {
+    content: url("/Resources/Icons/2000/wordpad.png");
+}
+
+.projectsSprite {
+    content: url("/Resources/Icons/2000/worlddirectories.png");
+}
+
+.aboutSprite {
+    content: url("/Resources/Icons/2000/help.png");
+}
+
+.msgErrorSprite {
+    content: url("/Resources/Icons/2000/MessageBox/error.png")
+}
+
+.msgWarningSprite {
+    content: url("/Resources/Icons/2000/MessageBox/warning.png")
+}
+
+.msgQuestionSprite {
+    content: url("/Resources/Icons/2000/MessageBox/question.png")
+}
+
+.msgInformationSprite {
+    content: url("/Resources/Icons/2000/MessageBox/information.png")
+}
+
+.bottomBar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 1px;
+    margin-left: 1px;
+}

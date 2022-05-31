@@ -2,6 +2,10 @@ body {
     background-color: #396ba5;
 }
 
+.homeSprite {
+    content: url("/Resources/Icons/XP/home.png");
+}
+
 .postsSprite {
     content: url("/Resources/Icons/XP/wordpad.png");
 }
@@ -16,6 +20,10 @@ body {
 
 .msgErrorSprite {
     content: url("/Resources/Icons/XP/MessageBox/error.png")
+}
+
+.msgWarningSprite {
+    content: url("/Resources/Icons/XP/MessageBox/warning.png")
 }
 
 .msgQuestionSprite {

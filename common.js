@@ -1,22 +1,27 @@
 function CheckCss()
 {
-    let cookieValue = GetCookie("theme");
-    let finalCss = "/Libraries/XP.css/dist/98.css";
-    let finalImages = "/sprites98.css";
-    let finalTheme = "98";
+    let finalCss = "/Libraries/XP.css/dist/2000.css";
+    let finalImages = "/sprites2000.css";
+    let finalTheme = "2000";
+    let theyConsented = GetCookie("AcceptedCookies");
 
-    switch (cookieValue)
+    if (theyConsented == "Yes")
     {
-        case "xp":
-            finalTheme = "xp";
-            finalCss = "/Libraries/XP.css/dist/XP.css";
-            finalImages = "/spritesXP.css";
-            break;
-        default:
-            break;
-    }
+        let cookieValue = GetCookie("theme");
 
-    SetCookie("theme", finalTheme, 365);
+        switch (cookieValue)
+        {
+            case "xp":
+                finalTheme = "xp";
+                finalCss = "/Libraries/XP.css/dist/XP.css";
+                finalImages = "/spritesXP.css";
+                break;
+            default:
+                break;
+        }
+
+        SetCookie("theme", finalTheme, 365);
+    }
 
     let cssElement = document.createElement("link");
     cssElement.rel = "stylesheet";
@@ -40,14 +45,14 @@ function PromptCookies()
     cookiesOverlay.removeAttribute("style");
 }
 
-function ConsentCookies()
+function ConsentCookies(fromButton = false)
 {
     let cookiesOverlay = document.getElementById("cookiesOverlay");
     cookiesOverlay.style.display = "none";
 
     SetCookie("AcceptedCookies", "Yes", 60, true);
 
-    let finalTheme = "98";
+    let finalTheme = "2000";
     let cookieValue = GetCookie("theme");
 
     switch (cookieValue)
@@ -60,14 +65,18 @@ function ConsentCookies()
     }
 
     SetCookie("theme", finalTheme, 365);
+
+    if(fromButton) ShowBox("cookieSuccessOverlay");
 }
 
-function RejectCookies()
+function RejectCookies(fromButton = false)
 {
     let cookiesOverlay = document.getElementById("cookiesOverlay");
     cookiesOverlay.style.display = "none";
 
     SetCookie("AcceptedCookies", "No", 60, true);
+
+    if(fromButton) ShowBox("cookieSuccessOverlay");
 }
 
 function ShowBox(boxId)
@@ -80,6 +89,11 @@ function HideBox(boxId)
 {
     let messageBox = document.getElementById(boxId);
     messageBox.style.display = "none";
+}
+
+function ChangeTab(name)
+{
+    window.location.hash = name;
 }
 
 function ChangeTheme()
@@ -96,9 +110,9 @@ function ChangeTheme()
     switch (cookieValue)
     {
         case "xp":
-            SetCookie("theme", "98", 365);
+            SetCookie("theme", "2000", 365);
             break;
-        case "98":
+        case "2000":
         default:
             SetCookie("theme", "xp", 365);
             break;
