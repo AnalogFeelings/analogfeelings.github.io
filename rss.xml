@@ -5,13 +5,19 @@
         <link>https://aestheticalz.github.io/</link>
         <description>Nora's personal website for programming and misc.</description>
         <docs>https://www.rssboard.org/rss-specification</docs>
-        <copyright>Copyleft 2022, AestheticalZ</copyright>
+        <copyright>Copyright 2022, AestheticalZ</copyright>
         <image>
             <url>https://aestheticalz.github.io/Resources/favicon.png</url>
             <title>Aesthetical's Hideout</title>
             <link>https://aestheticalz.github.io/</link>
         </image>
 
+        <item>
+            <title>The redesign has arrived!</title>
+            <link>https://aestheticalz.github.io/Posts/The-Redesign-Has-Arrived/</link>
+            <pubDate>Tue, 31 May 2022 21:48 GMT</pubDate>
+            <description>Sorry for the long downtime!</description>
+        </item>
         <item>
             <title>I'm back!</title>
             <link>https://aestheticalz.github.io/Posts/Im-Back/</link>
