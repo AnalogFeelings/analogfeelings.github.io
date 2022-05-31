@@ -11,7 +11,7 @@ function CheckCss()
             document.getElementById("XPstyle").removeAttribute("style");
             break;
         default:
-        case "98":
+        case "2000":
             break;  
     }
 }
