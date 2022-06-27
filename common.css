@@ -2,14 +2,14 @@ body {
 	margin: 0;
 }
 
+pre {
+	margin: 0px;
+}
+
 .headerSprite {
 	vertical-align: middle;
 	margin-right: 10px;
 	width: 48px;
-}
-
-pre {
-	margin: 0px;
 }
 
 .centeredDiv {

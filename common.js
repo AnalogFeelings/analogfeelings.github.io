@@ -182,13 +182,13 @@ function RejectCookies(fromButton = false)
 function ShowBox(boxId)
 {
     let messageBox = document.getElementById(boxId);
-    messageBox.removeAttribute("style");
+    messageBox.removeAttribute("hidden");
 }
 
 function HideBox(boxId)
 {
     let messageBox = document.getElementById(boxId);
-    messageBox.style.display = "none";
+    messageBox.setAttribute("hidden", true);
 }
 
 function ChangeTab(name)

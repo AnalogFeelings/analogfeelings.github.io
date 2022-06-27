@@ -2,6 +2,17 @@ body {
     background-color: #396ba5;
 }
 
+.mainWindow {
+    width: calc(100vw - 80px);
+    height: calc(100vh - 80px);
+
+    min-width: 1675px;
+    min-height: 815px;
+
+    padding: 40px;
+    display: flex;
+}
+
 .homeSprite {
     content: url("/Resources/Icons/XP/home.png");
 }
