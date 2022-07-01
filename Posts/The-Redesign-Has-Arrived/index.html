@@ -2,298 +2,298 @@
 <html>
 
 <head>
-	<title>The redesign has arrived!</title>
+    <title>The redesign has arrived!</title>
 
-	<script src="/common.js"></script>
-	<script src="RedesignPost.js"></script>
+    <script src="/common.js"></script>
+    <script src="RedesignPost.js"></script>
 
-	<link rel="stylesheet" href="/common.css">
-	<link rel="icon" href="/Resources/favicon.png">
+    <link rel="stylesheet" href="/common.css">
+    <link rel="icon" href="/Resources/favicon.png">
 
-	<meta name="og:title" content="The redesign has arrived!">
-	<meta name="og:url" content="https://aestheticalz.github.io/">
-	<meta name="og:description" content="Sorry for the big delay, I had major flexbox issues :P">
-	<meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="theme-color" content="#396BA5">
-	<link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/aestheticalshideoutfirstpost.json" />
+    <meta name="og:title" content="The redesign has arrived!">
+    <meta name="og:url" content="https://aestheticalz.github.io/">
+    <meta name="og:description" content="Sorry for the big delay, I had major flexbox issues :P">
+    <meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#396BA5">
+    <link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/94ea87ce4245a66d522f0e8d0011bbc0/raw/aestheticalshideoutfirstpost.json" />
 </head>
 
 <body>
-	<noscript>
-		<style>
-			html {
-				display: none;
-			}
-		</style>
-		<meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
-	</noscript>
+    <noscript>
+        <style>
+            html {
+                display: none;
+            }
+        </style>
+        <meta http-equiv="refresh" content="0.0;url=/nojavascript.html">
+    </noscript>
 
-	<div id="cookiesOverlay" class="messageBox" hidden>
-		<div class="window centeredDiv" style="width: auto;">
-			<div class="title-bar">
-				<div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
-				<div class="title-bar-controls">
-					<button aria-label="Help" title="Why do I have to do this?" onclick="window.open('https://gdpr.eu/cookies/', '_blank')"></button>
-				</div>
-			</div>
-			<div class="window-body">
-				<div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
-					<div style="flex: 0 0">
-						<img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
-					</div>
-					<div style="flex: 1">
-						<p class="inlineCenteredText">
-							Heya!<br><br>
-							My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
-							If you consent, I will only use that cookie to keep track of the website's look (Windows 2000 or XP theme).<br><br>
-							If you don't consent instead, the website will always display the Windows 2000 theme.
-						</p>
-					</div>
-				</div>
-				<section class="field-row" style="justify-content: flex-end">
-					<button onclick="ConsentCookies()">Consent</button>
-					<button onclick="RejectCookies()">Disallow</button>
-				</section>
-			</div>
-		</div>
-	</div>
-	
-	<div id="themeWarningOverlay" class="messageBox" hidden>
-		<div class="window centeredDiv" style="width: auto;">
-			<div class="title-bar">
-				<div class="title-bar-text" style="user-select: none;">Error!</div>
-				<div class="title-bar-controls">
-					<button aria-label="Close" onclick="HideBox('themeWarningOverlay')"></button>
-				</div>
-			</div>
-			<div class="window-body">
-				<div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
-					<div style="flex: 0 0">
-						<img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
-					</div>
-					<div style="flex: 1">
-						<p class="inlineCenteredText">
-							You need to consent to cookies before you can change your theme!<br>
-							You will be prompted for cookie consent every 2 months.<br><br>
-	
-							Change your cookie settings in the website's sidebar.
-						</p>
-					</div>
-				</div>
-				<section class="field-row" style="justify-content: flex-end">
-					<button onclick="HideBox('themeWarningOverlay')">OK</button>
-				</section>
-			</div>
-		</div>
-	</div>
-	
-	<div id="cookieSuccessOverlay" class="messageBox" hidden style="width: 100vw; height: 100vh;">
-		<div class="window centeredDiv" style="width: auto;">
-			<div class="title-bar">
-				<div class="title-bar-text" style="user-select: none;">Success!</div>
-				<div class="title-bar-controls">
-					<button aria-label="Close" onclick="location.reload()"></button>
-				</div>
-			</div>
-			<div class="window-body">
-				<div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
-					<div style="flex: 0 0">
-						<img class="msgInformationSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
-					</div>
-					<div style="flex: 1">
-						<p class="inlineCenteredText">
-							Set your cookie preferences successfully!<br><br>
-	
-							The page will now reload.
-						</p>
-					</div>
-				</div>
-				<section class="field-row" style="justify-content: flex-end">
-					<button onclick="location.reload()">OK</button>
-				</section>
-			</div>
-		</div>
-	</div>
+    <div id="cookiesOverlay" class="messageBox" hidden>
+        <div class="window centeredDiv" style="width: auto;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help" title="Why do I have to do this?" onclick="window.open('https://gdpr.eu/cookies/', '_blank')"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
+                    <div style="flex: 0 0">
+                        <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            Heya!<br><br>
+                            My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
+                            If you consent, I will only use that cookie to keep track of the website's look (Windows 2000 or XP theme).<br><br>
+                            If you don't consent instead, the website will always display the Windows 2000 theme.
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="ConsentCookies()">Consent</button>
+                    <button onclick="RejectCookies()">Disallow</button>
+                </section>
+            </div>
+        </div>
+    </div>
 
-	<!--Window, core object of the entire website.-->
-	<div style="width: calc(100vw - 80px); height: calc(100vh - 80px); padding: 40px; display: flex;">
-		<div class="window" style="width: 100%; display: flex; flex-direction: column;">
-			<div class="title-bar">
-				<div class="title-bar-text" style="user-select: none;">Nora's Hideout : The redesign has arrived!</div>
-				<div class="title-bar-controls">
-					<button aria-label="Help" onclick="window.location='/index.html#About'"></button>
-					<button aria-label="Close" onclick="window.location='/index.html'"></button>
-				</div>
-			</div>
+    <div id="themeWarningOverlay" class="messageBox" hidden>
+        <div class="window centeredDiv" style="width: auto;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Error!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close" onclick="HideBox('themeWarningOverlay')"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
+                    <div style="flex: 0 0">
+                        <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            You need to consent to cookies before you can change your theme!<br>
+                            You will be prompted for cookie consent every 2 months.<br><br>
 
-			<div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
-				<div style="flex: 0 1 auto;">
-					<div class="container">
-						<img src="/Resources/banner.png" class="disableFiltering" style="width: 100%;">
-						<div class="field-row bottom-left" style="justify-content: flex-start;">
-							<img id="bannerSprite" src="/Resources/flag.gif" class="disableFiltering headerSprite">
-							<!-- <div id="bannerText" style="font-size: 300%;"><b>I'm back!</b></div> -->
-							<div style="display: flex; flex-direction: column; justify-content: flex-start;">
-								<div style="flex: 1 0 auto">
-									<div style="font-size: 300%"><b>The redesign has arrived!</b></div>
-								</div>
-								<div style="flex: 1 1 auto;">
-									<p style="margin: 0; text-align: left;">Sorry for the big delay, I had major flexbox issues :P</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<fieldset>
-						<div class="field-row" style="justify-content: flex-start;">
-							<button id="homeButton" onclick="GoToHomeTab('Home')">Home</button>
-							<button id="postsButton" onclick="GoToHomeTab('Posts')">Posts</button>
-							<button id="projectsButton" onclick="GoToHomeTab('Projects')">Projects</button>
-							<button id="aboutButton" onclick="GoToHomeTab('About')">About</button>
-							<div class="field-row" style="margin-left: auto; margin-bottom: auto;">
-								<button onclick="location.href='/BlitzDocs/index.htm'">Blitz3D TSS Documentation</button>
-							</div>
-						</div>
-					</fieldset>
-				</div>
+                            Change your cookie settings in the website's sidebar.
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="HideBox('themeWarningOverlay')">OK</button>
+                </section>
+            </div>
+        </div>
+    </div>
 
-				<!--Page Content-->
-				<div style="display: flex; flex-direction: column; flex: 1 1 auto;">
-					<!--Field Row To Contain Sidebar And Content-->
-					<div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
-						<!--Content-->
-						<div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
-							<div id="contentContainer" style="flex: 1 0 0; overflow-y: auto;">
-								<p>
-									<b>Well, here it is!</b><br><br>
-									
-									The redesign I have been working on for months is finally done! I hope I never get to do all that flexbox bullshit ever again.<br><br>
+    <div id="cookieSuccessOverlay" class="messageBox" hidden style="width: 100vw; height: 100vh;">
+        <div class="window centeredDiv" style="width: auto;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Success!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close" onclick="location.reload()"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
+                    <div style="flex: 0 0">
+                        <img class="msgInformationSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            Set your cookie preferences successfully!<br><br>
 
-									You may have noticed that the website now uses a Windows 2000 theme by default instead of the old Windows 98 one, and no, you are not hallucinating.<br>
-									I didn't like the Windows 98 color scheme for this specific website design, so I decided to slightly modify the colors of XP.css to fit 2000 more.<br>
-									I think it looks quite nice! Maybe one day I will implement 7.css and XP.css together to make some weird abomination, who knows?<br><br>
+                            The page will now reload.
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="location.reload()">OK</button>
+                </section>
+            </div>
+        </div>
+    </div>
 
-									Oh, yeah! I kinda forgot, sorry for the lack of activity in the blog recently! I've been so busy with mental health and redesig related issues that I couldn't
-									bring myself to write an interesting blog post.<br><br>
+    <!--Window, core object of the entire website.-->
+    <div class="mainWindow">
+        <div class="window" style="width: 100%; display: flex; flex-direction: column;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Nora's Hideout : The redesign has arrived!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Help" onclick="window.location='/index.html#About'"></button>
+                    <button aria-label="Close" onclick="window.location='/index.html'"></button>
+                </div>
+            </div>
 
-									I'm working on a Windows Forms app that will let me make new posts easier! It's called HideoutHelper, but the GitHub repository for it is still private, and I won't
-									make it public until its finished.<br><br>
+            <div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                <div style="flex: 0 1 auto;">
+                    <div class="container">
+                        <img src="/Resources/banner.png" class="disableFiltering" style="width: 100%;">
+                        <div class="field-row bottom-left" style="justify-content: flex-start;">
+                            <img id="bannerSprite" src="/Resources/flag.gif" class="disableFiltering headerSprite">
+                            <!-- <div id="bannerText" style="font-size: 300%;"><b>I'm back!</b></div> -->
+                            <div style="display: flex; flex-direction: column; justify-content: flex-start;">
+                                <div style="flex: 1 0 auto">
+                                    <div style="font-size: 300%"><b>The redesign has arrived!</b></div>
+                                </div>
+                                <div style="flex: 1 1 auto;">
+                                    <p style="margin: 0; text-align: left;">Sorry for the big delay, I had major flexbox issues :P</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset>
+                        <div class="field-row" style="justify-content: flex-start;">
+                            <button id="homeButton" onclick="GoToHomeTab('Home')">Home</button>
+                            <button id="postsButton" onclick="GoToHomeTab('Posts')">Posts</button>
+                            <button id="projectsButton" onclick="GoToHomeTab('Projects')">Projects</button>
+                            <button id="aboutButton" onclick="GoToHomeTab('About')">About</button>
+                            <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
+                                <button onclick="location.href='/BlitzDocs/index.htm'">Blitz3D TSS Documentation</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
 
-									<b>And yes, I know the scaling is fucked up when the browser is tiny.</b><br>
+                <!--Page Content-->
+                <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
+                    <!--Field Row To Contain Sidebar And Content-->
+                    <div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
+                        <!--Content-->
+                        <div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
+                            <div id="contentContainer" style="flex: 1 0 0; overflow-y: auto;">
+                                <p>
+                                    <b>Well, here it is!</b><br><br>
 
-									So don't even bother asking.<br><br>
+                                    The redesign I have been working on for months is finally done! I hope I never get to do all that flexbox bullshit ever again.<br><br>
 
-									Over all, this has been more of an announcement post than a blog post. But it's important sooooo I decided to add it here :)<br><br><br><br>
+                                    You may have noticed that the website now uses a Windows 2000 theme by default instead of the old Windows 98 one, and no, you are not hallucinating.<br>
+                                    I didn't like the Windows 98 color scheme for this specific website design, so I decided to slightly modify the colors of XP.css to fit 2000 more.<br>
+                                    I think it looks quite nice! Maybe one day I will implement 7.css and XP.css together to make some weird abomination, who knows?<br><br>
 
-									
+                                    Oh, yeah! I kinda forgot, sorry for the lack of activity in the blog recently! I've been so busy with mental health and redesig related issues that I couldn't
+                                    bring myself to write an interesting blog post.<br><br>
 
-									Oh and by the way, happy pride month!
-								</p>
-							</div>
-							<!--Comments or opinions?-->
-							<div style="flex: 0 1 auto; margin-top: 1%;">
-								<fieldset style="margin-bottom: 0;">
-									Any comments or opinions? Head over
-									<a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/redesign-release-comments">here</a>
-									and create a discussion!
-								</fieldset>
-							</div>
-						</div>
+                                    I'm working on a Windows Forms app that will let me make new posts easier! It's called HideoutHelper, but the GitHub repository for it is still private, and I won't
+                                    make it public until its finished.<br><br>
 
-						<!--Sidebar-->
-						<fieldset style="width: 14%; margin: 0;">
-							<legend>Sidebar</legend>
+                                    <b>And yes, I know the scaling is fucked up when the browser is tiny.</b><br>
 
-							<div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
-								<div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
-									<b><u>Information</u></b>
-									<ul>
-										<li><a href="https://www.cookielaw.org/the-cookie-law/" target="_blank">Why the cookie popup?</a></li>
-										<li><a href="https://github.com/AestheticalZ/aestheticalz.github.io" target="_blank">The site's repository.</a></li>
-									</ul>
-									<p>
-										<b>Warning!</b> This website does not look correct on really tiny window sizes.
-									</p>
+                                    So don't even bother asking.<br><br>
 
-									<b><u>Cookie Settings</u></b>
-									<p>
-										The website will always use the Windows 2000 theme if cookies are turned off.
-									</p>
-									<div class="field-row">
-										<button onclick="ConsentCookies(true)">Consent</button>
-										<button onclick="RejectCookies(true)">Reject</button>
-									</div>
+                                    Over all, this has been more of an announcement post than a blog post. But it's important sooooo I decided to add it here :)<br><br><br><br>
 
-									<br>
-									<b><u>Side Note</u></b>
-									<p>
-										Please do not open issues about the scaling being fucked up on small browser sizes, I already know about it.
-									</p>
-								</div>
-								<!--Social Media Buttons-->
-								<div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
-									<div style="margin-right: auto;">
-										<button onclick="ChangeTheme()">Change Theme</button>
-									</div>
-									<a href="/rss.xml">
-										<img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
-									</a>
-									<a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
-										<img border="0" src="/Resources/SocialMedia/github.png" width="16" height="16">
-									</a>
-									<a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
-										<img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
-									</a>
-									<a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
-										<img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
-									</a>
-								</div>
-							</div>
-						</fieldset>
-					</div>
 
-					<!--Old Web GIFs-->
-					<div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
-						<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
-							<img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
-						</a>
-						<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
-							<img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
-						</a>
-						<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
-							<img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
-						</a>
-						<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
-							<img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
-						</a>
-						<a href="https://theoldnet.com/aol" class="flexSizeOverride">
-							<img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
-						</a>
-					</div>
-				</div>
-			</div>
 
-			<div style="flex: 0 1 auto;">
-				<!--Message Box-->
-				<div class="bottomBar warning">
-					<img class="msgWarningSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
-					<p style="color: white;">
-						The redesign has changed the URL structure of posts. Please rewrite any external website that contains those URLs to use the new ones.
-					</p>
-				</div>
+                                    Oh and by the way, happy pride month!
+                                </p>
+                            </div>
+                            <!--Comments or opinions?-->
+                            <div style="flex: 0 1 auto; margin-top: 1%;">
+                                <fieldset style="margin-bottom: 0;">
+                                    Any comments or opinions? Head over
+                                    <a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/redesign-release-comments">here</a>
+                                    and create a discussion!
+                                </fieldset>
+                            </div>
+                        </div>
 
-				<!--Credits and copyright information at the bottom.-->
-				<div class="status-bar">
-					<p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
-						, released under <b>GPL v3.0</b></p>
-					<p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
-						originally by <b>botoxparty</b>.</p>
-					<p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
-					<p class="status-bar-field">Created: <b>2022-05-31 11:41PM</b></p>
-					<p class="status-bar-field">Edited: <b>Never</b></p>
-				</div>
-			</div>
-		</div>
+                        <!--Sidebar-->
+                        <fieldset style="width: 14%; margin: 0;">
+                            <legend>Sidebar</legend>
+
+                            <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
+                                <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
+                                    <b><u>Information</u></b>
+                                    <ul>
+                                        <li><a href="https://www.cookielaw.org/the-cookie-law/" target="_blank">Why the cookie popup?</a></li>
+                                        <li><a href="https://github.com/AestheticalZ/aestheticalz.github.io" target="_blank">The site's repository.</a></li>
+                                    </ul>
+                                    <p>
+                                        <b>Warning!</b> This website does not look correct on really tiny window sizes.
+                                    </p>
+
+                                    <b><u>Cookie Settings</u></b>
+                                    <p>
+                                        The website will always use the Windows 2000 theme if cookies are turned off.
+                                    </p>
+                                    <div class="field-row">
+                                        <button onclick="ConsentCookies(true)">Consent</button>
+                                        <button onclick="RejectCookies(true)">Reject</button>
+                                    </div>
+
+                                    <br>
+                                    <b><u>Side Note</u></b>
+                                    <p>
+                                        Please do not open issues about the scaling being fucked up on small browser sizes, I already know about it.
+                                    </p>
+                                </div>
+                                <!--Social Media Buttons-->
+                                <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
+                                    <div style="margin-right: auto;">
+                                        <button onclick="ChangeTheme()">Change Theme</button>
+                                    </div>
+                                    <a href="/rss.xml">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    </a>
+                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
+                                        <img border="0" src="/Resources/SocialMedia/github.png" width="16" height="16">
+                                    </a>
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                        <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                        <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
+                                    </a>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <!--Old Web GIFs-->
+                    <div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                        <a href="https://theoldnet.com/aol" class="flexSizeOverride">
+                            <img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="flex: 0 1 auto;">
+                <!--Message Box-->
+                <div class="bottomBar warning">
+                    <img class="msgWarningSprite disableFiltering" style="margin: 3px; margin-right: 10px;">
+                    <p style="color: white;">
+                        The redesign has changed the URL structure of posts. Please rewrite any external website that contains those URLs to use the new ones.
+                    </p>
+                </div>
+
+                <!--Credits and copyright information at the bottom.-->
+                <div class="status-bar">
+                    <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
+                        , released under <b>GPL v3.0</b></p>
+                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                        originally by <b>botoxparty</b>.</p>
+                    <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
+                    <p class="status-bar-field">Created: <b>2022-05-31 11:41PM</b></p>
+                    <p class="status-bar-field">Edited: <b>Never</b></p>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
