@@ -30,7 +30,7 @@
     </noscript>
 
     <div id="cookiesOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: 25%;">
+        <div class="window centeredDiv" style="width: auto;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
                 <div class="title-bar-controls">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="window-body">
-                <div class="marginBlocks" style="display: flex;">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
                     <div style="flex: 0 0">
                         <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
                     </div>
@@ -46,9 +46,8 @@
                         <p class="inlineCenteredText">
                             Heya!<br><br>
                             My website uses a single cookie (well, actually two since I need to keep track of this dialogue box) for themeing!<br><br>
-                            If you consent, I will only use that cookie to keep track of the website's look (Windows 98 or XP theme).<br>
-                            If you don't consent instead, the website will always display the Windows 98 theme (or maybe Windows XP if the
-                            prompt cookie expired before the theme cookie).
+                            If you consent, I will only use that cookie to keep track of the website's look (Windows 2000 or XP theme).<br><br>
+                            If you don't consent instead, the website will always display the Windows 2000 theme.
                         </p>
                     </div>
                 </div>
@@ -61,7 +60,7 @@
     </div>
     
     <div id="themeWarningOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: 25%;">
+        <div class="window centeredDiv" style="width: auto;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
                 <div class="title-bar-controls">
@@ -69,7 +68,7 @@
                 </div>
             </div>
             <div class="window-body">
-                <div class="marginBlocks" style="display: flex;">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
                     <div style="flex: 0 0">
                         <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
                     </div>
@@ -77,13 +76,41 @@
                         <p class="inlineCenteredText">
                             You need to consent to cookies before you can change your theme!<br>
                             You will be prompted for cookie consent every 2 months.<br><br>
-                            As a workaround, go <a href="https://developer.chrome.com/docs/devtools/storage/cookies/">here</a>, follow
-                            the guide and edit the "AcceptedCookies" value to "Yes".
+    
+                            Change your cookie settings in the website's sidebar.
                         </p>
                     </div>
                 </div>
                 <section class="field-row" style="justify-content: flex-end">
                     <button onclick="HideBox('themeWarningOverlay')">OK</button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="cookieSuccessOverlay" class="messageBox" hidden style="width: 100vw; height: 100vh;">
+        <div class="window centeredDiv" style="width: auto;">
+            <div class="title-bar">
+                <div class="title-bar-text" style="user-select: none;">Success!</div>
+                <div class="title-bar-controls">
+                    <button aria-label="Close" onclick="location.reload()"></button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
+                    <div style="flex: 0 0">
+                        <img class="msgInformationSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                    </div>
+                    <div style="flex: 1">
+                        <p class="inlineCenteredText">
+                            Set your cookie preferences successfully!<br><br>
+    
+                            The page will now reload.
+                        </p>
+                    </div>
+                </div>
+                <section class="field-row" style="justify-content: flex-end">
+                    <button onclick="location.reload()">OK</button>
                 </section>
             </div>
         </div>
