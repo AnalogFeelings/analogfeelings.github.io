@@ -34,7 +34,7 @@
     </noscript>
 
     <div id="cookiesOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
                 <div class="title-bar-controls">
@@ -64,7 +64,7 @@
     </div>
 
     <div id="themeWarningOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
                 <div class="title-bar-controls">
@@ -93,7 +93,7 @@
     </div>
 
     <div id="cookieSuccessOverlay" class="messageBox" hidden style="width: 100vw; height: 100vh;">
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Success!</div>
                 <div class="title-bar-controls">
@@ -371,9 +371,6 @@
                                     </p>
                                 </div>
                                 <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
-                                    <!-- <div style="margin-right: auto;">
-                                        <button onclick="ChangeTheme()">Change Theme</button>
-                                    </div> -->
                                     <select id="themeDropdown" style="margin-right: auto;" onchange="ChangeTheme()">
                                         <option>Windows 2000</option>
                                         <option>Windows XP</option>

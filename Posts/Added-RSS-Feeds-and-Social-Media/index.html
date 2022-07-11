@@ -30,7 +30,7 @@
     </noscript>
 
     <div id="cookiesOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Annoying Cookies Prompt</div>
                 <div class="title-bar-controls">
@@ -40,7 +40,7 @@
             <div class="window-body">
                 <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
                     <div style="flex: 0 0">
-                        <img class="msgQuestionSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                        <img class="msgQuestionSprite" style="vertical-align: middle; margin-right: 10px;">
                     </div>
                     <div style="flex: 1">
                         <p class="inlineCenteredText">
@@ -60,7 +60,7 @@
     </div>
     
     <div id="themeWarningOverlay" class="messageBox" hidden>
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Error!</div>
                 <div class="title-bar-controls">
@@ -70,7 +70,7 @@
             <div class="window-body">
                 <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
                     <div style="flex: 0 0">
-                        <img class="msgErrorSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                        <img class="msgErrorSprite" style="vertical-align: middle; margin-right: 10px;">
                     </div>
                     <div style="flex: 1">
                         <p class="inlineCenteredText">
@@ -89,7 +89,7 @@
     </div>
     
     <div id="cookieSuccessOverlay" class="messageBox" hidden style="width: 100vw; height: 100vh;">
-        <div class="window centeredDiv" style="width: auto;">
+        <div class="window centeredDiv" style="width: auto; position: absolute;">
             <div class="title-bar">
                 <div class="title-bar-text" style="user-select: none;">Success!</div>
                 <div class="title-bar-controls">
@@ -99,7 +99,7 @@
             <div class="window-body">
                 <div style="display: flex; margin-bottom: 15px; margin-top: 15px; margin-right: 20px;">
                     <div style="flex: 0 0">
-                        <img class="msgInformationSprite disableFiltering" style="vertical-align: middle; margin-right: 10px;">
+                        <img class="msgInformationSprite" style="vertical-align: middle; margin-right: 10px;">
                     </div>
                     <div style="flex: 1">
                         <p class="inlineCenteredText">
@@ -227,19 +227,21 @@
                                 </div>
                                 <!--Social Media Buttons-->
                                 <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
-                                    <div style="margin-right: auto;">
-                                        <button onclick="ChangeTheme()">Change Theme</button>
-                                    </div>
-                                    <a href="/rss.xml">
-                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    <select id="themeDropdown" style="margin-right: auto;" onchange="ChangeTheme()">
+                                        <option>Windows 2000</option>
+                                        <option>Windows XP</option>
+                                        <option>Windows 7</option>
+                                    </select>
+                                    <a href="/rss.xml" title="Subscribe to the RSS feed!" style="display: flex;">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png">
                                     </a>
-                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
+                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/github.png" width="16" height="16">
                                     </a>
-                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
                                     </a>
-                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
                                     </a>
                                 </div>
@@ -273,7 +275,7 @@
                 <div class="status-bar">
                     <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
                         , released under <b>GPL v3.0</b></p>
-                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP.css">XP.css</a>,
+                    <p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP-EX.css">XP.css</a>,
                         originally by <b>botoxparty</b>.</p>
                     <p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
                     <p class="status-bar-field">Created: <b>2022-01-04 10:30PM</b></p>
