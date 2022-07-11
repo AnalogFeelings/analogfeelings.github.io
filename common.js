@@ -1,6 +1,6 @@
 function CheckCss()
 {
-    let finalCss = "/Libraries/XP.css/dist/2000.css";
+    let finalCss = "/Libraries/XP-EX.css/dist/2000.css";
     let finalImages = "/sprites2000.css";
     let finalTheme = "2000";
     let themeIndex = 0;
@@ -15,14 +15,14 @@ function CheckCss()
         {
             case "xp":
                 finalTheme = "xp";
-                finalCss = "/Libraries/XP.css/dist/XP.css";
+                finalCss = "/Libraries/XP-EX.css/dist/XP.css";
                 finalImages = "/spritesXP.css";
                 themeIndex = 1;
 
                 break;
             case "7":
                 finalTheme = "7";
-                finalCss = "/Libraries/XP.css/dist/7.css";
+                finalCss = "/Libraries/XP-EX.css/dist/7.css";
                 finalImages = "/spritesXP.css";
                 themeIndex = 2;
 
