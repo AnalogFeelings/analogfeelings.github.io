@@ -12,6 +12,8 @@
     <link rel="icon" href="/Resources/favicon.png">
     <link rel="alternate" type="application/rss+xml" title="Subscribe to the blog feed!" href="/rss.xml" />
 
+    <meta charset="UTF-8">
+
     <meta name="og:title" content="Nora's Hideout">
     <meta name="og:url" content="https://aestheticalz.github.io/">
     <meta name="og:description" content="Hi! This is Nora's personal website! I post blogs and random stuff here. Hope you enjoy it!">
@@ -369,19 +371,24 @@
                                     </p>
                                 </div>
                                 <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
-                                    <div style="margin-right: auto;">
+                                    <!-- <div style="margin-right: auto;">
                                         <button onclick="ChangeTheme()">Change Theme</button>
-                                    </div>
-                                    <a href="/rss.xml">
-                                        <img border="0" src="/Resources/SocialMedia/rss.png" title="Subscribe to the RSS feed!">
+                                    </div> -->
+                                    <select id="themeDropdown" style="margin-right: auto;" onchange="ChangeTheme()">
+                                        <option>Windows 2000</option>
+                                        <option>Windows XP</option>
+                                        <option>Windows 7</option>
+                                    </select>
+                                    <a href="/rss.xml" title="Subscribe to the RSS feed!" style="display: flex;">
+                                        <img border="0" src="/Resources/SocialMedia/rss.png">
                                     </a>
-                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
+                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/github.png" width="16" height="16">
                                     </a>
-                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
                                     </a>
-                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!" style="display: flex;">
                                         <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
                                     </a>
                                 </div>

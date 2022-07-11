@@ -3,6 +3,8 @@ function CheckCss()
     let finalCss = "/Libraries/XP.css/dist/2000.css";
     let finalImages = "/sprites2000.css";
     let finalTheme = "2000";
+    let themeIndex = 0;
+
     let theyConsented = GetCookie("AcceptedCookies");
 
     if (theyConsented == "Yes")
@@ -15,6 +17,15 @@ function CheckCss()
                 finalTheme = "xp";
                 finalCss = "/Libraries/XP.css/dist/XP.css";
                 finalImages = "/spritesXP.css";
+                themeIndex = 1;
+
+                break;
+            case "7":
+                finalTheme = "7";
+                finalCss = "/Libraries/XP.css/dist/7.css";
+                finalImages = "/spritesXP.css";
+                themeIndex = 2;
+
                 break;
             default:
                 break;
@@ -34,6 +45,9 @@ function CheckCss()
     iconCssElement.href = finalImages;
 
     document.head.appendChild(iconCssElement);
+
+    let themeDropdown = document.getElementById("themeDropdown");
+    themeDropdown.selectedIndex = themeIndex;
 }
 
 function PromptCookies()
@@ -59,6 +73,9 @@ function ConsentCookies(fromButton = false)
     {
         case "xp":
             finalTheme = "xp";
+            break;
+        case "7":
+            finalTheme = "7";
             break;
         default:
             break;
@@ -105,16 +122,18 @@ function ChangeTheme()
         return;
     }
 
-    let cookieValue = GetCookie("theme");
+    let dropdown = document.getElementById("themeDropdown");
 
-    switch (cookieValue)
+    switch (dropdown.selectedIndex)
     {
-        case "xp":
+        case 0:
             SetCookie("theme", "2000", 365);
             break;
-        case "2000":
-        default:
+        case 1:
             SetCookie("theme", "xp", 365);
+            break;
+        case 2:
+            SetCookie("theme", "7", 365);
             break;
     }
 
