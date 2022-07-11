@@ -23,7 +23,7 @@ function CheckCss()
             case "7":
                 finalTheme = "7";
                 finalCss = "/Libraries/XP-EX.css/dist/7.css";
-                finalImages = "/spritesXP.css";
+                finalImages = "/sprites7.css";
                 themeIndex = 2;
 
                 break;

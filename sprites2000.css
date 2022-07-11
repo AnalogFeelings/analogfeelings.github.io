@@ -34,19 +34,27 @@ fieldset {
 }
 
 .msgErrorSprite {
-    content: url("/Resources/Icons/2000/MessageBox/error.png")
+    content: url("/Resources/Icons/2000/MessageBox/error.png");
+    width: 32px;
+    height: 32px;
 }
 
 .msgWarningSprite {
-    content: url("/Resources/Icons/2000/MessageBox/warning.png")
+    content: url("/Resources/Icons/2000/MessageBox/warning.png");
+    width: 32px;
+    height: 32px;
 }
 
 .msgQuestionSprite {
-    content: url("/Resources/Icons/2000/MessageBox/question.png")
+    content: url("/Resources/Icons/2000/MessageBox/question.png");
+    width: 32px;
+    height: 32px;
 }
 
 .msgInformationSprite {
-    content: url("/Resources/Icons/2000/MessageBox/information.png")
+    content: url("/Resources/Icons/2000/MessageBox/information.png");
+    width: 32px;
+    height: 32px;
 }
 
 .bottomBar {
