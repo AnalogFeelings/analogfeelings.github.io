@@ -15,18 +15,26 @@ body {
 
 .homeSprite {
     content: url("/Resources/Icons/XP/home.png");
+    width: 48px;
+    height: 48px;
 }
 
 .postsSprite {
     content: url("/Resources/Icons/XP/wordpad.png");
+    width: 48px;
+    height: 48px;
 }
 
 .projectsSprite {
     content: url("/Resources/Icons/XP/worlddirectories.png");
+    width: 48px;
+    height: 48px;
 }
 
 .aboutSprite {
     content: url("/Resources/Icons/XP/help.png");
+    width: 48px;
+    height: 48px;
 }
 
 .msgErrorSprite {

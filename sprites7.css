@@ -14,19 +14,27 @@ body {
 }
 
 .homeSprite {
-	content: url("/Resources/Icons/2000/home.png");
+	content: url("/Resources/Icons/7/home.png");
+	width: 48px;
+	height: 48px;
 }
 
 .postsSprite {
-	content: url("/Resources/Icons/2000/wordpad.png");
+	content: url("/Resources/Icons/7/wordpad.png");
+	width: 48px;
+	height: 48px;
 }
 
 .projectsSprite {
-	content: url("/Resources/Icons/2000/worlddirectories.png");
+	content: url("/Resources/Icons/7/worlddirectories.png");
+	width: 48px;
+	height: 48px;
 }
 
 .aboutSprite {
-	content: url("/Resources/Icons/2000/help.png");
+	content: url("/Resources/Icons/7/help.png");
+	width: 48px;
+	height: 48px;
 }
 
 .msgErrorSprite {

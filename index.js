@@ -64,7 +64,7 @@ function GetPosts()
 //I hate JavaScript please do not make me write javascript ever again.
 function CheckTabHash()
 {
-	let bannerSpriteDefaults = "disableFiltering headerSprite";
+	let bannerSpriteDefaults = "headerSprite";
 	let tab = window.location.hash.substring(1);
 
 	let homeButton = document.getElementById("homeButton");
