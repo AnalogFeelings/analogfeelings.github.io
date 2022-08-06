@@ -84,6 +84,7 @@ function CheckTabHash()
 	{
 		default:
 		case "Home":
+			document.title = "Home - Nora's Hideout";
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " homeSprite");
 			bannerText.innerHTML = `<b>Welcome To My Website!</b>`;
 
@@ -98,6 +99,7 @@ function CheckTabHash()
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "Posts":
+			document.title = "Posts - Nora's Hideout";
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " postsSprite");
 			bannerText.innerHTML = `<b>My Blog Posts!</b>`;
 
@@ -112,6 +114,7 @@ function CheckTabHash()
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "Projects":
+			document.title = "Projects - Nora's Hideout";
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " projectsSprite");
 			bannerText.innerHTML = `<b>My Open Source Projects!</b>`;
 
@@ -126,6 +129,7 @@ function CheckTabHash()
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "About":
+			document.title = "About - Nora's Hideout";
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " aboutSprite");
 			bannerText.innerHTML = `<b>About My Website!</b>`;
 
