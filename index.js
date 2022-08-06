@@ -67,6 +67,8 @@ function CheckTabHash()
 	let bannerSpriteDefaults = "headerSprite";
 	let tab = window.location.hash.substring(1);
 
+	let titleText = document.getElementById("TitleText");
+
 	let homeButton = document.getElementById("homeButton");
 	let postsButton = document.getElementById("postsButton");
 	let projectsButton = document.getElementById("projectsButton");
@@ -85,6 +87,8 @@ function CheckTabHash()
 		default:
 		case "Home":
 			document.title = "Home - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Home";
+
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " homeSprite");
 			bannerText.innerHTML = `<b>Welcome To My Website!</b>`;
 
@@ -100,6 +104,8 @@ function CheckTabHash()
 			break;
 		case "Posts":
 			document.title = "Posts - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Posts";
+
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " postsSprite");
 			bannerText.innerHTML = `<b>My Blog Posts!</b>`;
 
@@ -115,6 +121,8 @@ function CheckTabHash()
 			break;
 		case "Projects":
 			document.title = "Projects - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Projects";
+
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " projectsSprite");
 			bannerText.innerHTML = `<b>My Open Source Projects!</b>`;
 
@@ -130,6 +138,8 @@ function CheckTabHash()
 			break;
 		case "About":
 			document.title = "About - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - About";
+
 			bannerSprite.setAttribute("class", bannerSpriteDefaults + " aboutSprite");
 			bannerText.innerHTML = `<b>About My Website!</b>`;
 
