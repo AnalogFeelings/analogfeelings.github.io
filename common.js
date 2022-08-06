@@ -56,13 +56,13 @@ function PromptCookies()
     if (theyConsented == "Yes" || theyConsented == "No") return;
 
     let cookiesOverlay = document.getElementById("cookiesOverlay");
-    cookiesOverlay.removeAttribute("style");
+    cookiesOverlay.removeAttribute("hidden");
 }
 
 function ConsentCookies(fromButton = false)
 {
     let cookiesOverlay = document.getElementById("cookiesOverlay");
-    cookiesOverlay.style.display = "none";
+    cookiesOverlay.setAttribute("hidden", true);
 
     SetCookie("AcceptedCookies", "Yes", 60, true);
 
