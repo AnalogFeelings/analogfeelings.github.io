@@ -2,17 +2,23 @@ window.onload = CheckCss;
 
 function CheckCss()
 {
-    var cookieValue = GetCookie("theme");
+    let theyConsented = GetCookie("AcceptedCookies");
 
-    switch(cookieValue)
+    if(theyConsented == "Yes")
     {
-        case "xp":
-            document.getElementById("98style").setAttribute("style", "visibility: hidden;");
-            document.getElementById("XPstyle").removeAttribute("style");
-            break;
-        default:
-        case "2000":
-            break;  
+        var cookieValue = GetCookie("theme");
+
+        switch (cookieValue)
+        {
+            case "7":
+            case "xp":
+                document.getElementById("98style").setAttribute("style", "visibility: hidden;");
+                document.getElementById("XPstyle").removeAttribute("style");
+                break;
+            default:
+            case "2000":
+                break;
+        }
     }
 }
 
