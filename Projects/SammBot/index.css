@@ -59,11 +59,13 @@ body {
 	background-position: center center;
 }
 
+.acrylicSurface {
+	backdrop-filter: blur(30px) saturate(125%);
+	background-color: rgba(128, 128, 128, 0.1);
+}
+
 .overlayDiv {
 	height: 100%;
-
-	backdrop-filter: blur(30px);
-	background-color: rgba(128, 128, 128, 0.1);
 
 	display: flex;
 	justify-content: center;
