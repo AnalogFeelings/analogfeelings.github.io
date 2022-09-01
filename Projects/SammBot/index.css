@@ -1,25 +1,3 @@
-@font-face {
-	font-family: JetBrains-Mono;
-	src: url(https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Regular.woff2);
-}
-
-@font-face {
-	font-family: JetBrains-Mono-Bold;
-	src: url(https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Bold.woff2);
-}
-
-body {
-	padding: 0;
-	margin: 0;
-
-	font-family: 'JetBrains-Mono';
-	color: white;
-
-	background-color: black;
-
-	min-width: 800px;
-}
-
 .field-row {
 	display: flex;
 	align-items: center
@@ -37,16 +15,37 @@ body {
 	image-rendering: pixelated;
 }
 
-.headerText {
+.noSelect {
+	user-select: none;
+}
+
+.boldText {
 	font-family: 'JetBrains-Mono-Bold';
+}
+
+.thinText {
+	font-family: 'JetBrains-Mono-Thin';
+}
+
+body {
+	padding: 0;
+	margin: 0;
+
+	font-family: 'JetBrains-Mono';
+	color: white;
+
+	background-color: black;
+
+	min-width: 800px;
+}
+
+.headerText {
 	font-size: 8em;
 
 	margin: 0;
 }
 
 .subHeaderText {
-	font-family: 'JetBrains-Mono';
-
 	margin: 0;
 }
 
@@ -63,8 +62,8 @@ body {
 .overlayDiv {
 	height: 100%;
 
+	backdrop-filter: blur(30px);
 	background-color: rgba(128, 128, 128, 0.1);
-	backdrop-filter: blur(32px);
 
 	display: flex;
 	justify-content: center;
@@ -108,6 +107,8 @@ body {
 
 	padding-left: 20px;
 	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 
 	display: flex;
 	flex: 0 1 auto;
