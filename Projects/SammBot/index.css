@@ -1,0 +1,116 @@
+@font-face {
+	font-family: JetBrains-Mono;
+	src: url(https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Regular.woff2);
+}
+
+@font-face {
+	font-family: JetBrains-Mono-Bold;
+	src: url(https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Bold.woff2);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+
+	font-family: 'JetBrains-Mono';
+	color: white;
+
+	background-color: black;
+
+	min-width: 800px;
+}
+
+.field-row {
+	display: flex;
+	align-items: center
+}
+
+.field-row>*+* {
+	margin-left: 6px
+}
+
+[class^=field-row]+[class^=field-row] {
+	margin-top: 6px
+}
+
+.filterDisabled {
+	image-rendering: pixelated;
+}
+
+.headerText {
+	font-family: 'JetBrains-Mono-Bold';
+	font-size: 8em;
+
+	margin: 0;
+}
+
+.subHeaderText {
+	font-family: 'JetBrains-Mono';
+
+	margin: 0;
+}
+
+.headerDiv {
+	width: 100%;
+	height: 100vh;
+
+	min-height: 640px;
+
+	background-image: url("Resources/backdrop.jpg");
+	background-position: center center;
+}
+
+.overlayDiv {
+	height: 100%;
+
+	background-color: rgba(128, 128, 128, 0.1);
+	backdrop-filter: blur(32px);
+
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.separatorDiv {
+	background-color: #291c28;
+
+	height: 10px;
+	min-height: 10px;
+}
+
+.thinSeparatorDiv {
+	background-color: #291c28;
+
+	height: 5px;
+	min-height: 5px;
+}
+
+.horizontalCenter {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.bodyDiv {
+	background-color: #412c40;
+}
+
+.bodyContent {
+	width: 85%;
+}
+
+.footerDiv {
+	background-color: #362535;
+
+	padding-left: 20px;
+	padding-right: 20px;
+
+	display: flex;
+	flex: 0 1 auto;
+	justify-content: right;
+	align-items: center;
+}
