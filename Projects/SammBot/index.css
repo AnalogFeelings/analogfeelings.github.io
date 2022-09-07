@@ -91,17 +91,33 @@ p {
 
 	display: flex;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 
 	height: 25%;
 	min-height: 25%;
 
 	position: sticky;
 	top: 0;
+
+	transition: box-shadow 0.3s ease-in-out;
 }
 
 .navigationBarDiv.sticky {
 	box-shadow: 0 5px 5px 0 rgb(0 0 0 / 49%);
+}
+
+.navigationBarLogo {
+	margin-right: auto;
+	margin-left: 10px;
+	display: flex;
+
+	opacity: 0;
+
+	transition: opacity 0.5s ease-in-out;
+}
+
+.navigationBarLogo.shown {
+	opacity: 1;
 }
 
 .navigationBarButton > button {
