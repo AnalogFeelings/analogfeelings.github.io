@@ -19,14 +19,6 @@
 	user-select: none;
 }
 
-.boldText {
-	font-family: 'JetBrains-Mono-Bold';
-}
-
-.thinText {
-	font-family: 'JetBrains-Mono-Thin';
-}
-
 body {
 	padding: 0;
 	margin: 0;
@@ -37,21 +29,6 @@ body {
 	background-color: black;
 
 	min-width: 800px;
-}
-
-p {
-	margin-top: 12px;
-	margin-bottom: 12px;
-}
-
-.headerText {
-	font-size: 8em;
-
-	margin: 0;
-}
-
-.subHeaderText {
-	margin: 0;
 }
 
 .headerDiv {
@@ -86,6 +63,33 @@ img.emoji {
 	align-content: center;
 	flex-direction: column;
 	align-items: center;
+}
+
+.overlayDiv > img {
+	image-rendering: pixelated;
+
+	user-select: none;
+
+	width: 128px;
+	height: 128px;
+}
+
+.overlayDiv > h1 {
+	font-size: 8em;
+	font-family: "JetBrains-Mono-Bold";
+
+	margin: 0;
+
+	user-select: none;
+}
+
+.overlayDiv > h2 {
+	font-size: 1em;
+	font-family: "JetBrains-Mono-Bold";
+
+	margin: 0;
+
+	user-select: none;
 }
 
 .separatorDiv {
@@ -130,11 +134,31 @@ img.emoji {
 	transition: opacity 0.5s ease-in-out;
 }
 
+.navigationBarLogo > img {
+	margin-right: 15px;
+
+	width: 64px;
+	height: 64px;
+}
+
+.navigationBarLogo > p {
+	font-size: 1.5em;
+	font-family: "JetBrains-Mono-Bold";
+
+	margin: 0;
+}
+
 .navigationBarLogo.shown {
 	opacity: 1;
 }
 
-.navigationBarButton > button {
+.navigationBarButtons {
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.navigationBarButtons > button {
 	height: 85px;
 	min-height: 85px;
 
@@ -151,7 +175,7 @@ img.emoji {
 	border: none;
 }
 
-.navigationBarButton > button:hover {
+.navigationBarButtons > button:hover {
 	background-color: #4f364d;
 }
 
@@ -201,6 +225,19 @@ img.emoji {
 	flex: 0 1 auto;
 	justify-content: right;
 	align-items: center;
+}
+
+.footerSocialMediaIcon {
+	user-select: none;
+
+	display: flex;
+}
+
+.footerSocialMediaIcon > img {
+	border: 0;
+
+	width: 32px;
+	height: 32px;
 }
 
 .featuresDiv {

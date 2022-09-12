@@ -12,3 +12,11 @@
 	font-family: JetBrains-Mono-Thin;
 	src: url(https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/fonts/webfonts/JetBrainsMono-Thin.woff2);
 }
+
+.boldText {
+	font-family: 'JetBrains-Mono-Bold';
+}
+
+.thinText {
+	font-family: 'JetBrains-Mono-Thin';
+}
