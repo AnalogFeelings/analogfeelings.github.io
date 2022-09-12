@@ -96,7 +96,7 @@ img.emoji {
 }
 
 .navigationBarDiv {
-	background-color: #291c28;
+	background-color: #362535;
 
 	display: flex;
 	justify-content: center;
@@ -105,14 +105,19 @@ img.emoji {
 	height: 25%;
 	min-height: 25%;
 
+	border-bottom: 5px solid;
+	border-color: #362535;
+
 	position: sticky;
 	top: 0;
 
-	transition: box-shadow 0.3s ease-in-out;
+	transition: box-shadow 0.3s ease-in-out, border-bottom-color 0.3s ease-in-out;
 }
 
 .navigationBarDiv.sticky {
-	box-shadow: 0 5px 5px 0 rgb(0 0 0 / 49%);
+	box-shadow: 0 0 10px 5px rgb(0 0 0 / 60%);
+
+	border-color: #291c28;
 }
 
 .navigationBarLogo {
@@ -140,7 +145,7 @@ img.emoji {
 	font-size: 1.1em;
 
 	color: white;
-	background-color: #291c28;
+	background-color: rgba(0, 0, 0, 0);
 
 	transition-duration: 0.3s;
 	border: none;
@@ -148,13 +153,6 @@ img.emoji {
 
 .navigationBarButton > button:hover {
 	background-color: #4f364d;
-}
-
-.thinSeparatorDiv {
-	background-color: #291c28;
-
-	height: 5px;
-	min-height: 5px;
 }
 
 .horizontalCenter {
@@ -195,6 +193,9 @@ img.emoji {
 	padding-right: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+
+	border-top: 5px solid;
+	border-color: #291c28;
 
 	display: flex;
 	flex: 0 1 auto;
