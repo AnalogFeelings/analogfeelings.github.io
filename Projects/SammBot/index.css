@@ -69,6 +69,15 @@ p {
 	background-color: rgba(128, 128, 128, 0.1);
 }
 
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+
+	user-select: none;
+}
+
 .overlayDiv {
 	height: 100%;
 
@@ -180,22 +189,45 @@ p {
 	align-items: center;
 }
 
-.headlineClass {
+.featuresDiv {
 	display: flex;
-	width: 100%;
+
 	justify-content: center;
-	align-items: center;
+	align-items: stretch;
+	align-content: center;
+
+	flex-wrap: wrap;
+	gap: 12px;
+
+	width: 100%;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.featuresDiv > div {
+	display: flex;
+	flex-direction: column;
 	text-align: center;
+
+	background-color: #4f364d;
+
+	max-width: 32%;
+	width: 32%;
+
+	border-radius: 8px;
+	border-color: #755072;
+	border-width: 2px;
+	border-style: solid;
+
+	box-shadow: 0 5px 5px 0 rgb(0 0 0 / 35%);
 }
 
-.headlineClass:before, .headlineClass:after {
-	content: '';
-	border-top: 2px solid;
-	margin: 0 20px 0 0;
-	flex: 1 0 20px;
-	color: rgb(117, 80, 114);
+.featuresDiv > div > h1 {
+	font-size: 4em;
+	margin: 0;
 }
 
-.headlineClass:after {
-	margin: 0 0 0 20px;
+.featuresDiv > div > h2 {
+	margin: 0;
 }

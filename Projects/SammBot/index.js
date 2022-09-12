@@ -1,4 +1,13 @@
-window.onload = InitBanner;
+window.onload = InitPage;
+
+function InitPage()
+{
+    twemoji.parse(document.body, {
+        folder: "svg",
+        ext: ".svg"
+    });
+    InitBanner();
+}
 
 function InitBanner()
 {
