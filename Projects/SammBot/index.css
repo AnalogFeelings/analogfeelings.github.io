@@ -15,10 +15,6 @@
 	image-rendering: pixelated;
 }
 
-.noSelect {
-	user-select: none;
-}
-
 body {
 	padding: 0;
 	margin: 0;
@@ -42,7 +38,9 @@ body {
 }
 
 .acrylicSurface {
+	-webkit-backdrop-filter: blur(30px) saturate(125%);
 	backdrop-filter: blur(30px) saturate(125%);
+
 	background-color: rgba(128, 128, 128, 0.1);
 }
 
@@ -52,6 +50,7 @@ img.emoji {
 	margin: 0 .05em 0 .1em;
 	vertical-align: -0.1em;
 
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -68,6 +67,7 @@ img.emoji {
 .overlayDiv > img {
 	image-rendering: pixelated;
 
+	-webkit-user-select: none;
 	user-select: none;
 
 	width: 128px;
@@ -80,6 +80,7 @@ img.emoji {
 
 	margin: 0;
 
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -89,6 +90,7 @@ img.emoji {
 
 	margin: 0;
 
+	-webkit-user-select: none;
 	user-select: none;
 }
 
@@ -228,6 +230,7 @@ img.emoji {
 }
 
 .footerSocialMediaIcon {
+	-webkit-user-select: none;
 	user-select: none;
 
 	display: flex;
