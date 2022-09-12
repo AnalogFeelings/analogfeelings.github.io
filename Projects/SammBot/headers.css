@@ -9,9 +9,13 @@
 .headlineClassSingle:before, .headlineClassSingle:after {
     content: '';
     border-top: 2px solid;
-    margin: 0 20px 0 20px;
+    margin: 0 20px 0 0;
     flex: 1 0 20px;
     color: rgb(117, 80, 114);
+}
+
+.headlineClassSingle:after {
+    margin: 0 0 0 20px;
 }
 
 .headlineClassDouble {
