@@ -14,8 +14,9 @@ function InitPage()
 function OpenBurger()
 {
     let burgerMenu = document.getElementById("burgerMenu");
+    let isShown = burgerMenu.classList.contains("shown");
 
-    burgerMenu.classList.toggle("shown", !burgerMenu.classList.contains("shown"));
+    burgerMenu.classList.toggle("shown", !isShown);
 }
 
 function HandleClick(e)
