@@ -91,7 +91,7 @@ body {
 
     display: flex;
     flex: 0 1 auto;
-    justify-content: right;
+    justify-content: flex-start;
     align-items: center;
 }
 
