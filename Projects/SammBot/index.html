@@ -6,9 +6,20 @@
 
 		<title>Samm-Bot</title>
 
-		<link rel="stylesheet" href="fonts.css">
-		<link rel="stylesheet" href="headers.css">
-		<link rel="stylesheet" href="index.css">
+		<!--Contains styling shared across platforms.!-->
+		<link rel="stylesheet" href="Stylesheets/Common/framework.css">
+		<link rel="stylesheet" href="Stylesheets/Common/headers.css">
+		<link rel="stylesheet" href="Stylesheets/Common/navigation.css">
+		<link rel="stylesheet" href="Stylesheets/Common/misc.css">
+
+		<!--Contains styling specifically designed for mobile, this is the default styling.!-->
+		<link rel="stylesheet" href="Stylesheets/Mobile/navigation.css">
+		<link rel="stylesheet" href="Stylesheets/Mobile/index.css">
+
+		<!--Contains styling overrides for computers.!-->
+		<link rel="stylesheet" href="Stylesheets/Computer/navigation.css">
+		<link rel="stylesheet" href="Stylesheets/Computer/index.css">
+
 		<link rel="icon" href="Resources/sammicon.png">
 
 		<!--Uses twemoji by Twitter https://twemoji.twitter.com/!-->
@@ -26,29 +37,49 @@
 
 	<body>
 		<div class="headerDiv">
-			<div class="overlayDiv acrylicSurface">
+			<div class="headerOverlayDiv acrylicSurface">
 				<img alt="" src="Resources/sammicon.png">
 				<h1>Samm-Bot</h1>
 				<h2>A simple Discord bot packed with a couple of nice features.</h2>
 			</div>
 		</div>
 
-		<div id="stickyBanner" class="navigationBarDiv field-row">
-			<div id="bannerLogo" class="navigationBarLogo field-row">
-				<img alt="" src="Resources/sammicon.png">
-				<p>Samm-Bot</p>
+		<div id="stickyBanner" class="stickyBar">
+			<div id="navBar" class="navigationBarDiv field-row">
+				<div id="bannerLogo" class="navigationBarLogo field-row">
+					<img alt="" src="Resources/sammicon.png">
+					<p>Samm-Bot</p>
+				</div>
+				<div class="navigationBarButtons field-row">
+					<button type="button" onclick="window.location.hash='About'">
+						ABOUT
+					</button>
+					<button type="button" onclick="window.location.hash='Features'">
+						FEATURES
+					</button>
+					<button type="button" onclick="window.location.hash='Install'">
+						INSTALL
+					</button>
+					<button type="button" onclick="window.location.hash='Documentation'">
+						DOCUMENTATION
+					</button>
+				</div>
+				<div id="burgerButton" class="navigationBarBurger">
+					<button type="button" onclick="OpenBurger()"></button>
+				</div>
 			</div>
-			<div class="navigationBarButtons field-row">
-				<button type="button" onclick="window.location.hash='About'">
+
+			<div id="burgerMenu" class="navigationBarBurgerMenu">
+				<button type="button" onclick="GoToTag('About')">
 					ABOUT
 				</button>
-				<button type="button" onclick="window.location.hash='Features'">
+				<button type="button" onclick="GoToTag('Features')">
 					FEATURES
 				</button>
-				<button type="button" onclick="window.location.hash='Install'">
+				<button type="button" onclick="GoToTag('Install')">
 					INSTALL
 				</button>
-				<button type="button" onclick="window.location.hash='Documentation'">
+				<button type="button" onclick="GoToTag('Documentation')">
 					DOCUMENTATION
 				</button>
 			</div>
@@ -249,7 +280,7 @@
 		</div>
 
 		<div class="footerDiv field-row">
-			<p style="margin-right: auto;">
+			<p class="footerText">
 				<span class="boldText">Samm-Bot</span> and this website are licensed under the GPL v3.0 license.
 				<br>
 				<span class="thinText" style="color: gray;">Website font is <span class="boldText">JetBrains Mono</span>, available under the SIL Open Font License 1.1.</span>

@@ -7,11 +7,41 @@ function InitPage()
         ext: ".svg"
     });
     InitBanner();
+
+    window.addEventListener("mouseup", (e) => HandleClick(e));
 }
+
+function OpenBurger()
+{
+    let burgerMenu = document.getElementById("burgerMenu");
+
+    burgerMenu.classList.toggle("shown", !burgerMenu.classList.contains("shown"));
+}
+
+function HandleClick(e)
+{
+    let burgerMenu = document.getElementById("burgerMenu");
+    let burgerButton = document.getElementById("burgerButton");
+
+    if (e.target !== burgerButton && e.target !== burgerMenu)
+    {
+        burgerMenu.classList.toggle("shown", false);
+    }
+}
+function GoToTag(tag)
+{
+    let burgerMenu = document.getElementById("burgerMenu");
+
+    window.location.hash = tag;
+
+    burgerMenu.classList.toggle("shown", false);
+}
+
 
 function InitBanner()
 {
     let bannerLogoElement = document.getElementById("bannerLogo");
+    let navBarElement = document.querySelector('[id="navBar"]');
     let stickyBannerElement = document.querySelector('[id="stickyBanner"]');
     let stickyObserver = new IntersectionObserver(([e]) => BannerCallback(e),
         {
@@ -27,6 +57,7 @@ function InitBanner()
 
         bannerLogoElement.classList.toggle("shown", isIntersecting);
 
-        e.target.classList.toggle("sticky", isIntersecting);
+        stickyBannerElement.classList.toggle("sticky", isIntersecting);
+        navBarElement.classList.toggle("sticky", isIntersecting);
     }
 }
