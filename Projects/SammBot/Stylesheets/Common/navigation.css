@@ -34,6 +34,9 @@
     opacity: 0;
 
     transition: opacity 0.5s ease-in-out;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .navigationBarLogo > p {
@@ -51,6 +54,9 @@
     margin-top: 0;
     margin-left: 0;
     margin-right: 10px;
+
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .navigationBarButtons > button {
