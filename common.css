@@ -6,10 +6,20 @@ pre {
 	margin: 0px;
 }
 
+.headerBannerImage {
+	width: 100%;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
 .headerSprite {
 	vertical-align: middle;
 	margin-right: 10px;
 	width: 48px;
+
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .centeredDiv {
@@ -17,6 +27,28 @@ pre {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.bannerText {
+	font-size: 3em;
+	height: 100%;
+}
+
+.sidebarHeader {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.sidebarHeader:after {
+	content: '';
+	border-top: 2px solid;
+	color: gray;
+	flex: 1 0 8px;
+
+	margin: 0 0 0 8px;
 }
 
 .error {
@@ -76,4 +108,32 @@ pre {
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0);
 	z-index: 100;
+}
+
+.oldWebRow {
+	justify-content: flex-start;
+	flex: 0 1 auto;
+}
+
+.oldWebRow > a {
+	min-width: 0;
+	min-height: 0;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.sideBarBottom {
+	width: 100%;
+	min-width: 100%;
+
+	justify-content: right;
+	flex: 0 1 auto;
+}
+
+.sideBarBottom > a {
+	display: flex;
+
+	-webkit-user-select: none;
+	user-select: none;
 }

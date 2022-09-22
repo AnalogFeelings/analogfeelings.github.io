@@ -134,10 +134,10 @@
             <div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
                 <div style="flex: 0 1 auto;">
                     <div class="container">
-                        <img src="./Resources/banner.png" class="disableFiltering" style="width: 100%;">
+                        <img src="./Resources/banner.png" class="headerBannerImage disableFiltering">
                         <div class="field-row bottom-left" style="justify-content: flex-start;">
                             <img id="bannerSprite" class="headerSprite">
-                            <div id="bannerText" style="font-size: 300%;"><b>Home Page</b></div>
+                            <div id="bannerText" class="bannerText"><b>Home Page</b></div>
                         </div>
                     </div>
                     <fieldset>
@@ -368,7 +368,7 @@
 
                             <div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
                                 <div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
-                                    <b><u>Information</u></b>
+                                    <div class="sidebarHeader"><b>Information</b></div>
                                     <ul>
                                         <li><a href="https://www.cookielaw.org/the-cookie-law/" target="_blank">Why the cookie popup?</a></li>
                                         <li><a href="https://github.com/AestheticalZ/aestheticalz.github.io" target="_blank">The site's repository.</a></li>
@@ -376,8 +376,8 @@
                                     <p>
                                         <b>Warning!</b> This website does not look correct on really tiny window sizes.
                                     </p>
-                                    
-                                    <b><u>Cookie Settings</u></b>
+
+                                    <div class="sidebarHeader"><b>Cookie Settings</b></div>
                                     <p>
                                         The website will always use the Windows 2000 theme if cookies are turned off.
                                     </p>
@@ -387,27 +387,27 @@
                                     </div>
 
                                     <br>
-                                    <b><u>Side Note</u></b>
+                                    <div class="sidebarHeader"><b>Side Note</b></div>
                                     <p>
                                         I <i>think</i> I fixed the scaling? Not sure.<br>Time will tell!
                                     </p>
                                 </div>
-                                <div class="field-row" style="min-width: 100%; width: 100%; justify-content: right; flex: 0 1 auto;">
+                                <div class="sideBarBottom field-row">
                                     <select id="themeDropdown" style="margin-right: auto;" onchange="ChangeTheme()">
                                         <option>Windows 2000</option>
                                         <option>Windows XP</option>
                                         <option>Windows 7</option>
                                     </select>
-                                    <a href="/rss.xml" title="Subscribe to the RSS feed!" style="display: flex;">
+                                    <a href="/rss.xml" title="Subscribe to the RSS feed!">
                                         <img border="0" src="/Resources/SocialMedia/rss.png">
                                     </a>
-                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!" style="display: flex;">
+                                    <a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
                                         <img border="0" src="/Resources/SocialMedia/github.png" width="16" height="16">
                                     </a>
-                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!" style="display: flex;">
+                                    <a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
                                         <img border="0" src="/Resources/SocialMedia/twitter.webp" width="16" height="16">
                                     </a>
-                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!" style="display: flex;">
+                                    <a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
                                         <img border="0" src="/Resources/SocialMedia/youtube.png" width="16" height="16">
                                     </a>
                                 </div>
@@ -416,20 +416,20 @@
                     </div>
 
                     <!--Old Web GIFs-->
-                    <div class="field-row" style="justify-content: flex-start; flex: 0 1 auto;">
-                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com" class="flexSizeOverride">
+                    <div class="oldWebRow field-row">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com">
                             <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
                         </a>
-                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm" class="flexSizeOverride">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm">
                             <img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
                         </a>
-                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/" class="flexSizeOverride">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/">
                             <img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
                         </a>
-                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com" class="flexSizeOverride">
+                        <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com">
                             <img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
                         </a>
-                        <a href="https://theoldnet.com/aol" class="flexSizeOverride">
+                        <a href="https://theoldnet.com/aol">
                             <img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
                         </a>
                     </div>
