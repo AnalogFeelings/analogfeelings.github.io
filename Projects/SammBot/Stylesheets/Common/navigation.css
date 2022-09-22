@@ -74,6 +74,10 @@
     background-color: #4f364d;
 }
 
+.navigationBarButtons > button:active {
+    background-color: #5c3d58;
+}
+
 /*NAVBAR BURGER MENU ICON*/
 .navigationBarBurger {
     margin: 0;
@@ -88,7 +92,7 @@
     background-color: transparent;
     background-position: center center;
 
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 
     padding: 0;
     border: none;
@@ -96,6 +100,14 @@
 
 .navigationBarBurger > button:hover {
     background-color: #4f364d;
+}
+
+.navigationBarBurger > button:focus {
+    background-color: #3d293b;
+}
+
+.navigationBarBurger > button:active {
+    background-color: #5c3d58;
 }
 
 /*NAVBAR BURGER MENU CONTENTS*/
