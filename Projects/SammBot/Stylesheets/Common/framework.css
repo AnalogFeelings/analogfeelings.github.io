@@ -77,6 +77,9 @@ body {
     -webkit-backdrop-filter: blur(30px) saturate(125%);
     backdrop-filter: blur(30px) saturate(125%);
 
+    /*I heard this fixes the filters being extremely slow on mobile.*/
+    transform: translate3d(0, 0, 0);
+
     background-color: rgba(128, 128, 128, 0.1);
 }
 
