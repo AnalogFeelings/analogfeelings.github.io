@@ -15,26 +15,32 @@ body {
 
 .homeSprite {
 	content: url("/Resources/Icons/7/home.png");
-	width: 48px;
-	height: 48px;
+	width: 96px;
+	height: 96px;
 }
 
 .postsSprite {
 	content: url("/Resources/Icons/7/wordpad.png");
-	width: 48px;
-	height: 48px;
+	width: 96px;
+	height: 96px;
 }
 
-.projectsSprite {
+.repositoriesSprite {
 	content: url("/Resources/Icons/7/worlddirectories.png");
-	width: 48px;
-	height: 48px;
+	width: 96px;
+	height: 96px;
+}
+
+.sitesSprite {
+	content: url("/Resources/Icons/7/xml.png");
+	width: 96px;
+	height: 96px;
 }
 
 .aboutSprite {
 	content: url("/Resources/Icons/7/help.png");
-	width: 48px;
-	height: 48px;
+	width: 96px;
+	height: 96px;
 }
 
 .msgErrorSprite {

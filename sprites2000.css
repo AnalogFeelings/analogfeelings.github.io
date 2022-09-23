@@ -20,29 +20,36 @@ fieldset {
 .homeSprite {
     content: url("/Resources/Icons/2000/home.png");
     image-rendering: pixelated;
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
 }
 
 .postsSprite {
     content: url("/Resources/Icons/2000/wordpad.png");
     image-rendering: pixelated;
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
 }
 
-.projectsSprite {
+.repositoriesSprite {
     content: url("/Resources/Icons/2000/worlddirectories.png");
     image-rendering: pixelated;
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
+}
+
+.sitesSprite {
+    content: url("/Resources/Icons/2000/xml.png");
+    image-rendering: pixelated;
+    width: 96px;
+    height: 96px;
 }
 
 .aboutSprite {
     content: url("/Resources/Icons/2000/help.png");
     image-rendering: pixelated;
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
 }
 
 .msgErrorSprite {

@@ -135,7 +135,7 @@
                 <div style="flex: 0 1 auto;">
                     <div class="container">
                         <img src="./Resources/banner.png" class="headerBannerImage disableFiltering">
-                        <div class="field-row bottom-left" style="justify-content: flex-start;">
+                        <div class="field-row bottom-left" style="justify-content: flex-start; flex-direction: column; align-items: flex-start; row-gap: 6px;">
                             <img id="bannerSprite" class="headerSprite">
                             <div id="bannerText" class="bannerText"><b>Home Page</b></div>
                         </div>
@@ -144,7 +144,8 @@
                         <div class="field-row" style="justify-content: flex-start;">
                             <button id="homeButton" class="active" onclick="ChangeTab('Home')">Home</button>
                             <button id="postsButton" onclick="ChangeTab('Posts')">Posts</button>
-                            <button id="projectsButton" onclick="ChangeTab('Projects')">Projects</button>
+                            <button id="repositoriesButton" onclick="ChangeTab('Repositories')">Repositories</button>
+                            <button id="sitesButton" onclick="ChangeTab('Sites')">Sites</button>
                             <button id="aboutButton" onclick="ChangeTab('About')">About</button>
                             <div class="field-row" style="margin-left: auto; margin-bottom: auto;">
                                 <button onclick="location.href='/BlitzDocs/index.htm'">Blitz3D TSS Documentation</button>
@@ -225,8 +226,8 @@
                                     </fieldset>
                                 </div>
 
-                                <!--Projects Tab-->
-                                <div id="Projects" style="flex: 1; overflow-y: auto;" hidden>
+                                <!--Repositories Tab-->
+                                <div id="Repositories" style="flex: 1; overflow-y: auto;" hidden>
                                     <ul class="tree-view">
                                         <li>
                                             <details open>
@@ -296,7 +297,7 @@
                                             <details open>
                                                 <summary>Discord Bots</summary>
                                                 <ul>
-                                                    <li><u><a href="/Projects/SammBot/index.html">Samm-Bot</a></u> :
+                                                    <li><u><a href="https://github.com/AestheticalZ/SammBot">Samm-Bot</a></u> :
                                                         SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.</li>
                                                     <li>All the other bots are private!</li>
                                                 </ul>
@@ -313,6 +314,11 @@
                                             </details>
                                         </li>
                                     </ul>
+                                </div>
+
+                                <!--Sites Tab-->
+                                <div id="Sites" style="flex: 1; overflow-y: auto;" hidden>
+
                                 </div>
 
                                 <!--About Tab-->

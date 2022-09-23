@@ -71,12 +71,14 @@ function CheckTabHash()
 
 	let homeButton = document.getElementById("homeButton");
 	let postsButton = document.getElementById("postsButton");
-	let projectsButton = document.getElementById("projectsButton");
+	let repositoriesButton = document.getElementById("repositoriesButton");
+	let sitesButton = document.getElementById("sitesButton");
 	let aboutButton = document.getElementById("aboutButton");
 
 	let homePanel = document.getElementById("Home");
 	let postsPanel = document.getElementById("Posts");
-	let projectsPanel = document.getElementById("Projects");
+	let repositoriesPanel = document.getElementById("Repositories");
+	let sitesPanel = document.getElementById("Sites");
 	let aboutPanel = document.getElementById("About");
 
 	let bannerText = document.getElementById("bannerText");
@@ -93,13 +95,15 @@ function CheckTabHash()
 			bannerText.innerHTML = `<b>Welcome To My Website!</b>`;
 
 			homeButton.setAttribute("class", "active");
-			projectsButton.removeAttribute("class");
+			sitesButton.removeAttribute("class");
+			repositoriesButton.removeAttribute("class");
 			aboutButton.removeAttribute("class");
 			postsButton.removeAttribute("class");
 
 			homePanel.removeAttribute("hidden");
 			postsPanel.setAttribute("hidden", true);
-			projectsPanel.setAttribute("hidden", true);
+			repositoriesPanel.setAttribute("hidden", true);
+			sitesPanel.setAttribute("hidden", true);
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "Posts":
@@ -110,28 +114,52 @@ function CheckTabHash()
 			bannerText.innerHTML = `<b>My Blog Posts!</b>`;
 
 			postsButton.setAttribute("class", "active");
-			projectsButton.removeAttribute("class");
+			sitesButton.removeAttribute("class");
+			repositoriesButton.removeAttribute("class");
 			aboutButton.removeAttribute("class");
 			homeButton.removeAttribute("class");
 
 			postsPanel.removeAttribute("hidden");
+			sitesPanel.setAttribute("hidden", true);
 			homePanel.setAttribute("hidden", true);
-			projectsPanel.setAttribute("hidden", true);
+			repositoriesPanel.setAttribute("hidden", true);
 			aboutPanel.setAttribute("hidden", true);
 			break;
 		case "Projects":
-			document.title = "Projects - Nora's Hideout";
-			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Projects";
+		case "Repositories":
+			document.title = "Repositories - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Repositories";
 
-			bannerSprite.setAttribute("class", bannerSpriteDefaults + " projectsSprite");
-			bannerText.innerHTML = `<b>My Open Source Projects!</b>`;
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " repositoriesSprite");
+			bannerText.innerHTML = `<b>My Open Source Repositories!</b>`;
 
-			projectsButton.setAttribute("class", "active");
+			repositoriesButton.setAttribute("class", "active");
+			sitesButton.removeAttribute("class");
 			postsButton.removeAttribute("class");
 			aboutButton.removeAttribute("class");
 			homeButton.removeAttribute("class");
 
-			projectsPanel.removeAttribute("hidden");
+			repositoriesPanel.removeAttribute("hidden");
+			sitesPanel.setAttribute("hidden", true);
+			homePanel.setAttribute("hidden", true);
+			postsPanel.setAttribute("hidden", true);
+			aboutPanel.setAttribute("hidden", true);
+			break;
+		case "Sites":
+			document.title = "Sites - Nora's Hideout";
+			titleText.innerHTML = "Nora's Hideout: Nora's Personal Website - Sites";
+
+			bannerSprite.setAttribute("class", bannerSpriteDefaults + " sitesSprite");
+			bannerText.innerHTML = `<b>My Project Websites!</b>`;
+
+			sitesButton.setAttribute("class", "active");
+			repositoriesButton.removeAttribute("class");
+			postsButton.removeAttribute("class");
+			aboutButton.removeAttribute("class");
+			homeButton.removeAttribute("class");
+
+			sitesPanel.removeAttribute("hidden");
+			repositoriesPanel.setAttribute("hidden", true);
 			homePanel.setAttribute("hidden", true);
 			postsPanel.setAttribute("hidden", true);
 			aboutPanel.setAttribute("hidden", true);
@@ -144,14 +172,16 @@ function CheckTabHash()
 			bannerText.innerHTML = `<b>About My Website!</b>`;
 
 			aboutButton.setAttribute("class", "active");
-			projectsButton.removeAttribute("class");
+			sitesButton.removeAttribute("class");
+			repositoriesButton.removeAttribute("class");
 			postsButton.removeAttribute("class");
 			homeButton.removeAttribute("class");
 
 			aboutPanel.removeAttribute("hidden");
+			sitesPanel.setAttribute("hidden", true);
 			homePanel.setAttribute("hidden", true);
 			postsPanel.setAttribute("hidden", true);
-			projectsPanel.setAttribute("hidden", true);
+			repositoriesPanel.setAttribute("hidden", true);
 			break;
 	}
 }
