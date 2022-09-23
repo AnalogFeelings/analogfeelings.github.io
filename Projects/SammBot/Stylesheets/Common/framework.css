@@ -123,20 +123,6 @@ body {
     align-items: center;
 }
 
-.footerSocialMediaIcon {
-    -webkit-user-select: none;
-    user-select: none;
-
-    display: flex;
-}
-
-.footerSocialMediaIcon > img {
-    border: 0;
-
-    width: 32px;
-    height: 32px;
-}
-
 .featuresDiv {
     display: flex;
 

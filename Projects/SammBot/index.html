@@ -7,6 +7,7 @@
 		<title>Samm-Bot</title>
 
 		<!--Contains styling shared across platforms.-->
+		<link rel="stylesheet" href="Stylesheets/Common/social.css">
 		<link rel="stylesheet" href="Stylesheets/Common/framework.css">
 		<link rel="stylesheet" href="Stylesheets/Common/headers.css">
 		<link rel="stylesheet" href="Stylesheets/Common/navigation.css">
@@ -217,14 +218,15 @@
 			<p class="footerText">
 				<span class="boldText">Samm-Bot</span> and this website are licensed under the GPL v3.0 license.
 				<br>
-				<span class="thinText" style="color: gray;">Website font is <span class="boldText">JetBrains Mono</span>, available under the SIL Open Font License 1.1.</span>
+				<span class="thinText" style="color: gray;">
+					Website font is <span class="boldText">JetBrains Mono</span>, available under the SIL Open Font License 1.1.
+					<br>
+					Website made by <span class="boldText">AestheticalZ</span>. You can find me on GitHub.
+				</span>
 			</p>
-			<a class="footerSocialMediaIcon" href="https://github.com/AestheticalZ/SammBot" title="Samm-Bot's GitHub Repository">
-				<img alt="GitHub Logo" style="filter: invert(100%);" src="/Resources/SocialMedia/github.png">
-			</a>
-			<a class="footerSocialMediaIcon" href="/index.html" title="Nora's Hideout">
-				<img alt="Nora's Hideout Logo" class="filterDisabled" src="/Resources/favicon.png">
-			</a>
+
+			<button type="button" class="footerSocialMediaIcon github" onclick="GoToUrl('https://github.com/AestheticalZ/SammBot')" title="Samm-Bot's GitHub Repository"></button>
+			<button type="button" class="footerSocialMediaIcon hideout" onclick="GoToUrl('/index.html')" title="Nora's Hideout"></button>
 		</div>
 	</body>
 </html>

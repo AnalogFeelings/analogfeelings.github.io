@@ -11,6 +11,11 @@ function InitPage()
     window.addEventListener("mouseup", (e) => HandleClick(e));
 }
 
+function GoToUrl(url)
+{
+    location.href = url;
+}
+
 function OpenBurger()
 {
     let burgerMenu = document.getElementById("burgerMenu");
@@ -29,6 +34,7 @@ function HandleClick(e)
         burgerMenu.classList.toggle("shown", false);
     }
 }
+
 function GoToTag(tag)
 {
     let burgerMenu = document.getElementById("burgerMenu");
@@ -37,7 +43,6 @@ function GoToTag(tag)
 
     burgerMenu.classList.toggle("shown", false);
 }
-
 
 function InitBanner()
 {
