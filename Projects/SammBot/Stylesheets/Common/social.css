@@ -35,3 +35,8 @@
 .footerSocialMediaIcon.hideout {
     background-image: url("/Resources/favicon.png");
 }
+
+/*TWITTER ICON*/
+.footerSocialMediaIcon.twitter {
+    background-image: url("/Resources/SocialMedia/twitter.svg");
+}
