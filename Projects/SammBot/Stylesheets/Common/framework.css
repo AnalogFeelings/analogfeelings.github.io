@@ -12,6 +12,10 @@ a:visited {
     color: #654c65;
 }
 
+li::marker {
+    color: #755072;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -74,9 +78,7 @@ body {
 }
 
 .acrylicSurface {
-    -webkit-backdrop-filter: saturate(125%);
-    backdrop-filter: saturate(125%);
-
+    /*It's 2022 and backdrop-filter is still slow as shit. Why??? Prerendering an image every time I want to make a tiny change is annoying.*/
     background-color: rgba(64, 64, 64, 0.1);
 }
 
@@ -95,6 +97,14 @@ body {
 
 .contentSection {
     width: 100%;
+
+    text-align: center;
+}
+
+.contentSection > ul {
+    display: inline-block;
+
+    text-align: left;
 }
 
 .contentSection > p {
