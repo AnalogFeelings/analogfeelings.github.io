@@ -45,13 +45,8 @@ body {
 }
 
 .headerOverlayDiv > img {
-    image-rendering: pixelated;
-
     -webkit-user-select: none;
     user-select: none;
-
-    width: 128px;
-    height: 128px;
 }
 
 .headerOverlayDiv > h1 {

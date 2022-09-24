@@ -7,6 +7,11 @@
 		min-height: 640px;
 	}
 
+	.headerOverlayDiv > img {
+		width: 256px;
+		height: 256px;
+	}
+
 	.headerOverlayDiv > h1 {
 		font-size: 8em;
 	}

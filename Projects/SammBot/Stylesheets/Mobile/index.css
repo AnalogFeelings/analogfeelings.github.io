@@ -6,8 +6,13 @@ body {
 	min-height: 280px;
 }
 
+.headerOverlayDiv > img {
+	width: 180px;
+	height: 180px;
+}
+
 .headerOverlayDiv > h1 {
-	font-size: 4em;
+	font-size: 6em;
 }
 
 .bodyContent {
