@@ -31,6 +31,7 @@ body {
     height: 100vh;
 
     background-image: url("../../Resources/backdropBlurred.png");
+    background-size: cover;
     background-position: center center;
 }
 
