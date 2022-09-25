@@ -69,6 +69,8 @@
     font-family: "JetBrains-Mono-Bold";
     font-size: 1.1em;
 
+    cursor: pointer;
+
     color: white;
     background-color: rgba(0, 0, 0, 0);
 
