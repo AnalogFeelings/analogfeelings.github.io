@@ -40,3 +40,8 @@
 .footerSocialMediaIcon.twitter {
     background-image: url("/Resources/SocialMedia/twitter.svg");
 }
+
+/*YOUTUBE ICON*/
+.footerSocialMediaIcon.youtube {
+    background-image: url("/Resources/SocialMedia/youtube.svg");
+}
