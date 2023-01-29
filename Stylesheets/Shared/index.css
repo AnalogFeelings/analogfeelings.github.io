@@ -1,0 +1,25 @@
+.field-row
+{
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+}
+
+[class^=field-row]+[class^=field-row]
+{
+	margin-top: 6px
+}
+
+.filterDisabled
+{
+	image-rendering: pixelated;
+}
+
+body
+{
+	margin: 0;
+
+	color-scheme: light;
+
+	font-family: Merriweather-Regular;
+}

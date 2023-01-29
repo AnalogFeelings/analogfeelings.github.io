@@ -1,11 +1,8 @@
 window.onload = PageStartup;
-window.onhashchange = CheckTabHash;
 
 function PageStartup()
 {
-	PromptCookies();
-	CheckCss();
-	CheckTabHash();
+	LoadElements();
 	GetPosts();
 }
 
