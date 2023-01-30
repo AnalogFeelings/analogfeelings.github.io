@@ -2,6 +2,11 @@
 {
 	--body-background: #FFFFFF;
 
+	--thin-color: gray;
+
 	--navbar-background: #FFFFFF;
 	--navbar-gradient-start: #2F3279;
+	--navbar-border-color: dimgray;
+
+	--separator-color: lightgray;
 }

@@ -10,16 +10,77 @@
 	margin-top: 6px
 }
 
+b
+{
+	font-family: Merriweather-Bold;
+}
+
+i
+{
+	font-family: Merriweather-RegularItalic;
+}
+
 .filterDisabled
 {
 	image-rendering: pixelated;
+}
+
+html
+{
+	height: 100%;
 }
 
 body
 {
 	margin: 0;
 
+	display: flex;
+	flex-direction: column;
+
+	height: 100%;
+
 	color-scheme: light;
+	background-color: var(--body-background);
 
 	font-family: Merriweather-Regular;
+}
+
+.mainBodyDiv
+{
+	flex-wrap: wrap;
+	align-content: flex-start;
+
+	min-height: 110%;
+
+	column-gap: 0;
+}
+
+.innerBodyDiv
+{
+	width: 100%;
+	height: 100%;
+
+	align-items: stretch;
+
+	column-gap: 0;
+}
+
+.bodyContent
+{
+	width: 100%;
+
+	padding: 20px;
+
+	box-shadow: inset 4px 4px 6px 0px rgb(0 0 0 / 13%);
+}
+
+.separatorDiv
+{
+	width: 95%;
+	min-height: 1px;
+
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	background-color: var(--separator-color);
 }

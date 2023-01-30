@@ -1,13 +1,12 @@
 .topBar
 {
-	width: 100%;
-
 	background-color: var(--navbar-background);
 
 	padding: 20px;
 
-	border-bottom: solid dimgray 1px;
-	box-shadow: 0 0 12px 0 rgb(0 0 0 / 40%);
+	border-bottom: solid 1px var(--navbar-border-color);
+
+	column-gap: 0;
 }
 
 .topBar > img
@@ -33,8 +32,57 @@
 
 .topBarTextGradient
 {
-	min-height: 6px;
+	min-height: 4px;
 	min-width: 30vw;
 
 	background: linear-gradient(90deg, var(--navbar-gradient-start), var(--navbar-background));
+}
+
+.sideBar
+{
+	max-width: 250px;
+	min-width: 220px;
+
+	align-items: stretch;
+
+	padding: 10px;
+
+	background-color: var(--navbar-background);
+	border-right: solid 1px var(--navbar-border-color);
+
+	flex-direction: column;
+}
+
+.sideBarSection
+{
+	margin-top: 5px;
+	margin-right: 15px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+}
+
+.sideBarSection > ul
+{
+	margin-bottom: 0;
+
+	padding-left: 20px;
+}
+
+.sideBarCopyright
+{
+	font-size: 0.7em;
+
+	color: var(--thin-color);
+
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.sideBarSocial
+{
+	width: 100%;
+
+	margin-top: 12px;
+
+	justify-content: space-between;
 }

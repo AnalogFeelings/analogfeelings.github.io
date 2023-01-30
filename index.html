@@ -9,6 +9,7 @@
     <script src="index.js"></script>
 
 	<link rel="stylesheet" href="Stylesheets/Shared/colors.css">
+	<link rel="stylesheet" href="Stylesheets/Shared/social.css">
 	<link rel="stylesheet" href="Stylesheets/Shared/fonts.css">
 	<link rel="stylesheet" href="Stylesheets/Shared/index.css">
 	<link rel="stylesheet" href="Stylesheets/Shared/scaffold.css">
@@ -30,7 +31,16 @@
 <body>
 	<div data-include="topbar"></div>
 
-    <div class="mainWindow">
+	<div class="mainBodyDiv field-row">
+		<div class="innerBodyDiv field-row">
+			<div data-include="sidebar"></div>
+			<div class="bodyContent">
+				Hello!
+			</div>
+		</div>
+	</div>
+
+    <!--<div class="mainWindow">
         <div class="window" style="width: 100%; display: flex; flex-direction: column;">
             <div class="title-bar">
                 <div id="TitleText" class="title-bar-text" style="user-select: none;">Nora's Hideout: Nora's Personal Website</div>
@@ -62,14 +72,14 @@
                     </fieldset>
                 </div>
 
-                <!--Page Content-->
+                &lt;!&ndash;Page Content&ndash;&gt;
                 <div style="display: flex; flex-direction: column; flex: 1 1 auto;">
-                    <!--Field Row To Contain Sidebar And Content-->
+                    &lt;!&ndash;Field Row To Contain Sidebar And Content&ndash;&gt;
                     <div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
-                        <!--Content-->
+                        &lt;!&ndash;Content&ndash;&gt;
                         <div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
                             <div style="flex: 1 0 0; overflow-y: auto;">
-                                <!--Home Tab-->
+                                &lt;!&ndash;Home Tab&ndash;&gt;
                                 <div id="Home">
                                     <p>
                                         Hi! I'm <a href="https://github.com/AestheticalZ">AestheticalZ</a>, but you
@@ -119,7 +129,7 @@
                                     </fieldset>
                                 </div>
 
-                                <!--Posts Tab-->
+                                &lt;!&ndash;Posts Tab&ndash;&gt;
                                 <div id="Posts" hidden>
                                     <p>
                                         Follow the <a href="/rss.xml">RSS feed</a> for updates on your device!<br>
@@ -134,7 +144,7 @@
                                     </fieldset>
                                 </div>
 
-                                <!--Projects Tab-->
+                                &lt;!&ndash;Projects Tab&ndash;&gt;
                                 <div id="Projects" style="flex: 1; overflow-y: auto;" hidden>
                                     <ul class="tree-view">
                                         <li>
@@ -224,7 +234,7 @@
                                     </ul>
                                 </div>
 
-                                <!--About Tab-->
+                                &lt;!&ndash;About Tab&ndash;&gt;
                                 <div id="About" hidden>
                                     <p>
                                         This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
@@ -271,7 +281,7 @@
                             </div>
                         </div>
 
-                        <!--Sidebar-->
+                        &lt;!&ndash;Sidebar&ndash;&gt;
                         <fieldset style="width: 14%; margin: 0;">
                             <legend>Sidebar</legend>
 
@@ -327,7 +337,7 @@
                         </fieldset>
                     </div>
 
-                    <!--Old Web GIFs-->
+                    &lt;!&ndash;Old Web GIFs&ndash;&gt;
                     <div class="oldWebRow field-row">
                         <a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com">
                             <img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
@@ -349,14 +359,14 @@
             </div>
 
             <div style="flex: 0 1 auto;">
-                <!-- Message Box -->
-                <!-- <div class="bottomBar message">
+                &lt;!&ndash; Message Box &ndash;&gt;
+                &lt;!&ndash; <div class="bottomBar message">
                     <img class="msgInformationSprite" style="margin: 3px; margin-right: 10px;">
                     <p style="color: white;">
                         easter egg omg
                     </p>
-                </div> -->
-                <!--Credits and copyright information at the bottom.-->
+                </div> &ndash;&gt;
+                &lt;!&ndash;Credits and copyright information at the bottom.&ndash;&gt;
                 <div class="status-bar">
                     <p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
                         , released under <b>GPL v3.0</b></p>
@@ -366,7 +376,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
 </body>
 
 </html>
