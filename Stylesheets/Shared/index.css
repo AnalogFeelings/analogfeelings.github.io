@@ -49,8 +49,7 @@ body
 {
 	flex-wrap: wrap;
 	align-content: flex-start;
-
-	min-height: 110%;
+	flex-grow: 1;
 
 	column-gap: 0;
 }
