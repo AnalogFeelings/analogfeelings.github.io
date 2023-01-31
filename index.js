@@ -3,7 +3,10 @@ window.onload = PageStartup;
 function PageStartup()
 {
 	LoadElements();
-	GetPosts();
+
+	//GetPosts();
+
+	window.addEventListener("mouseup", (e) => HandleClick(e));
 }
 
 function GetPosts()

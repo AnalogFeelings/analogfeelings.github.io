@@ -1,0 +1,21 @@
+@media only screen and (min-width: 1000px)
+{
+	.socialMediaIcon
+	{
+		width: 30px;
+		height: 30px;
+
+		background-size: 30px 30px;
+	}
+}
+
+@media only screen and (max-width: 875px)
+{
+	.socialMediaIcon
+	{
+		width: 30px;
+		height: 30px;
+
+		background-size: 30px 30px;
+	}
+}

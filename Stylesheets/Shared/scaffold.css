@@ -2,19 +2,11 @@
 {
 	background-color: var(--navbar-background);
 
-	padding: 20px;
-
 	border-bottom: solid 1px var(--navbar-border-color);
-
-	column-gap: 0;
 }
 
 .topBar > img
 {
-	margin-right: 40px;
-
-	width: 96px;
-	height: 96px;
 }
 
 .topBarText
@@ -27,25 +19,30 @@
 	font-family: Merriweather-BoldItalic;
 
 	margin-top: 0;
-	margin-bottom: 12px;
+}
+
+.topBarTextTop
+{
+}
+
+.topBarTextBottom
+{
+	font-family: Merriweather-RegularItalic;
 }
 
 .topBarTextGradient
 {
-	min-height: 4px;
-	min-width: 30vw;
-
 	background: linear-gradient(90deg, var(--navbar-gradient-start), var(--navbar-background));
+}
+
+.topBarBurger
+{
+
 }
 
 .sideBar
 {
-	max-width: 250px;
-	min-width: 220px;
-
 	align-items: stretch;
-
-	padding: 10px;
 
 	background-color: var(--navbar-background);
 	border-right: solid 1px var(--navbar-border-color);
@@ -55,23 +52,15 @@
 
 .sideBarSection
 {
-	margin-top: 5px;
-	margin-right: 15px;
-	margin-left: 15px;
-	margin-bottom: 5px;
 }
 
 .sideBarSection > ul
 {
 	margin-bottom: 0;
-
-	padding-left: 20px;
 }
 
 .sideBarCopyright
 {
-	font-size: 0.7em;
-
 	color: var(--thin-color);
 
 	margin-top: 0;
@@ -80,9 +69,5 @@
 
 .sideBarSocial
 {
-	width: 100%;
-
-	margin-top: 12px;
-
 	justify-content: space-between;
 }

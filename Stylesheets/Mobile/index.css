@@ -1,0 +1,14 @@
+.bodyContent
+{
+	font-size: 2.2em;
+
+	padding: 25px;
+}
+
+.separatorDiv
+{
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	min-height: 3px;
+}

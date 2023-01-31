@@ -1,0 +1,138 @@
+@media only screen and (min-width: 1000px)
+{
+	.topBar
+	{
+		padding: 20px;
+
+		column-gap: 0;
+	}
+
+	.topBar > img
+	{
+		margin-right: 40px;
+
+		width: 96px;
+		height: 96px;
+	}
+
+	.topBarText > p
+	{
+		margin-bottom: 12px;
+	}
+
+	.topBarTextTop
+	{
+		font-size: 2.5em;
+	}
+
+	.topBarTextBottom
+	{
+		font-size: 1.1em;
+	}
+
+	.topBarTextGradient
+	{
+		min-height: 4px;
+		min-width: 125%;
+	}
+
+	.topBarBurger
+	{
+		display: none;
+	}
+
+	.sideBar
+	{
+		display: block;
+
+		position: static;
+
+		max-width: 250px;
+		min-width: 220px;
+
+		border-bottom: none;
+		box-shadow: none;
+
+		font-size: 1em;
+
+		padding: 10px;
+	}
+
+	.sideBarSection
+	{
+		margin-top: 5px;
+		margin-right: 15px;
+		margin-left: 15px;
+		margin-bottom: 5px;
+	}
+
+	.sideBarSection > ul
+	{
+		padding-left: 20px;
+	}
+
+	.sideBarCopyright
+	{
+		font-size: 0.7em;
+	}
+
+	.sideBarSocial
+	{
+		width: 100%;
+
+		margin-top: 12px;
+	}
+}
+
+@media only screen and (max-width: 915px)
+{
+	.topBar > img
+	{
+		display: none;
+	}
+
+	.topBarTextTop
+	{
+		font-size: 2.5em;
+	}
+
+	.topBarTextBottom
+	{
+		font-size: 1.1em;
+	}
+
+	.topBarTextGradient
+	{
+		min-height: 4px;
+		min-width: 125%;
+	}
+
+	.sideBar
+	{
+		max-width: 250px;
+		min-width: 220px;
+
+		font-size: 1em;
+
+		padding: 10px;
+	}
+}
+
+@media only screen and (max-width: 600px)
+{
+	.topBarTextTop
+	{
+		font-size: 2.2em;
+	}
+
+	.topBarTextBottom
+	{
+		font-size: 0.9em;
+	}
+
+	.topBarTextGradient
+	{
+		min-height: 4px;
+		min-width: 110%;
+	}
+}

@@ -1,0 +1,106 @@
+.topBar
+{
+	padding: 15px;
+
+	column-gap: 0;
+}
+
+.topBar > img
+{
+	margin-right: 40px;
+
+	width: 128px;
+	height: 128px;
+}
+
+.topBarText > p
+{
+	margin-bottom: 12px;
+}
+
+.topBarTextTop
+{
+	font-size: 3.2em;
+}
+
+.topBarTextBottom
+{
+	font-size: 1.6em;
+}
+
+.topBarTextGradient
+{
+	min-height: 4px;
+	min-width: 110%;
+}
+
+.topBarBurger
+{
+	display: block;
+
+	margin-right: 25px;
+	margin-left: 10px;
+}
+
+.topBarBurger > button
+{
+	width: 92px;
+	height: 92px;
+
+	background-image: url("../../Resources/menu.svg");
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position: center center;
+	background-size: 48px 48px;
+
+	padding: 0;
+
+	color: black;
+}
+
+.sideBar
+{
+	display: none;
+
+	position: absolute;
+
+	max-width: 450px;
+	min-width: 420px;
+
+	border-bottom: solid 1px var(--navbar-border-color);
+	box-shadow: 4px 4px 6px 0px rgb(0 0 0 / 13%);
+
+	font-size: 1.8em;
+
+	padding: 25px;
+}
+
+.sideBar.shown
+{
+	display: block;
+}
+
+.sideBarSection
+{
+	margin-top: 15px;
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-bottom: 15px;
+}
+
+.sideBarSection > ul
+{
+	padding-left: 25px;
+}
+
+.sideBarCopyright
+{
+	font-size: 0.8em;
+}
+
+.sideBarSocial
+{
+	width: 100%;
+
+	margin-top: 22px;
+}

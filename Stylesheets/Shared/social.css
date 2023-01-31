@@ -3,10 +3,6 @@
 	-webkit-user-select: none;
 	user-select: none;
 
-	width: 30px;
-	height: 30px;
-
-	background-size: 30px 30px;
 	background-position: center;
 	background-repeat: no-repeat;
 }

@@ -14,3 +14,22 @@ function LoadElements()
         }, 'html');
     }
 }
+
+function OpenSidebar()
+{
+    let sideBar = document.getElementById("sideBar");
+    let isShown = sideBar.classList.contains("shown");
+
+    sideBar.classList.toggle("shown", !isShown);
+}
+
+function HandleClick(e)
+{
+    let sideBar = document.getElementById("sideBar");
+    let sideBarButton = document.getElementById("sideBarButton");
+
+    if (e.target !== sideBarButton && e.target !== sideBar)
+    {
+        sideBar.classList.toggle("shown", false);
+    }
+}

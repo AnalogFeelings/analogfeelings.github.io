@@ -39,6 +39,8 @@ body
 
 	height: 100%;
 
+	overflow-x: clip;
+
 	color-scheme: light;
 	background-color: var(--body-background);
 
@@ -68,18 +70,12 @@ body
 {
 	width: 100%;
 
-	padding: 20px;
-
 	box-shadow: inset 4px 4px 6px 0px rgb(0 0 0 / 13%);
 }
 
 .separatorDiv
 {
 	width: 95%;
-	min-height: 1px;
-
-	margin-top: 15px;
-	margin-bottom: 15px;
 
 	background-color: var(--separator-color);
 }
