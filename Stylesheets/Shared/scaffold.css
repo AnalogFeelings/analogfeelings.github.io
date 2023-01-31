@@ -7,6 +7,8 @@
 
 .topBar > img
 {
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .topBarText
@@ -17,6 +19,9 @@
 .topBarText > p
 {
 	font-family: Merriweather-BoldItalic;
+
+	-webkit-user-select: none;
+	user-select: none;
 
 	margin-top: 0;
 }
