@@ -20,6 +20,19 @@ i
 	font-family: Merriweather-RegularItalic;
 }
 
+h1::after
+{
+	display: block;
+	content: '';
+
+	margin-top: 10px;
+
+	min-height: 5px;
+	min-width: 100%;
+
+	background: linear-gradient(90deg, var(--header-gradient-start), var(--navbar-background));
+}
+
 .filterDisabled
 {
 	image-rendering: pixelated;
@@ -71,6 +84,11 @@ body
 	width: 100%;
 
 	box-shadow: inset 4px 4px 6px 0px rgb(0 0 0 / 13%);
+}
+
+.bodyContent > h1:first-of-type
+{
+	margin-top: 10px;
 }
 
 .separatorDiv
