@@ -15,39 +15,3 @@
 		min-height: 1px;
 	}
 }
-
-@media only screen and (max-width: 915px)
-{
-	.bodyContent
-	{
-		font-size: 1em;
-
-		padding: 20px;
-	}
-
-	.separatorDiv
-	{
-		margin-top: 20px;
-		margin-bottom: 20px;
-
-		min-height: 1px;
-	}
-}
-
-@media only screen and (max-width: 600px)
-{
-	.bodyContent
-	{
-		font-size: 1em;
-
-		padding: 20px;
-	}
-
-	.separatorDiv
-	{
-		margin-top: 20x;
-		margin-bottom: 20px;
-
-		min-height: 1px;
-	}
-}

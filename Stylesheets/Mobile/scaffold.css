@@ -7,10 +7,7 @@
 
 .topBar > img
 {
-	margin-right: 40px;
-
-	width: 128px;
-	height: 128px;
+	display: none;
 }
 
 .topBarText > p
@@ -20,38 +17,38 @@
 
 .topBarTextTop
 {
-	font-size: 3.2em;
+	font-size: 2em;
 }
 
 .topBarTextBottom
 {
-	font-size: 1.6em;
+	font-size: 0.7em;
 }
 
 .topBarTextGradient
 {
 	min-height: 4px;
-	min-width: 110%;
+	min-width: 115%;
 }
 
 .topBarBurger
 {
 	display: block;
 
-	margin-right: 25px;
-	margin-left: 10px;
+	margin-right: 20px;
+	margin-left: 5px;
 }
 
 .topBarBurger > button
 {
-	width: 92px;
-	height: 92px;
+	width: 48px;
+	height: 48px;
 
 	background-image: url("../../Resources/menu.svg");
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position: center center;
-	background-size: 48px 48px;
+	background-size: 32px 32px;
 
 	padding: 0;
 
@@ -64,15 +61,15 @@
 
 	position: absolute;
 
-	max-width: 450px;
-	min-width: 420px;
+	max-width: 250px;
+	min-width: 220px;
 
 	border-bottom: solid 1px var(--navbar-border-color);
 	box-shadow: 4px 4px 6px 0px rgb(0 0 0 / 13%);
 
-	font-size: 1.8em;
+	font-size: 0.9em;
 
-	padding: 25px;
+	padding: 15px;
 }
 
 .sideBar.shown

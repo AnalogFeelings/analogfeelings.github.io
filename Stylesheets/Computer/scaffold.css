@@ -9,6 +9,8 @@
 
 	.topBar > img
 	{
+		display: inline;
+
 		margin-right: 40px;
 
 		width: 96px;
@@ -82,75 +84,6 @@
 		width: 100%;
 
 		margin-top: 12px;
-	}
-
-	.sideBarSocialRss > img
-	{
-		width: 16px;
-		height: 16px;
-
-		vertical-align: -0.1em;
-	}
-}
-
-@media only screen and (max-width: 915px)
-{
-	.topBar > img
-	{
-		display: none;
-	}
-
-	.topBarTextTop
-	{
-		font-size: 2.5em;
-	}
-
-	.topBarTextBottom
-	{
-		font-size: 1.1em;
-	}
-
-	.topBarTextGradient
-	{
-		min-height: 4px;
-		min-width: 125%;
-	}
-
-	.sideBar
-	{
-		max-width: 250px;
-		min-width: 220px;
-
-		font-size: 1em;
-
-		padding: 10px;
-	}
-
-	.sideBarSocialRss > img
-	{
-		width: 16px;
-		height: 16px;
-
-		vertical-align: -0.1em;
-	}
-}
-
-@media only screen and (max-width: 600px)
-{
-	.topBarTextTop
-	{
-		font-size: 2.2em;
-	}
-
-	.topBarTextBottom
-	{
-		font-size: 0.9em;
-	}
-
-	.topBarTextGradient
-	{
-		min-height: 4px;
-		min-width: 110%;
 	}
 
 	.sideBarSocialRss > img
