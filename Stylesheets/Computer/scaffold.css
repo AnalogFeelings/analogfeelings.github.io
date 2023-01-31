@@ -83,6 +83,14 @@
 
 		margin-top: 12px;
 	}
+
+	.sideBarSocialRss > img
+	{
+		width: 16px;
+		height: 16px;
+
+		vertical-align: -0.1em;
+	}
 }
 
 @media only screen and (max-width: 915px)
@@ -117,6 +125,14 @@
 
 		padding: 10px;
 	}
+
+	.sideBarSocialRss > img
+	{
+		width: 16px;
+		height: 16px;
+
+		vertical-align: -0.1em;
+	}
 }
 
 @media only screen and (max-width: 600px)
@@ -135,5 +151,13 @@
 	{
 		min-height: 4px;
 		min-width: 110%;
+	}
+
+	.sideBarSocialRss > img
+	{
+		width: 16px;
+		height: 16px;
+
+		vertical-align: -0.1em;
 	}
 }

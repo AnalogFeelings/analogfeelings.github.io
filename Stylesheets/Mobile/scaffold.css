@@ -104,3 +104,11 @@
 
 	margin-top: 22px;
 }
+
+.sideBarSocialRss > img
+{
+	width: 24px;
+	height: 24px;
+
+	vertical-align: -0.05em;
+}
