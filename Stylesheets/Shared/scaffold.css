@@ -58,6 +58,11 @@
 	flex-direction: column;
 }
 
+.sideBar .separatorDiv
+{
+	align-self: center;
+}
+
 .sideBarSection
 {
 }
@@ -98,6 +103,11 @@
 .sideBarSocial
 {
 	justify-content: space-between;
+}
+
+.sideBarSocialRss
+{
+	margin-bottom: 0;
 }
 
 .sideBarSocialRss > img

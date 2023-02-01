@@ -69,20 +69,20 @@
 
 	font-size: 0.9em;
 
-	padding: 15px;
+	padding: 10px;
 }
 
 .sideBar.shown
 {
-	display: block;
+	display: flex;
 }
 
 .sideBarSection
 {
-	margin-top: 15px;
+	margin-top: 12px;
 	margin-right: 25px;
 	margin-left: 25px;
-	margin-bottom: 15px;
+	margin-bottom: 12px;
 }
 
 .sideBarSection > ul

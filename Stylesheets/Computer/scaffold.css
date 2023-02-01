@@ -45,7 +45,7 @@
 
 	.sideBar
 	{
-		display: block;
+		display: flex;
 
 		position: static;
 
