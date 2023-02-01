@@ -21,8 +21,8 @@ function LoadPosts(fileContent)
 		let createdPostRecent = document.createElement("li");
 		let createdPostRecentDesc = document.createElement("p");
 
-		createdPostRecent.classList.add("recentPostHeader");
-		createdPostRecentDesc.classList.add("recentPostDescription");
+		createdPostRecent.classList.add("postHeader");
+		createdPostRecentDesc.classList.add("postDescription");
 
 		createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> - <a href="${ currentValue.url }">${ currentValue.title }</a>`;
 		createdPostRecentDesc.innerHTML = currentValue.description;

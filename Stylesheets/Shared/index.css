@@ -100,12 +100,12 @@ body
 	background-color: var(--separator-color);
 }
 
-.recentPostHeader
+.postHeader
 {
 	margin-bottom: 2px;
 }
 
-.recentPostDescription
+.postDescription
 {
 	margin-left: 8px;
 
