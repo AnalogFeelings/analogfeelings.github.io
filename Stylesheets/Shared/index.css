@@ -38,6 +38,8 @@ h1::after
 html
 {
 	height: 100%;
+
+	overflow-x: clip;
 }
 
 body
