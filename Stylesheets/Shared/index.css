@@ -82,8 +82,6 @@ body
 .bodyContent
 {
 	width: 100%;
-
-	box-shadow: inset 4px 4px 6px 0px rgb(0 0 0 / 13%);
 }
 
 .bodyContent > h1:first-of-type
