@@ -97,3 +97,16 @@ body
 
 	background-color: var(--separator-color);
 }
+
+.recentPostHeader
+{
+	margin-bottom: 2px;
+}
+
+.recentPostDescription
+{
+	margin-left: 8px;
+
+	margin-top: 3px;
+	margin-bottom: 3px;
+}

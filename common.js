@@ -33,3 +33,13 @@ function HandleClick(e)
         sideBar.classList.toggle("shown", false);
     }
 }
+
+function RetrievePosts(callbackFunction)
+{
+    $.getJSON("/posts.json",
+        function (data, textStatus, jqXHR)
+        {
+            callbackFunction(data);
+        }
+    );
+}
