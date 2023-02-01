@@ -1,532 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Nora's Hideout: Projects</title>
 
-	<title>Nora's Hideout: Projects</title>
+		<link href="Stylesheets/Shared/colors.css" rel="stylesheet">
+		<link href="Stylesheets/Shared/social.css" rel="stylesheet">
+		<link href="Stylesheets/Shared/fonts.css" rel="stylesheet">
+		<link href="Stylesheets/Shared/index.css" rel="stylesheet">
+		<link href="Stylesheets/Shared/scaffold.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="Stylesheets/Shared/colors.css">
-	<link rel="stylesheet" href="Stylesheets/Shared/social.css">
-	<link rel="stylesheet" href="Stylesheets/Shared/fonts.css">
-	<link rel="stylesheet" href="Stylesheets/Shared/index.css">
-	<link rel="stylesheet" href="Stylesheets/Shared/scaffold.css">
+		<link href="Stylesheets/Mobile/social.css" rel="stylesheet">
+		<link href="Stylesheets/Mobile/index.css" rel="stylesheet">
+		<link href="Stylesheets/Mobile/scaffold.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="Stylesheets/Mobile/social.css">
-	<link rel="stylesheet" href="Stylesheets/Mobile/index.css">
-	<link rel="stylesheet" href="Stylesheets/Mobile/scaffold.css">
+		<link href="Stylesheets/Computer/social.css" rel="stylesheet">
+		<link href="Stylesheets/Computer/index.css" rel="stylesheet">
+		<link href="Stylesheets/Computer/scaffold.css" rel="stylesheet">
 
-	<link rel="stylesheet" href="Stylesheets/Computer/social.css">
-	<link rel="stylesheet" href="Stylesheets/Computer/index.css">
-	<link rel="stylesheet" href="Stylesheets/Computer/scaffold.css">
+		<script crossorigin="anonymous"
+				integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script src="common.js"></script>
+		<script src="projects.js"></script>
 
-	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-	<script src="common.js"></script>
-	<script src="projects.js"></script>
+		<link href="/Resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
 
-	<link rel="icon" href="/Resources/favicon.png">
-	<link rel="alternate" type="application/rss+xml" title="Subscribe to the blog feed!" href="/rss.xml" />
+		<meta content="Nora's Hideout: Projects" name="og:title">
+		<meta content="https://aestheticalz.github.io/" name="og:url">
+		<meta content="This is a list of all my notable projects!" name="og:description">
+		<meta content="https://aestheticalz.github.io/Resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://gist.githubusercontent.com/AestheticalZ/b2866747178201fc1487a714ffc5c40a/raw/aestheticalshideout.json"
+			  type="application/json+oembed"/>
+	</head>
 
-	<meta name="og:title" content="Nora's Hideout: Projects">
-	<meta name="og:url" content="https://aestheticalz.github.io/">
-	<meta name="og:description" content="This is a list of all my notable projects!">
-	<meta name="og:image" content="https://aestheticalz.github.io/Resources/bannercropped.png">
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="theme-color" content="#396BA5">
-	<link type="application/json+oembed" href="https://gist.githubusercontent.com/AestheticalZ/b2866747178201fc1487a714ffc5c40a/raw/aestheticalshideout.json" />
-</head>
+	<body>
+		<div data-include="topbar"></div>
 
-<body>
-<div data-include="topbar"></div>
-
-<div class="mainBodyDiv field-row">
-	<div class="innerBodyDiv field-row">
-		<div data-include="sidebar"></div>
-		<div class="bodyContent">
-			<h1>
-				My Projects
-			</h1>
-			<p>
-				Here's a tree view of all my notable GitHub projects! Obviously, the closed source ones are not here.
-			</p>
-			<ul class="tree-view">
-				<li>
-					<details open>
-						<summary>Tools</summary>
-						<ul>
-							<li>
-								<a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a>
-								 - Generate sentences from the beloved Black Mesa announcer, VOX!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a>
-								 - Piece of software not suitable for wide usage; made for specific purpose.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a>
-								 - Store your favourite GIFs and Videos in an unfinished Windows Forms app.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a>
-								 - Add multiple pride flags as a circular frame to images.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a>
-								 - Fork of <b><a href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/godot-psx">GodotPSX</a>
-								 - A small pack of shaders for Godot that replicate the old PS1 look.
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li>
-					<details open>
-						<summary>Fun</summary>
-						<ul>
-							<li>
-								<a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a>
-								 - The website you are watching right now!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a>
-								 - Nuke your computer with one wrong guess!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a>
-								 - Similar to Half-Life VOX Generator, but realtime!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/kmdf-bugchecker">KmdfBugchecker</a>
-								 - Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a>
-								 - Communicate with KMDF-Bugchecker from a simple program!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a>
-								 - Program that exploits NtRaiseHardError to raise a BSOD easily!
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a>
-								 - Kills svchost.exe and BSODs the system.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/KmdfMandelcheck">KmdfMandelcheck</a>
-								 - Fun little kernel driver that displays an image after a BSOD.
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li>
-					<details open>
-						<summary>Libraries</summary>
-						<ul>
-							<li>
-								<a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a>
-								 - The core of FlagPFP-GUI.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a>
-								 - Get cute cat and dog images from the web.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/HookPlusPlus">HookPlusPlus</a>
-								 - Trampoline hooks for Win32, made EXTREMELY easy.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/Matcha">Matcha</a>
-								 - Simple logging library for C#, compatible with .NET Standard.
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li>
-					<details open>
-						<summary>Blitz Userlibs</summary>
-						<ul>
-							<li>
-								<a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a>
-								 - Blitz userlib that allows BlitzBasic to use the Discord Game SDK.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a>
-								- Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.
-							</li>
-							<li>
-								<a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a>
-								 - Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li>
-					<details open>
-						<summary>Discord Bots</summary>
-						<ul>
-							<li>
-								<a href="/SammBot/index.html">Samm-Bot</a>
-								 - SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.
-							</li>
-						</ul>
-					</details>
-				</li>
-				<li>
-					<details open>
-						<summary>Operating Systems</summary>
-						<ul>
-							<li>
-								<a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a>
-								 - Megalithic kernel thing, development halted.
-							</li>
-						</ul>
-					</details>
-				</li>
-			</ul>
-		</div>
-	</div>
-</div>
-
-<!--<div class="mainWindow">
-	<div class="window" style="width: 100%; display: flex; flex-direction: column;">
-		<div class="title-bar">
-			<div id="TitleText" class="title-bar-text" style="user-select: none;">Nora's Hideout: Nora's Personal Website</div>
-			<div class="title-bar-controls">
-				<button aria-label="Help" onclick="window.location='/index.html#About'"></button>
-				<button aria-label="Close" onclick="window.location='/index.html'"></button>
-			</div>
-		</div>
-
-		<div class="window-body" style="display: flex; flex-direction: column; flex: 1 1 auto;">
-			<div style="flex: 0 1 auto;">
-				<div class="container">
-					<img src="./Resources/banner.png" class="headerBannerImage disableFiltering">
-					<div class="field-row bottom-left" style="justify-content: flex-start;">
-						<img id="bannerSprite" class="headerSprite">
-						<div id="bannerText" class="bannerText"><b>Home Page</b></div>
-					</div>
-				</div>
-				<fieldset>
-					<div class="field-row" style="justify-content: flex-start;">
-						<button id="homeButton" class="active" onclick="ChangeTab('Home')">Home</button>
-						<button id="postsButton" onclick="ChangeTab('Posts')">Posts</button>
-						<button id="projectsButton" onclick="ChangeTab('Projects')">Projects</button>
-						<button id="aboutButton" onclick="ChangeTab('About')">About</button>
-						<div class="field-row" style="margin-left: auto; margin-bottom: auto;">
-							<button onclick="location.href='/BlitzDocs/index.htm'">Blitz3D TSS Documentation</button>
-						</div>
-					</div>
-				</fieldset>
-			</div>
-
-			&lt;!&ndash;Page Content&ndash;&gt;
-			<div style="display: flex; flex-direction: column; flex: 1 1 auto;">
-				&lt;!&ndash;Field Row To Contain Sidebar And Content&ndash;&gt;
-				<div class="field-row" style="display: flex; justify-content: flex-start; align-items: stretch; margin-bottom: 4px; flex: 1 1 auto;">
-					&lt;!&ndash;Content&ndash;&gt;
-					<div style="width: 85%; margin-right: 1%; display: flex; flex-direction: column;">
-						<div style="flex: 1 0 0; overflow-y: auto;">
-							&lt;!&ndash;Home Tab&ndash;&gt;
-							<div id="Home">
-								<p>
-									Hi! I'm <a href="https://github.com/AestheticalZ">AestheticalZ</a>, but you
-									can call me <b>Nora</b>.
-									<br>
-								</p>
-
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent">
+					<h1>
+						My Projects
+					</h1>
+					<p>
+						Here's a tree view of all my notable GitHub projects! Obviously, the closed source ones are not here.
+					</p>
+					<ul class="tree-view">
+						<li>
+							<details open>
+								<summary>Tools</summary>
 								<ul>
-									<li><b>Pronouns</b>: she/her</li>
-									<li><b>Gender Identity</b>: Transgender Woman</li>
-									<li><b>Sexual Orientation</b>: Pansexual</li>
-									<li><b>Primary Operating System</b>: Windows 11 Pro</li>
-									<li><b>Primary Editor</b>: Visual Studio 2022</li>
-									<li><b>Miscellaneous Editor</b>: Visual Studio Code Insiders</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a>
+										- Generate sentences from the beloved Black Mesa announcer, VOX!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a>
+										- Piece of software not suitable for wide usage; made for specific purpose.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a>
+										- Store your favourite GIFs and Videos in an unfinished Windows Forms app.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a>
+										- Add multiple pride flags as a circular frame to images.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a>
+										- Fork of <b><a
+											href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/godot-psx">GodotPSX</a>
+										- A small pack of shaders for Godot that replicate the old PS1 look.
+									</li>
 								</ul>
-
-								I know the following languages:
-								<br>
-
+							</details>
+						</li>
+						<li>
+							<details open>
+								<summary>Fun</summary>
 								<ul>
-									<li><b>C#</b></li>
-									<li><b>C/C++</b></li>
-									<li><b>Java</b></li>
-									<li><b>HTML</b></li>
-									<li><b>JS</b></li>
-									<li><b>CSS</b></li>
+									<li>
+										<a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a>
+										- The website you are watching right now!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a>
+										- Nuke your computer with one wrong guess!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a>
+										- Similar to Half-Life VOX Generator, but realtime!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/kmdf-bugchecker">KmdfBugchecker</a>
+										- Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a>
+										- Communicate with KMDF-Bugchecker from a simple program!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a>
+										- Program that exploits NtRaiseHardError to raise a BSOD easily!
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a>
+										- Kills svchost.exe and BSODs the system.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/KmdfMandelcheck">KmdfMandelcheck</a>
+										- Fun little kernel driver that displays an image after a BSOD.
+									</li>
 								</ul>
-
-								I am trying to learn the following:
-								<br>
-
+							</details>
+						</li>
+						<li>
+							<details open>
+								<summary>Libraries</summary>
 								<ul>
-									<li><b>Rust</b></li>
-									<li><b>Basic Networking</b></li>
-									<li><b>Godot Engine</b></li>
-								</ul>
-
-								Be sure to check out the
-								<a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/announcements">announcements page</a>
-								for announcements or news!<br><br>
-
-								<fieldset style="margin: 0;">
-									<legend>Recent Posts</legend>
-									<ul id="recentPostsList" style="margin: 0; padding-left: 20px;">
-
-									</ul>
-								</fieldset>
-							</div>
-
-							&lt;!&ndash;Posts Tab&ndash;&gt;
-							<div id="Posts" hidden>
-								<p>
-									Follow the <a href="/rss.xml">RSS feed</a> for updates on your device!<br>
-									These are ordered by <b>newest to oldest</b>.
-								</p>
-								<fieldset style="margin: 0;">
-									<legend>Post List</legend>
-									<div style="overflow: auto;">
-										<ul id="postsList" style="margin: 0; padding-left: 20px;">
-										</ul>
-									</div>
-								</fieldset>
-							</div>
-
-							&lt;!&ndash;Projects Tab&ndash;&gt;
-							<div id="Projects" style="flex: 1; overflow-y: auto;" hidden>
-								<ul class="tree-view">
 									<li>
-										<details open>
-											<summary>Tools</summary>
-											<ul>
-												<li><u><a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a></u> :
-													Generate sentences from the beloved Black Mesa announcer, VOX!</li>
-												<li><u><a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a></u> :
-													Piece of software not suitable for wide usage; made for specific purpose.</li>
-												<li><u><a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a></u> :
-													Store your favourite GIFs and Videos in an unfinished Windows Forms app.</li>
-												<li><u><a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a></u> :
-													Add multiple pride flags as a circular frame to images.</li>
-												<li><u><a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a></u> :
-													Fork of <b><a href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.</li>
-											</ul>
-										</details>
+										<a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a>
+										- The core of FlagPFP-GUI.
 									</li>
 									<li>
-										<details open>
-											<summary>Fun</summary>
-											<ul>
-												<li><u><a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a></u> :
-													The website you are watching right now!</li>
-												<li><u><a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a></u> :
-													Nuke your computer with one wrong guess!</li>
-												<li><u><a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a></u> :
-													Similar to Half-Life VOX Generator, but realtime!</li>
-												<li><u><a href="https://github.com/AestheticalZ/kmdf-bugchecker">KMDF-Bugchecker</a></u> :
-													Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!</li>
-												<li><u><a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a></u> :
-													Communicate with KMDF-Bugchecker from a simple program!</li>
-												<li><u><a href="https://github.com/AestheticalZ/KmdfMandelcheck">KMDF-Mandelcheck</a></u>
-													Kernel mode driver that makes the system display an image after a BSOD!</li>
-												<li><u><a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a></u> :
-													Program that exploits NtRaiseHardError to raise a BSOD easily!</li>
-												<li><u><a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a></u> :
-													Kills svchost.exe and BSODs the system.</li>
-											</ul>
-										</details>
+										<a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a>
+										- Get cute cat and dog images from the web.
 									</li>
 									<li>
-										<details open>
-											<summary>Libraries</summary>
-											<ul>
-												<li><u><a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a></u> :
-													The core of FlagPFP-GUI.</li>
-												<li><u><a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a></u> :
-													Get cute cat and dog images from the web.</li>
-											</ul>
-										</details>
+										<a href="https://github.com/AestheticalZ/HookPlusPlus">HookPlusPlus</a>
+										- Trampoline hooks for Win32, made EXTREMELY easy.
 									</li>
 									<li>
-										<details open>
-											<summary>Blitz Userlibs</summary>
-											<ul>
-												<li><u><a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a></u> :
-													Blitz userlib that allows BlitzBasic to use the Discord Game SDK.</li>
-												<li><u><a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a></u> :
-													Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.</li>
-												<li><u><a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a></u> :
-													Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.</li>
-											</ul>
-										</details>
-									</li>
-									<li>
-										<details open>
-											<summary>Discord Bots</summary>
-											<ul>
-												<li><u><a href="/SammBot/index.html">Samm-Bot</a></u> :
-													SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.</li>
-												<li>All the other bots are private!</li>
-											</ul>
-										</details>
-									</li>
-									<li>
-										<details open>
-											<summary>Operating Systems</summary>
-											<ul>
-												<li><u><a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a></u> :
-													Megalithic kernel thing idk its weird</li>
-												<li>This is probably gonna be the only thing here lol</li>
-											</ul>
-										</details>
+										<a href="https://github.com/AestheticalZ/Matcha">Matcha</a>
+										- Simple logging library for C#, compatible with .NET Standard.
 									</li>
 								</ul>
-							</div>
-
-							&lt;!&ndash;About Tab&ndash;&gt;
-							<div id="About" hidden>
-								<p>
-									This website was made, as indicated by the bottom bar, using a library called <b>XP.css</b>.
-									<br>
-									It's pretty lightweight, I tried to keep JavaScript usage to minimum.
-									<br><br>
-									<b>Well, let's get to the point.</b>
-									<br>
-									This website is a nicer hub for my <a href="https://github.com/AestheticalZ">GitHub</a> profile.
+							</details>
+						</li>
+						<li>
+							<details open>
+								<summary>Blitz Userlibs</summary>
 								<ul>
-									<li>The "Posts" tag will pretty much have random blog posts about random things that I decide to
-										randomly
-										write about at random intervals.</li>
-									<li>The "Projects" tab will contain an organized tree view of my most notable projects (which aren't
-										many).</li>
-									<li> The "Home" tab is, well, the home tab.</li>
-									<li> And the "About" tab is what you are reading now!</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a>
+										- Blitz userlib that allows BlitzBasic to use the Discord Game SDK.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a>
+										- Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.
+									</li>
+									<li>
+										<a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a>
+										- Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.
+									</li>
 								</ul>
-
-								Do you have any opinions on my website? Head over
-								<a target="_blank" href="https://github.com/AestheticalZ/aestheticalz.github.io/discussions/categories/general-comments-opinions">here</a>
-								and create a discussion!
-								</p>
-								<img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
-								<h4 class="inlineCenteredText">In Memory of Ekaterina "BerkeliumAsset"</h4>
-								<img src="./Resources/candle.gif" class="disableFiltering" style="vertical-align: middle; padding-right: 10px; padding-bottom: 10px;">
-								<p>
-									Suicide is something that can happen to the people closest to you. Unfortunately, it has happened to us
-									with our dearest friend BerkeliumAsset.
-									<br><br>
-									Today, 25th of November 2021, CaptainCrunch has received a WhatsApp message from BerkeliumAsset's mother
-									telling us about her suicide.
-									<br><br>
-									Berk was a sweet person, with dreams, loving friends, and a nice personality, but she has committed suicide.
-									<br>
-									We didn't help her because she seemed okay the night before, but it seems that she had personal problems she
-									did not want to tell us about.
-									<br>
-									Berk was a great friend, and she helped me in sad times, especially when I discovered my gender identity.
-									<br><br>
-									May she rest in peace.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					&lt;!&ndash;Sidebar&ndash;&gt;
-					<fieldset style="width: 14%; margin: 0;">
-						<legend>Sidebar</legend>
-
-						<div style="display: flex; flex-direction: column; align-items: flex-start; height: 100%;">
-							<div style="min-width: 100%; width: 100%; flex: 1 1 auto;">
-								<div class="sidebarHeader"><b>Information</b></div>
+							</details>
+						</li>
+						<li>
+							<details open>
+								<summary>Discord Bots</summary>
 								<ul>
-									<li><a href="https://www.cookielaw.org/the-cookie-law/" target="_blank">Why the cookie popup?</a></li>
-									<li><a href="https://github.com/AestheticalZ/aestheticalz.github.io" target="_blank">The site's repository.</a></li>
+									<li>
+										<a href="/SammBot/index.html">Samm-Bot</a>
+										- SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.
+									</li>
 								</ul>
-								<p>
-									<b>Warning!</b> This website does not look correct on really tiny window sizes.
-								</p>
-
-								<div class="sidebarHeader"><b>Cookie Settings</b></div>
-								<p>
-									The website will always use the Windows 2000 theme if cookies are turned off.
-								</p>
-								<div class="field-row">
-									<button onclick="ConsentCookies(true)">Consent</button>
-									<button onclick="RejectCookies(true)">Reject</button>
-								</div>
-
-								<br>
-								<div class="sidebarHeader"><b>Side Note</b></div>
-								<p>
-									I <i>think</i> I fixed the scaling? Not sure.<br>Time will tell!
-								</p>
-							</div>
-							<div class="sideBarBottom field-row">
-								<select id="themeDropdown" style="margin-right: auto;" onchange="ChangeTheme()">
-									<option>Windows 2000</option>
-									<option>Windows XP</option>
-									<option>Windows 7</option>
-								</select>
-								<a href="/rss.xml" title="Subscribe to the RSS feed!">
-									<img border="0" src="/Resources/SocialMedia/rss.png">
-								</a>
-								<a href="https://github.com/AestheticalZ" title="Follow me on GitHub!">
-									<img border="0" src="/Resources/SocialMedia/githubdark.svg" width="16" height="16">
-								</a>
-								<a href="https://twitter.com/z_aesthetical" title="Follow me on Twitter!">
-									<img border="0" src="/Resources/SocialMedia/twitter.svg" width="16" height="16">
-								</a>
-								<a rel="me" href="https://tech.lgbt/@analog_feelings" title="Follow me on Mastodon!">
-									<img border="0" src="/Resources/SocialMedia/mastodon.svg" width="16" height="16">
-								</a>
-								<a href="https://www.youtube.com/channel/UC0DyFqMDghAeL9trXMcItig" title="Subscribe to my YouTube channel!">
-									<img border="0" src="/Resources/SocialMedia/youtube.svg" width="16" height="16">
-								</a>
-							</div>
-						</div>
-					</fieldset>
-				</div>
-
-				&lt;!&ndash;Old Web GIFs&ndash;&gt;
-				<div class="oldWebRow field-row">
-					<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://netscape.com">
-						<img border="0" src="/Resources/NetGifs/netnow3.gif" class="disableFiltering" style="width: 100%;">
-					</a>
-					<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://microsoft.com//ie/ie.htm">
-						<img border="0" src="/Resources/NetGifs/iexplorer.gif" class="disableFiltering" style="width: 100%;">
-					</a>
-					<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://frontpageworld.com/">
-						<img border="0" src="/Resources/NetGifs/frontpg.gif" class="disableFiltering" style="width: 100%;">
-					</a>
-					<a href="https://theoldnet.com/get?year=1996&scripts=false&decode=false&url=http://linkexchange.com">
-						<img border="0" src="/Resources/NetGifs/linkexchange.gif" class="disableFiltering" style="width: 100%;">
-					</a>
-					<a href="https://theoldnet.com/aol">
-						<img border="0" src="/Resources/NetGifs/aolchoice.gif" class="disableFiltering" style="width: 100%;">
-					</a>
+							</details>
+						</li>
+						<li>
+							<details open>
+								<summary>Operating Systems</summary>
+								<ul>
+									<li>
+										<a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a>
+										- Megalithic kernel thing, development halted.
+									</li>
+								</ul>
+							</details>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-
-		<div style="flex: 0 1 auto;">
-			&lt;!&ndash; Message Box &ndash;&gt;
-			&lt;!&ndash; <div class="bottomBar message">
-				<img class="msgInformationSprite" style="margin: 3px; margin-right: 10px;">
-				<p style="color: white;">
-					easter egg omg
-				</p>
-			</div> &ndash;&gt;
-			&lt;!&ndash;Credits and copyright information at the bottom.&ndash;&gt;
-			<div class="status-bar">
-				<p class="status-bar-field">Copyright 2022 <b>AestheticalZ</b>
-					, released under <b>GPL v3.0</b></p>
-				<p class="status-bar-field">Using a fork of <a href="https://github.com/AestheticalZ/XP-EX.css">XP.css</a>,
-					originally by <b>botoxparty</b>.</p>
-				<p class="status-bar-field">Star me on <a href="https://github.com/AestheticalZ/aestheticalz.github.io">GitHub</a>!</p>
-			</div>
-		</div>
-	</div>
-</div>-->
-</body>
-
+	</body>
 </html>
