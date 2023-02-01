@@ -6,7 +6,7 @@ function LoadElements()
     {
         let name = element.getAttribute("data-include");
 
-        let file = 'Elements/' + name + '.html';
+        let file = '/Elements/' + name + '.html';
 
         $.get(file, function(html_content)
         {
