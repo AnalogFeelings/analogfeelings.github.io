@@ -12,12 +12,14 @@
 
 b
 {
-	font-family: Merriweather-Bold;
+	font-family: Merriweather-Bold, serif;
+	font-weight: bold;
 }
 
 i
 {
-	font-family: Merriweather-RegularItalic;
+	font-family: Merriweather-RegularItalic, serif;
+	font-style: italic;
 }
 
 h1::after
@@ -31,11 +33,6 @@ h1::after
 	min-width: 100%;
 
 	background: linear-gradient(90deg, var(--header-gradient-start), var(--navbar-background));
-}
-
-.filterDisabled
-{
-	image-rendering: pixelated;
 }
 
 html
@@ -57,7 +54,12 @@ body
 	color-scheme: light;
 	background-color: var(--body-background);
 
-	font-family: Merriweather-Regular;
+	font-family: Merriweather-Regular, serif;
+}
+
+.filterDisabled
+{
+	image-rendering: pixelated;
 }
 
 .mainBodyDiv

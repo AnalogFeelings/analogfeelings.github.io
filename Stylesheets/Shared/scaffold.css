@@ -18,7 +18,7 @@
 
 .topBarText > p
 {
-	font-family: Merriweather-BoldItalic;
+	font-family: Merriweather-BoldItalic, serif;
 
 	-webkit-user-select: none;
 	user-select: none;
@@ -28,11 +28,14 @@
 
 .topBarTextTop
 {
+	font-weight: bold;
 }
 
 .topBarTextBottom
 {
-	font-family: Merriweather-RegularItalic;
+	font-family: Merriweather-RegularItalic, serif;
+
+	font-style: italic;
 }
 
 .topBarTextGradient
