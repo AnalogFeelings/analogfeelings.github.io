@@ -67,6 +67,26 @@
 	margin-bottom: 0;
 }
 
+.sideBarSection a {
+	color: #0000EE;
+
+	text-decoration: none;
+}
+
+.sideBarSection a:visited {
+	color: #0000EE;
+}
+
+.sideBarSection a:hover {
+	color: #0000EE;
+
+	text-decoration: underline;
+}
+
+.sideBarSection a:active {
+	color: #FF0000;
+}
+
 .sideBarCopyright
 {
 	color: var(--thin-color);
