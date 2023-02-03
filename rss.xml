@@ -3,7 +3,7 @@
     <channel>
         <title>Aesthetical's Hideout</title>
         <link>https://aestheticalz.github.io/</link>
-        <description>Nora's personal website for programming and misc.</description>
+        <description>Nora's personal website for programming and other stuff.</description>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <copyright>Copyright 2021, AestheticalZ</copyright>
         <image>
@@ -13,44 +13,50 @@
         </image>
 
         <item>
+            <title>The second redesign has arrived!</title>
+            <link>https://aestheticalz.github.io/posts/the-second-redesign-has-arrived</link>
+            <pubDate>Wed, Feb 01 2023 23:45 GMT</pubDate>
+            <description>Sorry for the even bigger delay, I was busy with other projects!</description>
+        </item>
+        <item>
             <title>The redesign has arrived!</title>
-            <link>https://aestheticalz.github.io/Posts/The-Redesign-Has-Arrived/</link>
+            <link>https://aestheticalz.github.io/posts/the-redesign-has-arrived/</link>
             <pubDate>Tue, 31 May 2022 21:48 GMT</pubDate>
             <description>Sorry for the long downtime!</description>
         </item>
         <item>
             <title>I'm back!</title>
-            <link>https://aestheticalz.github.io/Posts/Im-Back/</link>
+            <link>https://aestheticalz.github.io/posts/im-back/</link>
             <pubDate>Thu, 24 Feb 2022 05:05 GMT</pubDate>
             <description>Sorry for the long downtime!</description>
         </item>
         <item>
             <title>Added RSS Feeds and Social Media!</title>
-            <link>https://aestheticalz.github.io/Posts/Added-RSS-Feeds-and-Social-Media/</link>
+            <link>https://aestheticalz.github.io/posts/added-rss-feeds-and-social-media/</link>
             <pubDate>Tue, 04 Jan 2022 09:30 GMT</pubDate>
             <description>Now you can follow the blog (and my social media) without manually checking the website!</description>
         </item>
         <item>
             <title>Added GitHub Discussions And A Favicon!</title>
-            <link>https://aestheticalz.github.io/Posts/Added-GitHub-Discussions-And-A-Favicon/</link>
+            <link>https://aestheticalz.github.io/posts/added-github-discussions-and-a-favicon/</link>
             <pubDate>Sat, 01 Jan 2022 04:46 GMT</pubDate>
             <description>Added GitHub Discussions to act as a comment section. Also added an icon that displays in the tab header of your browser.</description>
         </item>
         <item>
             <title>Happy New Year 2022!</title>
-            <link>https://aestheticalz.github.io/Posts/Happy-New-Year-2022/</link>
+            <link>https://aestheticalz.github.io/posts/happy-new-year-2022/</link>
             <pubDate>Sat, 01 Jan 2022 03:50 GMT</pubDate>
             <description>I hope you have a great year!</description>
         </item>
         <item>
             <title>Raising bugchecks from userspace in NT.</title>
-            <link>https://aestheticalz.github.io/Posts/Raising-bugchecks-from-userspace-in-NT/</link>
+            <link>https://aestheticalz.github.io/posts/raising-bugchecks-from-userspace-in-nt/</link>
             <pubDate>Tue, 30 Nov 2021 07:31 GMT</pubDate>
             <description>Why did Microsoft decide to allow ANY userspace program without admin rights to bugcheck the system with 2 function calls?</description>
         </item>
         <item>
             <title>The First Post!</title>
-            <link>https://aestheticalz.github.io/Posts/The-First-Post/</link>
+            <link>https://aestheticalz.github.io/posts/the-first-post/</link>
             <pubDate>Wed, 24 Nov 2021 11:06 GMT</pubDate>
             <description>The first ever blog post for my new website!</description>
         </item>
