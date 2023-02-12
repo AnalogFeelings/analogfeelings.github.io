@@ -75,6 +75,8 @@
 .sideBar.shown
 {
 	display: flex;
+
+	z-index: 9999999;
 }
 
 .sideBarSection
