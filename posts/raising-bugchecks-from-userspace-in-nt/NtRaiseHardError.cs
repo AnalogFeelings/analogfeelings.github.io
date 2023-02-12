@@ -1,1 +1,0 @@
-NtRaiseHardError(0xc0000420, 0, 0, IntPtr.Zero, 6, out uint output);

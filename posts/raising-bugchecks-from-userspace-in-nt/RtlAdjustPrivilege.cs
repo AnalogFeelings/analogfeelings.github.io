@@ -1,1 +1,0 @@
-RtlAdjustPrivilege(19, true, false, out bool idk);
