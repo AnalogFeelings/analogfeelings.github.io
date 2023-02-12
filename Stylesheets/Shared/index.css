@@ -86,6 +86,8 @@ body
 .bodyContent
 {
 	width: 100%;
+
+	box-sizing: border-box;
 }
 
 .bodyContent > h1:first-of-type
