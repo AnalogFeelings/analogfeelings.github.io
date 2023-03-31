@@ -9,11 +9,41 @@
 		box-shadow: inset 4px 4px 6px 0px rgb(0 0 0 / 13%);
 	}
 
+	.bodyContent > h1
+	{
+		font-size: 2em;
+	}
+
+	.bodyContent > h1:first-of-type
+	{
+		margin-top: 10px;
+	}
+
 	.separatorDiv
 	{
 		margin-top: 20px;
 		margin-bottom: 20px;
 
 		min-height: 1px;
+	}
+
+	.postInformation
+	{
+		margin-top: -8px;
+	}
+
+	.postInformationBullet
+	{
+		bottom: 0.05em;
+
+		margin-right: 4px;
+		margin-left: 4px;
+	}
+
+	.postInformationBullet:after
+	{
+		content: "\2022";
+
+		position: relative;
 	}
 }

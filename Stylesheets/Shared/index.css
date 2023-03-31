@@ -29,7 +29,7 @@ h1::after
 
 	margin-top: 10px;
 
-	min-height: 5px;
+	min-height: 4px;
 	min-width: 100%;
 
 	background: linear-gradient(90deg, var(--header-gradient-start), var(--navbar-background));
@@ -90,11 +90,6 @@ body
 	box-sizing: border-box;
 }
 
-.bodyContent > h1:first-of-type
-{
-	margin-top: 10px;
-}
-
 .bodyContent > .separatorDiv
 {
 	margin-top: 40px;
@@ -119,4 +114,16 @@ body
 
 	margin-top: 3px;
 	margin-bottom: 3px;
+}
+
+.postInformation
+{
+	color: var(--thin-color);
+
+	margin-bottom: 25px;
+}
+
+.postInformationBullet
+{
+	position: relative;
 }
