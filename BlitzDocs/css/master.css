@@ -1,14 +1,16 @@
 body{
 	color: #ffffff;
-	font: 10pt verdana;
+	font: 12px "Segoe UI", sans-serif;
 	background: #00485e;
 	margin: 32px;
 	padding-bottom: 115px;
+
+	color-scheme: dark;
 }
 
 h1{
 	color: #e4e4e4;
-	font: 30pt verdana;
+	font: 28px "Segoe UI", sans-serif;
 }
 
 .box{
@@ -28,7 +30,7 @@ h1{
 
 h1.allsolid {
     color: #e4e4e4;
-	font: bold 30pt verdana;
+	font: bold 28px "Segoe UI", sans-serif;
 }
 
 a{
@@ -48,7 +50,7 @@ ul{
 }
 
 hr.solid {
-  border-top: 2px solid;
+  border-top: 1px solid;
   position: relative;
   z-index: 100;
   margin-bottom: 2.67em;
