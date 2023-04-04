@@ -11,6 +11,7 @@
 		<link href="stylesheets/shared/fonts.css" rel="stylesheet">
 		<link href="stylesheets/shared/index.css" rel="stylesheet">
 		<link href="stylesheets/shared/scaffold.css" rel="stylesheet">
+		<link href="stylesheets/shared/treeview.css" rel="stylesheet">
 
 		<link href="stylesheets/mobile/social.css" rel="stylesheet">
 		<link href="stylesheets/mobile/index.css" rel="stylesheet">
@@ -51,143 +52,145 @@
 					<p>
 						Here's a tree view of all my notable GitHub projects! Obviously, the closed source ones are not here.
 					</p>
-					<ul class="tree-view">
-						<li>
-							<details open>
-								<summary>Tools</summary>
-								<ul>
-									<li>
-										<a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a>
-										- Generate sentences from the beloved Black Mesa announcer, VOX!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a>
-										- Piece of software not suitable for wide usage; made for specific purpose.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a>
-										- Store your favourite GIFs and Videos in an unfinished Windows Forms app.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a>
-										- Add multiple pride flags as a circular frame to images.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a>
-										- Fork of <b><a
-											href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/godot-psx">GodotPSX</a>
-										- A small pack of shaders for Godot that replicate the old PS1 look.
-									</li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details open>
-								<summary>Fun</summary>
-								<ul>
-									<li>
-										<a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a>
-										- The website you are watching right now!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a>
-										- Nuke your computer with one wrong guess!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a>
-										- Similar to Half-Life VOX Generator, but realtime!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/kmdf-bugchecker">KmdfBugchecker</a>
-										- Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a>
-										- Communicate with KMDF-Bugchecker from a simple program!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a>
-										- Program that exploits NtRaiseHardError to raise a BSOD easily!
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a>
-										- Kills svchost.exe and BSODs the system.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/KmdfMandelcheck">KmdfMandelcheck</a>
-										- Fun little kernel driver that displays an image after a BSOD.
-									</li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details open>
-								<summary>Libraries</summary>
-								<ul>
-									<li>
-										<a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a>
-										- The core of FlagPFP-GUI.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a>
-										- Get cute cat and dog images from the web.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/HookPlusPlus">HookPlusPlus</a>
-										- Trampoline hooks for Win32, made EXTREMELY easy.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/Matcha">Matcha</a>
-										- Simple logging library for C#, compatible with .NET Standard.
-									</li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details open>
-								<summary>Blitz Userlibs</summary>
-								<ul>
-									<li>
-										<a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a>
-										- Blitz userlib that allows BlitzBasic to use the Discord Game SDK.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a>
-										- Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.
-									</li>
-									<li>
-										<a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a>
-										- Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.
-									</li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details open>
-								<summary>Discord Bots</summary>
-								<ul>
-									<li>
-										<a href="/SammBot/index.html">Samm-Bot</a>
-										- SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.
-									</li>
-								</ul>
-							</details>
-						</li>
-						<li>
-							<details open>
-								<summary>Operating Systems</summary>
-								<ul>
-									<li>
-										<a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a>
-										- Megalithic kernel thing, development halted.
-									</li>
-								</ul>
-							</details>
-						</li>
-					</ul>
+					<div class="treeviewBorder">
+						<ul class="fancyTreeview border">
+							<li>
+								<details open>
+									<summary>Tools</summary>
+									<ul>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/HLVoxGenerator">Half-Life VOX Generator</a>
+											- Generate sentences from the beloved Black Mesa announcer, VOX!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/filem0ver">FileM0ver</a>
+											- Piece of software not suitable for wide usage; made for specific purpose.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/dlh">Discord Link Helper</a>
+											- Store your favourite GIFs and Videos in an unfinished Windows Forms app.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/flagpfp-gui">FlagPFP-GUI</a>
+											- Add multiple pride flags as a circular frame to images.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/cbre-ex">CBRE-EX</a>
+											- Fork of <b><a
+												href="https://github.com/SCP-CBN/cbre">CBRE</a></b> by juanjp600, with QOL features.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/godot-psx">GodotPSX</a>
+											- A small pack of shaders for Godot that replicate the old PS1 look.
+										</li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details open>
+									<summary>Fun</summary>
+									<ul>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/aestheticalz.github.io">aestheticalz.github.io</a>
+											- The website you are watching right now!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/bsodsweeper">BSOD Sweeper</a>
+											- Nuke your computer with one wrong guess!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/VoxMicrophone">VoxMicrophone</a>
+											- Similar to Half-Life VOX Generator, but realtime!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/kmdf-bugchecker">KmdfBugchecker</a>
+											- Kernel mode driver that lets any user space application bugcheck the computer with ANY stop code!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/bugchecker-communicator">Bugcheck-Communicator</a>
+											- Communicate with KMDF-Bugchecker from a simple program!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/BSODMachine">BSODMachine</a>
+											- Program that exploits NtRaiseHardError to raise a BSOD easily!
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/SvchostDestroyer">SvcHostDestroyer</a>
+											- Kills svchost.exe and BSODs the system.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/KmdfMandelcheck">KmdfMandelcheck</a>
+											- Fun little kernel driver that displays an image after a BSOD.
+										</li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details open>
+									<summary>Libraries</summary>
+									<ul>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/FlagPFPCore">FlagPFP-Core</a>
+											- The core of FlagPFP-GUI.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/SharpCat">SharpCat</a>
+											- Get cute cat and dog images from the web.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/HookPlusPlus">HookPlusPlus</a>
+											- Trampoline hooks for Win32, made EXTREMELY easy.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/Matcha">Matcha</a>
+											- Simple logging library for C#, compatible with .NET Standard.
+										</li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details open>
+									<summary>Blitz Userlibs</summary>
+									<ul>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/Blitzcord">Blitzcord</a>
+											- Blitz userlib that allows BlitzBasic to use the Discord Game SDK.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/BlitzConsole">BlitzConsole</a>
+											- Blitz userlib that allows BlitzBasic to open Win32 console windows, and write to them.
+										</li>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/BlitzHash">BlitzHash</a>
+											- Blitz userlib that allows BlitzBasic to use the SHA hashing algorithm to hash strings.
+										</li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details open>
+									<summary>Discord Bots</summary>
+									<ul>
+										<li class="page">
+											<a href="/SammBot/index.html">Samm-Bot</a>
+											- SammBot is my most advanced bot yet, used in 4 servers at the time of this writing.
+										</li>
+									</ul>
+								</details>
+							</li>
+							<li>
+								<details open>
+									<summary>Operating Systems</summary>
+									<ul>
+										<li class="page">
+											<a href="https://github.com/AestheticalZ/NoraOS">NoraOS</a>
+											- Megalithic kernel thing, development halted.
+										</li>
+									</ul>
+								</details>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
