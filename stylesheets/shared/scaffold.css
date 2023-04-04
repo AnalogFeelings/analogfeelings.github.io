@@ -67,28 +67,32 @@
 {
 }
 
-.sideBarSection > ul
+.sideBarSection > ul:not(.fancyTreeview)
 {
 	margin-bottom: 0;
 }
 
-.sideBarSection a {
+.sideBarSection a
+{
 	color: #0000EE;
 
 	text-decoration: none;
 }
 
-.sideBarSection a:visited {
+.sideBarSection a:visited
+{
 	color: #0000EE;
 }
 
-.sideBarSection a:hover {
+.sideBarSection a:hover
+{
 	color: #0000EE;
 
 	text-decoration: underline;
 }
 
-.sideBarSection a:active {
+.sideBarSection a:active
+{
 	color: #FF0000;
 }
 
