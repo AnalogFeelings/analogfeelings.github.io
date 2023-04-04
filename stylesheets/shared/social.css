@@ -9,30 +9,30 @@
 
 /*GITHUB ICON*/
 .socialMediaIcon.github {
-	background-image: url("../../Resources/Social/github.svg");
+	background-image: url("/resources/social/github.svg");
 }
 
 /*TUMBLR ICON*/
 .socialMediaIcon.tumblr {
-	background-image: url("../../Resources/Social/tumblr.svg");
+	background-image: url("/resources/social/tumblr.svg");
 }
 
 /*TWITTER ICON*/
 .socialMediaIcon.twitter {
-	background-image: url("../../Resources/Social/twitter.svg");
+	background-image: url("/resources/social/twitter.svg");
 }
 
 /*MASTODON ICON*/
 .socialMediaIcon.mastodon {
-	background-image: url("../../Resources/Social/mastodon.svg");
+	background-image: url("/resources/social/mastodon.svg");
 }
 
 /*REDDIT ICON*/
 .socialMediaIcon.reddit {
-	background-image: url("../../Resources/Social/reddit.svg");
+	background-image: url("/resources/social/reddit.svg");
 }
 
 /*YOUTUBE ICON*/
 .socialMediaIcon.youtube {
-	background-image: url("../../Resources/Social/youtube.svg");
+	background-image: url("/resources/social/youtube.svg");
 }
