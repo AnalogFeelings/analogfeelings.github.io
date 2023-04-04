@@ -8,10 +8,16 @@ function LoadElements()
 
         let file = '/elements/' + name + '.html';
 
-        $.get(file, function(html_content)
-        {
-            $(element).replaceWith(html_content);
-        }, 'html');
+        // Had to make sync to prevent race conditions.
+        $.ajax({
+            async: false,
+            url: file,
+            success: function(html_content)
+            {
+                $(element).replaceWith(html_content);
+            },
+            dataType: 'html'
+        });
     }
 }
 
