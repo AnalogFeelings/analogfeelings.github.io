@@ -118,3 +118,22 @@
 {
 	margin-right: 3px;
 }
+
+.sideBarWebButtons
+{
+	display: flex;
+
+	justify-content: center;
+	column-gap: 16px;
+	row-gap: 16px;
+	flex-wrap: wrap;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.sideBarWebButtons img
+{
+	width: 88px;
+	height: 31px;
+}
