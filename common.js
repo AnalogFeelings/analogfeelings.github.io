@@ -34,7 +34,7 @@ function HandleClick(e)
     let sideBar = document.getElementById("sideBar");
     let sideBarButton = document.getElementById("sideBarButton");
 
-    if (e.target !== sideBarButton && e.target !== sideBar)
+    if (!sideBar.contains(e.target) && !sideBarButton.contains(e.target))
     {
         sideBar.classList.toggle("shown", false);
     }
