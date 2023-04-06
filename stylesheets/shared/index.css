@@ -127,3 +127,15 @@ body
 {
 	position: relative;
 }
+
+.warningFieldset
+{
+	background-color: var(--warning-background-color);
+	border-color: var(--warning-border-color);
+}
+
+.remarksFieldset
+{
+	background-color: var(--remarks-background-color);
+	border-color: var(--remarks-border-color);
+}

@@ -13,4 +13,10 @@
 	--button-border: black;
 
 	--separator-color: lightgray;
+
+	--warning-background-color: lightyellow;
+	--warning-border-color: orange;
+
+	--remarks-background-color: aliceblue;
+	--remarks-border-color: cornflowerblue;
 }
