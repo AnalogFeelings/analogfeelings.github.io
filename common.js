@@ -5,7 +5,6 @@ function LoadElements()
     for(const element of includeElements)
     {
         let name = element.getAttribute("data-include");
-
         let file = '/elements/' + name + '.html';
 
         // Had to make sync to prevent race conditions.
