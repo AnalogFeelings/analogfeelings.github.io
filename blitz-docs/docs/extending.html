@@ -1,0 +1,152 @@
+<h1>
+	Writing Libraries
+</h1>
+<p class="postInformation">
+	Created on <b>2023-04-09 03:08</b>
+	<span class="postInformationBullet"></span>
+	Never Updated
+</p>
+<p>
+	Extending the engine is done through a "UserLib", which consists of two files:
+</p>
+<ul>
+	<li>
+		A <b>.dll</b> file containing the library's code.
+	</li>
+	<li>
+		A <b>.decls</b> file that declares all the library's functions for BlitzBasic.
+	</li>
+</ul>
+<p>
+	The <b>.decls</b> files are CRUCIAL. Without one, BlitzBasic won't be able to locate the functions you want to use from the DLL file.
+	<br>
+	Let's have a quick rundown of the <b>.decls</b> file format.
+</p>
+
+<h2>
+	The ".decls" Format
+</h2>
+<p>
+	Each <b>.decls</b> file should begin with a <b>.lib</b> directive, followed by a whitespace and the quoted name of the DLL file to be loaded.
+	<br>
+	Example:
+	<br>
+	<b>INCLUDE CODE HERE</b>
+</p>
+<p>
+	Afterwards, you must define a list of functions you want to expose to BlitzBasic. There are a few pitfalls:
+</p>
+<ul>
+	<li>
+		No default parameter values are allowed.
+	</li>
+	<li>
+		If no function return type is specified, the function is a 'void' function - ie: it returns nothing.
+	</li>
+	<li>
+		Instead of object parameters, you can only specify 'void*' parameters using a '*' type tag. Such parameters can be assigned ANY object or bank, so BE CAREFUL!
+	</li>
+	<li>
+		The declaration must be followed by the C decorated name. This takes form of a <b>:</b> followed by the quoted decorated name.
+		<br>
+		Example:
+	</li>
+</ul>
+<p>
+	To get a list of exports from a DLL file, please read <a href="https://docs.microsoft.com/en-us/cpp/build/reference/dash-exports?view=msvc-170">this page</a>.
+</p>
+
+<h2>
+	Important Rules
+</h2>
+<p>
+	So, here is a list of very important rules:
+</p>
+<ul>
+	<li>
+		Functions MUST use the _stdcall convention.
+	</li>
+	<li>
+		Floats are passed and returned as per standard C/C++ conventions.
+	</li>
+	<li>
+		Strings MUST be in C format (
+		<code class="language-c">const char*</code>
+		), no std::string allowed.
+	</li>
+	<li>
+		Banks and objects can be passed into functions. The value passed is a pointer to the first byte of storage.
+		<br>
+		No information is passed about the type or size of the memory though, so <b>PROCEED WITH EXTREME CAUTION</b>.
+	</li>
+	<li>
+		Banks and objects cannot be returned from functions, and arrays are not supported in any way.
+	</li>
+	<li>
+		C++ name mangling is not allowed, you must use
+		<code class="language-cpp">extern "C"</code>.
+	</li>
+</ul>
+
+<h2>
+	Writing a DLL
+</h2>
+<p>
+	Now, here is how we would write a DLL.
+</p>
+<ol>
+	<li>
+		Open up Visual Studio and create a <b>"Dynamic-Link Library"</b> project.
+	</li>
+	<li>
+		Delete all the files, and turn <b>"precompiled headers"</b> off in the project settings.
+	</li>
+	<li>
+		Copy <b>runtime.lib</b> from the <b>userlibs</b> folder into the project's root directory, and link into it.
+		<br>
+		This will allow you to call the BlitzBasic <b>DebugLog</b> and <b>RuntimeError</b> functions.
+	</li>
+	<li>
+		Write the library code.
+	</li>
+	<li>
+		Compile the code.
+	</li>
+	<li>
+		Create the corresponding <b>.decls</b> file.
+	</li>
+	<li>
+		Place <b>MyLib.dll</b> and <b>MyLib.decls</b> in the userlibs folder of your Blitz3D TSS installation.
+	</li>
+	<li>
+		You're done!
+	</li>
+</ol>
+<fieldset class="specialFieldset remarksFieldset">
+	<legend>
+		<img src="/resources/remark.svg"/>
+		<b>Remarks</b>
+	</legend>
+	When building a standalone executable for your game, you must place the userlib's DLL alongside the executable.
+</fieldset>
+
+<h2>
+	Sample Code
+</h2>
+<p>
+	File: <b>MyLib.h</b>
+</p>
+<pre data-src="samples/extending/MyLib.h"></pre>
+<p>
+	File: <b>MyLib.cpp</b>
+</p>
+<pre data-src="samples/extending/MyLib.cpp"></pre>
+<p>
+	File: <b>MyLib.decls</b>
+</p>
+<pre data-src="samples/extending/MyLib.decls"></pre>
+<p>
+	Hopefully this guide will help you.
+	<br><br>
+	If you find any issues with this guide, please open an issue or contact AestheticalZ#6365 on the Third Subdivision Studios Discord server.
+</p>
