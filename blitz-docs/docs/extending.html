@@ -30,9 +30,8 @@
 	Each <b>.decls</b> file should begin with a <b>.lib</b> directive, followed by a whitespace and the quoted name of the DLL file to be loaded.
 	<br>
 	Example:
-	<br>
-	<b>INCLUDE CODE HERE</b>
 </p>
+<pre data-src="samples/extending/Header.decls"></pre>
 <p>
 	Afterwards, you must define a list of functions you want to expose to BlitzBasic. There are a few pitfalls:
 </p>
@@ -52,6 +51,7 @@
 		Example:
 	</li>
 </ul>
+<pre data-src="samples/extending/CDeclaration.decls"></pre>
 <p>
 	To get a list of exports from a DLL file, please read <a href="https://docs.microsoft.com/en-us/cpp/build/reference/dash-exports?view=msvc-170">this page</a>.
 </p>
