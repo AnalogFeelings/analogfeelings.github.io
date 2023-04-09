@@ -90,6 +90,8 @@ function GoToPage(page)
 	{
 		SetUrlParameter("page", page);
 	}
+
+	Prism.highlightAllUnder(bodyContent, true);
 }
 
 // Loads the state of the sidebar tree view from the session storage.

@@ -22,6 +22,8 @@
 		<link href="/stylesheets/computer/index.css" rel="stylesheet">
 		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
 
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
 		<script crossorigin="anonymous"
 				integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 		<script src="/common.js"></script>
@@ -43,10 +45,12 @@
 		<div class="mainBodyDiv field-row">
 			<div class="innerBodyDiv field-row">
 				<div data-include="blitz-docs/sidebar"></div>
-				<div class="bodyContent">
+				<div class="bodyContent line-numbers">
 					<!--Content handled by JavaScript-->
 				</div>
 			</div>
 		</div>
+
+		<script src="/lib/prism/prism.js" data-manual></script>
 	</body>
 </html>
