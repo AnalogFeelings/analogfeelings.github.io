@@ -20,6 +20,8 @@
 		<link href="/stylesheets/computer/index.css" rel="stylesheet">
 		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
 
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
 		<script crossorigin="anonymous"
 				integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 		<script src="/common.js"></script>
@@ -45,7 +47,7 @@
 		<div class="mainBodyDiv field-row">
 			<div class="innerBodyDiv field-row">
 				<div data-include="sidebar"></div>
-				<div class="bodyContent">
+				<div class="bodyContent line-numbers">
 					<h1>
 						Raising bugchecks from userspace in NT.
 					</h1>
@@ -67,7 +69,7 @@
 						Analyzing the code
 					</h4>
 
-					<script src="https://gist.github.com/AestheticalZ/1f48a81c81ec32bbcee926e9a780fe08.js?file=FullCode.cs"></script>
+					<pre data-src="./resources/FullCode.cs"></pre>
 
 					<p>
 						<br>
@@ -81,7 +83,7 @@
 						<br><br>
 					</p>
 
-					<script src="https://gist.github.com/AestheticalZ/1f48a81c81ec32bbcee926e9a780fe08.js?file=Imports.cs"></script>
+					<pre data-src="./resources/FullCode.cs" data-range="7,13"></pre>
 
 					<p>
 						<br>
@@ -90,7 +92,7 @@
 						<br><br>
 					</p>
 
-					<script src="https://gist.github.com/AestheticalZ/1f48a81c81ec32bbcee926e9a780fe08.js?file=AdjustPrivilege.cs"></script>
+					<pre data-src="./resources/FullCode.cs" data-range="17"></pre>
 
 					<p>
 						<br>
@@ -106,7 +108,7 @@
 						<li><b>Fourth parameter (PreviousValue):</b> outputs a boolean that tells us if the privilege was enabled before or not.</li>
 					</ul>
 
-					<script src="https://gist.github.com/AestheticalZ/1f48a81c81ec32bbcee926e9a780fe08.js?file=RaiseHardError.cs"></script>
+					<pre data-src="./resources/FullCode.cs" data-range="19"></pre>
 
 					<p>
 						<br>
@@ -144,5 +146,7 @@
 				</div>
 			</div>
 		</div>
+
+		<script src="/lib/prism/prism.js"></script>
 	</body>
 </html>
