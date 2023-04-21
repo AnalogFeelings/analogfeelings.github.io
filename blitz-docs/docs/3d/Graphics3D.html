@@ -1,0 +1,57 @@
+<h1>
+	Graphics3D
+</h1>
+<p class="postInformation">
+	Created on <b>2023-04-21 20:20</b>
+	<span class="postInformationBullet"></span>
+	Never Updated
+</p>
+
+<p>
+	Sets 3D Graphics mode. This command must be executed before any other 3D command, otherwise programs will return an error.
+	<br><br>
+	Width and height set the resolution of the game window.
+	The resolution must be compatible with the GPU and monitor being used.
+	<br><br>
+	Depth sets the colour mode of the screen. If this value is omitted or set to 0, then the highest available colour depth available will be used.
+	<br>
+	It is recommended to use 32-bit for better Windows 8+ compatibility.
+</p>
+
+<h2>
+	Parameters
+</h2>
+Parameters marked with an asterisk (<b>*</b>) are optional.
+<ol>
+	<li>
+		<b>Width%</b> - The window width in pixels.
+	</li>
+	<li>
+		<b>Height%</b> - The window height in pixels.
+	</li>
+	<li>
+		<b>Depth%</b>* - The window color depth in bits.
+	</li>
+	<li>
+		<b>Mode%</b>* - Mode of display.
+		<ul>
+			<li>
+				<b>0</b> - Windowed in debug mode, fullscreen if in release config.
+			</li>
+			<li>
+				<b>1</b> - Fullscreen.
+			</li>
+			<li>
+				<b>2</b> - Windowed.
+			</li>
+			<li>
+				<b>3</b> - Windowed or scaled.
+			</li>
+		</ul>
+	</li>
+</ol>
+
+<h2>
+	Example
+</h2>
+<pre data-src="samples/3d/Graphics3D.bb"></pre>
