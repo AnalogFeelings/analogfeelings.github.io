@@ -164,7 +164,14 @@ function OnAnchorClick(e)
 	// Get the page from the data-ref attribute of the anchor.
 	let docPage = e.target.getAttribute("data-ref");
 
-	GoToPage(docPage);
+	if(docPage == null)
+	{
+		GoToPage("home");
+	}
+	else
+	{
+		GoToPage(docPage);
+	}
 }
 
 function OnDetailsToggled(e)
