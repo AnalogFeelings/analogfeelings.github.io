@@ -1,0 +1,45 @@
+<h1>
+	WBuffer
+</h1>
+<p class="postInformation">
+	Created on <b>2023-04-24 18:36</b>
+	<span class="postInformationBullet"></span>
+	Never Updated
+</p>
+
+<fieldset class="specialFieldset warningFieldset">
+	<legend>
+		<img src="/resources/warning.svg"/>
+		<b>Warning!</b>
+	</legend>
+	Microsoft seems to have removed 16-bit modes in the latest versions of Windows.
+	<br>
+	This command may do more bad than good on 32-bit modes.
+</fieldset>
+
+<p>
+	This command enables or disables w-buffering.
+	<br><br>
+	W-buffering is a technique used to draw 3D object in order of their depth - i.e. the ones furthest away from the camera first,
+	then the ones closer to the camera, and so on.
+	<br>
+	Normally, Z-buffering is used to perform such a technique, but a Z-buffer can be slightly inaccurate in 16-bit colour mode, for which the level of precision is less
+	than in 24-bit or 32-bit colour modes. This means that in some situations, objects will appear to overlap each other when they shouldn't and so on.
+	<br><br>
+	To compensate for this, you can use W-buffering. This is a slightly more accurate technique than Z-buffering, although it may be less compatible
+	on some set-ups than Z-buffering, and may cause issues on 24-bit and 32-bit modes.
+</p>
+
+<h2>
+	Parameters
+</h2>
+<p>
+	Parameters marked with an asterisk (<b>*</b>) are optional.
+</p>
+<ol>
+	<li>
+		<b>Enable%</b> - True to enable W-buffering, and False to disable it.
+		<br>
+		<b>Default Value:</b> True for 16-bit modes.
+	</li>
+</ol>
