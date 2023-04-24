@@ -1,0 +1,53 @@
+<h1>
+	Dither
+</h1>
+<p class="postInformation">
+	Created on <b>2023-04-24 17:54</b>
+	<span class="postInformationBullet"></span>
+	Never Updated
+</p>
+
+<fieldset class="specialFieldset warningFieldset">
+	<legend>
+		<img src="/resources/warning.svg"/>
+		<b>Warning!</b>
+	</legend>
+	Microsoft seems to have removed 16-bit fullscreen modes in the latest versions of Windows.
+	<br>
+	This command will do nothing on 32-bit modes.
+</fieldset>
+<p>
+	This command enables or disables hardware dithering.
+	<br><br>
+	Hardware dithering is useful when running games in 16-bit colour mode.
+	Due to the fact that 16-bit mode offers fewer colours than the human eye can detect, separate bands of colour are often noticeable on shaded objects.
+	However, hardware dithering will dither the entire screen to give the impression that more colours are being used than is actually the case.
+	<br><br>
+	Due to the fact that 24-bit and 32-bit offer more colours than the human eye can detect, hardware dithering is made pretty much redundant in those modes.
+</p>
+<fieldset class="specialFieldset remarksFieldset">
+	<legend>
+		<img src="/resources/remark.svg"/>
+		<b>Remarks</b>
+	</legend>
+	Dithering is emulated in software in Windows 8 and higher, and only works in fullscreen.
+	<br>
+	Performance may be degraded. Use with caution.
+</fieldset>
+
+<h2>
+	Parameters
+</h2>
+<p>
+	Parameters marked with an asterisk (<b>*</b>) are optional.
+</p>
+<ol>
+	<li>
+		<b>Enable%</b> - True to enable dithering, and False to disable it.
+	</li>
+</ol>
+
+<h2>
+	Example
+</h2>
+<pre data-src="samples/3d/Dither.bb"></pre>
