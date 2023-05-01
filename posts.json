@@ -1,5 +1,11 @@
 [
     {
+        "date": "2023-05-01 19:41",
+        "url": "/posts/getting-uwp-unit-tests-to-work",
+        "title": "Getting UWP unit tests to work was a pain.",
+        "description": "A story on how getting GitHub Actions to run UWP unit tests was a pain in the ass."
+    },
+    {
         "date": "2023-02-02 00:45",
         "url": "/posts/the-second-redesign-has-arrived",
         "title": "The second redesign has arrived!",

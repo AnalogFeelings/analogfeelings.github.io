@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+		<title>Nora's Hideout: Getting UWP unit tests to work was a pain.</title>
+
+		<link href="/stylesheets/shared/colors.css" rel="stylesheet">
+		<link href="/stylesheets/shared/social.css" rel="stylesheet">
+		<link href="/stylesheets/shared/fonts.css" rel="stylesheet">
+		<link href="/stylesheets/shared/index.css" rel="stylesheet">
+		<link href="/stylesheets/shared/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/computer/social.css" rel="stylesheet">
+		<link href="/stylesheets/computer/index.css" rel="stylesheet">
+		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
+		<script crossorigin="anonymous"
+				integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+		<script src="/common.js"></script>
+		<script src="index.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
+
+		<meta content="Nora's Hideout: Getting UWP unit tests to work was a pain." name="og:title">
+		<meta content="https://aestheticalz.github.io/" name="og:url">
+		<meta content="A story on how getting GitHub Actions to run UWP unit tests was a pain in the ass."
+			  name="og:description">
+		<meta content="https://aestheticalz.github.io/resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://gist.githubusercontent.com/AestheticalZ/b2866747178201fc1487a714ffc5c40a/raw/aestheticalshideout.json"
+			  type="application/json+oembed"/>
+	</head>
+
+	<body>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent line-numbers">
+					<h1>
+						Getting UWP unit tests to work was a pain.
+					</h1>
+					<p class="postInformation">
+						Posted on <b>2023-05-01 19:41</b>
+						<span class="postInformationBullet"></span>
+						Never Edited
+					</p>
+					<p>
+						So, lets begin with a short story on how I got here in the first place.
+						<br><br>
+
+						I recently became the owner of a Mastodon client called Tooter through a GitHub conversation. The poor guy spent 3 years
+						without a reply!
+						<br>
+						I came around, and after a very long conversation (misinformation), I got ownership of the repository.
+						<br><br>
+
+						<img src="./resources/longconvo.png" alt="A screenshot of the GitHub conversation."/>
+
+						<br><br>
+						You can find the repository for it in my projects page! <b>But thats not the point of this post!</b>
+					</p>
+					<h2>
+						The Actual Story
+					</h2>
+					<p>
+						I lied. This post does have to do with my project.
+						<br><br>
+
+						On my big quest to clean up the 4-year-old outdated codebase (that didn't even compile), I wanted to implement GitHub Actions to automate
+						unit tests to make contributing easier.
+						<br>
+						What I didn't know was that I was about to spend almost an entire day doing changes to the YAML file, back-and-forth with the Actions tab and
+						the text editor.
+					</p>
+					<h2>
+						Explaining The Workflow
+					</h2>
+					<p>
+						Lets begin by the workflow triggers part. This is probably the simplest part to understand, but I will start with it anyways
+						for the sake of completeness.
+					</p>
+					<pre data-src="./resources/code/full-attempt.yml" data-range="3,15"></pre>
+					<p>
+						We want the workflow to run on each push and pull request, only if they target the <b>master</b> branch and if the modified files
+						are <b>cs</b> or <b>csproj</b> files.
+						<br>
+						Running actions if someone modifies a markdown file for example would be extremely wasteful of the limited time per month that we are
+						allowed to use Actions for.
+						<br><br>
+
+						And last, the <b>workflow_dispatch</b> trigger allows us to run the workflow manually from GitHub's webpage.
+					</p>
+					<pre data-src="./resources/code/full-attempt.yml" data-range="16,23"></pre>
+					<p>
+						Here we use a job matrix to be able to run multiple configurations and target architectures with a single workflow job.
+						<br>
+						This will let us easily adapt the workflow in case we decide to test more architectures or configurations.
+						<br><br>
+
+						We also specify <b>windows-latest</b> as the runner, which at the time of writing, is Windows Server 2022.
+					</p>
+					<pre data-src="./resources/code/full-attempt.yml" data-range="25,27"></pre>
+					<p>
+						Here we have some simple environment variables to make the workflow a bit cleaner and easier to modify.
+						<br>
+						The matrix variables change on every configuration and target, so we can use them to easily access the output executable.
+					</p>
+					<pre data-src="./resources/code/full-attempt.yml" data-range="29,48"></pre>
+					<p>
+						Here we use the checkout action to download or update the repository, and then we set up MSBuild with another action.
+						<br><br>
+
+						We then run MSBuild with the <b>-t:restore</b> flag, which downloads or updates any NuGet packages required by the project.
+						<br>
+						Afterwards, we swap it out with the <b>-t:build</b> flag to actually produce an executable and APPX bundle.
+						<br><br>
+
+						Finally, we use the <b>vswhere</b> tool to find the Visual Studio install location to be able to use <b>VSTest</b>.
+						<br>
+						Then we execute the tests.
+					</p>
+					<h2>
+						The Pitfalls
+					</h2>
+					<p>
+						Of course, just like with everything related to UWP, there are some pitfalls.
+						<br><br>
+
+						The first one was that I tried to use <b>dotnet test</b> to do this.
+					</p>
+					<pre data-src="./resources/code/first-attempt.yml" data-range="37,39"></pre>
+					<p>
+						This obviously didn't work, since it expected a .NET 7.0 solution which UWP obviously doesn't support.
+						<br>
+						I then learnt that I needed to use MSTest for .NET Framework projects, but MSTest was deprecated, so instead I had to use VSTest.
+						<br><br>
+
+						But then I realized VSTest doesn't automatically build the project, unlike .NET 7.0's test suite, so I obviously had to add some MSBuild
+						commands beforehand.
+						<br><br>
+
+						I then tried to add MSBuild, but I then quickly realized that you need to specify the unit test project alone since building the
+						entire solution is wasteful.
+						<br>
+						Oh right, I almost forgot something! NuGet restoration. MSBuild doesn't do it automatically. So don't forget that part.
+						<br><br>
+
+						About APPX bundles, you have to remove <code class="language-xml">&lt;PackageCertificateKeyFile&gt;</code> and
+						<code class="language-xml">&lt;PackageCertificateThumbprint&gt;</code>, as well as setting
+						<code class="language-xml">&lt;AppxPackageSigningEnabled&gt;</code> to <b>False</b> in the unit test project
+						for the build to work fine.
+						<br><br>
+
+						Lastly, about VSTest, you cannot use the default .NET Framework target. You must use <b>frameworkUAP10</b>, otherwise it will refuse to launch.
+						<br>
+						Then, I also found out that you must not give it the output <b>.exe</b> file, but instead the <b>.appxrecipe</b> file. This is because UWP
+						apps are containerized, so running the raw <b>.exe</b> file doesn't work.
+					</p>
+					<h2>
+						Conclusion
+					</h2>
+					<p>
+						This GitHub Actions adventure was not fun at all, but in the end it was very worth it. I hope this helps people in the future.
+						<br>
+						Thanks to <b>ahmed605</b> and <b>Sergio0694</b> for some of the help I needed.
+						<br><br>
+
+						Here's the full workflow file if you need it, you obviously will need to adapt the environment variables though:
+					</p>
+					<pre data-src="./resources/code/full-attempt.yml"></pre>
+				</div>
+			</div>
+		</div>
+
+		<script src="/lib/prism/prism.js"></script>
+	</body>
+</html>
