@@ -13,6 +13,12 @@
         </image>
 
         <item>
+            <title>Getting UWP unit tests to work was a pain.</title>
+            <link>https://aestheticalz.github.io/posts/getting-uwp-unit-tests-to-work/</link>
+            <pubDate>Mon, May 01 2023 19:41:00 GMT</pubDate>
+            <description>A story on how getting GitHub Actions to run UWP unit tests was a pain in the ass.</description>
+        </item>
+        <item>
             <title>The second redesign has arrived!</title>
             <link>https://aestheticalz.github.io/posts/the-second-redesign-has-arrived</link>
             <pubDate>Wed, Feb 01 2023 23:45:00 GMT</pubDate>
