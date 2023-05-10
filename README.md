@@ -1,5 +1,5 @@
 # Nora's Hideout
-This is the main repository for my public [website](https://aestheticalz.github.io/)!
+This is the main repository for my public [website](https://analogfeelings.github.io/)!
 
 Head over to the **Discussions** tab for comments or feedback!
 
