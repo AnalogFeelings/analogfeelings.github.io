@@ -17,6 +17,11 @@
 	margin-top: 0;
 }
 
+.bodyContent img
+{
+	width: 100%;
+}
+
 .separatorDiv
 {
 	margin-top: 15px;
