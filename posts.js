@@ -11,27 +11,24 @@ function PageStartup()
 
 function LoadPosts(fileContent)
 {
-	let recentPosts = document.getElementById("postsList");
+	let postsList = document.getElementById("postsList");
 
 	let i = 0;
 
 	fileContent.forEach(function (currentValue)
 	{
 		//The post you see in the "Recent Posts" part of the home tab.
-		let createdPostRecent = document.createElement("li");
-		let createdPostRecentDesc = document.createElement("p");
+		let createdPost = document.createElement("li");
+		let createdPostDesc = document.createElement("p");
 
-		createdPostRecent.classList.add("postHeader");
-		createdPostRecentDesc.classList.add("postDescription");
+		createdPost.classList.add("postHeader");
+		createdPostDesc.classList.add("postDescription");
 
-		createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> - <a href="${ currentValue.url }">${ currentValue.title }</a>`;
-		createdPostRecentDesc.innerHTML = currentValue.description;
+		createdPost.innerHTML = `<b>${ currentValue.date }</b> - <a href="${ currentValue.url }">${ currentValue.title }</a>`;
+		createdPostDesc.innerHTML = currentValue.description;
 
-		if (i < 8)
-		{
-			recentPosts.appendChild(createdPostRecent);
-			recentPosts.appendChild(createdPostRecentDesc);
-		}
+		postsList.appendChild(createdPost);
+		postsList.appendChild(createdPostDesc);
 
 		i++;
 	});
