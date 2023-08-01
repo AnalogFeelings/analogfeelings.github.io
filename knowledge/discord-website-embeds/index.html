@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+		<title>Nora's Hideout: Discord Website Embeds</title>
+
+		<link href="/stylesheets/shared/colors.css" rel="stylesheet">
+		<link href="/stylesheets/shared/social.css" rel="stylesheet">
+		<link href="/stylesheets/shared/fonts.css" rel="stylesheet">
+		<link href="/stylesheets/shared/index.css" rel="stylesheet">
+		<link href="/stylesheets/shared/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/computer/social.css" rel="stylesheet">
+		<link href="/stylesheets/computer/index.css" rel="stylesheet">
+		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<script src="/common.js"></script>
+		<script src="index.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
+
+		<meta content="Discord Website Embeds" name="og:title">
+		<meta content="https://analogfeelings.github.io/" name="og:url">
+		<meta content="A knowledge article on making website embeds for Discord." name="og:description">
+		<meta content="https://analogfeelings.github.io/resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://gist.githubusercontent.com/AnalogFeelings/94ea87ce4245a66d522f0e8d0011bbc0/raw/aestheticalshideoutfirstpost.json"
+			  type="application/json+oembed"/>
+	</head>
+
+	<body>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent line-numbers">
+					<h1>
+						Discord Website Embeds
+					</h1>
+					<p class="postInformation">
+						Written on <b>2023-08-01 22:36</b>
+						<span class="postInformationBullet"></span>
+						Never Edited
+					</p>
+					<fieldset class="specialFieldset warningFieldset">
+						<legend>
+							<img src="/resources/warning.svg"/>
+							<b>Warning!</b>
+						</legend>
+						Discord's proxy caches embeds for 30 minutes. This is not configurable by the website.
+						<br>
+						You can force it to refresh by appending dummy characters like "#" or random queries.
+					</fieldset>
+					<p>
+						A Discord website embed is composed of several HTML <b>meta</b> tags, and optionally, an <b>OEmbed JSON</b> file.
+
+						<br><br>
+
+						Below is a crude diagram of how a Discord website embed is structured.
+						<br>
+						My apologies for the eyesore.
+
+						<br><br>
+
+						We won't be talking about section 5 for now, since it's related to OEmbed.
+
+						<br><br>
+
+						<img src="./resources/embedanatomy.png" alt="A diagram of the Discord website embed structure."/>
+					</p>
+					<h2>
+						Element Breakdown
+					</h2>
+					<p>
+						Below is the list of elements that I know Discord supports so far.
+					</p>
+					<ul>
+						<li>
+							<b>og:title</b> - The title of the page, it usually gets displayed in the biggest font size.
+							Represented by the number <b>1</b> in the diagram above.
+						</li>
+						<li>
+							<b>og:url</b> - The URL to the page. This is used when clicking the author field.
+							Represented by the number <b>5</b> in the diagram above.
+						</li>
+						<li>
+							<b>og:description</b> - The description of the page. This is shown under the page title. Keep it short!
+							Represented by the number <b>2</b> in the diagram above.
+						</li>
+						<li>
+							<b>og:image</b> - The image displayed under the description. Must be a URL.
+							Represented by the number <b>3</b> in the diagram.
+						</li>
+						<li>
+							<b>theme-color</b> - The color of the thin strip on the left of the embed. Must be in hex.
+							Represented by the number <b>4</b> in the diagram.
+						</li>
+					</ul>
+					<fieldset class="specialFieldset remarksFieldset">
+						<legend>
+							<img src="/resources/remark.svg"/>
+							<b>Remarks</b>
+						</legend>
+						Discord by default won't make images large. You must add another meta tag.
+						<br>
+						Its name must be <b>twitter:card</b> with a content of <b>summary_large_image</b>.
+					</fieldset>
+					<p>
+						To make the field above the page title appear, you must add an OEmbed file.
+						<br>
+						Here is an example, taken from the source code of the home page.
+					</p>
+					<pre data-src="./resources/code/currentpage.html"></pre>
+					<h2>
+						OEmbed Definition
+					</h2>
+					<p>
+						To make field 5 appear on your rich embed, you must add a <b>link</b> element to your
+						page's head, with the type <b>application/json+oembed</b>, and an href pointing to your
+						JSON file
+						<br>
+						Its content is very simple.
+					</p>
+					<ul>
+						<li>
+							<b>author_name</b> - The text that will appear on field <b>5</b> of the image.
+						</li>
+						<li>
+							<b>author_url</b> - If this is set, it will turn the author_name field into a link.
+						</li>
+					</ul>
+					<p>
+						Here's an example, again from this website.
+					</p>
+					<pre data-src="./resources/code/oembed.json"></pre>
+
+					<div data-include="report"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/lib/prism/prism.js"></script>
+	</body>
+</html>
+

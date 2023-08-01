@@ -13,6 +13,12 @@
         </image>
 
         <item>
+            <title>Discord Website Embeds</title>
+            <link>https://analogfeelings.github.io/knowledge/discord-website-embeds/</link>
+            <pubDate>Tue, 01 Aug 2023 22:36:00 GMT</pubDate>
+            <description>A knowledge base article on how Discord rich embeds work.</description>
+        </item>
+        <item>
             <title>Getting UWP unit tests to work was a pain.</title>
             <link>https://analogfeelings.github.io/posts/getting-uwp-unit-tests-to-work/</link>
             <pubDate>Mon, May 01 2023 19:41:00 GMT</pubDate>

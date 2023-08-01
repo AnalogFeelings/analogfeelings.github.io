@@ -4,7 +4,7 @@ function PageStartup()
 {
 	LoadElements();
 
-	RetrievePosts(LoadPosts);
+	RetrievePosts(LoadPosts, true);
 
 	window.addEventListener("mouseup", (e) => HandleClick(e));
 }

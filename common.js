@@ -39,9 +39,9 @@ function HandleClick(e)
     }
 }
 
-function RetrievePosts(callbackFunction)
+function RetrievePosts(callbackFunction, isPosts)
 {
-    $.getJSON("/posts.json",
+    $.getJSON(isPosts ? "/posts.json" : "/knowledge.json",
         function (data, textStatus, jqXHR)
         {
             callbackFunction(data);
