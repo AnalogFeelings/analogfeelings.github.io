@@ -1,3 +1,6 @@
+/**
+ * Loads external HTML elements dynamically.
+ */
 function LoadElements()
 {
     let includeElements = document.querySelectorAll('[data-include]');
@@ -20,6 +23,9 @@ function LoadElements()
     }
 }
 
+/**
+ * Opens the page sidebar.
+ */
 function OpenSidebar()
 {
     let sideBar = document.getElementById("sideBar");
@@ -28,6 +34,11 @@ function OpenSidebar()
     sideBar.classList.toggle("shown", !isShown);
 }
 
+/**
+ * Hides the sidebar if clicked outside of its bounds.
+ * Only for mobile.
+ * @param {MouseEvent} e The mouse click event.
+ */
 function HandleClick(e)
 {
     let sideBar = document.getElementById("sideBar");
@@ -39,6 +50,11 @@ function HandleClick(e)
     }
 }
 
+/**
+ * Retrieves post data from a JSON file.
+ * @param {receivePostsCallback} callbackFunction The callback that will receive the data.
+ * @param {boolean} isPosts If true, fetch content from the posts file, otherwise, knowledge.
+ */
 function RetrievePosts(callbackFunction, isPosts)
 {
     $.getJSON(isPosts ? "/posts.json" : "/knowledge.json",
@@ -48,3 +64,9 @@ function RetrievePosts(callbackFunction, isPosts)
         }
     );
 }
+
+/**
+ * Callback for receiving post data.
+ * @callback receivePostsCallback
+ * @param {object} data The JSON data.
+ */
