@@ -17,11 +17,6 @@
 	background-image: url("/resources/social/tumblr.svg");
 }
 
-/*TWITTER ICON*/
-.socialMediaIcon.twitter {
-	background-image: url("/resources/social/twitter.svg");
-}
-
 /*MASTODON ICON*/
 .socialMediaIcon.mastodon {
 	background-image: url("/resources/social/mastodon.svg");
@@ -35,4 +30,9 @@
 /*YOUTUBE ICON*/
 .socialMediaIcon.youtube {
 	background-image: url("/resources/social/youtube.svg");
+}
+
+/*ITCH ICON*/
+.socialMediaIcon.itch {
+	background-image: url("/resources/social/itch.svg");
 }
