@@ -18,7 +18,8 @@
 
 .topBarText > p
 {
-	font-family: Merriweather-BoldItalic, serif;
+	font-family: PTSerif-Bold, serif;
+	font-style: italic;
 
 	-webkit-user-select: none;
 	user-select: none;
@@ -33,7 +34,7 @@
 
 .topBarTextBottom
 {
-	font-family: Merriweather-RegularItalic, serif;
+	font-family: PTSerif-Italic, serif;
 
 	font-style: italic;
 }
