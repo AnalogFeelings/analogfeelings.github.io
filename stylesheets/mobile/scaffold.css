@@ -81,10 +81,10 @@
 
 .sideBarSection
 {
-	margin-top: 12px;
+	margin-top: 8px;
 	margin-right: 23px;
 	margin-left: 23px;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 }
 
 .sideBarSection > ul:not(.fancyTreeview)
