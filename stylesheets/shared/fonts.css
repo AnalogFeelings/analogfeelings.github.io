@@ -1,35 +1,23 @@
 @font-face
 {
-	font-family: Merriweather-Regular;
-	src: url("/resources/fonts/Merriweather-Regular.ttf");
+	font-family: PTSerif;
+	src: url("/resources/fonts/PTSerif-Regular.ttf");
 }
 
 @font-face
 {
-	font-family: Merriweather-RegularItalic;
-	src: url("/resources/fonts/Merriweather-Italic.ttf");
+	font-family: PTSerif-Bold;
+	src: url("/resources/fonts/PTSerif-Bold.ttf");
 }
 
 @font-face
 {
-	font-family: Merriweather-Bold;
-	src: url("/resources/fonts/Merriweather-Bold.ttf");
+	font-family: PTSerif-BoldItalic;
+	src: url("/resources/fonts/PTSerif-BoldItalic.ttf");
 }
 
 @font-face
 {
-	font-family: Merriweather-BoldItalic;
-	src: url("/resources/fonts/Merriweather-BoldItalic.ttf");
-}
-
-@font-face
-{
-	font-family: Merriweather-Light;
-	src: url("/resources/fonts/Merriweather-Light.ttf");
-}
-
-@font-face
-{
-	font-family: Merriweather-LightItalic;
-	src: url("/resources/fonts/Merriweather-LightItalic.ttf");
+	font-family: PTSerif-Italic;
+	src: url("/resources/fonts/PTSerif-Italic.ttf");
 }

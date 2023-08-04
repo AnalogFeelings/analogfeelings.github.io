@@ -12,13 +12,13 @@
 
 b
 {
-	font-family: Merriweather-Bold, serif;
+	font-family: PTSerif-Bold, serif;
 	font-weight: bold;
 }
 
 i
 {
-	font-family: Merriweather-RegularItalic, serif;
+	font-family: PTSerif-Italic, serif;
 	font-style: italic;
 }
 
@@ -56,7 +56,7 @@ body
 	color-scheme: light;
 	background-color: var(--body-background);
 
-	font-family: Merriweather-Regular, serif;
+	font-family: PTSerif, serif;
 }
 
 .filterDisabled
