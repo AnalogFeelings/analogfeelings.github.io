@@ -17,6 +17,9 @@
 	--warning-background-color: lightyellow;
 	--warning-border-color: orange;
 
+	--important-background-color: #F1E0FF;
+	--important-border-color: mediumpurple;
+
 	--remarks-background-color: aliceblue;
 	--remarks-border-color: cornflowerblue;
 }
