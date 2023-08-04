@@ -1,6 +1,6 @@
 .topBar
 {
-	padding: 15px;
+	padding: 12px;
 
 	column-gap: 0;
 }
@@ -12,7 +12,7 @@
 
 .topBarText > p
 {
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 }
 
 .topBarTextTop
@@ -22,7 +22,7 @@
 
 .topBarTextBottom
 {
-	font-size: 0.65em;
+	font-size: 0.95em;
 }
 
 .topBarTextGradient
@@ -35,20 +35,20 @@
 {
 	display: block;
 
-	margin-right: 20px;
+	margin-right: 15px;
 	margin-left: 5px;
 }
 
 .topBarBurger > button
 {
-	width: 48px;
-	height: 48px;
+	width: 32px;
+	height: 32px;
 
 	background-image: url("/resources/menu.svg");
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position: center center;
-	background-size: 32px 32px;
+	background-size: 24px 24px;
 
 	border: 2px solid var(--button-border);
 
@@ -68,8 +68,6 @@
 
 	border-bottom: solid 1px var(--navbar-border-color);
 	box-shadow: 4px 4px 6px 0px rgb(0 0 0 / 13%);
-
-	font-size: 0.9em;
 
 	padding: 10px;
 }
