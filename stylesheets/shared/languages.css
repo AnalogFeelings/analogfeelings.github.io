@@ -1,0 +1,41 @@
+.languagesBorder
+{
+	border: 1px solid var(--thin-color);
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.languagesContainer
+{
+	display: flex;
+	flex-direction: row;
+	column-gap: 16px;
+	margin: 12px;
+	align-items: center;
+}
+
+.languagesContainer > img
+{
+	object-fit: contain;
+	width: 64px !important;
+	height: 64px !important;
+}
+
+.languagesText
+{
+	display: flex;
+
+	flex-direction: column;
+	row-gap: 8px;
+
+	justify-content: center;
+}
+
+.languagesSeparator
+{
+	min-height: 1px;
+	width: 100%;
+
+	background: var(--thin-color);;
+}
