@@ -50,14 +50,17 @@ function HandleClick(e)
     }
 }
 
+const POSTS_PATH = "/resources/data/posts.json";
+const KNOWLEDGE_PATH = "/resources/data/knowledge.json";
+
 /**
- * Retrieves post data from a JSON file.
+ * Retrieves blog post data from a JSON file.
  * @param {boolean} isPosts If true, fetch content from the posts file, otherwise, knowledge.
  * @param {...receivePostsCallback} callbackFunctions The callbacks that will receive the data.
  */
-function RetrievePosts(isPosts, ...callbackFunctions)
+function RetrieveBlogData(isPosts, ...callbackFunctions)
 {
-    $.getJSON(isPosts ? "/posts.json" : "/knowledge.json",
+    $.getJSON(isPosts ? POSTS_PATH : KNOWLEDGE_PATH,
         function (data, textStatus, jqXHR)
         {
             callbackFunctions.forEach(x => x.apply(null, new Array(data)));
