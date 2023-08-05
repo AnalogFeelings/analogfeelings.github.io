@@ -52,15 +52,15 @@ function HandleClick(e)
 
 /**
  * Retrieves post data from a JSON file.
- * @param {receivePostsCallback} callbackFunction The callback that will receive the data.
  * @param {boolean} isPosts If true, fetch content from the posts file, otherwise, knowledge.
+ * @param {...receivePostsCallback} callbackFunctions The callbacks that will receive the data.
  */
-function RetrievePosts(callbackFunction, isPosts)
+function RetrievePosts(isPosts, ...callbackFunctions)
 {
     $.getJSON(isPosts ? "/posts.json" : "/knowledge.json",
         function (data, textStatus, jqXHR)
         {
-            callbackFunction(data);
+            callbackFunctions.forEach(x => x.apply(null, new Array(data)));
         }
     );
 }
