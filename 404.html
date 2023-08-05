@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>404 - Nora's Hideout</title>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
 
-        <link rel="stylesheet" href="/404.css">
-        <link rel="icon" href="/resources/favicon.png">
+		<title>Not Found - Nora's Hideout</title>
 
-        <meta name="og:title" content="Page not found!">
-        <meta name="og:url" content="https://analogfeelings.github.io/">
-        <meta name="og:description"
-            content="An error has ocurred.">
-        <meta name="og:image" content="https://analogfeelings.github.io/resources/bannercropped.png">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="theme-color" content="#002ca5">
-        <link type="application/json+oembed"
-            href="https://gist.githubusercontent.com/AnalogFeelings/465a3430e1d53cc521f0a519111362ed/raw/aestheticalshideout404.json" />
+		<link href="stylesheets/shared/colors.css" rel="stylesheet">
+		<link href="stylesheets/shared/social.css" rel="stylesheet">
+		<link href="stylesheets/shared/fonts.css" rel="stylesheet">
+		<link href="stylesheets/shared/index.css" rel="stylesheet">
+		<link href="stylesheets/shared/scaffold.css" rel="stylesheet">
+
+		<link href="stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="stylesheets/computer/social.css" rel="stylesheet">
+		<link href="stylesheets/computer/index.css" rel="stylesheet">
+		<link href="stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<script src="common.js"></script>
+		<script src="404.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
     </head>
     <body>
-        <div>
-			<p class="blueScreen">
-				A problem has been detected and GitHub Pages has redirected you here to prevent an ugly 404 website <br>
-				that uses Times New Roman.
-				<br><br>
-				ERROR_PAGE_NOT_FOUND
-				<br><br>
-				The problem seems to be caused by the fact that you cannot type a URL properly, or you got pranked.
-				<br>
-				The system will not try to collect data, after all, this is a just a dumb website replicating a<br>
-				Windows XP bugcheck!
-				<br><br>
-				Please make sure your URL is correct and if you were sent this by a friend or something, <br> tell them to
-				learn how to use Ctrl + C instead of typing the URL out manually.
-				<br><br>
-				If this problem persists, who knows, maybe I have revamped the entire webpage's structure!
-				<br>
-				Please go back to the <a href="/index.html"><u>main website</u></a> to properly navigate
-				this site.
-				<br><br>
-				Technical information:
-				<br><br>
-				*** STOP: 0x000000404 (0xDEADBEEF,0xBADDCAFE,0xDEADDEAD,0xBAAAAAAD)
-			</p>
-        </div>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent">
+					<h1>
+						Page Not Found
+					</h1>
+					<p>
+						The page you've requested does not exist, or it has been moved.
+						<br>
+						Please remember URLs are case-sensitive, check your spelling, and try again.
+
+						<br><br>
+
+						You also have the sidebar, which should allow you to go to the home page.
+					</p>
+				</div>
+			</div>
+		</div>
     </body>
 </html>
