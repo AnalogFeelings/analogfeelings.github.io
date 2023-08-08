@@ -28,6 +28,12 @@ fieldset
 	margin-inline-end: 0;
 }
 
+label
+{
+	display: inline-block;
+	margin-right: 5px;
+}
+
 h1::after
 {
 	display: block;
