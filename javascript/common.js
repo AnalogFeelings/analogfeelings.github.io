@@ -1,4 +1,76 @@
 /**
+ * Changes the theme in the DOM.
+ * @param theme The selected theme.
+ */
+function ChangeDisplayTheme(theme)
+{
+    let validPreference = GetValidTheme(theme);
+
+    document.documentElement.dataset.appliedMode = validPreference;
+}
+
+/**
+ * Gets the user's preferred theme from the local storage.
+ * @returns {string|string} The preferred theme, or "system" if none.
+ */
+function GetThemePreference()
+{
+    return localStorage.getItem("theme") || "system";
+}
+
+/**
+ * Sets the user's preferred theme to local storage.
+ * @param theme The selected theme.
+ */
+function SetThemePreference(theme)
+{
+    localStorage.setItem("theme", theme);
+
+    ChangeDisplayTheme(theme);
+}
+
+function GetValidTheme(theme)
+{
+    let isSystem = matchMedia("(prefers-color-scheme: light)").matches;
+
+    if(isSystem || theme === "light")
+        return "light";
+    else
+        return "dark";
+}
+
+/**
+ * Handles theme selection.
+ */
+function OnThemeChanged()
+{
+    let dropdown = document.getElementById("themeDropdown");
+    let value = dropdown.value;
+
+    switch(value)
+    {
+        case "light":
+        case "dark":
+        case "system":
+            SetThemePreference(value);
+            break;
+        default:
+            SetThemePreference("system");
+            break;
+    }
+}
+
+/**
+ * Loads the site theme.
+ */
+function LoadTheme()
+{
+    let preference = GetThemePreference();
+
+    ChangeDisplayTheme(preference);
+}
+
+/**
  * Loads external HTML elements dynamically.
  */
 function LoadElements()

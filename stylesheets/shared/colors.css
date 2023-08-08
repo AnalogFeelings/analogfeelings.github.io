@@ -1,7 +1,35 @@
-:root
+:root[data-applied-mode="light"]
 {
+	color-scheme: light;
+
 	--body-background: #FFFFFF;
 
+	--thin-color: gray;
+
+	--navbar-background: #FFFFFF;
+	--navbar-gradient-start: #2F3279;
+	--navbar-border-color: dimgray;
+
+	--header-gradient-start: #008080;
+
+	--button-border: black;
+
+	--separator-color: lightgray;
+
+	--warning-background-color: lightyellow;
+	--warning-border-color: orange;
+
+	--important-background-color: #F1E0FF;
+	--important-border-color: mediumpurple;
+
+	--remarks-background-color: aliceblue;
+	--remarks-border-color: cornflowerblue;
+}
+
+:root[data-applied-mode="dark"]
+{
+	color-scheme: dark;
+	--body-background: black;
 	--thin-color: gray;
 
 	--navbar-background: #FFFFFF;

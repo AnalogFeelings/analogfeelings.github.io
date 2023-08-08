@@ -1,3 +1,5 @@
+LoadTheme();
+
 window.onload = PageStartup;
 
 function PageStartup()
@@ -5,6 +7,11 @@ function PageStartup()
 	LoadElements();
 
 	RetrieveBlogData(false, LoadArticles);
+
+	let themeDropdown = document.getElementById("themeDropdown");
+
+	themeDropdown.value = GetThemePreference();
+	themeDropdown.addEventListener("change", OnThemeChanged);
 
 	window.addEventListener("mouseup", (e) => HandleClick(e));
 }
