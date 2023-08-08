@@ -15,6 +15,10 @@
 	--github-icon: url("/resources/social/github.svg");
 	--tumblr-icon: url("/resources/social/tumblr.svg");
 
+	--link-color: #0000EE;
+	--link-active: #FF0000;
+	--link-visited: #551A8B;
+
 	--header-gradient-start: #008080;
 
 	--button-border: black;
