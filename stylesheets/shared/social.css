@@ -8,31 +8,37 @@
 }
 
 /*GITHUB ICON*/
-.socialMediaIcon.github {
+.socialMediaIcon.github
+{
 	background-image: url("/resources/social/github.svg");
 }
 
 /*TUMBLR ICON*/
-.socialMediaIcon.tumblr {
+.socialMediaIcon.tumblr
+{
 	background-image: url("/resources/social/tumblr.svg");
 }
 
 /*MASTODON ICON*/
-.socialMediaIcon.mastodon {
+.socialMediaIcon.mastodon
+{
 	background-image: url("/resources/social/mastodon.svg");
 }
 
 /*REDDIT ICON*/
-.socialMediaIcon.reddit {
+.socialMediaIcon.reddit
+{
 	background-image: url("/resources/social/reddit.svg");
 }
 
 /*YOUTUBE ICON*/
-.socialMediaIcon.youtube {
+.socialMediaIcon.youtube
+{
 	background-image: url("/resources/social/youtube.svg");
 }
 
 /*ITCH ICON*/
-.socialMediaIcon.itch {
+.socialMediaIcon.itch
+{
 	background-image: url("/resources/social/itch.svg");
 }
