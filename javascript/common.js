@@ -33,10 +33,14 @@ function GetValidTheme(theme)
 {
     let isSystem = matchMedia("(prefers-color-scheme: light)").matches;
 
-    if(isSystem || theme === "light")
+    if(theme === "light")
         return "light";
-    else
+    if(theme === "dark")
         return "dark";
+    if(isSystem)
+        return "light";
+
+    return "dark";
 }
 
 /**

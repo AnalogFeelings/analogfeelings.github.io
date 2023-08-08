@@ -50,6 +50,8 @@
 	background-position: center center;
 	background-size: 24px 24px;
 
+	filter: var(--menu-button-filter);
+
 	border: 2px solid var(--button-border);
 
 	padding: 0;

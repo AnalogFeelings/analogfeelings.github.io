@@ -75,26 +75,26 @@
 
 .sideBarSection a
 {
-	color: #0000EE;
+	color: var(--navbar-link-color);
 
 	text-decoration: none;
 }
 
 .sideBarSection a:visited
 {
-	color: #0000EE;
+	color: var(--navbar-link-color);
 }
 
 .sideBarSection a:hover
 {
-	color: #0000EE;
+	color: var(--navbar-link-color);
 
 	text-decoration: underline;
 }
 
 .sideBarSection a:active
 {
-	color: #FF0000;
+	color: var(--navbar-link-active);
 }
 
 .sideBarCopyright

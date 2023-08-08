@@ -10,13 +10,13 @@
 /*GITHUB ICON*/
 .socialMediaIcon.github
 {
-	background-image: url("/resources/social/github.svg");
+	background-image: var(--github-icon);
 }
 
 /*TUMBLR ICON*/
 .socialMediaIcon.tumblr
 {
-	background-image: url("/resources/social/tumblr.svg");
+	background-image: var(--tumblr-icon);
 }
 
 /*MASTODON ICON*/

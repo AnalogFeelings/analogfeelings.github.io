@@ -34,6 +34,21 @@ label
 	margin-right: 5px;
 }
 
+a
+{
+	color: var(--link-color);
+}
+
+a:visited
+{
+	color: var(--link-visited);
+}
+
+a:active
+{
+	color: var(--link-active);
+}
+
 h1::after
 {
 	display: block;

@@ -9,10 +9,16 @@
 	--navbar-background: #FFFFFF;
 	--navbar-gradient-start: #2F3279;
 	--navbar-border-color: dimgray;
+	--navbar-link-color: #0000EE;
+	--navbar-link-active: #FF0000;
+
+	--github-icon: url("/resources/social/github.svg");
+	--tumblr-icon: url("/resources/social/tumblr.svg");
 
 	--header-gradient-start: #008080;
 
 	--button-border: black;
+	--menu-button-filter: none;
 
 	--separator-color: lightgray;
 
@@ -29,25 +35,37 @@
 :root[data-applied-mode="dark"]
 {
 	color-scheme: dark;
-	--body-background: black;
+
+	--body-background: #202020;
+
 	--thin-color: gray;
 
-	--navbar-background: #FFFFFF;
-	--navbar-gradient-start: #2F3279;
+	--navbar-background: #202020;
+	--navbar-gradient-start: #6494C3;
 	--navbar-border-color: dimgray;
+	--navbar-link-color: #6B6BFF;
+	--navbar-link-active: #FF8080;
 
-	--header-gradient-start: #008080;
+	--github-icon: url("/resources/social/github-light.svg");
+	--tumblr-icon: url("/resources/social/tumblr-light.svg");
+
+	--link-color: #6B6BFF;
+	--link-active: #FF8080;
+	--link-visited: #9F57E0;
+
+	--header-gradient-start: #009E9E;
 
 	--button-border: black;
+	--menu-button-filter: invert();
 
-	--separator-color: lightgray;
+	--separator-color: gray;
 
-	--warning-background-color: lightyellow;
+	--warning-background-color: #525200;
 	--warning-border-color: orange;
 
-	--important-background-color: #F1E0FF;
+	--important-background-color: #391358;
 	--important-border-color: mediumpurple;
 
-	--remarks-background-color: aliceblue;
+	--remarks-background-color: #003461;
 	--remarks-border-color: cornflowerblue;
 }
