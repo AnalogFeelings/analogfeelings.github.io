@@ -12,9 +12,6 @@
 	--navbar-link-color: #0000EE;
 	--navbar-link-active: #FF0000;
 
-	--github-icon: url("/resources/social/github.svg");
-	--tumblr-icon: url("/resources/social/tumblr.svg");
-
 	--link-color: #0000EE;
 	--link-active: #FF0000;
 	--link-visited: #551A8B;
@@ -50,10 +47,6 @@
 	--navbar-link-color: #6B6BFF;
 	--navbar-link-active: #FF8080;
 
-	--github-icon: url("/resources/social/github-light.svg");
-	--tumblr-icon: url("/resources/social/tumblr-light.svg");
-
-	--link-color: #6B6BFF;
 	--link-active: #FF8080;
 	--link-visited: #9F57E0;
 

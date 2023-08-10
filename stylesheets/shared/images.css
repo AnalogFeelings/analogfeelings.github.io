@@ -1,0 +1,11 @@
+:root[data-applied-mode="light"]
+{
+	--github-icon: url("/resources/social/github.svg");
+	--tumblr-icon: url("/resources/social/tumblr.svg");
+}
+
+:root[data-applied-mode="dark"]
+{
+	--github-icon: url("/resources/social/github-light.svg");
+	--tumblr-icon: url("/resources/social/tumblr-light.svg");
+}
