@@ -1,5 +1,11 @@
 [
     {
+        "date": "2023-09-11 17:43",
+        "url": "/posts/verifying-my-site-on-discord",
+        "title": "Verifying my website on Discord",
+        "description": "A short story and guide on how to verify GitHub Pages sites with Discord."
+    },
+    {
         "date": "2023-05-01 19:41",
         "url": "/posts/getting-uwp-unit-tests-to-work",
         "title": "Getting UWP unit tests to work was a pain.",
