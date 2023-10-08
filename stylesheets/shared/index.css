@@ -49,7 +49,7 @@ a:active
 	color: var(--link-active);
 }
 
-h1::after
+h1::after, h2::after
 {
 	display: block;
 	content: '';
@@ -60,6 +60,16 @@ h1::after
 	min-width: 100%;
 
 	background: linear-gradient(90deg, var(--header-gradient-start), var(--navbar-background));
+}
+
+h2::after
+{
+    min-height: 3px;
+}
+
+h2
+{
+    font-weight: 500;
 }
 
 html
@@ -202,4 +212,20 @@ body
 .remarksFieldset > legend > img
 {
 	bottom: 2px;
+}
+
+.listBorder
+{
+	border: 1px solid var(--thin-color);
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.listSeparator
+{
+	min-height: 1px;
+	width: 100%;
+
+	background: var(--thin-color);;
 }

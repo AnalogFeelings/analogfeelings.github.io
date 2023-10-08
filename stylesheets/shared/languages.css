@@ -1,11 +1,3 @@
-.languagesBorder
-{
-	border: 1px solid var(--thin-color);
-
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
-
 .languagesContainer
 {
 	display: flex;
@@ -30,12 +22,4 @@
 	row-gap: 8px;
 
 	justify-content: center;
-}
-
-.languagesSeparator
-{
-	min-height: 1px;
-	width: 100%;
-
-	background: var(--thin-color);;
 }
