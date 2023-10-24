@@ -22,7 +22,7 @@
 
 .topBarTextBottom
 {
-	font-size: 0.95em;
+	display: none;
 }
 
 .topBarTextGradient
