@@ -151,7 +151,7 @@
 	user-select: none;
 }
 
-.sideBarWebButtons img
+.sideBarWebButtons > :is(img, a)
 {
 	width: 88px;
 	height: 31px;
