@@ -1,1 +1,0 @@
-SeedRnd Millisecs() ; Seed the randomizer with the current system time in  milliseconds.

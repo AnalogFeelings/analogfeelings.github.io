@@ -1,1 +1,0 @@
-.lib "mylib.dll"
