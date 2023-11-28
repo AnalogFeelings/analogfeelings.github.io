@@ -1,3 +1,5 @@
+LoadTheme();
+
 window.onload = PageStartup;
 
 let currentPage = "";
