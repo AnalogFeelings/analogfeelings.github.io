@@ -3,6 +3,7 @@
 	color-scheme: light;
 
 	--body-background: #FFFFFF;
+	--body-foreground: black;
 
 	--thin-color: gray;
 
@@ -38,6 +39,7 @@
 	color-scheme: dark;
 
 	--body-background: #202020;
+	--body-foreground: lightgray;
 
 	--thin-color: gray;
 
