@@ -1,5 +1,11 @@
 [
     {
+        "date": "2024-05-01 15:12",
+        "url": "/posts/building-software-with-modern-toolchains-for-chicago",
+        "title": "Using modern toolchains for Windows 95!",
+        "description": "An article on how I got the Windows 11 SDK to output software for Windows 95."
+    },
+    {
         "date": "2023-09-11 17:43",
         "url": "/posts/verifying-my-site-on-discord",
         "title": "Verifying my website on Discord",
