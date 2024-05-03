@@ -166,55 +166,6 @@ body
 	position: relative;
 }
 
-.specialFieldset
-{
-	padding-bottom: 14px;
-}
-
-.specialFieldset > legend > img
-{
-	display: inline;
-	position: relative;
-
-	vertical-align: middle;
-
-	width: 24px;
-	height: 24px;
-}
-
-.warningFieldset
-{
-	background-color: var(--warning-background-color);
-	border-color: var(--warning-border-color);
-}
-
-.warningFieldset > legend > img
-{
-	bottom: 3px;
-}
-
-.importantFieldset
-{
-	background-color: var(--important-background-color);
-	border-color: var(--important-border-color);
-}
-
-.importantFieldset > legend > img
-{
-	bottom: 2px;
-}
-
-.remarksFieldset
-{
-	background-color: var(--remarks-background-color);
-	border-color: var(--remarks-border-color);
-}
-
-.remarksFieldset > legend > img
-{
-	bottom: 2px;
-}
-
 .languagesText
 {
 	display: flex;
