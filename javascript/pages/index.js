@@ -20,55 +20,35 @@ function PageStartup()
 function LoadPosts(fileContent)
 {
 	let recentPosts = document.getElementById("recentPostsList");
-
 	let i = 0;
 
-	fileContent.forEach(function (currentValue)
+	for (const value of fileContent)
 	{
-		//The post you see in the "Recent Posts" part of the home tab.
-		let createdPostRecent = document.createElement("li");
-		let createdPostRecentDesc = document.createElement("p");
+		if(i >= 8)
+			break;
 
-		createdPostRecent.classList.add("postHeader");
-		createdPostRecentDesc.classList.add("postDescription");
+		let createdPostRecent = GenerateArticle(value);
 
-		createdPostRecent.innerHTML = `<b>${ currentValue.date }</b> - <a href="${ currentValue.url }">${ currentValue.title }</a>`;
-		createdPostRecentDesc.innerHTML = currentValue.description;
-
-		if (i < 8)
-		{
-			recentPosts.appendChild(createdPostRecent);
-			recentPosts.appendChild(createdPostRecentDesc);
-		}
+		recentPosts.appendChild(createdPostRecent);
 
 		i++;
-	});
+	}
 }
 
 function LoadArticles(fileContent)
 {
 	let recentArticles = document.getElementById("recentArticleList");
-
 	let i = 0;
 
-	fileContent.forEach(function (currentValue)
+	for (const value of fileContent)
 	{
-		//The post you see in the "Recent Posts" part of the home tab.
-		let createdArticleRecent = document.createElement("li");
-		let createdArticleRecentDesc = document.createElement("p");
+		if(i >= 8)
+			break;
 
-		createdArticleRecent.classList.add("postHeader");
-		createdArticleRecentDesc.classList.add("postDescription");
+		let createdArticleRecent = GenerateArticle(value);
 
-		createdArticleRecent.innerHTML = `<b>${ currentValue.date }</b> - <a href="${ currentValue.url }">${ currentValue.title }</a>`;
-		createdArticleRecentDesc.innerHTML = currentValue.description;
-
-		if (i < 8)
-		{
-			recentArticles.appendChild(createdArticleRecent);
-			recentArticles.appendChild(createdArticleRecentDesc);
-		}
+		recentArticles.appendChild(createdArticleRecent);
 
 		i++;
-	});
+	}
 }

@@ -4,9 +4,7 @@
  */
 function ChangeDisplayTheme(theme)
 {
-    let validPreference = GetValidTheme(theme);
-
-    document.documentElement.dataset.appliedMode = validPreference;
+    document.documentElement.dataset.appliedMode = GetValidTheme(theme);
 }
 
 /**
@@ -142,6 +140,25 @@ function RetrieveBlogData(isPosts, ...callbackFunctions)
             callbackFunctions.forEach(x => x.apply(null, new Array(data)));
         }
     );
+}
+
+/**
+ * Generates a post or article preview item.
+ * @param {object} articleData The JSON data.
+ * @returns {HTMLDivElement} The new article or post preview.
+ */
+function GenerateArticle(articleData)
+{
+    let createdArticle = document.createElement("div");
+    createdArticle.classList.add("listItem", "listItemVertical");
+
+    let editedString = !articleData.edited ? "Never Edited" : `Edited on <b>${articleData.edited}</b>`;
+
+    createdArticle.innerHTML = `<a href="${articleData.url}"><h3 class="postHeader">${articleData.title}</h3></a>`;
+    createdArticle.innerHTML += `<p class="postInformation postHeaderInformation">Posted on <b>${articleData.date}</b><span class="postInformationBullet"></span>${editedString}</p>`;
+    createdArticle.innerHTML += `<p class="postDescription">${articleData.description}</p>`;
+
+    return createdArticle;
 }
 
 /**

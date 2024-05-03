@@ -1,66 +1,77 @@
 [
     {
         "date": "2024-05-01 15:12",
+        "edited": "2024-05-01 15:21",
         "url": "/posts/building-software-with-modern-toolchains-for-chicago",
         "title": "Using modern toolchains for Windows 95!",
         "description": "An article on how I got the Windows 11 SDK to output software for Windows 95."
     },
     {
         "date": "2023-09-11 17:43",
+        "edited": null,
         "url": "/posts/verifying-my-site-on-discord",
         "title": "Verifying my website on Discord",
         "description": "A short story and guide on how to verify GitHub Pages sites with Discord."
     },
     {
         "date": "2023-05-01 19:41",
+        "edited": null,
         "url": "/posts/getting-uwp-unit-tests-to-work",
         "title": "Getting UWP unit tests to work was a pain.",
         "description": "A story on how getting GitHub Actions to run UWP unit tests was a pain in the ass."
     },
     {
         "date": "2023-02-02 00:45",
+        "edited": null,
         "url": "/posts/the-second-redesign-has-arrived",
         "title": "The second redesign has arrived!",
         "description": "Sorry for the even bigger delay, I was busy with other projects!"
     },
     {
         "date": "2022-05-31 23:41",
+        "edited": null,
         "url": "/posts/the-redesign-has-arrived",
         "title": "The redesign has arrived!",
         "description": "Sorry for the big delay, I had major flexbox issues :P"
     },
     {
         "date": "2022-02-24 06:05",
+        "edited": "2022-05-24 01:29",
         "url": "/posts/im-back",
         "title": "I'm back!",
         "description": "Sorry for the long downtime!"
     },
     {
         "date": "2022-01-04 22:30",
+        "edited": "2022-05-24 01:21",
         "url": "/posts/added-rss-feeds-and-social-media",
         "title": "Added RSS Feeds and Social Media!",
         "description": "Now you can follow the blog (and my social media) without manually checking the website!"
     },
     {
         "date": "2022-01-01 05:46",
+        "edited": "2022-05-24 01:04",
         "url": "/posts/added-github-discussions-and-a-favicon",
         "title": "Added GitHub Discussions And A Favicon!",
         "description": "Added GitHub Discussions to act as a comment section. Also added an icon that displays in the tab header of your browser."
     },
     {
         "date": "2022-01-01 04:50",
+        "edited": "2022-05-24 01:04",
         "url": "/posts/happy-new-year-2022",
         "title": "Happy New Year 2022!",
         "description": "I hope you have a great year!"
     },
     {
         "date": "2021-11-30 20:31",
+        "edited": "2023-02-12 05:04",
         "url": "/posts/raising-bugchecks-from-userspace-in-nt",
         "title": "Raising bugchecks from userspace in NT.",
         "description": "Why did Microsoft decide to allow ANY userspace program without admin rights to bugcheck the system with 2 function calls?"
     },
     {
         "date": "2021-11-24 12:06",
+        "edited": "2022-05-24 09:57",
         "url": "/posts/the-first-post",
         "title": "The First Post!",
         "description": "The first ever blog post for my new website!"

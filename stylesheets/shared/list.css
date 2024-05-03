@@ -17,6 +17,12 @@
 	border-bottom: 1px solid var(--thin-color);
 }
 
+.listItemVertical
+{
+	flex-direction: column;
+	align-items: flex-start;
+}
+
 .listItem > img
 {
 	object-fit: contain;
