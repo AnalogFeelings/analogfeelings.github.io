@@ -11,6 +11,10 @@
 	column-gap: 16px;
 	padding: 12px;
 	align-items: center;
+
+	border-left: 1px solid var(--thin-color);
+	border-right: 1px solid var(--thin-color);
+	border-bottom: 1px solid var(--thin-color);
 }
 
 .listItem > img
@@ -20,7 +24,7 @@
 	height: 64px !important;
 }
 
-.listItem:not(:last-child)
+.listItem:first-child
 {
-	border-bottom: 1px solid var(--thin-color);
+	border-top: 1px solid var(--thin-color);
 }
