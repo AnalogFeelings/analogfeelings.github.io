@@ -1,0 +1,26 @@
+.listContainer
+{
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.listItem
+{
+	display: flex;
+	flex-direction: row;
+	column-gap: 16px;
+	padding: 12px;
+	align-items: center;
+}
+
+.listItem > img
+{
+	object-fit: contain;
+	width: 64px !important;
+	height: 64px !important;
+}
+
+.listItem:not(:last-child)
+{
+	border-bottom: 1px solid var(--thin-color);
+}

@@ -215,18 +215,12 @@ body
 	bottom: 2px;
 }
 
-.listBorder
+.languagesText
 {
-	border: 1px solid var(--thin-color);
+	display: flex;
 
-	margin-top: 1em;
-	margin-bottom: 1em;
-}
+	flex-direction: column;
+	row-gap: 8px;
 
-.listSeparator
-{
-	min-height: 1px;
-	width: 100%;
-
-	background: var(--thin-color);;
+	justify-content: center;
 }
