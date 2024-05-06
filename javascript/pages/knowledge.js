@@ -5,13 +5,7 @@ window.onload = PageStartup;
 async function PageStartup()
 {
 	await LoadElements();
-
 	await RetrieveBlogData(false, LoadArticles);
-
-	let themeDropdown = document.getElementById("themeDropdown");
-
-	themeDropdown.value = GetThemePreference();
-	themeDropdown.addEventListener("change", OnThemeChanged);
 
 	window.addEventListener("mouseup", (e) => HandleClick(e));
 }

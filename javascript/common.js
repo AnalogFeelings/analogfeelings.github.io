@@ -1,10 +1,14 @@
+const LIGHT_THEME = "light";
+const DARK_THEME = "dark";
+const SYSTEM_THEME = "system";
+
 /**
  * Changes the theme in the DOM.
  * @param theme The selected theme.
  */
 function ChangeDisplayTheme(theme)
 {
-    document.documentElement.dataset.appliedMode = GetValidTheme(theme);
+    document.documentElement.dataset.appliedMode = GetValidThemeForIdentifier(theme);
 }
 
 /**
@@ -27,18 +31,30 @@ function SetThemePreference(theme)
     ChangeDisplayTheme(theme);
 }
 
-function GetValidTheme(theme)
+/**
+ * Returns the theme to use based on the identifier.
+ * @param {string} theme The theme identifier.
+ * @returns {string} The theme to use.
+ */
+function GetValidThemeForIdentifier(theme)
 {
-    let isSystem = matchMedia("(prefers-color-scheme: light)").matches;
+    switch(theme)
+    {
+        case SYSTEM_THEME:
+            let prefersLight = matchMedia("(prefers-color-scheme: light)").matches;
+            if(prefersLight)
+                return LIGHT_THEME;
 
-    if(theme === "light")
-        return "light";
-    if(theme === "dark")
-        return "dark";
-    if(isSystem)
-        return "light";
-
-    return "dark";
+            let prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+            if(prefersDark)
+                return DARK_THEME;
+            break;
+        case LIGHT_THEME:
+        case DARK_THEME:
+            return theme;
+        default:
+            return DARK_THEME;
+    }
 }
 
 /**
@@ -51,13 +67,13 @@ function OnThemeChanged()
 
     switch(value)
     {
-        case "light":
-        case "dark":
-        case "system":
+        case LIGHT_THEME:
+        case DARK_THEME:
+        case SYSTEM_THEME:
             SetThemePreference(value);
             break;
         default:
-            SetThemePreference("system");
+            SetThemePreference(SYSTEM_THEME);
             break;
     }
 }

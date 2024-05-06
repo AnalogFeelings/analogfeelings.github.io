@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+		<title>Settings - Nora's Hideout</title>
+
+		<link href="stylesheets/shared/colors.css" rel="stylesheet">
+		<link href="stylesheets/shared/images.css" rel="stylesheet">
+		<link href="stylesheets/shared/social.css" rel="stylesheet">
+		<link href="stylesheets/shared/fonts.css" rel="stylesheet">
+		<link href="stylesheets/shared/index.css" rel="stylesheet">
+		<link href="stylesheets/shared/scaffold.css" rel="stylesheet">
+
+		<link href="stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="stylesheets/computer/social.css" rel="stylesheet">
+		<link href="stylesheets/computer/index.css" rel="stylesheet">
+		<link href="stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+		<script src="/javascript/common.js"></script>
+		<script src="/javascript/pages/settings.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
+
+		<meta content="Settings Page" name="og:title">
+		<meta content="https://analogfeelings.github.io/" name="og:url">
+		<meta content="The settings page for Nora's Hideout." name="og:description">
+		<meta content="https://analogfeelings.github.io/resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://gist.githubusercontent.com/AnalogFeelings/b2866747178201fc1487a714ffc5c40a/raw/aestheticalshideout.json"
+			  type="application/json+oembed"/>
+	</head>
+
+	<body>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent">
+					<h1>
+						Settings Page
+					</h1>
+					<p>
+						This page contains client-side settings to modify how the website is displayed.
+						<br>
+						Right now it only contains basic cosmetic settings such as the theme.
+					</p>
+					<fieldset>
+						<legend>Color Mode</legend>
+						Controls the color mode of the site, such as dark, light or system defined.
+						<br>
+						Dark mode is recommended if you value your corneas.
+						<br><br>
+
+						<label for="themeDropdown">Current Value:</label>
+						<select name="themeDropdown" id="themeDropdown">
+							<option value="light">Light</option>
+							<option value="dark">Dark</option>
+							<option value="system">System</option>
+						</select>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
