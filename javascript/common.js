@@ -75,7 +75,7 @@ function LoadTheme()
 /**
  * Loads external HTML elements dynamically.
  */
-function LoadElements()
+async function LoadElements()
 {
     let includeElements = document.querySelectorAll('[data-include]');
 
@@ -84,16 +84,10 @@ function LoadElements()
         let name = element.getAttribute("data-include");
         let file = '/elements/' + name + '.html';
 
-        // Had to make sync to prevent race conditions.
-        $.ajax({
-            async: false,
-            url: file,
-            success: function(html_content)
-            {
-                $(element).replaceWith(html_content);
-            },
-            dataType: 'html'
-        });
+        let response = await fetch(file);
+        let data = await response.text();
+
+        $(element).replaceWith(data);
     }
 }
 
@@ -132,14 +126,12 @@ const KNOWLEDGE_PATH = "/resources/data/knowledge.json";
  * @param {boolean} isPosts If true, fetch content from the posts file, otherwise, knowledge.
  * @param {...receivePostsCallback} callbackFunctions The callbacks that will receive the data.
  */
-function RetrieveBlogData(isPosts, ...callbackFunctions)
+async function RetrieveBlogData(isPosts, ...callbackFunctions)
 {
-    $.getJSON(isPosts ? POSTS_PATH : KNOWLEDGE_PATH,
-        function (data, textStatus, jqXHR)
-        {
-            callbackFunctions.forEach(x => x.apply(null, new Array(data)));
-        }
-    );
+    let response = await fetch(isPosts ? POSTS_PATH : KNOWLEDGE_PATH);
+    let json = await response.json();
+
+    callbackFunctions.forEach(x => x.apply(null, new Array(json)));
 }
 
 /**

@@ -2,9 +2,9 @@ LoadTheme();
 
 window.onload = PageStartup;
 
-function PageStartup()
+async function PageStartup()
 {
-	LoadElements();
+	await LoadElements();
 
 	let themeDropdown = document.getElementById("themeDropdown");
 

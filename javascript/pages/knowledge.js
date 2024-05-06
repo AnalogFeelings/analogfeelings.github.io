@@ -2,11 +2,11 @@ LoadTheme();
 
 window.onload = PageStartup;
 
-function PageStartup()
+async function PageStartup()
 {
-	LoadElements();
+	await LoadElements();
 
-	RetrieveBlogData(false, LoadArticles);
+	await RetrieveBlogData(false, LoadArticles);
 
 	let themeDropdown = document.getElementById("themeDropdown");
 
