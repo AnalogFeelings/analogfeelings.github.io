@@ -1,12 +1,3 @@
-:root[data-applied-mode=light]
-{
-	/* Code blocks */
-	/* Inline code */
-	/* overrides color-values for the Line Numbers plugin
-	 * http://prismjs.com/plugins/line-numbers/
-	 */
-}
-
 :root[data-applied-mode=light] code[class*=language-],
 :root[data-applied-mode=light] pre[class*=language-]
 {
@@ -233,13 +224,6 @@
 :root[data-applied-mode=light] .token a
 {
 	color: inherit;
-}
-
-:root[data-applied-mode=dark]
-{
-	/*********************************************************
-	* Line highlighting
-	*/
 }
 
 :root[data-applied-mode=dark] pre[class*=language-],
