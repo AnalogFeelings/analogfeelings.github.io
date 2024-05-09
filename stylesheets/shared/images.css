@@ -2,10 +2,14 @@
 {
 	--github-icon: url("/resources/social/github.svg");
 	--tumblr-icon: url("/resources/social/tumblr.svg");
+
+	--external-link-icon: url("/resources/external-link-dark.svg");
 }
 
 :root[data-applied-mode="dark"]
 {
 	--github-icon: url("/resources/social/github-light.svg");
 	--tumblr-icon: url("/resources/social/tumblr-light.svg");
+
+	--external-link-icon: url("/resources/external-link.svg");
 }

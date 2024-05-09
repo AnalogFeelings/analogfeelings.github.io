@@ -37,6 +37,16 @@ a:active
 	color: var(--link-active);
 }
 
+/* Style external links */
+:not(.sideBarWebButtons) > a[href]:not(.socialMediaIcon):not(:where([href^="#"], [href^="/"]:not([href^="//"]), [href*="//analogfeelings.github.io"]))
+{
+	background-image: var(--external-link-icon);
+	background-position: center right;
+	background-repeat: no-repeat;
+	padding-right: 16px;
+	background-size: 12px 12px;
+}
+
 h1::after, h2::after
 {
 	display: block;
