@@ -68,8 +68,8 @@
 	max-width: 250px;
 	min-width: 230px;
 
-	border-bottom: solid 1px var(--navbar-border-color);
-	box-shadow: 4px 4px 6px 0px rgb(0 0 0 / 13%);
+	border-bottom: ridge 2px var(--navbar-border-color);
+	box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 13%);
 
 	padding: 10px;
 }

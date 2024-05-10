@@ -1,8 +1,8 @@
 .topBar
 {
-	background-color: var(--navbar-background);
+	background: var(--navbar-background);
 
-	border-bottom: solid 1px var(--navbar-border-color);
+	border-bottom: ridge 2px var(--navbar-border-color);
 }
 
 .topBar > img
@@ -18,7 +18,7 @@
 
 .topBarText > p
 {
-	font-family: PTSerif-Bold, serif;
+	font-family: PTSerif-BoldItalic, serif;
 	font-style: italic;
 
 	-webkit-user-select: none;
@@ -41,7 +41,7 @@
 
 .topBarTextGradient
 {
-	background: linear-gradient(90deg, var(--navbar-gradient-start), var(--navbar-background));
+	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
 }
 
 .topBarBurger
@@ -53,8 +53,8 @@
 {
 	align-items: stretch;
 
-	background-color: var(--navbar-background);
-	border-right: solid 1px var(--navbar-border-color);
+	background: var(--sidebar-background);
+	border-right: ridge 2px var(--navbar-border-color);
 
 	flex-direction: column;
 }

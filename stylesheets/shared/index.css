@@ -57,7 +57,7 @@ h1::after, h2::after
 	min-height: 4px;
 	min-width: 100%;
 
-	background: linear-gradient(90deg, var(--header-gradient-start), var(--navbar-background));
+	background: linear-gradient(90deg, var(--header-gradient-start), transparent);
 }
 
 h2::after

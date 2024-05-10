@@ -7,11 +7,13 @@
 
 	--thin-color: gray;
 
-	--navbar-background: #FFFFFF;
+	--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 	--navbar-gradient-start: #2F3279;
-	--navbar-border-color: dimgray;
+	--navbar-border-color: lightgray;
 	--navbar-link-color: #0000EE;
 	--navbar-link-active: #FF0000;
+
+	--sidebar-background: linear-gradient(90deg, var(--body-background), #E7E7E7);
 
 	--link-color: #0000EE;
 	--link-active: #FF0000;
@@ -43,11 +45,13 @@
 
 	--thin-color: gray;
 
-	--navbar-background: #202020;
+	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
 	--navbar-border-color: dimgray;
 	--navbar-link-color: #9B9BFF;
 	--navbar-link-active: #FF8080;
+
+	--sidebar-background: linear-gradient(var(--body-background), var(--body-background));
 
 	--link-color: #9B9BFF;
 	--link-active: #FF8080;
