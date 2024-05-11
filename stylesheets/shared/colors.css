@@ -24,7 +24,7 @@
 	--button-border: black;
 	--menu-button-filter: none;
 
-	--separator-color: lightgray;
+	--separator-color: #CBCBCB;
 
 	--warning-background-color: lightyellow;
 	--warning-border-color: orange;
@@ -62,7 +62,7 @@
 	--button-border: black;
 	--menu-button-filter: invert();
 
-	--separator-color: gray;
+	--separator-color: #565656;
 
 	--warning-background-color: #545428;
 	--warning-border-color: orange;

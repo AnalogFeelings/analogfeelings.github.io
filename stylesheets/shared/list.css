@@ -12,9 +12,9 @@
 	padding: 12px;
 	align-items: center;
 
-	border-left: 1px solid var(--thin-color);
-	border-right: 1px solid var(--thin-color);
-	border-bottom: 1px solid var(--thin-color);
+	border-left: 2px solid var(--thin-color);
+	border-right: 2px solid var(--thin-color);
+	border-bottom: 2px solid var(--thin-color);
 }
 
 .listItemVertical
@@ -32,5 +32,5 @@
 
 .listItem:first-child
 {
-	border-top: 1px solid var(--thin-color);
+	border-top: 2px solid var(--thin-color);
 }

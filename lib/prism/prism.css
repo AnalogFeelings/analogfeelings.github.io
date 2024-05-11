@@ -41,7 +41,7 @@
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	border: 1px solid #DDD;
+	border: 2px solid #DDD;
 	background-color: white;
 }
 
@@ -50,8 +50,9 @@
 	padding: 0.2em;
 	padding-top: 1px;
 	padding-bottom: 1px;
+	margin: 0 0.2em;
 	background: #F8F8F8;
-	border: 1px solid #DDD;
+	border: 2px solid #DDD;
 }
 
 :root[data-applied-mode=light] .token.comment,
@@ -199,7 +200,7 @@
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid #999;
+	border-right: 2px solid #999;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -274,7 +275,7 @@
 {
 	padding: 1em;
 	margin: 0.5em 0;
-	border: 1px solid darkgray;
+	border: 2px solid darkgray;
 	overflow: auto;
 	background: #1E1E1E;
 }
@@ -282,8 +283,9 @@
 :root[data-applied-mode=dark] :not(pre) > code[class*=language-]
 {
 	padding: 0.1em 0.3em;
-	border-radius: 0.3em;
 	color: #DB4C69;
+	border: 2px solid darkgray;
+	margin: 0 0.2em;
 	background: #1E1E1E;
 }
 
@@ -574,7 +576,7 @@
 	left: -3.8em;
 	width: 3em; /* works for line-numbers below 1000 lines */
 	letter-spacing: -1px;
-	border-right: 1px solid #999;
+	border-right: 2px solid #999;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;

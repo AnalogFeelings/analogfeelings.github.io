@@ -135,8 +135,9 @@ body
 .separatorDiv
 {
 	width: 95%;
+	height: 2px;
 
-	background-color: var(--separator-color);
+	background: linear-gradient(90deg, transparent 0%, var(--separator-color) 50%, transparent 100%);
 }
 
 .postHeader
