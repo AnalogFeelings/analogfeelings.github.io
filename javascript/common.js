@@ -109,28 +109,31 @@ async function LoadElements()
 
 /**
  * Replaces an element with another, while executing scripts.
- * @param element The target element.
- * @param html The HTML to replace the element with.
+ * Will not work if the replacement element has more than 2 root nodes.
+ * @param element {Element} The target element.
+ * @param html {string} The HTML to replace the element with.
  */
 function ReplaceElement(element, html)
 {
+    let next = element.nextElementSibling;
     element.outerHTML = html;
 
-    Array.from(element.querySelectorAll("script"))
-        .forEach(originalScript =>
+    let newElement = next.previousElementSibling;
+
+    for (const originalScript of newElement.getElementsByTagName("script"))
+    {
+        const newScriptEl = document.createElement("script");
+
+        for (const attr of originalScript.attributes)
         {
-            const newScriptEl = document.createElement("script");
+            newScriptEl.setAttribute(attr.name, attr.value)
+        }
 
-            Array.from(originalScript.attributes).forEach(attr =>
-            {
-                newScriptEl.setAttribute(attr.name, attr.value)
-            });
+        const scriptText = document.createTextNode(originalScript.innerHTML);
+        newScriptEl.appendChild(scriptText);
 
-            const scriptText = document.createTextNode(originalScript.innerHTML);
-            newScriptEl.appendChild(scriptText);
-
-            originalScript.parentNode.replaceChild(newScriptEl, originalScript);
-        });
+        originalScript.parentNode.replaceChild(newScriptEl, originalScript);
+    }
 }
 
 /**
