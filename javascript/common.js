@@ -38,15 +38,15 @@ function SetThemePreference(theme)
  */
 function GetValidThemeForIdentifier(theme)
 {
-    switch(theme)
+    switch (theme)
     {
         case SYSTEM_THEME:
             let prefersLight = matchMedia("(prefers-color-scheme: light)").matches;
-            if(prefersLight)
+            if (prefersLight)
                 return LIGHT_THEME;
 
             let prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
-            if(prefersDark)
+            if (prefersDark)
                 return DARK_THEME;
             break;
         case LIGHT_THEME:
@@ -65,7 +65,7 @@ function OnThemeChanged()
     let dropdown = document.getElementById("themeDropdown");
     let value = dropdown.value;
 
-    switch(value)
+    switch (value)
     {
         case LIGHT_THEME:
         case DARK_THEME:
@@ -95,7 +95,7 @@ async function LoadElements()
 {
     let includeElements = document.querySelectorAll('[data-include]');
 
-    for(const element of includeElements)
+    for (const element of includeElements)
     {
         let name = element.getAttribute("data-include");
         let file = '/elements/' + name + '.html';
@@ -103,8 +103,34 @@ async function LoadElements()
         let response = await fetch(file);
         let data = await response.text();
 
-        $(element).replaceWith(data);
+        ReplaceElement(element, data);
     }
+}
+
+/**
+ * Replaces an element with another, while executing scripts.
+ * @param element The target element.
+ * @param html The HTML to replace the element with.
+ */
+function ReplaceElement(element, html)
+{
+    element.outerHTML = html;
+
+    Array.from(element.querySelectorAll("script"))
+        .forEach(originalScript =>
+        {
+            const newScriptEl = document.createElement("script");
+
+            Array.from(originalScript.attributes).forEach(attr =>
+            {
+                newScriptEl.setAttribute(attr.name, attr.value)
+            });
+
+            const scriptText = document.createTextNode(originalScript.innerHTML);
+            newScriptEl.appendChild(scriptText);
+
+            originalScript.parentNode.replaceChild(newScriptEl, originalScript);
+        });
 }
 
 /**
