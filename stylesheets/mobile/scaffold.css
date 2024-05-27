@@ -65,13 +65,14 @@
 
 	position: absolute;
 
-	max-width: 250px;
-	min-width: 230px;
+	max-width: 270px;
+	min-width: 250px;
 
 	border-bottom: ridge 2px var(--navbar-border-color);
 	box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 13%);
 
 	padding: 10px;
+	padding-top: 20px;
 }
 
 .sideBar.shown
@@ -84,8 +85,8 @@
 .sideBarSection
 {
 	margin-top: 8px;
-	margin-right: 23px;
-	margin-left: 23px;
+	margin-right: 20px;
+	margin-left: 20px;
 	margin-bottom: 8px;
 }
 
