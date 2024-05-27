@@ -14,7 +14,7 @@ Head over to the **Discussions** tab for comments or feedback!
 I do not accept pull requests for anything that involves new content, only fixes for existing content such as missing closing tags, typos, etc.
 
 # :balance_scale: License
-The website is licensed under the GPL version 3.0. Blog posts are also under that license unless stated otherwise.
+The website is licensed under the GPL version 3.0. Credit me if you use my blog posts!
 
 > [!IMPORTANT]  
 > Visual assets (logos, blog post images, etc.) are not open source. Ask for permission before using them.
