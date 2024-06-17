@@ -97,17 +97,6 @@
 	color: var(--navbar-link-active);
 }
 
-#dingusnetwork
-{
-	display: inline-block;
-	vertical-align: middle;
-}
-
-#dinguslabel
-{
-	margin-top: 12px;
-}
-
 .sideBarCopyright
 {
 	color: var(--thin-color);
