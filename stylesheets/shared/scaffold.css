@@ -5,29 +5,15 @@
 	background-repeat: repeat;
 	background-size: 64px 64px;
 
-	animation: topBarAnim 1.5s linear infinite;
+	animation: topBarBgAnim 1.5s linear infinite;
 
 	border-bottom: solid 8px var(--navbar-border-color);
 	transform: rotate(-6deg);
 
 	width: 110vw;
-	height: 200px;
+	z-index: 9999;
 
 	position: absolute;
-	left: -5vw;
-	top: -15vh;
-}
-
-@keyframes topBarAnim
-{
-	0%
-	{
-		background-position: 0 0;
-	}
-	100%
-	{
-		background-position: -64px 64px;
-	}
 }
 
 .topBarText
@@ -54,7 +40,6 @@
 	letter-spacing: 2px;
 
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 8px var(--title-border);
 }
 
 .topBarTextBottom
@@ -66,8 +51,14 @@
 {
 	align-items: stretch;
 
-	background: var(--sidebar-background);
-	border-right: ridge 2px var(--navbar-border-color);
+	/* HACK HACK: use linear gradient to tint */
+	background-image: var(--sidebar-gradient), url("/resources/sidebarbackground.png");
+	background-repeat: repeat;
+	background-size: 64px 64px;
+
+	animation: sideBarBgAnim 1.5s linear infinite;
+
+	border-right: solid 8px var(--navbar-border-color);
 
 	flex-direction: column;
 }
@@ -157,4 +148,28 @@
 {
 	width: 88px;
 	height: 31px;
+}
+
+@keyframes topBarBgAnim
+{
+	0%
+	{
+		background-position: 0 0;
+	}
+	100%
+	{
+		background-position: -64px 64px;
+	}
+}
+
+@keyframes sideBarBgAnim
+{
+	0%
+	{
+		background-position: 0 0;
+	}
+	100%
+	{
+		background-position: 64px -64px;
+	}
 }

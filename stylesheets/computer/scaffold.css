@@ -4,16 +4,11 @@
 	{
 		padding: 128px 128px 5px 128px;
 		column-gap: 0;
-	}
 
-	.topBar > img
-	{
-		display: inline;
+		left: -5vw;
+		top: -15vh;
 
-		margin-right: 40px;
-
-		width: 96px;
-		height: 96px;
+		height: 200px;
 	}
 
 	.topBarText > p
@@ -24,6 +19,7 @@
 	.topBarTextTop
 	{
 		font-size: 6em;
+		-webkit-text-stroke: 8px var(--title-border);
 	}
 
 	.topBarTextBottom
@@ -49,16 +45,15 @@
 
 		position: static;
 
-		max-width: 260px;
-		min-width: 240px;
+		max-width: 290px;
+		min-width: 270px;
 
 		border-bottom: none;
 		box-shadow: none;
 
 		font-size: 1em;
 
-		padding: 10px;
-		padding-top: 20px;
+		padding: var(--sidebar-offset) 10px 10px;
 	}
 
 	.sideBarSection

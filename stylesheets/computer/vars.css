@@ -1,0 +1,8 @@
+@media only screen and (min-width: 1275px)
+{
+	:root
+	{
+		--sidebar-offset: 350px;
+		--body-offset: 300px;
+	}
+}

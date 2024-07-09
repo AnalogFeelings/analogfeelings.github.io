@@ -1,13 +1,13 @@
 .topBar
 {
-	padding: 12px;
+	padding: 36px 24px 0 24px;
 
 	column-gap: 0;
-}
 
-.topBar > img
-{
-	display: none;
+	left: -5vw;
+	top: -3vh;
+
+	height: 120px;
 }
 
 .topBarText > p
@@ -17,12 +17,13 @@
 
 .topBarTextTop
 {
-	font-size: 1.8em;
+	font-size: 2.7em;
+	-webkit-text-stroke: 4px var(--title-border);
 }
 
 .topBarTextBottom
 {
-	display: none;
+	font-size: 1em;
 }
 
 .topBarTextGradient
@@ -72,14 +73,14 @@
 	box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 13%);
 
 	padding: 10px;
-	padding-top: 20px;
+	padding-top: var(--sidebar-offset);
 }
 
 .sideBar.shown
 {
 	display: flex;
 
-	z-index: 9999999;
+	z-index: 9000;
 }
 
 .sideBarSection

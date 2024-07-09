@@ -2,6 +2,9 @@
 {
 	--title-background: linear-gradient(90deg, #A669DE, #008080);
 	--title-border: black;
+
+	--sidebar-offset: 50%;
+	--body-offset: 180px;
 }
 
 :root[data-applied-mode="light"]
@@ -21,7 +24,7 @@
 	--navbar-link-color: #0000EE;
 	--navbar-link-active: #FF0000;
 
-	--sidebar-background: linear-gradient(90deg, var(--body-background), #E7E7E7);
+	--sidebar-gradient: linear-gradient(rgba(183, 229, 255, 0.75), rgba(183, 229, 255, 0.75));
 
 	--link-color: #0000EE;
 	--link-active: #FF0000;
@@ -32,7 +35,7 @@
 	--button-border: black;
 	--menu-button-filter: none;
 
-	--separator-color: #CBCBCB;
+	--separator-color: #000;
 
 	--warning-background-color: lightyellow;
 	--warning-border-color: orange;
@@ -61,7 +64,7 @@
 	--navbar-link-color: #9B9BFF;
 	--navbar-link-active: #FF8080;
 
-	--sidebar-background: linear-gradient(var(--body-background), var(--body-background));
+	--sidebar-gradient: linear-gradient(rgba(208, 240, 255, 0.5), rgba(208, 240, 255, 0.5));
 
 	--link-color: #9B9BFF;
 	--link-active: #FF8080;
