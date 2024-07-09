@@ -12,7 +12,7 @@
 
 b
 {
-	font-family: PTSerif-Bold, serif;
+	font-family: Montserrat-Bold, serif;
 	font-weight: bold;
 }
 
@@ -28,7 +28,31 @@ b
 	src: url("/resources/fonts/PTSerif-Italic.woff2") format("woff2");
 }
 
+@font-face
+{
+	font-family: Ortland-Regular;
+	src: url("/resources/fonts/Ortland-Regular.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: Montserrat-Regular;
+	src: url("/resources/fonts/Montserrat-Regular.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: Montserrat-Bold;
+	src: url("/resources/fonts/Montserrat-Bold.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: Montserrat-Italic;
+	src: url("/resources/fonts/Montserrat-Italic.woff2") format("woff2");
+}
+
 i
 {
-	font-family: PTSerif-Italic, serif;
+	font-family: Montserrat-Italic, serif;
 }

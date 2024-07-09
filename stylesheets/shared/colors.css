@@ -1,3 +1,9 @@
+:root
+{
+	--title-background: linear-gradient(90deg, #A669DE, #008080);
+	--title-border: black;
+}
+
 :root[data-applied-mode="light"]
 {
 	color-scheme: light;
@@ -9,7 +15,7 @@
 
 	--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 	--navbar-gradient-start: #2F3279;
-	--navbar-border-color: lightgray;
+	--navbar-border-color: black;
 	--navbar-link-color: #0000EE;
 	--navbar-link-active: #FF0000;
 
@@ -47,7 +53,7 @@
 
 	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
-	--navbar-border-color: dimgray;
+	--navbar-border-color: white;
 	--navbar-link-color: #9B9BFF;
 	--navbar-link-active: #FF8080;
 

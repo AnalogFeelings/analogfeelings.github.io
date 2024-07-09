@@ -92,7 +92,7 @@ body
 	background-color: var(--body-background);
 	color: var(--body-foreground);
 
-	font-family: PTSerif, serif;
+	font-family: Montserrat-Regular, serif;
 }
 
 .filterDisabled

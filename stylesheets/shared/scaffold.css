@@ -1,14 +1,13 @@
 .topBar
 {
-	background: var(--navbar-background);
-
-	border-bottom: ridge 2px var(--navbar-border-color);
-}
-
-.topBar > img
-{
-	-webkit-user-select: none;
-	user-select: none;
+	background: blue;
+	border-bottom: solid 8px var(--navbar-border-color);
+	transform: rotate(-10deg);
+	width: 110vw;
+	height: 200px;
+	position: absolute;
+	left: -5vw;
+	top: -20vh;
 }
 
 .topBarText
@@ -18,18 +17,12 @@
 
 .topBarText > p
 {
-	font-family: PTSerif-BoldItalic, serif;
-	font-style: italic;
+	font-family: Ortland-Regular, serif;
 
 	-webkit-user-select: none;
 	user-select: none;
 
 	margin-top: 0;
-}
-
-.topBarTextTop
-{
-	font-weight: bold;
 }
 
 .topBarTextBottom
@@ -39,14 +32,15 @@
 	font-style: italic;
 }
 
-.topBarTextGradient
+.topBarTextTop
 {
-	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
-}
+	background: var(--title-background);
+	background-clip: text;
 
-.topBarBurger
-{
+	font-stretch: extra-expanded;
 
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 8px var(--title-border);
 }
 
 .sideBar
