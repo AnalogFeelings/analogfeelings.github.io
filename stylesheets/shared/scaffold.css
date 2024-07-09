@@ -1,13 +1,33 @@
 .topBar
 {
-	background: blue;
+	/* HACK HACK: use linear gradient to tint */
+	background-image: var(--title-gradient), url("/resources/titlebackground.png");
+	background-repeat: repeat;
+	background-size: 64px 64px;
+
+	animation: topBarAnim 1.5s linear infinite;
+
 	border-bottom: solid 8px var(--navbar-border-color);
-	transform: rotate(-10deg);
+	transform: rotate(-6deg);
+
 	width: 110vw;
 	height: 200px;
+
 	position: absolute;
 	left: -5vw;
-	top: -20vh;
+	top: -15vh;
+}
+
+@keyframes topBarAnim
+{
+	0%
+	{
+		background-position: 0 0;
+	}
+	100%
+	{
+		background-position: -64px 64px;
+	}
 }
 
 .topBarText
@@ -25,22 +45,21 @@
 	margin-top: 0;
 }
 
-.topBarTextBottom
-{
-	font-family: PTSerif-Italic, serif;
-
-	font-style: italic;
-}
-
 .topBarTextTop
 {
 	background: var(--title-background);
 	background-clip: text;
 
 	font-stretch: extra-expanded;
+	letter-spacing: 2px;
 
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 8px var(--title-border);
+}
+
+.topBarTextBottom
+{
+	color: var(--title-border);
 }
 
 .sideBar
