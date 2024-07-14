@@ -1,6 +1,6 @@
 :root
 {
-	--title-background: linear-gradient(90deg, #A669DE, #008080);
+	--title-background: white;
 	--title-border: black;
 
 	--sidebar-offset: 50%;

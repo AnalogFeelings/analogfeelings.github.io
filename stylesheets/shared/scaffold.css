@@ -5,10 +5,10 @@
 	background-repeat: repeat;
 	background-size: 64px 64px;
 
-	animation: topBarBgAnim 1.5s linear infinite;
+	animation: topBarBgAnim 2s linear infinite;
 
 	border-bottom: solid 8px var(--navbar-border-color);
-	transform: rotate(-6deg);
+	transform: rotate(-4deg);
 
 	width: 110vw;
 	z-index: 9999;
@@ -33,13 +33,8 @@
 
 .topBarTextTop
 {
-	background: var(--title-background);
-	background-clip: text;
-
-	font-stretch: extra-expanded;
+	color: var(--title-background);
 	letter-spacing: 2px;
-
-	-webkit-text-fill-color: transparent;
 }
 
 .topBarTextBottom
@@ -56,7 +51,7 @@
 	background-repeat: repeat;
 	background-size: 64px 64px;
 
-	animation: sideBarBgAnim 1.5s linear infinite;
+	animation: sideBarBgAnim 2s linear infinite;
 
 	border-right: solid 8px var(--navbar-border-color);
 

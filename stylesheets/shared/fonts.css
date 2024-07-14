@@ -1,31 +1,7 @@
-@font-face
-{
-	font-family: PTSerif;
-	src: url("/resources/fonts/PTSerif-Regular.woff2") format("woff2");
-}
-
-@font-face
-{
-	font-family: PTSerif-Bold;
-	src: url("/resources/fonts/PTSerif-Bold.woff2") format("woff2");
-}
-
 b
 {
 	font-family: Montserrat-Bold, serif;
 	font-weight: bold;
-}
-
-@font-face
-{
-	font-family: PTSerif-BoldItalic;
-	src: url("/resources/fonts/PTSerif-BoldItalic.woff2") format("woff2");
-}
-
-@font-face
-{
-	font-family: PTSerif-Italic;
-	src: url("/resources/fonts/PTSerif-Italic.woff2") format("woff2");
 }
 
 @font-face

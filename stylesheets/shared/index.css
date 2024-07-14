@@ -65,6 +65,11 @@ h2::after
     min-height: 3px;
 }
 
+h1
+{
+	font-family: Ortland-Regular, sans-serif;
+}
+
 h2
 {
     font-weight: 500;

@@ -2,7 +2,7 @@
 {
 	:root
 	{
-		--sidebar-offset: 350px;
-		--body-offset: 300px;
+		--sidebar-offset: 300px;
+		--body-offset: 275px;
 	}
 }
