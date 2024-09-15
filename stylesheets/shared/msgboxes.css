@@ -1,11 +1,15 @@
 .specialFieldset
 {
 	padding-bottom: 12px;
+
+	border-style: solid;
+	border-radius: 8px;
 }
 
 .specialFieldset > legend
 {
 	padding: 4px;
+	border-radius: 8px;
 }
 
 .specialFieldset > legend > img
@@ -21,6 +25,13 @@
 	bottom: 1px;
 }
 
+.specialFieldset > legend > b
+{
+	position: relative;
+
+	top: 1px;
+}
+
 .warningFieldset
 {
 	background-color: var(--warning-background-color);
@@ -29,7 +40,7 @@
 
 .warningFieldset > legend
 {
-	border: 2px ridge var(--warning-border-color);
+	border: 2px solid var(--warning-border-color);
 	background-color: var(--warning-background-color);
 }
 
@@ -41,7 +52,7 @@
 
 .importantFieldset > legend
 {
-	border: 2px ridge var(--important-border-color);
+	border: 2px solid var(--important-border-color);
 	background-color: var(--important-background-color);
 }
 
@@ -53,6 +64,6 @@
 
 .remarksFieldset > legend
 {
-	border: 2px ridge var(--remarks-border-color);
+	border: 2px solid var(--remarks-border-color);
 	background-color: var(--remarks-background-color);
 }
