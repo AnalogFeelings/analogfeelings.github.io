@@ -42,6 +42,7 @@
 	margin: 0.5em 0;
 	overflow: auto;
 	border: 2px solid #DDD;
+	border-radius: 8px;
 	background-color: white;
 }
 
@@ -53,6 +54,7 @@
 	margin: 0 0.2em;
 	background: #F8F8F8;
 	border: 2px solid #DDD;
+	border-radius: 8px;
 }
 
 :root[data-applied-mode=light] .token.comment,
@@ -276,6 +278,7 @@
 	padding: 1em;
 	margin: 0.5em 0;
 	border: 2px solid darkgray;
+	border-radius: 8px;
 	overflow: auto;
 	background: #1E1E1E;
 }
@@ -285,6 +288,7 @@
 	padding: 0.1em 0.3em;
 	color: #DB4C69;
 	border: 2px solid darkgray;
+	border-radius: 8px;
 	margin: 0 0.2em;
 	background: #1E1E1E;
 }
