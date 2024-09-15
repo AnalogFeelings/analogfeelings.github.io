@@ -32,6 +32,7 @@ function GetNavlinkPreference()
         case NAVLINK_DISABLED:
             return stored;
         default:
+            localStorage.setItem(NAVLINK_STORAGE, NAVLINK_ENABLED);
             return NAVLINK_ENABLED;
     }
 }
@@ -62,7 +63,18 @@ function ChangeDisplayTheme(theme)
  */
 function GetThemePreference()
 {
-    return localStorage.getItem(THEME_STORAGE) || "system";
+    let stored = localStorage.getItem(THEME_STORAGE);
+
+    switch(stored)
+    {
+        case LIGHT_THEME:
+        case DARK_THEME:
+        case SYSTEM_THEME:
+            return stored;
+        default:
+            localStorage.setItem(THEME_STORAGE, SYSTEM_THEME);
+            return SYSTEM_THEME;
+    }
 }
 
 /**
