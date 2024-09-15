@@ -1,10 +1,55 @@
 const LIGHT_THEME = "light";
 const DARK_THEME = "dark";
 const SYSTEM_THEME = "system";
+const THEME_STORAGE = "theme";
+
+const NAVLINK_ENABLED = "enabled";
+const NAVLINK_DISABLED = "disabled";
+const NAVLINK_CONTAINER = "navlinkAdContainer";
+const NAVLINK_STORAGE = "navlink";
+
+/**
+ * Changes the navlink ad visibility in the DOM.
+ * @param {string} enabled If the navlink ad should be enabled.
+ */
+function ChangeNavlinkDisplay(enabled)
+{
+    let isEnabled = enabled === NAVLINK_ENABLED;
+    document.getElementById(NAVLINK_CONTAINER).className = isEnabled ? "" : "hidden";
+}
+
+/**
+ * Gets the user's preference for navlink ad visibility.
+ * @returns {string|string} The preferred visibility, or "enabled" if not found.
+ */
+function GetNavlinkPreference()
+{
+    let stored = localStorage.getItem(NAVLINK_STORAGE);
+
+    switch(stored)
+    {
+        case NAVLINK_ENABLED:
+        case NAVLINK_DISABLED:
+            return stored;
+        default:
+            return NAVLINK_ENABLED;
+    }
+}
+
+/**
+ * Sets the user's preferred navlink ad visibility to local storage.
+ * @param {string} enabled If it's enabled or not.
+ */
+function SetNavlinkPreference(enabled)
+{
+    localStorage.setItem(NAVLINK_STORAGE, enabled);
+
+    ChangeNavlinkDisplay(enabled);
+}
 
 /**
  * Changes the theme in the DOM.
- * @param theme The selected theme.
+ * @param {string} theme The selected theme.
  */
 function ChangeDisplayTheme(theme)
 {
@@ -17,16 +62,16 @@ function ChangeDisplayTheme(theme)
  */
 function GetThemePreference()
 {
-    return localStorage.getItem("theme") || "system";
+    return localStorage.getItem(THEME_STORAGE) || "system";
 }
 
 /**
  * Sets the user's preferred theme to local storage.
- * @param theme The selected theme.
+ * @param {string} theme The selected theme.
  */
 function SetThemePreference(theme)
 {
-    localStorage.setItem("theme", theme);
+    localStorage.setItem(THEME_STORAGE, theme);
 
     ChangeDisplayTheme(theme);
 }
@@ -58,27 +103,6 @@ function GetValidThemeForIdentifier(theme)
 }
 
 /**
- * Handles theme selection.
- */
-function OnThemeChanged()
-{
-    let dropdown = document.getElementById("themeDropdown");
-    let value = dropdown.value;
-
-    switch (value)
-    {
-        case LIGHT_THEME:
-        case DARK_THEME:
-        case SYSTEM_THEME:
-            SetThemePreference(value);
-            break;
-        default:
-            SetThemePreference(SYSTEM_THEME);
-            break;
-    }
-}
-
-/**
  * Loads the site theme.
  */
 function LoadTheme()
@@ -86,6 +110,16 @@ function LoadTheme()
     let preference = GetThemePreference();
 
     ChangeDisplayTheme(preference);
+}
+
+/**
+ * Loads the navlink ads.
+ */
+function LoadNavlink()
+{
+    let preference = GetNavlinkPreference();
+
+    ChangeNavlinkDisplay(preference);
 }
 
 /**

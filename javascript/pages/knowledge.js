@@ -5,6 +5,7 @@ window.onload = PageStartup;
 async function PageStartup()
 {
 	await LoadElements();
+	LoadNavlink();
 	await RetrieveBlogData(false, LoadArticles);
 
 	window.addEventListener("mouseup", (e) => HandleClick(e));
