@@ -19,6 +19,11 @@ fieldset
 	border-style: solid;
 }
 
+fieldset:not(.specialFieldset)
+{
+	margin-bottom: 16px;
+}
+
 label
 {
 	display: inline-block;
@@ -48,6 +53,11 @@ a:active
 	background-repeat: no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
+}
+
+.hidden
+{
+	display: none;
 }
 
 h1::after, h2::after
