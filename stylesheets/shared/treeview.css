@@ -6,7 +6,7 @@
 
 .treeviewBorder
 {
-	border: 1px solid var(--thin-color);
+	border: 2px solid var(--thin-color);
 	border-radius: 8px;
 }
 
