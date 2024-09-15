@@ -33,4 +33,15 @@
 .listItem:first-child
 {
 	border-top: 2px solid var(--thin-color);
+	border-radius: 8px 8px 0 0;
+}
+
+.listItem:only-child
+{
+	border-radius: 8px !important;
+}
+
+.listItem:last-child
+{
+	border-radius: 0 0 8px 8px;
 }
