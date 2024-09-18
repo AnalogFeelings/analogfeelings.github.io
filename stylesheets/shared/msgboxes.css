@@ -44,6 +44,11 @@
 	background-color: var(--warning-background-color);
 }
 
+.warningFieldset > legend > img
+{
+	content: url("/resources/annotations/warning.svg");
+}
+
 .importantFieldset
 {
 	background-color: var(--important-background-color);
@@ -56,6 +61,11 @@
 	background-color: var(--important-background-color);
 }
 
+.importantFieldset > legend > img
+{
+	content: url("/resources/annotations/important.svg");
+}
+
 .remarksFieldset
 {
 	background-color: var(--remarks-background-color);
@@ -66,4 +76,9 @@
 {
 	border: 2px solid var(--remarks-border-color);
 	background-color: var(--remarks-background-color);
+}
+
+.remarksFieldset > legend > img
+{
+	content: url("/resources/annotations/remark.svg");
 }
