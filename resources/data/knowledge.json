@@ -1,5 +1,12 @@
 [
     {
+        "date": "2024-09-18 14:47",
+        "edited": null,
+        "url": "/knowledge/writing-a-screensaver",
+        "title": "Writing a Windows Screensaver",
+        "description": "A knowledge article on writing native Win32 screensavers."
+    },
+    {
         "date": "2023-08-01 22:36",
         "edited": null,
         "url": "/knowledge/discord-website-embeds",

@@ -5,13 +5,19 @@
         <link>https://analogfeelings.github.io/</link>
         <description>Nora's personal website for programming and other stuff.</description>
         <docs>https://www.rssboard.org/rss-specification</docs>
-        <copyright>Copyright 2021, Analog Feelings</copyright>
+        <copyright>Copyright 2021 Analog Feelings</copyright>
         <image>
             <url>https://analogfeelings.github.io/resources/favicon.png</url>
             <title>Nora's Hideout</title>
             <link>https://analogfeelings.github.io/</link>
         </image>
 
+        <item>
+            <title>Writing a Windows Screensaver</title>
+            <link>https://analogfeelings.github.io/knowledge/writing-a-screensaver/</link>
+            <pubDate>Wed, Sep 18 2024 14:47:00 GMT</pubDate>
+            <description>A knowledge article on writing native Win32 screensavers.</description>
+        </item>
         <item>
             <title>Using modern toolchains for Windows 95!</title>
             <link>https://analogfeelings.github.io/posts/building-software-with-modern-toolchains-for-chicago/</link>

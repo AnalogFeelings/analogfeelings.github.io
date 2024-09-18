@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+		<title>Writing a Windows Screensaver - Nora's Hideout</title>
+
+		<link href="/stylesheets/shared/colors.css" rel="stylesheet">
+		<link href="/stylesheets/shared/images.css" rel="stylesheet">
+		<link href="/stylesheets/shared/social.css" rel="stylesheet">
+		<link href="/stylesheets/shared/msgboxes.css" rel="stylesheet">
+		<link href="/stylesheets/shared/fonts.css" rel="stylesheet">
+		<link href="/stylesheets/shared/index.css" rel="stylesheet">
+		<link href="/stylesheets/shared/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/computer/social.css" rel="stylesheet">
+		<link href="/stylesheets/computer/index.css" rel="stylesheet">
+		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
+		<script src="/javascript/common.js"></script>
+		<script src="/javascript/generic.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml"/>
+
+		<meta content="Writing a Windows Screensaver" name="og:title">
+		<meta content="https://analogfeelings.github.io/" name="og:url">
+		<meta content="A knowledge article on writing native Win32 screensavers." name="og:description">
+		<meta content="https://analogfeelings.github.io/resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://analogfeelings.github.io/resources/oembed/default-data.json" type="application/json+oembed"/>
+	</head>
+
+	<body>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv field-row">
+			<div class="innerBodyDiv field-row">
+				<div data-include="sidebar"></div>
+				<div class="bodyContent line-numbers">
+					<h1>
+						Writing a Windows Screensaver
+					</h1>
+					<p class="postInformation">
+						Written on <b>2024-09-18 14:47</b>
+						<span class="postInformationBullet"></span>
+						Never Edited
+					</p>
+
+					<p>
+						Microsoft provides a native statically linked library called <b>scrnsave.lib</b>
+						which is available on the Windows SDK.
+						This library implements the command line arguments and window procedures necessary
+						for a screensaver to have full functionality on par with the official Microsoft-made
+						screensavers, although Microsoft themselves don't seem to use scrnsave.lib in their
+						screensavers.
+					</p>
+
+					<h2>
+						Setup Using Visual Studio
+					</h2>
+
+					<p>
+						To set up the library using Visual Studio, right-click on the project and then click on
+						<b>Properties</b>.
+						<br>
+						Afterward, open the <b>Linker</b> section and click on <b>Input</b>. On the <b>Additional Dependencies</b>
+						section, add <b>scrnsave.lib</b> and hit <b>OK</b>.
+					</p>
+
+					<fieldset class="specialFieldset remarksFieldset">
+						<legend>
+							<img src="/resources/annotations/remark.svg"/>
+							<b>Remarks</b>
+						</legend>
+						Remember to do the same for the other build configurations and architectures!
+					</fieldset>
+
+					<p>
+						Accessing the library can now be done by including <b>scrnsave.h</b> in your code.
+					</p>
+
+					<h2>
+						Setting Up the Main File
+					</h2>
+
+					<p>
+						Screensavers that link to <b>scrnsave.lib</b> need to define or implement 3 functions, shown below:
+					</p>
+					<pre data-src="./resources/code/threefunctions.cpp"></pre>
+
+					<p>
+						<b>ScreenSaverProc</b> is the main window procedure of the screensaver. This is your main method.
+						<br>
+						<b>WM_CREATE</b> is received when the screensaver is created, and <b>WM_DESTROY</b> when the screensaver is being closed.
+						<br>
+						You can use <b>WM_PAINT</b> to draw whatever you want on the screen, as this is just a normal Win32 window.
+					</p>
+
+					<p>
+						<b>RegisterDialogClasses</b> tells the library if it should register the dialog <b>DLG_SCRNSAVECONFIGURE</b>,
+						which has an id of <b>2003</b>.
+						<br>
+						Make this function return true if you want to add a settings dialog to your screensaver.
+					</p>
+
+					<p>
+						<b>ScreenSaverConfigureDialog</b> is the main window procedure for the settings dialog.
+					</p>
+
+					<fieldset class="specialFieldset importantFieldset">
+						<legend>
+							<img src="/resources/annotations/important.svg"/>
+							<b>Important</b>
+						</legend>
+						Dialogs do not use <b>WM_CREATE</b> or <b>WM_DESTROY</b>, they use <b>WM_INITDIALOG</b> and <b>WM_CLOSE</b> respectively.
+					</fieldset>
+
+					<p>
+						To make a screensaver have a name in the screensaver control panel dialog, define a string named <b>IDS_DESCRIPTION</b>
+						with an ID of <b>1</b>.
+					</p>
+
+					<p>
+						For a screensaver to be detected by the screensaver control panel dialog, it must be located in <b>C:\Windows\System32</b>.
+					</p>
+
+					<div data-include="report"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="/lib/prism/prism.js"></script>
+	</body>
+</html>
+
