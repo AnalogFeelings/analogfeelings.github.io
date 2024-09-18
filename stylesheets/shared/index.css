@@ -145,6 +145,11 @@ body
 	margin-bottom: 40px;
 }
 
+.bodyContent > p > img
+{
+	border-radius: 8px;
+}
+
 .separatorDiv
 {
 	width: 95%;
