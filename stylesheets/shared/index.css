@@ -46,7 +46,7 @@ a:active
 }
 
 /* Style external links */
-:not(.sideBarWebButtons, #dingusnetwork) > a[href]:not(.socialMediaIcon):not(:where([href^="#"], [href^="/"]:not([href^="//"]), [href*="//analogfeelings.github.io"]))
+:not(.sideBarWebButtons) > a[href]:not(.socialMediaIcon):not(:where([href^="#"], [href^="/"]:not([href^="//"]), [href*="//analogfeelings.github.io"]))
 {
 	background-image: var(--external-link-icon);
 	background-position: center right;
