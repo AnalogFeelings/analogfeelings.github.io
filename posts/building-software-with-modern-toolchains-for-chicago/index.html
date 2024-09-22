@@ -42,191 +42,189 @@
 		<div data-include="topbar"></div>
 
 		<div class="mainBodyDiv field-row">
-			<div class="innerBodyDiv field-row">
-				<div data-include="sidebar"></div>
-				<div class="bodyContent line-numbers">
-					<h1>
-						Using modern toolchains for Windows 95!
-					</h1>
-					<p class="postInformation">
-						Posted on <b>2024-05-01 15:12</b>
-						<span class="postInformationBullet"></span>
-						Edited on <b>2024-05-01 15:21</b>
-					</p>
-					<p>
-						It's April 11th, 2024, and MattKC uploads a video about "backporting" .NET Framework 2.0 to Windows 95.
-						<br>
-						Well, sorta. It wasn't really a backport (since .NETFX is proprietary), but a "compatibility layer" backport.
-						<br><br>
-						Either way, it kind of inspired me to do something similar, but instead of with .NET, it would be with C/C++.
-						Thus, <a href="https://github.com/AnalogFeelings/ChicagoCRT">ChicagoCRT</a> was born.
-						<br>
-						The "Chicago" in the name is there because Windows 95's codename during development was "Chicago", and "95CRT" wasn't a good name.
-					</p>
-					<h2>
-						What is ChicagoCRT?
-					</h2>
-					<p>
-						ChicagoCRT is a fork of <a href="https://github.com/malxau/minicrt">MiniCRT</a>, which is a small MSVCRT replacement that doesn't rely
-						on modern windows APIs.
-						<br>
-						It had two major issues though:
-					</p>
-					<ul>
-						<li>
-							It referenced <b>memset</b> from the actual MSVCRT, which isn't available when you disable it.
-						</li>
-						<li>
-							It didn't compile with <b>/arch:IA32</b> on. This caused problems on older systems.
-						</li>
-					</ul>
-					<p>
-						I decided to fork the project and fix these issues. Both were obviously kind of simple to fix.
-						<br>
-						But first, I decided to remove NMAKE and use a standard Visual Studio project for this, since NMAKE is old and hard to maintain.
-					</p>
-					<h2>
-						Fixing memset
-					</h2>
-					<pre data-src="./resources/code/old_memset.c"></pre>
-					<p>
-						This is the original memset implementation used in MiniCRT. As you can see, it tries to prevent the compiler from being
-						"smart" and optimizing the code to a memset call from the MSVCRT.
-						<br><br>
-						Sadly, modern compilers are too good at optimizing and can still see through what this code is trying to do, so I had to come up
-						with a solution.
-						<br>
-						Aside from the solution, I also had to clean up the code since it was hard to guess from a first glance was it was doing.
-					</p>
-					<pre data-src="./resources/code/new_memset.c"></pre>
-					<p>
-						MSVC has a feature where you can disable optimization at a function level by using the <b>optimize</b> pragma directive.
-						<br>
-						And sure enough, doing this causes MSVC to stop optimizing the function to a call to <b>memset</b>. This may also cause it to not use vectorization or
-						any other fancy optimizations, but since we are targeting systems that didn't even have MMX or SSE, it's fine.
-						<br><br>
-						I've also went ahead and replaced the confusing code with a pretty standard memset implementation, so now it's much more compact and easy to read.
-					</p>
-					<h2>
-						Fixing the architecture
-					</h2>
-					<p>
-						This was the simplest to fix, as I just had to add one line in the .vcxproj file.
-					</p>
-					<pre data-src="./resources/code/ia32.xml"></pre>
-					<p>
-						This could also be done in the Visual Studio GUI under <b>C/C++ > Code Generation</b> and the <b>Enable Enhanced Instruction Set</b> setting.
-						<br>
-						And now, I could finally test this on an actual Windows 95 setup. I don't have a real old computer, so I had to use 86box for it.
-					</p>
-					<h2>
-						Beating MSVC into submission
-					</h2>
-					<p>
-						As you can probably guess, modern MSVC does not output very Windows 95-friendly executables unless you really force it to.
-						<br>
-						For this, I've had to modify several project options on Visual Studio:
-					</p>
-					<ul>
-						<li>
-							Change the file extensions to .c instead of .cpp to avoid hidden allocations and more.
-						</li>
-						<li>
-							Switch the character set to ANSI, as Windows 95 didn't have support for Unicode at all.
-						</li>
-						<li>
-							Disable the standard library, as it references APIs Windows 95 lacks (this is where ChicagoCRT comes in).
-						</li>
-						<li>
-							Disable SDL checks, as this may cause issues.
-						</li>
-						<li>
-							Disable C++ exceptions, this is probably not needed if you're using C.
-						</li>
-						<li>
-							Disable RTC, as this references functions from the MSVCRT.
-						</li>
-						<li>
-							Disable security checks, as those add extra runtime overhead and may cause issues as well.
-						</li>
-						<li>
-							As with ChicagoCRT, disable enhanced instruction sets.
-						</li>
-						<li>
-							Disable randomized base address.
-						</li>
-						<li>
-							Remove the x64 target and set x86 as the default.
-						</li>
-					</ul>
-					<p>
-						As you can probably see, this is a very secure codebase (sarcasm), but it is now ready to be compiled and ran on Windows 95 corre-
-						<br><br>
+			<div data-include="sidebar"></div>
+			<div class="bodyContent line-numbers">
+				<h1>
+					Using modern toolchains for Windows 95!
+				</h1>
+				<p class="postInformation">
+					Posted on <b>2024-05-01 15:12</b>
+					<span class="postInformationBullet"></span>
+					Edited on <b>2024-05-01 15:21</b>
+				</p>
+				<p>
+					It's April 11th, 2024, and MattKC uploads a video about "backporting" .NET Framework 2.0 to Windows 95.
+					<br>
+					Well, sorta. It wasn't really a backport (since .NETFX is proprietary), but a "compatibility layer" backport.
+					<br><br>
+					Either way, it kind of inspired me to do something similar, but instead of with .NET, it would be with C/C++.
+					Thus, <a href="https://github.com/AnalogFeelings/ChicagoCRT">ChicagoCRT</a> was born.
+					<br>
+					The "Chicago" in the name is there because Windows 95's codename during development was "Chicago", and "95CRT" wasn't a good name.
+				</p>
+				<h2>
+					What is ChicagoCRT?
+				</h2>
+				<p>
+					ChicagoCRT is a fork of <a href="https://github.com/malxau/minicrt">MiniCRT</a>, which is a small MSVCRT replacement that doesn't rely
+					on modern windows APIs.
+					<br>
+					It had two major issues though:
+				</p>
+				<ul>
+					<li>
+						It referenced <b>memset</b> from the actual MSVCRT, which isn't available when you disable it.
+					</li>
+					<li>
+						It didn't compile with <b>/arch:IA32</b> on. This caused problems on older systems.
+					</li>
+				</ul>
+				<p>
+					I decided to fork the project and fix these issues. Both were obviously kind of simple to fix.
+					<br>
+					But first, I decided to remove NMAKE and use a standard Visual Studio project for this, since NMAKE is old and hard to maintain.
+				</p>
+				<h2>
+					Fixing memset
+				</h2>
+				<pre data-src="./resources/code/old_memset.c"></pre>
+				<p>
+					This is the original memset implementation used in MiniCRT. As you can see, it tries to prevent the compiler from being
+					"smart" and optimizing the code to a memset call from the MSVCRT.
+					<br><br>
+					Sadly, modern compilers are too good at optimizing and can still see through what this code is trying to do, so I had to come up
+					with a solution.
+					<br>
+					Aside from the solution, I also had to clean up the code since it was hard to guess from a first glance was it was doing.
+				</p>
+				<pre data-src="./resources/code/new_memset.c"></pre>
+				<p>
+					MSVC has a feature where you can disable optimization at a function level by using the <b>optimize</b> pragma directive.
+					<br>
+					And sure enough, doing this causes MSVC to stop optimizing the function to a call to <b>memset</b>. This may also cause it to not use vectorization or
+					any other fancy optimizations, but since we are targeting systems that didn't even have MMX or SSE, it's fine.
+					<br><br>
+					I've also went ahead and replaced the confusing code with a pretty standard memset implementation, so now it's much more compact and easy to read.
+				</p>
+				<h2>
+					Fixing the architecture
+				</h2>
+				<p>
+					This was the simplest to fix, as I just had to add one line in the .vcxproj file.
+				</p>
+				<pre data-src="./resources/code/ia32.xml"></pre>
+				<p>
+					This could also be done in the Visual Studio GUI under <b>C/C++ > Code Generation</b> and the <b>Enable Enhanced Instruction Set</b> setting.
+					<br>
+					And now, I could finally test this on an actual Windows 95 setup. I don't have a real old computer, so I had to use 86box for it.
+				</p>
+				<h2>
+					Beating MSVC into submission
+				</h2>
+				<p>
+					As you can probably guess, modern MSVC does not output very Windows 95-friendly executables unless you really force it to.
+					<br>
+					For this, I've had to modify several project options on Visual Studio:
+				</p>
+				<ul>
+					<li>
+						Change the file extensions to .c instead of .cpp to avoid hidden allocations and more.
+					</li>
+					<li>
+						Switch the character set to ANSI, as Windows 95 didn't have support for Unicode at all.
+					</li>
+					<li>
+						Disable the standard library, as it references APIs Windows 95 lacks (this is where ChicagoCRT comes in).
+					</li>
+					<li>
+						Disable SDL checks, as this may cause issues.
+					</li>
+					<li>
+						Disable C++ exceptions, this is probably not needed if you're using C.
+					</li>
+					<li>
+						Disable RTC, as this references functions from the MSVCRT.
+					</li>
+					<li>
+						Disable security checks, as those add extra runtime overhead and may cause issues as well.
+					</li>
+					<li>
+						As with ChicagoCRT, disable enhanced instruction sets.
+					</li>
+					<li>
+						Disable randomized base address.
+					</li>
+					<li>
+						Remove the x64 target and set x86 as the default.
+					</li>
+				</ul>
+				<p>
+					As you can probably see, this is a very secure codebase (sarcasm), but it is now ready to be compiled and ran on Windows 95 corre-
+					<br><br>
 
-						<img src="./resources/newer.png" alt="An error about requiring a newer version of Windows."/>
+					<img src="./resources/newer.png" alt="An error about requiring a newer version of Windows."/>
 
-						<br><br>
-						Well, seems like I jinxed it.
-					</p>
-					<h2>
-						Going around MSVC's bullshit
-					</h2>
-					<p>
-						I was stuck here for like half an hour, I was thinking that maybe I configured something wrong.
-						<br>
-						Eventually, I grabbed a hex editor and took a look at the PE header. I noticed the minimum OS and subsystem versions were set to
-						6.0, which is Windows Vista.
-						<br>
-						Windows 95 uses OS version 1.0 and subsystem version 4.0, so I had to try to get MSVC to output these values.
-						<br><br>
-						MSVC does have a flag to set the minimum OS version, but it refuses to set anything lower than Windows Vista, so we will have to bruteforce it.
-						<br>
-						I came up with a C# script to run as a post-build event that patches the output executable with the correct values.
-					</p>
-					<pre data-src="./resources/code/patcher.cs"></pre>
-					<h2>
-						After success
-					</h2>
-					<p>
-						With this script, we finally got the executable to run on Windows 95!
-						<br>
-						By this moment, ChicagoCRT was still called MiniCRT since it wasn't public yet, by the way.
-						<br><br>
+					<br><br>
+					Well, seems like I jinxed it.
+				</p>
+				<h2>
+					Going around MSVC's bullshit
+				</h2>
+				<p>
+					I was stuck here for like half an hour, I was thinking that maybe I configured something wrong.
+					<br>
+					Eventually, I grabbed a hex editor and took a look at the PE header. I noticed the minimum OS and subsystem versions were set to
+					6.0, which is Windows Vista.
+					<br>
+					Windows 95 uses OS version 1.0 and subsystem version 4.0, so I had to try to get MSVC to output these values.
+					<br><br>
+					MSVC does have a flag to set the minimum OS version, but it refuses to set anything lower than Windows Vista, so we will have to bruteforce it.
+					<br>
+					I came up with a C# script to run as a post-build event that patches the output executable with the correct values.
+				</p>
+				<pre data-src="./resources/code/patcher.cs"></pre>
+				<h2>
+					After success
+				</h2>
+				<p>
+					With this script, we finally got the executable to run on Windows 95!
+					<br>
+					By this moment, ChicagoCRT was still called MiniCRT since it wasn't public yet, by the way.
+					<br><br>
 
-						<img src="./resources/success.png" alt="Message box showing a message from the program."/>
+					<img src="./resources/success.png" alt="Message box showing a message from the program."/>
 
-						<br><br>
-						Although it's kind of boring, don't you think? It needs something more to be more impressive.
-						<br>
-						I decided to just port the Win32 sample project to the same system and add a bit of extra functionality. Thankfully, I didn't need to change anything
-						regarding the compiler, it just worked fine!
-						<br><br>
+					<br><br>
+					Although it's kind of boring, don't you think? It needs something more to be more impressive.
+					<br>
+					I decided to just port the Win32 sample project to the same system and add a bit of extra functionality. Thankfully, I didn't need to change anything
+					regarding the compiler, it just worked fine!
+					<br><br>
 
-						<img src="./resources/fancy.png" alt="A fancier application showing dialogues, timers, and a menu bar as well as an app icon."/>
+					<img src="./resources/fancy.png" alt="A fancier application showing dialogues, timers, and a menu bar as well as an app icon."/>
 
-						<br><br>
-						And since this is Windows, here it is running on my host Windows 11 system!
-						<br><br>
+					<br><br>
+					And since this is Windows, here it is running on my host Windows 11 system!
+					<br><br>
 
-						<img src="./resources/uglyfancy.png" alt="The same app, but on Windows 11."/>
+					<img src="./resources/uglyfancy.png" alt="The same app, but on Windows 11."/>
 
-						<br><br>
-						It's ugly since it lacks visual styles and reverts to the default legacy styles, but it works fine!
-						<br>
-						If you're wondering about the specs of the emulated Windows 95 machine, here they are:
-					</p>
-					<ul>
-						<li><b>CPU</b>: Intel Pentium 75MHz</li>
-						<li><b>Motherboard</b>: ASUS P/I-P55T2P4</li>
-						<li><b>Memory</b>: 8MB</li>
-						<li><b>GPU (2D)</b>: S3 ViRGE/DX (375)</li>
-						<li><b>GPU (3D)</b>: 3dfx Voodoo</li>
-						<li><b>SPU</b>: SoundBlaster 16</li>
-					</ul>
-					<p>
-						If you want to check out the source code for the sample app, you can find it <a href="https://github.com/AnalogFeelings/ChicagoSample">here</a>!
-					</p>
-				</div>
+					<br><br>
+					It's ugly since it lacks visual styles and reverts to the default legacy styles, but it works fine!
+					<br>
+					If you're wondering about the specs of the emulated Windows 95 machine, here they are:
+				</p>
+				<ul>
+					<li><b>CPU</b>: Intel Pentium 75MHz</li>
+					<li><b>Motherboard</b>: ASUS P/I-P55T2P4</li>
+					<li><b>Memory</b>: 8MB</li>
+					<li><b>GPU (2D)</b>: S3 ViRGE/DX (375)</li>
+					<li><b>GPU (3D)</b>: 3dfx Voodoo</li>
+					<li><b>SPU</b>: SoundBlaster 16</li>
+				</ul>
+				<p>
+					If you want to check out the source code for the sample app, you can find it <a href="https://github.com/AnalogFeelings/ChicagoSample">here</a>!
+				</p>
 			</div>
 		</div>
 

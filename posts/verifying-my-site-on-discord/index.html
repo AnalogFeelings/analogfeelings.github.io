@@ -43,83 +43,81 @@
 		<div data-include="topbar"></div>
 
 		<div class="mainBodyDiv field-row">
-			<div class="innerBodyDiv field-row">
-				<div data-include="sidebar"></div>
-				<div class="bodyContent line-numbers">
-					<h1>
-						Verifying my website on Discord
-					</h1>
-					<p class="postInformation">
-						Posted on <b>2023-09-11 17:43</b>
-						<span class="postInformationBullet"></span>
-						Never Edited
-					</p>
-					<p>
-						Recently, Discord added a new feature for some users that allows them to connect their website to their
-						account.
-						<br>
-						This allows you to show off your website next to your other social media accounts, which is pretty neat.
-						<br><br>
-						I was one of the lucky ones who got the feature early, because if you didn't know, Discord rolls features
-						out gradually instead of immediately.
-						<br>
-						So off I went trying to verify my website!
-					</p>
-					<h2>
-						The Required Steps
-					</h2>
-					<p>
-						First, Discord will ask you to enter the domain name of your website into a text field, and click <b>Next</b>.
-					</p>
-					<fieldset class="specialFieldset importantFieldset">
-						<legend>
-							<img src=""/>
-							<b>Important</b>
-						</legend>
-						The domain name must not contain the <b>https://</b> prefix or anything else.
-						<br>
-						For example, <b>google.com</b> is valid, but <b>https://google.com/</b> is not.
-					</fieldset>
-					<p>
-						Then, it will show you two verification options, <b>DNS record</b> or <b>HTTP</b>.
-						<br>
-						I chose HTTP because I do not own a real domain.
-						<br><br>
-						The HTTP method asks you to create a folder called <b>.well-known</b> in the root of the website. You must then
-						add a file called <b>discord</b> (without file extension), and paste in the string the client shows you.
-						<br>
-						This way, you should be able to verify your domain correctly, <b>in theory</b>.
-					</p>
-					<h2>
-						The Bullshit Begins
-					</h2>
-					<p>
-						So, it turns out that if you don't have a real website with a server and a domain, Discord will not be able to find
-						the verification file.
-						<br>
-						The reason for this is because of <b>Jekyll</b>, the static site generator that GitHub Pages uses by default.
-						<br><br>
-						Jekyll ignores directories which begin by a period, which means the built site will not contain said directories.
-						<br>
-						This seems to be related to the UNIX philosophy of marking such directories as "hidden".
-						<br><br>
-						Luckily, this behavior can be modified to fit our needs.
-					</p>
-					<h2>
-						The Solution
-					</h2>
-					<p>
-						Thanks to the user <b>TomasHubelbauer</b> on GitHub, I've discovered the solution for the problem.
-						<br>
-						You need to create a file called <b>_config.yml</b> in the root of your website, with the following contents:
-					</p>
-					<pre data-src="./resources/solution.yml"></pre>
-					<p>
-						Save it, and commit it to your repository. Wait for it to build, and then try to verify your site again.
-						<br>
-						Enjoy your bragging rights!
-					</p>
-				</div>
+			<div data-include="sidebar"></div>
+			<div class="bodyContent line-numbers">
+				<h1>
+					Verifying my website on Discord
+				</h1>
+				<p class="postInformation">
+					Posted on <b>2023-09-11 17:43</b>
+					<span class="postInformationBullet"></span>
+					Never Edited
+				</p>
+				<p>
+					Recently, Discord added a new feature for some users that allows them to connect their website to their
+					account.
+					<br>
+					This allows you to show off your website next to your other social media accounts, which is pretty neat.
+					<br><br>
+					I was one of the lucky ones who got the feature early, because if you didn't know, Discord rolls features
+					out gradually instead of immediately.
+					<br>
+					So off I went trying to verify my website!
+				</p>
+				<h2>
+					The Required Steps
+				</h2>
+				<p>
+					First, Discord will ask you to enter the domain name of your website into a text field, and click <b>Next</b>.
+				</p>
+				<fieldset class="specialFieldset importantFieldset">
+					<legend>
+						<img src=""/>
+						<b>Important</b>
+					</legend>
+					The domain name must not contain the <b>https://</b> prefix or anything else.
+					<br>
+					For example, <b>google.com</b> is valid, but <b>https://google.com/</b> is not.
+				</fieldset>
+				<p>
+					Then, it will show you two verification options, <b>DNS record</b> or <b>HTTP</b>.
+					<br>
+					I chose HTTP because I do not own a real domain.
+					<br><br>
+					The HTTP method asks you to create a folder called <b>.well-known</b> in the root of the website. You must then
+					add a file called <b>discord</b> (without file extension), and paste in the string the client shows you.
+					<br>
+					This way, you should be able to verify your domain correctly, <b>in theory</b>.
+				</p>
+				<h2>
+					The Bullshit Begins
+				</h2>
+				<p>
+					So, it turns out that if you don't have a real website with a server and a domain, Discord will not be able to find
+					the verification file.
+					<br>
+					The reason for this is because of <b>Jekyll</b>, the static site generator that GitHub Pages uses by default.
+					<br><br>
+					Jekyll ignores directories which begin by a period, which means the built site will not contain said directories.
+					<br>
+					This seems to be related to the UNIX philosophy of marking such directories as "hidden".
+					<br><br>
+					Luckily, this behavior can be modified to fit our needs.
+				</p>
+				<h2>
+					The Solution
+				</h2>
+				<p>
+					Thanks to the user <b>TomasHubelbauer</b> on GitHub, I've discovered the solution for the problem.
+					<br>
+					You need to create a file called <b>_config.yml</b> in the root of your website, with the following contents:
+				</p>
+				<pre data-src="./resources/solution.yml"></pre>
+				<p>
+					Save it, and commit it to your repository. Wait for it to build, and then try to verify your site again.
+					<br>
+					Enjoy your bragging rights!
+				</p>
 			</div>
 		</div>
 

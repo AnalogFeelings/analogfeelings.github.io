@@ -115,17 +115,7 @@ body
 
 .mainBodyDiv
 {
-	flex-wrap: wrap;
-	align-content: flex-start;
-	flex-grow: 1;
-
-	column-gap: 0;
-}
-
-.innerBodyDiv
-{
 	width: 100%;
-	height: 100%;
 
 	align-items: stretch;
 

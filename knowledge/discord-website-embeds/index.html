@@ -43,111 +43,109 @@
 		<div data-include="topbar"></div>
 
 		<div class="mainBodyDiv field-row">
-			<div class="innerBodyDiv field-row">
-				<div data-include="sidebar"></div>
-				<div class="bodyContent line-numbers">
-					<h1>
-						Discord Website Embeds
-					</h1>
-					<p class="postInformation">
-						Written on <b>2023-08-01 22:36</b>
-						<span class="postInformationBullet"></span>
-						Never Edited
-					</p>
-					<fieldset class="specialFieldset importantFieldset">
-						<legend>
-							<img src=""/>
-							<b>Important</b>
-						</legend>
-						Discord's proxy caches embeds for 30 minutes. This is not configurable by the website.
-						<br>
-						You can force it to refresh by appending dummy characters like "#" or random queries.
-					</fieldset>
-					<p>
-						A Discord website embed is composed of several HTML <b>meta</b> tags, and optionally, an <b>OEmbed JSON</b> file.
+			<div data-include="sidebar"></div>
+			<div class="bodyContent line-numbers">
+				<h1>
+					Discord Website Embeds
+				</h1>
+				<p class="postInformation">
+					Written on <b>2023-08-01 22:36</b>
+					<span class="postInformationBullet"></span>
+					Never Edited
+				</p>
+				<fieldset class="specialFieldset importantFieldset">
+					<legend>
+						<img src=""/>
+						<b>Important</b>
+					</legend>
+					Discord's proxy caches embeds for 30 minutes. This is not configurable by the website.
+					<br>
+					You can force it to refresh by appending dummy characters like "#" or random queries.
+				</fieldset>
+				<p>
+					A Discord website embed is composed of several HTML <b>meta</b> tags, and optionally, an <b>OEmbed JSON</b> file.
 
-						<br><br>
+					<br><br>
 
-						Below is a crude diagram of how a Discord website embed is structured.
-						<br>
-						My apologies for the eyesore.
+					Below is a crude diagram of how a Discord website embed is structured.
+					<br>
+					My apologies for the eyesore.
 
-						<br><br>
+					<br><br>
 
-						We won't be talking about section 5 for now, since it's related to OEmbed.
+					We won't be talking about section 5 for now, since it's related to OEmbed.
 
-						<br><br>
+					<br><br>
 
-						<img src="./resources/embedanatomy.png" alt="A diagram of the Discord website embed structure."/>
-					</p>
-					<h2>
-						Element Breakdown
-					</h2>
-					<p>
-						Below is the list of elements that I know Discord supports so far.
-					</p>
-					<ul>
-						<li>
-							<b>og:title</b> - The title of the page, it usually gets displayed in the biggest font size.
-							Represented by the number <b>1</b> in the diagram above.
-						</li>
-						<li>
-							<b>og:url</b> - The URL to the page. This is used when clicking the author field.
-							Represented by the number <b>5</b> in the diagram above.
-						</li>
-						<li>
-							<b>og:description</b> - The description of the page. This is shown under the page title. Keep it short!
-							Represented by the number <b>2</b> in the diagram above.
-						</li>
-						<li>
-							<b>og:image</b> - The image displayed under the description. Must be a URL.
-							Represented by the number <b>3</b> in the diagram.
-						</li>
-						<li>
-							<b>theme-color</b> - The color of the thin strip on the left of the embed. Must be in hex.
-							Represented by the number <b>4</b> in the diagram.
-						</li>
-					</ul>
-					<fieldset class="specialFieldset remarksFieldset">
-						<legend>
-							<img src=""/>
-							<b>Remarks</b>
-						</legend>
-						Discord by default won't make images large. You must add another meta tag.
-						<br>
-						Its name must be <b>twitter:card</b> with a content of <b>summary_large_image</b>.
-					</fieldset>
-					<p>
-						To make the field above the page title appear, you must add an OEmbed file.
-						<br>
-						Here is an example, taken from the source code of the home page.
-					</p>
-					<pre data-src="./resources/code/currentpage.html"></pre>
-					<h2>
-						OEmbed Definition
-					</h2>
-					<p>
-						To make field 5 appear on your rich embed, you must add a <b>link</b> element to your
-						page's head, with the type <b>application/json+oembed</b>, and an href pointing to your
-						JSON file
-						<br>
-						Its content is very simple.
-					</p>
-					<ul>
-						<li>
-							<b>author_name</b> - The text that will appear on field <b>5</b> of the image.
-						</li>
-						<li>
-							<b>author_url</b> - If this is set, it will turn the author_name field into a link.
-						</li>
-					</ul>
-					<p>
-						Here's an example, again from this website.
-					</p>
-					<pre data-src="./resources/code/oembed.json"></pre>
+					<img src="./resources/embedanatomy.png" alt="A diagram of the Discord website embed structure."/>
+				</p>
+				<h2>
+					Element Breakdown
+				</h2>
+				<p>
+					Below is the list of elements that I know Discord supports so far.
+				</p>
+				<ul>
+					<li>
+						<b>og:title</b> - The title of the page, it usually gets displayed in the biggest font size.
+										Represented by the number <b>1</b> in the diagram above.
+					</li>
+					<li>
+						<b>og:url</b> - The URL to the page. This is used when clicking the author field.
+									  Represented by the number <b>5</b> in the diagram above.
+					</li>
+					<li>
+						<b>og:description</b> - The description of the page. This is shown under the page title. Keep it short!
+											  Represented by the number <b>2</b> in the diagram above.
+					</li>
+					<li>
+						<b>og:image</b> - The image displayed under the description. Must be a URL.
+										Represented by the number <b>3</b> in the diagram.
+					</li>
+					<li>
+						<b>theme-color</b> - The color of the thin strip on the left of the embed. Must be in hex.
+										   Represented by the number <b>4</b> in the diagram.
+					</li>
+				</ul>
+				<fieldset class="specialFieldset remarksFieldset">
+					<legend>
+						<img src=""/>
+						<b>Remarks</b>
+					</legend>
+					Discord by default won't make images large. You must add another meta tag.
+					<br>
+					Its name must be <b>twitter:card</b> with a content of <b>summary_large_image</b>.
+				</fieldset>
+				<p>
+					To make the field above the page title appear, you must add an OEmbed file.
+					<br>
+					Here is an example, taken from the source code of the home page.
+				</p>
+				<pre data-src="./resources/code/currentpage.html"></pre>
+				<h2>
+					OEmbed Definition
+				</h2>
+				<p>
+					To make field 5 appear on your rich embed, you must add a <b>link</b> element to your
+					page's head, with the type <b>application/json+oembed</b>, and an href pointing to your
+					JSON file
+					<br>
+					Its content is very simple.
+				</p>
+				<ul>
+					<li>
+						<b>author_name</b> - The text that will appear on field <b>5</b> of the image.
+					</li>
+					<li>
+						<b>author_url</b> - If this is set, it will turn the author_name field into a link.
+					</li>
+				</ul>
+				<p>
+					Here's an example, again from this website.
+				</p>
+				<pre data-src="./resources/code/oembed.json"></pre>
 
-					<div data-include="report"></div>
-				</div>
+				<div data-include="report"></div>
 			</div>
 		</div>
 

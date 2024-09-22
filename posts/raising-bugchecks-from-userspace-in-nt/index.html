@@ -43,105 +43,103 @@
 		<div data-include="topbar"></div>
 
 		<div class="mainBodyDiv field-row">
-			<div class="innerBodyDiv field-row">
-				<div data-include="sidebar"></div>
-				<div class="bodyContent line-numbers">
-					<h1>
-						Raising bugchecks from userspace in NT.
-					</h1>
-					<p class="postInformation">
-						Posted on <b>2021-11-30 20:31</b>
-						<span class="postInformationBullet"></span>
-						Edited on <b>2023-02-12 05:04</b>
-					</p>
-					<p>
-						If you are reading this post right here and right now, congratulations! You are interested in how to nuke
-						computers from a simple userspace program.
-						<br>
-						In this post I will show some example code, and attempt to shine a light into this mysterious function.
-						<br><br>
-						So, let's get into it!
-					</p>
+			<div data-include="sidebar"></div>
+			<div class="bodyContent line-numbers">
+				<h1>
+					Raising bugchecks from userspace in NT.
+				</h1>
+				<p class="postInformation">
+					Posted on <b>2021-11-30 20:31</b>
+					<span class="postInformationBullet"></span>
+					Edited on <b>2023-02-12 05:04</b>
+				</p>
+				<p>
+					If you are reading this post right here and right now, congratulations! You are interested in how to nuke
+					computers from a simple userspace program.
+					<br>
+					In this post I will show some example code, and attempt to shine a light into this mysterious function.
+					<br><br>
+					So, let's get into it!
+				</p>
 
-					<h4>
-						Analyzing the code
-					</h4>
+				<h4>
+					Analyzing the code
+				</h4>
 
-					<pre data-src="./resources/FullCode.cs"></pre>
+				<pre data-src="./resources/FullCode.cs"></pre>
 
-					<p>
-						<br>
-						You may be wondering, <i>Is it really that easy to nuke a computer?</i>
-						<br>
-						The answer is <b>yes</b>! You may also be wondering, <i>Why would Microsoft make it so easy?</i>
-						<br>
-						The answer for that is, <b>nobody knows</b>!
-						<br><br>
-						Oh, wait! I can't believe I forgot to comment what each part of the code does...
-						<br><br>
-					</p>
+				<p>
+					<br>
+					You may be wondering, <i>Is it really that easy to nuke a computer?</i>
+					<br>
+					The answer is <b>yes</b>! You may also be wondering, <i>Why would Microsoft make it so easy?</i>
+					<br>
+					The answer for that is, <b>nobody knows</b>!
+					<br><br>
+					Oh, wait! I can't believe I forgot to comment what each part of the code does...
+					<br><br>
+				</p>
 
-					<pre data-src="./resources/FullCode.cs" data-range="7,13"></pre>
+				<pre data-src="./resources/FullCode.cs" data-range="7,13"></pre>
 
-					<p>
-						<br>
-						In a nutshell, these import the "RtlAdjustPrivilege" and "NtRaiseHardError" functions from
-						the ntdll.dll DLL. These are of course needed to make the system throw a bugcheck.
-						<br><br>
-					</p>
+				<p>
+					<br>
+					In a nutshell, these import the "RtlAdjustPrivilege" and "NtRaiseHardError" functions from
+					the ntdll.dll DLL. These are of course needed to make the system throw a bugcheck.
+					<br><br>
+				</p>
 
-					<pre data-src="./resources/FullCode.cs" data-range="17"></pre>
+				<pre data-src="./resources/FullCode.cs" data-range="17"></pre>
 
-					<p>
-						<br>
-						Let's split this into parts:
-						<br>
-					</p>
+				<p>
+					<br>
+					Let's split this into parts:
+					<br>
+				</p>
 
-					<ul>
-						<li><b>First parameter (Privilege):</b> the privilege to enable, in this case 19, which is <b>SeShutdownPrivilege</b>.
-																This is required, otherwise NtRaiseHardError will not throw a bugcheck.</li>
-						<li><b>Second parameter (EnablePrivilege):</b> enables the privilege if <b>true</b>, disables it if <b>false</b>.</li>
-						<li><b>Third parameter (IsThreadPrivilege):</b> enables the privilege for the current thread if <b>true</b>, otherwise, the whole process.</li>
-						<li><b>Fourth parameter (PreviousValue):</b> outputs a boolean that tells us if the privilege was enabled before or not.</li>
-					</ul>
+				<ul>
+					<li><b>First parameter (Privilege):</b> the privilege to enable, in this case 19, which is <b>SeShutdownPrivilege</b>.
+															This is required, otherwise NtRaiseHardError will not throw a bugcheck.</li>
+					<li><b>Second parameter (EnablePrivilege):</b> enables the privilege if <b>true</b>, disables it if <b>false</b>.</li>
+					<li><b>Third parameter (IsThreadPrivilege):</b> enables the privilege for the current thread if <b>true</b>, otherwise, the whole process.</li>
+					<li><b>Fourth parameter (PreviousValue):</b> outputs a boolean that tells us if the privilege was enabled before or not.</li>
+				</ul>
 
-					<pre data-src="./resources/FullCode.cs" data-range="19"></pre>
+				<pre data-src="./resources/FullCode.cs" data-range="19"></pre>
 
-					<p>
-						<br>
-						Let's ALSO split this into parts:
-					</p>
+				<p>
+					<br>
+					Let's ALSO split this into parts:
+				</p>
 
-					<ul>
-						<li><b>First parameter (ErrorStatus):</b> the stop code to pass. <b>0xC0000420</b> means <b>STATUS_ASSERTION_FAILURE</b>.
-																  I haven't tried ALL of the NTSTATUS codes, but it seems that this is the only one that works.</li>
-						<li><b>Second parameter (NumberOfParameters):</b> number of <b>optional</b> parameters in the "Parameters" parameter.
-							<b>0</b> since we don't pass any.
-						</li>
-						<li><b>Third parameter (UnicodeStringParameterMask):</b> according to a ReactOS contributor, <i>it serves to tell the function which element(s)
-																														in the given parameters array are pointers to unicode strings</i>.</li>
-						<li><b>Fourth parameter (Parameters):</b> an array of DWORDs that will be shown when displaying the stop code.
-							<b>IntPtr.Zero</b> since we don't need any.
-						</li>
-						<li><b>Fifth parameter (ValidResponseOption):</b> the system response to the hard error. 6 is <b>OptionShutdownSystem</b>.
-																		  It must be 6, otherwise it will not work.</li>
-						<li><b>Sixth parameter (Response):</b> pointer to HARDERROR_RESPONSE struct. Not needed here since bugchecks do not set a response.</li>
-					</ul>
+				<ul>
+					<li><b>First parameter (ErrorStatus):</b> the stop code to pass. <b>0xC0000420</b> means <b>STATUS_ASSERTION_FAILURE</b>.
+															  I haven't tried ALL of the NTSTATUS codes, but it seems that this is the only one that works.</li>
+					<li><b>Second parameter (NumberOfParameters):</b> number of <b>optional</b> parameters in the "Parameters" parameter.
+						<b>0</b> since we don't pass any.
+					</li>
+					<li><b>Third parameter (UnicodeStringParameterMask):</b> according to a ReactOS contributor, <i>it serves to tell the function which element(s)
+																													in the given parameters array are pointers to unicode strings</i>.</li>
+					<li><b>Fourth parameter (Parameters):</b> an array of DWORDs that will be shown when displaying the stop code.
+						<b>IntPtr.Zero</b> since we don't need any.
+					</li>
+					<li><b>Fifth parameter (ValidResponseOption):</b> the system response to the hard error. 6 is <b>OptionShutdownSystem</b>.
+																	  It must be 6, otherwise it will not work.</li>
+					<li><b>Sixth parameter (Response):</b> pointer to HARDERROR_RESPONSE struct. Not needed here since bugchecks do not set a response.</li>
+				</ul>
 
-					<h4>
-						Going deeper
-					</h4>
-					<p>
-						So, why is this exposed to every user-space program? We may never know.
-						<br>
-						Who knows? Maybe its a poor decision for backwards compatibility for some old, weird, business program. What is true is that
-						ReactOS supposedly does not suffer from this.
-						<br><br>
-						I have tried <a href="https://github.com/AnalogFeelings/BSODMachine">BSODMachine</a> under Windows XP, Vista, 7, 8.1, 10 and 11. I
-						have yet to try 2000 and ReactOS.
-					</p>
-				</div>
+				<h4>
+					Going deeper
+				</h4>
+				<p>
+					So, why is this exposed to every user-space program? We may never know.
+					<br>
+					Who knows? Maybe its a poor decision for backwards compatibility for some old, weird, business program. What is true is that
+					ReactOS supposedly does not suffer from this.
+					<br><br>
+					I have tried <a href="https://github.com/AnalogFeelings/BSODMachine">BSODMachine</a> under Windows XP, Vista, 7, 8.1, 10 and 11. I
+					have yet to try 2000 and ReactOS.
+				</p>
 			</div>
 		</div>
 
