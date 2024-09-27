@@ -1,9 +1,9 @@
 [
     {
         "date": "2024-05-01 15:12",
-        "edited": "2024-05-01 15:21",
+        "edited": "2024-09-27 15:16",
         "url": "/posts/building-software-with-modern-toolchains-for-chicago",
-        "title": "Using modern toolchains for Windows 95!",
+        "title": "Using Modern Toolchains for Windows 95!",
         "description": "An article on how I got the Windows 11 SDK to output software for Windows 95."
     },
     {

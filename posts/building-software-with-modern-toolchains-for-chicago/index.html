@@ -45,12 +45,12 @@
 			<div data-include="sidebar"></div>
 			<div class="bodyContent line-numbers">
 				<h1>
-					Using modern toolchains for Windows 95!
+					Using Modern Toolchains for Windows 95!
 				</h1>
 				<p class="postInformation">
 					Posted on <b>2024-05-01 15:12</b>
 					<span class="postInformationBullet"></span>
-					Edited on <b>2024-05-01 15:21</b>
+					Edited on <b>2024-09-27 15:16</b>
 				</p>
 				<p>
 					It's April 11th, 2024, and MattKC uploads a video about "backporting" .NET Framework 2.0 to Windows 95.
@@ -63,7 +63,7 @@
 					The "Chicago" in the name is there because Windows 95's codename during development was "Chicago", and "95CRT" wasn't a good name.
 				</p>
 				<h2>
-					What is ChicagoCRT?
+					What Is ChicagoCRT?
 				</h2>
 				<p>
 					ChicagoCRT is a fork of <a href="https://github.com/malxau/minicrt">MiniCRT</a>, which is a small MSVCRT replacement that doesn't rely
@@ -85,7 +85,7 @@
 					But first, I decided to remove NMAKE and use a standard Visual Studio project for this, since NMAKE is old and hard to maintain.
 				</p>
 				<h2>
-					Fixing memset
+					Fixing Memset
 				</h2>
 				<pre data-src="./resources/code/old_memset.c"></pre>
 				<p>
@@ -107,7 +107,7 @@
 					I've also went ahead and replaced the confusing code with a pretty standard memset implementation, so now it's much more compact and easy to read.
 				</p>
 				<h2>
-					Fixing the architecture
+					Fixing the Architecture
 				</h2>
 				<p>
 					This was the simplest to fix, as I just had to add one line in the .vcxproj file.
@@ -119,7 +119,7 @@
 					And now, I could finally test this on an actual Windows 95 setup. I don't have a real old computer, so I had to use 86box for it.
 				</p>
 				<h2>
-					Beating MSVC into submission
+					Beating MSVC Into Submission
 				</h2>
 				<p>
 					As you can probably guess, modern MSVC does not output very Windows 95-friendly executables unless you really force it to.
@@ -168,7 +168,7 @@
 					Well, seems like I jinxed it.
 				</p>
 				<h2>
-					Going around MSVC's bullshit
+					Going Around MSVC's Bullshit
 				</h2>
 				<p>
 					I was stuck here for like half an hour, I was thinking that maybe I configured something wrong.
@@ -184,7 +184,7 @@
 				</p>
 				<pre data-src="./resources/code/patcher.cs"></pre>
 				<h2>
-					After success
+					After Success
 				</h2>
 				<p>
 					With this script, we finally got the executable to run on Windows 95!
