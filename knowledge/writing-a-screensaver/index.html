@@ -51,7 +51,7 @@
 				<p class="postInformation">
 					Written on <b>2024-09-18 14:47</b>
 					<span class="postInformationBullet"></span>
-					Never Edited
+					Edited on <b>2024-10-06 16:42</b>
 				</p>
 
 				<p>
@@ -101,14 +101,13 @@
 					<br>
 					<b>WM_CREATE</b> is received when the screensaver is created, and <b>WM_DESTROY</b> when the screensaver is being closed.
 					<br>
-										   You can use <b>WM_PAINT</b> to draw whatever you want on the screen, as this is just a normal Win32 window.
+					You can use <b>WM_PAINT</b> to draw whatever you want on the screen, as this is just a normal Win32 window.
 				</p>
 
 				<p>
-					<b>RegisterDialogClasses</b> tells the library if it should register the dialog <b>DLG_SCRNSAVECONFIGURE</b>,
-												 which has an id of <b>2003</b>.
+					<b>RegisterDialogClasses</b> tells the library if it should register the dialog <b>DLG_SCRNSAVECONFIGURE</b>, which has an id of <b>2003</b>.
 					<br>
-												 Make this function return true if you want to add a settings dialog to your screensaver.
+					Make this function return true if you want to add a settings dialog to your screensaver.
 				</p>
 
 				<p>
@@ -130,6 +129,65 @@
 
 				<p>
 					For a screensaver to be detected by the screensaver control panel dialog, it must be located in <b>C:\Windows\System32</b>.
+				</p>
+
+				<h2>
+					Debugging the Screensaver
+				</h2>
+
+				<p>
+					Debugging Windows screensavers is done in a quite unorthodox way, but I have developed a method that works.
+				</p>
+
+				<ol>
+					<li>
+						Open a Win32 window, for example Control Panel.
+					</li>
+					<li>
+						Grab its window handle using Spy++ or some other software.
+					</li>
+					<li>
+						Convert the handle from hexadecimal to decimal.
+					</li>
+					<li>
+						Go into your project's <b>Properties -> Debugging</b>.
+					</li>
+					<li>
+						On Command Arguments, write <b>/p (window handle)</b> and hit Apply.
+					</li>
+				</ol>
+
+				<p>
+					You can now debug the screensaver as long as you don't close the window you opened.
+				</p>
+
+				<fieldset class="specialFieldset remarksFieldset">
+					<legend>
+						<img src=""/>
+						<b>Remarks</b>
+					</legend>
+					You can replicate this in <b>Renderdoc</b> to be able to debug the graphics side.
+				</fieldset>
+
+				<h2>
+					Debugging the Configuration Dialog
+				</h2>
+
+				<p>
+					It's mostly the same method, but with some different steps.
+				</p>
+
+				<ol>
+					<li>
+						Do steps 1 to 4 from the section above.
+					</li>
+					<li>
+						On Command Arguments, write <b>/c:(window handle)</b> and hit Apply.
+					</li>
+				</ol>
+
+				<p>
+					You can now debug the configuration dialog freely.
 				</p>
 
 				<div data-include="report"></div>
