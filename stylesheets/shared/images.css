@@ -4,6 +4,8 @@
 	--tumblr-icon: url("/resources/social/tumblr.svg");
 
 	--external-link-icon: url("/resources/external-link-dark.svg");
+
+	--menu-button-icon: url("/resources/menu.svg");
 }
 
 :root[data-applied-mode="dark"]
@@ -12,4 +14,6 @@
 	--tumblr-icon: url("/resources/social/tumblr-light.svg");
 
 	--external-link-icon: url("/resources/external-link.svg");
+
+	--menu-button-icon: url("/resources/menu-dark.svg");
 }

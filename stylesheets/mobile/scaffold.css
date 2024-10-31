@@ -41,22 +41,33 @@
 
 .topBarBurger > button
 {
-	width: 32px;
-	height: 32px;
+	width: 50px;
+	height: 50px;
 
-	background-image: url("/resources/menu.svg");
+	background-image: var(--menu-button-icon);
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position: center center;
-	background-size: 24px 24px;
+	background-size: 32px 32px;
 
-	filter: var(--menu-button-filter);
+	vertical-align: middle;
 
 	border: 2px solid var(--button-border);
+	border-radius: 8px;
 
 	padding: 0;
 
-	color: black;
+	transition: all 0.5s;
+}
+
+.topBarBurger > button:hover
+{
+	border: 2px solid var(--button-border-hover);
+}
+
+.topBarBurger > button:active
+{
+	border: 2px solid var(--button-border-press);
 }
 
 .sideBar

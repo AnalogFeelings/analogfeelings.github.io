@@ -1,11 +1,17 @@
+:root
+{
+	--thin-color: gray;
+
+	--button-border-hover: gray;
+	--button-border-press: darkgray;
+}
+
 :root[data-applied-mode="light"]
 {
 	color-scheme: light;
 
 	--body-background: #FFFFFF;
 	--body-foreground: black;
-
-	--thin-color: gray;
 
 	--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 	--navbar-gradient-start: #2F3279;
@@ -22,7 +28,6 @@
 	--header-gradient-start: #008080;
 
 	--button-border: black;
-	--menu-button-filter: none;
 
 	--separator-color: #CBCBCB;
 
@@ -43,8 +48,6 @@
 	--body-background: #202020;
 	--body-foreground: lightgray;
 
-	--thin-color: gray;
-
 	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
 	--navbar-border-color: dimgray;
@@ -59,8 +62,7 @@
 
 	--header-gradient-start: #009E9E;
 
-	--button-border: black;
-	--menu-button-filter: invert();
+	--button-border: white;
 
 	--separator-color: #565656;
 

@@ -10,5 +10,5 @@
    xmlns:svg="http://www.w3.org/2000/svg"><defs
      id="defs1" /><path
      id="rect1760"
-     style="fill:#000000;stroke-width:6.10817;stroke-miterlimit:14.6"
+     style="fill:#ffffff;stroke-width:6.10817;stroke-miterlimit:14.6"
      d="m 2,8 a 2,2 45 0 0 2,2 H 28 A 2,2 135 0 0 30,8 2,2 45 0 0 28,6 H 4 A 2,2 135 0 0 2,8 Z m 0,8 a 2,2 45 0 0 2,2 h 24 a 2,2 135 0 0 2,-2 2,2 45 0 0 -2,-2 H 4 a 2,2 135 0 0 -2,2 z m 0,8 a 2,2 45 0 0 2,2 h 24 a 2,2 135 0 0 2,-2 2,2 45 0 0 -2,-2 L 4,22 a 2,2 135 0 0 -2,2 z" /></svg>
