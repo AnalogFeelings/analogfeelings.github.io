@@ -26,7 +26,7 @@
 	margin-left: 16px;
 	padding: 0;
 
-	border-left: 1px dotted var(--thin-color);
+	border-left: 2px dotted var(--thin-color);
 }
 
 .fancyTreeview ul,
@@ -68,26 +68,30 @@
 	display: inline-block;
 	position: relative;
 
-	left: -1px;
+	left: -5px;
+	top: 4px;
 
-	width: 10px;
-	height: 10px;
+	width: 18px;
+	height: 18px;
 
 	margin-right: 6px;
 }
 
 .fancyTreeview summary::before
 {
-	background: url("/resources/tree/expand.svg");
+	background: url("/resources/tree/expand.svg") no-repeat;
+	background-size: contain;
 }
 
 .fancyTreeview details[open] > summary::before
 {
-	background: url("/resources/tree/retract.svg");
+	background: url("/resources/tree/retract.svg") no-repeat;
+	background-size: contain;
 }
 
 .fancyTreeview li.page::before
 {
 	margin-left: -16px;
-	background: url("/resources/tree/empty.svg");
+	background: url("/resources/tree/empty.svg") no-repeat;
+	background-size: contain;
 }
