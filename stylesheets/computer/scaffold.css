@@ -58,16 +58,12 @@
 
 		font-size: 1em;
 
-		padding: 10px;
-		padding-top: 20px;
+		padding: 20px 10px 10px;
 	}
 
 	.sideBarSection
 	{
-		margin-top: 5px;
-		margin-right: 15px;
-		margin-left: 15px;
-		margin-bottom: 5px;
+		margin: 5px 15px;
 	}
 
 	.sideBarSection > ul:not(.fancyTreeview)
