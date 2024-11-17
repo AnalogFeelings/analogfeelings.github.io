@@ -44,11 +44,6 @@
 	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
 }
 
-.topBarBurger
-{
-
-}
-
 .sideBar
 {
 	align-items: stretch;
@@ -62,10 +57,6 @@
 .sideBar .separatorDiv
 {
 	align-self: center;
-}
-
-.sideBarSection
-{
 }
 
 .sideBarSection > ul:not(.fancyTreeview)
