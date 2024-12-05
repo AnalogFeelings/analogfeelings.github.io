@@ -90,6 +90,8 @@
 
 .sideBarCopyright
 {
+	font-size: 0.9em;
+
 	color: var(--thin-color);
 
 	margin-top: 0;
