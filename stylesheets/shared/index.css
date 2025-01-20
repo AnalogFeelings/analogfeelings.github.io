@@ -118,6 +118,7 @@ body
 	width: 100%;
 
 	align-items: stretch;
+	flex-grow: 1;
 
 	column-gap: 0;
 }
