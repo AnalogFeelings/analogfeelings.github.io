@@ -2,91 +2,91 @@
 <rss version="2.0">
     <channel>
         <title>Nora's Hideout</title>
-        <link>https://analogfeelings.github.io/</link>
+        <link>https://analogfeelings.xyz/</link>
         <description>Nora's personal website for programming and other stuff.</description>
         <docs>https://www.rssboard.org/rss-specification</docs>
         <copyright>Copyright 2021 Analog Feelings</copyright>
         <image>
-            <url>https://analogfeelings.github.io/resources/favicon.png</url>
+            <url>https://analogfeelings.xyz/resources/favicon.png</url>
             <title>Nora's Hideout</title>
-            <link>https://analogfeelings.github.io/</link>
+            <link>https://analogfeelings.xyz/</link>
         </image>
 
         <item>
             <title>Writing a Windows Screensaver</title>
-            <link>https://analogfeelings.github.io/knowledge/writing-a-screensaver/</link>
+            <link>https://analogfeelings.xyz/knowledge/writing-a-screensaver/</link>
             <pubDate>Wed, Sep 18 2024 14:47:00 GMT</pubDate>
             <description>A knowledge article on writing native Win32 screensavers.</description>
         </item>
         <item>
             <title>Using modern toolchains for Windows 95!</title>
-            <link>https://analogfeelings.github.io/posts/building-software-with-modern-toolchains-for-chicago/</link>
+            <link>https://analogfeelings.xyz/posts/building-software-with-modern-toolchains-for-chicago/</link>
             <pubDate>Wed, May 01 2024 15:12:00 GMT</pubDate>
             <description>An article on how I got the Windows 11 SDK to output software for Windows 95.</description>
         </item>
         <item>
             <title>Verifying my website on Discord</title>
-            <link>https://analogfeelings.github.io/posts/verifying-my-site-on-discord/</link>
+            <link>https://analogfeelings.xyz/posts/verifying-my-site-on-discord/</link>
             <pubDate>Mon, Sep 11 2023 17:43:00 GMT</pubDate>
             <description>A short story and guide on how to verify GitHub Pages sites with Discord.</description>
         </item>
         <item>
             <title>Discord Website Embeds</title>
-            <link>https://analogfeelings.github.io/knowledge/discord-website-embeds/</link>
+            <link>https://analogfeelings.xyz/knowledge/discord-website-embeds/</link>
             <pubDate>Tue, Aug 01 2023 22:36:00 GMT</pubDate>
             <description>A knowledge base article on how Discord rich embeds work.</description>
         </item>
         <item>
             <title>Getting UWP unit tests to work was a pain.</title>
-            <link>https://analogfeelings.github.io/posts/getting-uwp-unit-tests-to-work/</link>
+            <link>https://analogfeelings.xyz/posts/getting-uwp-unit-tests-to-work/</link>
             <pubDate>Mon, May 01 2023 19:41:00 GMT</pubDate>
             <description>A story on how getting GitHub Actions to run UWP unit tests was a pain in the ass.</description>
         </item>
         <item>
             <title>The second redesign has arrived!</title>
-            <link>https://analogfeelings.github.io/posts/the-second-redesign-has-arrived</link>
+            <link>https://analogfeelings.xyz/posts/the-second-redesign-has-arrived</link>
             <pubDate>Wed, Feb 01 2023 23:45:00 GMT</pubDate>
             <description>Sorry for the even bigger delay, I was busy with other projects!</description>
         </item>
         <item>
             <title>The redesign has arrived!</title>
-            <link>https://analogfeelings.github.io/posts/the-redesign-has-arrived/</link>
+            <link>https://analogfeelings.xyz/posts/the-redesign-has-arrived/</link>
             <pubDate>Tue, 31 May 2022 21:48:00 GMT</pubDate>
             <description>Sorry for the long downtime!</description>
         </item>
         <item>
             <title>I'm back!</title>
-            <link>https://analogfeelings.github.io/posts/im-back/</link>
+            <link>https://analogfeelings.xyz/posts/im-back/</link>
             <pubDate>Thu, 24 Feb 2022 05:05:00 GMT</pubDate>
             <description>Sorry for the long downtime!</description>
         </item>
         <item>
             <title>Added RSS Feeds and Social Media!</title>
-            <link>https://analogfeelings.github.io/posts/added-rss-feeds-and-social-media/</link>
+            <link>https://analogfeelings.xyz/posts/added-rss-feeds-and-social-media/</link>
             <pubDate>Tue, 04 Jan 2022 09:30:00 GMT</pubDate>
             <description>Now you can follow the blog (and my social media) without manually checking the website!</description>
         </item>
         <item>
             <title>Added GitHub Discussions And A Favicon!</title>
-            <link>https://analogfeelings.github.io/posts/added-github-discussions-and-a-favicon/</link>
+            <link>https://analogfeelings.xyz/posts/added-github-discussions-and-a-favicon/</link>
             <pubDate>Sat, 01 Jan 2022 04:46:00 GMT</pubDate>
             <description>Added GitHub Discussions to act as a comment section. Also added an icon that displays in the tab header of your browser.</description>
         </item>
         <item>
             <title>Happy New Year 2022!</title>
-            <link>https://analogfeelings.github.io/posts/happy-new-year-2022/</link>
+            <link>https://analogfeelings.xyz/posts/happy-new-year-2022/</link>
             <pubDate>Sat, 01 Jan 2022 03:50:00 GMT</pubDate>
             <description>I hope you have a great year!</description>
         </item>
         <item>
             <title>Raising bugchecks from userspace in NT.</title>
-            <link>https://analogfeelings.github.io/posts/raising-bugchecks-from-userspace-in-nt/</link>
+            <link>https://analogfeelings.xyz/posts/raising-bugchecks-from-userspace-in-nt/</link>
             <pubDate>Tue, 30 Nov 2021 07:31:00 GMT</pubDate>
             <description>Why did Microsoft decide to allow ANY userspace program without admin rights to bugcheck the system with 2 function calls?</description>
         </item>
         <item>
             <title>The First Post!</title>
-            <link>https://analogfeelings.github.io/posts/the-first-post/</link>
+            <link>https://analogfeelings.xyz/posts/the-first-post/</link>
             <pubDate>Wed, 24 Nov 2021 11:06:00 GMT</pubDate>
             <description>The first ever blog post for my new website!</description>
         </item>
