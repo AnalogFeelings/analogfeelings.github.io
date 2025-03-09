@@ -209,17 +209,33 @@ function HandleClick(e)
     }
 }
 
+const ArticleType = Object.freeze({
+    Post: 0,
+    Knowledge: 1
+});
+
 const POSTS_PATH = "/resources/data/posts.json";
 const KNOWLEDGE_PATH = "/resources/data/knowledge.json";
 
 /**
  * Retrieves blog post data from a JSON file.
- * @param {boolean} isPosts If true, fetch content from the posts file, otherwise, knowledge.
+ * @param {ArticleType} articleType The type of the article's database to fetch from.
  * @param {...receivePostsCallback} callbackFunctions The callbacks that will receive the data.
  */
-async function RetrieveBlogData(isPosts, ...callbackFunctions)
+async function RetrieveBlogData(articleType, ...callbackFunctions)
 {
-    let response = await fetch(isPosts ? POSTS_PATH : KNOWLEDGE_PATH);
+    let articlePath;
+    switch(articleType)
+    {
+        case ArticleType.Post:
+            articlePath = POSTS_PATH;
+            break;
+        case ArticleType.Knowledge:
+            articlePath = KNOWLEDGE_PATH;
+            break;
+    }
+
+    let response = await fetch(articlePath);
     let json = await response.json();
 
     callbackFunctions.forEach(x => x.apply(null, new Array(json)));

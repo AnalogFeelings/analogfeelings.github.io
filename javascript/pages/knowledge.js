@@ -6,7 +6,7 @@ async function PageStartup()
 {
 	await LoadElements();
 	LoadNavlink();
-	await RetrieveBlogData(false, LoadArticles);
+	await RetrieveBlogData(ArticleType.Knowledge, LoadArticles);
 
 	window.addEventListener("mouseup", (e) => HandleClick(e));
 }
