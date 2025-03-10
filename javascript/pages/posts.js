@@ -4,11 +4,9 @@ window.onload = PageStartup;
 
 async function PageStartup()
 {
-	await LoadElements();
-	LoadNavlink();
-	await RetrieveBlogData(ArticleType.Post, LoadPosts);
+	await LoadBasics();
 
-	window.addEventListener("mouseup", (e) => HandleClick(e));
+	await RetrieveBlogData(ArticleType.Post, LoadPosts);
 }
 
 function LoadPosts(fileContent)

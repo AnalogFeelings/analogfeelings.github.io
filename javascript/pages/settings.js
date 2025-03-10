@@ -7,8 +7,7 @@ window.onload = PageStartup;
 
 async function PageStartup()
 {
-	await LoadElements();
-	LoadNavlink();
+	await LoadBasics();
 
 	let themeDropdown = document.getElementById(THEME_DROPDOWN_ID);
 	let navlinkDropdown = document.getElementById(NAVLINK_DROPDOWN_ID);
@@ -18,8 +17,6 @@ async function PageStartup()
 
 	navlinkDropdown.value = GetNavlinkPreference();
 	navlinkDropdown.addEventListener("change", OnNavlinkChanged);
-
-	window.addEventListener("mouseup", (e) => HandleClick(e));
 }
 
 /**

@@ -9,6 +9,17 @@ const NAVLINK_CONTAINER = "navlinkAdContainer";
 const NAVLINK_STORAGE = "navlink";
 
 /**
+ * Loads the basics for a generic page.
+ */
+async function LoadBasics()
+{
+    await LoadElements();
+    LoadNavlink();
+
+    window.addEventListener("mouseup", (e) => HandleClick(e));
+}
+
+/**
  * Changes the navlink ad visibility in the DOM.
  * @param {string} enabled If the navlink ad should be enabled.
  */
