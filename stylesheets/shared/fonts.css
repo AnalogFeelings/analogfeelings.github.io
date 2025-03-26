@@ -1,34 +1,40 @@
 @font-face
 {
 	font-family: PTSerif;
-	src: url("/resources/fonts/PTSerif-Regular.woff2") format("woff2");
+	src: url("/resources/fonts/ptserif/ptserif-regular.woff2") format("woff2");
 }
 
 @font-face
 {
 	font-family: PTSerif-Bold;
-	src: url("/resources/fonts/PTSerif-Bold.woff2") format("woff2");
+	src: url("/resources/fonts/ptserif/ptserif-bold.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: PTSerif-BoldItalic;
+	src: url("/resources/fonts/ptserif/ptserif-bolditalic.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: PTSerif-Italic;
+	src: url("/resources/fonts/ptserif/ptserif-italic.woff2") format("woff2");
+}
+
+@font-face
+{
+	font-family: Cascadia-Code;
+	src: url("/resources/fonts/cascadia-code/cascadia-code.woff2") format("woff2");
+}
+
+i
+{
+	font-family: PTSerif-Italic, serif;
 }
 
 b
 {
 	font-family: PTSerif-Bold, serif;
 	font-weight: bold;
-}
-
-@font-face
-{
-	font-family: PTSerif-BoldItalic;
-	src: url("/resources/fonts/PTSerif-BoldItalic.woff2") format("woff2");
-}
-
-@font-face
-{
-	font-family: PTSerif-Italic;
-	src: url("/resources/fonts/PTSerif-Italic.woff2") format("woff2");
-}
-
-i
-{
-	font-family: PTSerif-Italic, serif;
 }

@@ -2,7 +2,7 @@
 :root[data-applied-mode=light] pre[class*=language-]
 {
 	color: #393A34;
-	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+	font-family: Cascadia-Code, monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -233,7 +233,7 @@
 :root[data-applied-mode=dark] code[class*=language-]
 {
 	color: #D4D4D4;
-	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+	font-family: Cascadia-Code, monospace;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
