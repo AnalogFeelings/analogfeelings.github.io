@@ -111,6 +111,13 @@ body
 	-webkit-font-smoothing: antialiased;
 }
 
+input, button, textarea, select
+{
+	font: inherit;
+
+	border-radius: 8px;
+}
+
 .filterDisabled
 {
 	image-rendering: pixelated;
