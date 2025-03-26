@@ -14,6 +14,8 @@
 .topBarText
 {
 	flex-direction: column;
+
+	line-height: normal;
 }
 
 .topBarText > p
