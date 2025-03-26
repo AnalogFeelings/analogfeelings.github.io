@@ -106,6 +106,9 @@ body
 	color: var(--body-foreground);
 
 	font-family: PTSerif, serif;
+
+	/* for my macOS pookies */
+	-webkit-font-smoothing: antialiased;
 }
 
 .filterDisabled
