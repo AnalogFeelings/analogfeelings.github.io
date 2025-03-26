@@ -13,7 +13,7 @@
 
 .topBarText
 {
-	flex-direction: column;
+	height: 100%;
 
 	line-height: normal;
 }
