@@ -172,10 +172,12 @@ async function LoadElements()
  */
 function ReplaceElement(element, html)
 {
+    const parent = element.parentNode;
     let next = element.nextElementSibling;
+
     element.outerHTML = html;
 
-    let newElement = next.previousElementSibling;
+    let newElement = next ? next.previousElementSibling : parent.lastElementChild;
 
     for (const originalScript of newElement.getElementsByTagName("script"))
     {
