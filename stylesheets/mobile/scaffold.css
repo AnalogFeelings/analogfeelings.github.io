@@ -1,5 +1,9 @@
 .topBar
 {
+	background: var(--navbar-background);
+
+	border-bottom: ridge 2px var(--navbar-border-color);
+
 	padding: 12px;
 
 	column-gap: 0;
@@ -8,27 +12,50 @@
 .topBar > img
 {
 	display: none;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.topBarText
+{
+	height: 100%;
+
+	line-height: normal;
 }
 
 .topBarText > p
 {
+	font-family: PTSerif-BoldItalic, serif;
+	font-style: italic;
+
+	margin-top: 0;
 	margin-bottom: 8px;
+
+	-webkit-user-select: none;
+	user-select: none;
 }
 
 .topBarTextTop
 {
 	font-size: 1.8em;
+	font-weight: bold;
 }
 
 .topBarTextBottom
 {
 	display: none;
+
+	font-family: PTSerif-Italic, serif;
+	font-style: italic;
 }
 
 .topBarTextGradient
 {
 	min-height: 4px;
 	min-width: 115%;
+
+	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
 }
 
 .topBarBurger
@@ -76,14 +103,25 @@
 
 	position: absolute;
 
+	flex-direction: column;
+	align-items: stretch;
+
 	max-width: 270px;
 	min-width: 250px;
 
 	border-bottom: ridge 2px var(--navbar-border-color);
 	box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 13%);
 
+	background: var(--sidebar-background);
+	border-right: ridge 2px var(--navbar-border-color);
+
 	padding: 10px;
 	padding-top: 20px;
+}
+
+.sideBar .separatorDiv
+{
+	align-self: center;
 }
 
 .sideBar.shown
@@ -101,16 +139,59 @@
 	margin-bottom: 8px;
 }
 
+.sideBarSection a
+{
+	color: var(--navbar-link-color);
+
+	text-decoration: none;
+}
+
+.sideBarSection a:visited
+{
+	color: var(--navbar-link-color);
+}
+
+.sideBarSection a:hover
+{
+	color: var(--navbar-link-color);
+
+	text-decoration: underline;
+}
+
+.sideBarSection a:active
+{
+	color: var(--navbar-link-active);
+}
+
 .sideBarSection > ul:not(.fancyTreeview)
 {
+	margin-bottom: 0;
+
 	padding-left: 25px;
+}
+
+.sideBarCopyright
+{
+	font-size: 0.9em;
+
+	color: var(--thin-color);
+
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .sideBarSocial
 {
 	width: 100%;
 
+	justify-content: space-between;
+
 	margin-top: 22px;
+}
+
+.sideBarSocialRss
+{
+	margin-bottom: 0;
 }
 
 .sideBarSocialRss > img
@@ -118,5 +199,35 @@
 	width: 24px;
 	height: 24px;
 
+	margin-right: 3px;
+
 	vertical-align: -0.4em;
+}
+
+.sideBarNavlinkAd
+{
+	display: flex;
+
+	width: 100%;
+
+	justify-content: center;
+}
+
+.sideBarWebButtons
+{
+	display: flex;
+
+	justify-content: center;
+	column-gap: 16px;
+	row-gap: 16px;
+	flex-wrap: wrap;
+
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.sideBarWebButtons > :is(img, a)
+{
+	width: 88px;
+	height: 31px;
 }
