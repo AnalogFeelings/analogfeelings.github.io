@@ -16,12 +16,12 @@
 	--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 	--navbar-gradient-start: #2F3279;
 	--navbar-border-color: lightgray;
-	--navbar-link-color: #0000EE;
+	--navbar-link-color: #2F3279;
 	--navbar-link-active: #FF0000;
 
 	--sidebar-background: linear-gradient(90deg, var(--body-background), #E7E7E7);
 
-	--link-color: #0000EE;
+	--link-color: #2F3279;
 	--link-active: #FF0000;
 	--link-visited: #551A8B;
 
@@ -58,14 +58,14 @@
 	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
 	--navbar-border-color: dimgray;
-	--navbar-link-color: #9B9BFF;
+	--navbar-link-color: #6494C3;
 	--navbar-link-active: #FF8080;
 
 	--sidebar-background: linear-gradient(var(--body-background), var(--body-background));
 
-	--link-color: #9B9BFF;
+	--link-color: #6494C3;
 	--link-active: #FF8080;
-	--link-visited: #A669DE;
+	--link-visited: #C0A4DA;
 
 	--header-gradient-start: #009E9E;
 
