@@ -55,6 +55,8 @@
 	min-height: 4px;
 	min-width: 115%;
 
+	border-radius: 4px;
+
 	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
 }
 

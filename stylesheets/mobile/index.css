@@ -60,6 +60,11 @@ a:active
 	display: none;
 }
 
+h2
+{
+	font-weight: 500;
+}
+
 h1::after, h2::after
 {
 	display: block;
@@ -70,17 +75,16 @@ h1::after, h2::after
 	min-height: 4px;
 	min-width: 100%;
 
+	border-radius: 4px;
+
 	background: linear-gradient(90deg, var(--header-gradient-start), transparent);
 }
 
 h2::after
 {
 	min-height: 3px;
-}
 
-h2
-{
-	font-weight: 500;
+	border-radius: 3px;
 }
 
 html
