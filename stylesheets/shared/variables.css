@@ -58,14 +58,14 @@
 	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
 	--navbar-border-color: dimgray;
-	--navbar-link-color: #6494C3;
+	--navbar-link-color: #79B6FF;
 	--navbar-link-active: #FF8080;
 
 	--sidebar-background: linear-gradient(var(--body-background), var(--body-background));
 
-	--link-color: #6494C3;
+	--link-color: #79B6FF;
 	--link-active: #FF8080;
-	--link-visited: #C0A4DA;
+	--link-visited: #CE9CFF;
 
 	--header-gradient-start: #009E9E;
 

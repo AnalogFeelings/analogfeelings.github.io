@@ -27,7 +27,7 @@
 .listItem > img
 {
 	object-fit: contain;
-	
+
 	width: 64px !important;
 	height: 64px !important;
 }
