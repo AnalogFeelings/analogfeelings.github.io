@@ -22,15 +22,12 @@
 	height: 100%;
 
 	line-height: normal;
-}
 
-.topBarText > p
-{
 	font-family: PTSerif-BoldItalic, serif;
 	font-style: italic;
 
 	margin-top: 0;
-	margin-bottom: 8px;
+	margin-bottom: 0;
 
 	-webkit-user-select: none;
 	user-select: none;
@@ -42,22 +39,27 @@
 	font-weight: bold;
 }
 
-.topBarTextBottom
+.topBarTextTop::after
 {
-	display: none;
+	display: block;
+	content: '';
 
-	font-family: PTSerif-Italic, serif;
-	font-style: italic;
-}
+	margin-top: 8px;
 
-.topBarTextGradient
-{
 	min-height: 4px;
 	min-width: 115%;
 
 	border-radius: 4px;
 
 	background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
+}
+
+.topBarTextBottom
+{
+	display: none;
+
+	font-family: PTSerif-Italic, serif;
+	font-style: italic;
 }
 
 .topBarBurger

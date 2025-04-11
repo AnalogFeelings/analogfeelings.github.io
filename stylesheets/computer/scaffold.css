@@ -17,26 +17,36 @@
 		height: 96px;
 	}
 
-	.topBarText > p
-	{
-		margin-bottom: 12px;
-	}
-
 	.topBarTextTop
 	{
 		font-size: 2.5em;
 	}
 
+	.topBarTextTop::after
+	{
+		content: none;
+	}
+
 	.topBarTextBottom
 	{
 		display: block;
+
 		font-size: 1.1em;
 	}
 
-	.topBarTextGradient
+	.topBarTextBottom::after
 	{
+		display: block;
+		content: '';
+
+		margin-top: 12px;
+
 		min-height: 4px;
-		min-width: 125%;
+		min-width: 115%;
+
+		border-radius: 4px;
+
+		background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
 	}
 
 	.topBarBurger
