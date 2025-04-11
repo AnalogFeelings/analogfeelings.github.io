@@ -63,7 +63,10 @@
 		max-width: 260px;
 		min-width: 240px;
 
+		border-radius: 0;
+
 		border-bottom: none;
+		
 		box-shadow: none;
 
 		font-size: 1em;

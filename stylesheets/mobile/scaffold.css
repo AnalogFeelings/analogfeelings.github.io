@@ -113,11 +113,14 @@
 	max-width: 270px;
 	min-width: 250px;
 
+	border-right: ridge 2px var(--navbar-border-color);
 	border-bottom: ridge 2px var(--navbar-border-color);
+
+	border-radius: 0 0 8px 0;
+
 	box-shadow: 4px 4px 6px 0 rgb(0 0 0 / 13%);
 
 	background: var(--sidebar-background);
-	border-right: ridge 2px var(--navbar-border-color);
 
 	padding: 10px;
 	padding-top: 20px;
