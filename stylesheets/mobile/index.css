@@ -301,7 +301,6 @@ h1, h2, h3
 	color: var(--thin-color);
 
 	margin-top: -4px;
-	margin-bottom: 25px;
 }
 
 .postHeader
@@ -312,7 +311,7 @@ h1, h2, h3
 
 .postHeaderInformation
 {
-	margin-bottom: 0.5em !important;
+	margin-bottom: 0.3em;
 }
 
 .postDescription
