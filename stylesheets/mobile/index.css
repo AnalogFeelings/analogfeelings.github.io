@@ -24,6 +24,108 @@ fieldset:not(.specialFieldset)
 	margin-bottom: 16px;
 }
 
+.specialFieldset
+{
+	padding-bottom: 12px;
+
+	border-style: solid;
+	border-radius: 8px;
+}
+
+.specialFieldset > legend
+{
+	padding: 4px;
+	border-radius: 8px;
+}
+
+.specialFieldset > legend > img
+{
+	display: inline;
+	position: relative;
+
+	vertical-align: middle;
+
+	width: 22px;
+	height: 22px;
+
+	bottom: 1px;
+}
+
+.specialFieldset > legend > b
+{
+	position: relative;
+
+	top: 1px;
+}
+
+.warningFieldset
+{
+	background-color: var(--warning-background-color);
+	border-color: var(--warning-border-color);
+}
+
+.warningFieldset > legend
+{
+	border: 2px solid var(--warning-border-color);
+	background-color: var(--warning-background-color);
+}
+
+.warningFieldset > legend > img
+{
+	content: url("/resources/annotations/warning.svg");
+}
+
+.importantFieldset
+{
+	background-color: var(--important-background-color);
+	border-color: var(--important-border-color);
+}
+
+.importantFieldset > legend
+{
+	border: 2px solid var(--important-border-color);
+	background-color: var(--important-background-color);
+}
+
+.importantFieldset > legend > img
+{
+	content: url("/resources/annotations/important.svg");
+}
+
+.remarksFieldset
+{
+	background-color: var(--remarks-background-color);
+	border-color: var(--remarks-border-color);
+}
+
+.remarksFieldset > legend
+{
+	border: 2px solid var(--remarks-border-color);
+	background-color: var(--remarks-background-color);
+}
+
+.remarksFieldset > legend > img
+{
+	content: url("/resources/annotations/remark.svg");
+}
+
+.dangerFieldset
+{
+	background-color: var(--danger-background-color);
+	border-color: var(--danger-border-color);
+}
+
+.dangerFieldset > legend
+{
+	border: 2px solid var(--danger-border-color);
+	background-color: var(--danger-background-color);
+}
+
+.dangerFieldset > legend > img
+{
+	content: url("/resources/annotations/danger.svg");
+}
+
 label
 {
 	display: inline-block;
