@@ -82,3 +82,20 @@
 {
 	content: url("/resources/annotations/remark.svg");
 }
+
+.dangerFieldset
+{
+	background-color: var(--danger-background-color);
+	border-color: var(--danger-border-color);
+}
+
+.dangerFieldset > legend
+{
+	border: 2px solid var(--danger-border-color);
+	background-color: var(--danger-background-color);
+}
+
+.dangerFieldset > legend > img
+{
+	content: url("/resources/annotations/danger.svg");
+}

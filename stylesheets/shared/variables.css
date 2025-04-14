@@ -40,6 +40,9 @@
 	--remarks-background-color: aliceblue;
 	--remarks-border-color: cornflowerblue;
 
+	--danger-background-color: lightpink;
+	--danger-border-color: indianred;
+
 	--github-icon: url("/resources/social/github.svg");
 	--tumblr-icon: url("/resources/social/tumblr.svg");
 
@@ -81,6 +84,9 @@
 
 	--remarks-background-color: #20405D;
 	--remarks-border-color: cornflowerblue;
+
+	--danger-background-color: #570101;
+	--danger-border-color: indianred;
 
 	--github-icon: url("/resources/social/github-light.svg");
 	--tumblr-icon: url("/resources/social/tumblr-light.svg");
