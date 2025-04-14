@@ -170,7 +170,7 @@ h1, h2, h3
 	width: 100%;
 }
 
-.bodyContent > p > img
+.bodyContent > img
 {
 	border-radius: 8px;
 }

@@ -177,13 +177,20 @@
 	padding-left: 25px;
 }
 
-.sideBarCopyright
+.sideBarCopyright > p
 {
 	font-size: 0.9em;
 
 	color: var(--thin-color);
+}
 
+.sideBarCopyright > p:first-child
+{
 	margin-top: 0;
+}
+
+.sideBarCopyright > p:last-child
+{
 	margin-bottom: 0;
 }
 

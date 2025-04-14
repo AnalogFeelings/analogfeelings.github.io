@@ -52,7 +52,8 @@
 					It's April 11th, 2024, and MattKC uploads a video about "backporting" .NET Framework 2.0 to Windows 95.
 					<br>
 					Well, sorta. It wasn't really a backport (since .NETFX is proprietary), but a "compatibility layer" backport.
-					<br><br>
+				</p>
+				<p>
 					Either way, it kind of inspired me to do something similar, but instead of with .NET, it would be with C/C++.
 					Thus, <a href="https://github.com/AnalogFeelings/ChicagoCRT">ChicagoCRT</a> was born.
 					<br>
@@ -87,7 +88,8 @@
 				<p>
 					This is the original memset implementation used in MiniCRT. As you can see, it tries to prevent the compiler from being
 					"smart" and optimizing the code to a memset call from the MSVCRT.
-					<br><br>
+				</p>
+				<p>
 					Sadly, modern compilers are too good at optimizing and can still see through what this code is trying to do, so I had to come up
 					with a solution.
 					<br>
@@ -99,7 +101,8 @@
 					<br>
 					And sure enough, doing this causes MSVC to stop optimizing the function to a call to <b>memset</b>. This may also cause it to not use vectorization or
 					any other fancy optimizations, but since we are targeting systems that didn't even have MMX or SSE, it's fine.
-					<br><br>
+				</p>
+				<p>
 					I've also went ahead and replaced the confusing code with a pretty standard memset implementation, so now it's much more compact and easy to read.
 				</p>
 				<h2>
@@ -156,11 +159,9 @@
 				</ul>
 				<p>
 					As you can probably see, this is a very secure codebase (sarcasm), but it is now ready to be compiled and ran on Windows 95 corre-
-					<br><br>
-
-					<img src="./resources/newer.png" alt="An error about requiring a newer version of Windows."/>
-
-					<br><br>
+				</p>
+				<img src="./resources/newer.png" alt="An error about requiring a newer version of Windows."/>
+				<p>
 					Well, seems like I jinxed it.
 				</p>
 				<h2>
@@ -173,7 +174,8 @@
 					6.0, which is Windows Vista.
 					<br>
 					Windows 95 uses OS version 1.0 and subsystem version 4.0, so I had to try to get MSVC to output these values.
-					<br><br>
+				</p>
+				<p>
 					MSVC does have a flag to set the minimum OS version, but it refuses to set anything lower than Windows Vista, so we will have to bruteforce it.
 					<br>
 					I came up with a C# script to run as a post-build event that patches the output executable with the correct values.
@@ -186,26 +188,20 @@
 					With this script, we finally got the executable to run on Windows 95!
 					<br>
 					By this moment, ChicagoCRT was still called MiniCRT since it wasn't public yet, by the way.
-					<br><br>
-
-					<img src="./resources/success.png" alt="Message box showing a message from the program."/>
-
-					<br><br>
+				</p>
+				<img src="./resources/success.png" alt="Message box showing a message from the program."/>
+				<p>
 					Although it's kind of boring, don't you think? It needs something more to be more impressive.
 					<br>
 					I decided to just port the Win32 sample project to the same system and add a bit of extra functionality. Thankfully, I didn't need to change anything
 					regarding the compiler, it just worked fine!
-					<br><br>
-
-					<img src="./resources/fancy.png" alt="A fancier application showing dialogues, timers, and a menu bar as well as an app icon."/>
-
-					<br><br>
+				</p>
+				<img src="./resources/fancy.png" alt="A fancier application showing dialogues, timers, and a menu bar as well as an app icon."/>
+				<p>
 					And since this is Windows, here it is running on my host Windows 11 system!
-					<br><br>
-
-					<img src="./resources/uglyfancy.png" alt="The same app, but on Windows 11."/>
-
-					<br><br>
+				</p>
+				<img src="./resources/uglyfancy.png" alt="The same app, but on Windows 11."/>
+				<p>
 					It's ugly since it lacks visual styles and reverts to the default legacy styles, but it works fine!
 					<br>
 					If you're wondering about the specs of the emulated Windows 95 machine, here they are:
