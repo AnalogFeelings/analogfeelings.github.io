@@ -1,13 +1,13 @@
+*
+{
+	box-sizing: border-box;
+}
+
 html
 {
 	height: 100%;
 
 	overflow-x: clip;
-}
-
-*
-{
-	box-sizing: border-box;
 }
 
 body
@@ -257,8 +257,6 @@ h2::after
 	padding: 15px;
 
 	background-color: var(--body-background);
-
-	box-shadow: inset 0 4px 6px 0 rgb(0 0 0 / 13%);
 }
 
 .bodyContent > h1

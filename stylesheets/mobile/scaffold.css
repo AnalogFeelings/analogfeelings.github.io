@@ -4,6 +4,7 @@
 
 	border-bottom: ridge 2px var(--navbar-border-color);
 
+	width: 100%;
 	padding: 12px;
 
 	column-gap: 0;
