@@ -110,8 +110,7 @@
 	flex-direction: column;
 	align-items: stretch;
 
-	max-width: 270px;
-	min-width: 250px;
+	max-width: 292px;
 
 	border-right: ridge 2px var(--navbar-border-color);
 	border-bottom: ridge 2px var(--navbar-border-color);
