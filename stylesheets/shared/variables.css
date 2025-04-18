@@ -95,3 +95,13 @@
 
 	--menu-button-icon: url("/resources/menu-dark.svg");
 }
+
+:root[data-applied-mode="light"][data-applied-wallpaper="analog"]
+{
+	--body-wallpaper: url(/resources/wallpapers/light/analogbanner.png);
+}
+
+:root[data-applied-mode="dark"][data-applied-wallpaper="analog"]
+{
+	--body-wallpaper: url(/resources/wallpapers/dark/analogbanner.png);
+}

@@ -3,13 +3,6 @@
 	box-sizing: border-box;
 }
 
-html
-{
-	height: 100%;
-
-	overflow-x: clip;
-}
-
 body
 {
 	margin: 0;
@@ -17,12 +10,13 @@ body
 	display: flex;
 	flex-direction: column;
 
-	height: 100%;
-
-	overflow-x: clip;
-
 	color-scheme: light;
 	color: var(--body-foreground);
+
+	background-image: var(--body-wallpaper);
+	background-size: cover;
+
+	image-rendering: pixelated;
 
 	font-family: PTSerif, serif;
 	line-height: 1.5;
