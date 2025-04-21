@@ -4,6 +4,9 @@
 	{
 		margin: 100px 0 100px 0;
 
+		background-image: var(--body-wallpaper);
+		background-size: cover;
+
 		align-items: center;
 	}
 
@@ -16,6 +19,7 @@
 	{
 		border-right: solid 2px var(--navbar-border-color);
 		border-left: solid 2px var(--navbar-border-color);
+		border-bottom: solid 2px var(--navbar-border-color);
 
 		flex-direction: row-reverse;
 	}

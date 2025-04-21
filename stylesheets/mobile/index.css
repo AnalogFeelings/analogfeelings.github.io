@@ -5,16 +5,13 @@
 
 body
 {
-	margin: 50px 0 50px 0;
+	margin: 0;
 
 	display: flex;
 	flex-direction: column;
 
 	color-scheme: light;
 	color: var(--body-foreground);
-
-	background-image: var(--body-wallpaper);
-	background-size: cover;
 
 	image-rendering: pixelated;
 
@@ -238,7 +235,6 @@ h2::after
 	width: 100%;
 
 	border-top: solid 2px var(--navbar-border-color);
-	border-bottom: solid 2px var(--navbar-border-color);
 
 	align-items: stretch;
 	flex-grow: 1;

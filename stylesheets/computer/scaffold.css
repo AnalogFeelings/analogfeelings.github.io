@@ -2,6 +2,8 @@
 {
 	.topBar
 	{
+		background: var(--navbar-background);
+
 		padding: 20px;
 
 		column-gap: 0;
