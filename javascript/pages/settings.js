@@ -2,6 +2,7 @@ const THEME_DROPDOWN_ID = "themeDropdown";
 const NAVLINK_DROPDOWN_ID = "navlinkDropdown";
 
 LoadTheme();
+LoadWallpaper();
 
 window.onload = PageStartup;
 

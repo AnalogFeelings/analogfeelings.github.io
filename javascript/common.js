@@ -60,6 +60,23 @@ function SetNavlinkPreference(enabled)
 }
 
 /**
+ * Changes the wallpaper in the DOM.
+ * @param wallpaper The selected wallpaper.
+ */
+function ChangeDisplayWallpaper(wallpaper)
+{
+    document.documentElement.dataset.appliedWallpaper = "analog";
+}
+
+/**
+ * Loads the site wallpaper.
+ */
+function LoadWallpaper()
+{
+    ChangeDisplayWallpaper("");
+}
+
+/**
  * Changes the theme in the DOM.
  * @param {string} theme The selected theme.
  */

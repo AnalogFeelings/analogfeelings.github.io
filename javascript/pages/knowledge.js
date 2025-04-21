@@ -1,4 +1,5 @@
 LoadTheme();
+LoadWallpaper();
 
 window.onload = PageStartup;
 
