@@ -4,6 +4,8 @@
 
 	--button-border-hover: gray;
 	--button-border-press: darkgray;
+
+	--computer-max-width: 1200px;
 }
 
 :root[data-applied-mode="light"]

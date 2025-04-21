@@ -12,7 +12,7 @@
 
 	body > *
 	{
-		max-width: 1200px;
+		max-width: var(--computer-max-width);
 	}
 
 	.mainBodyDiv
@@ -27,6 +27,8 @@
 	.bodyContent
 	{
 		font-size: 1em;
+
+		max-width: calc(var(--computer-max-width) - var(--sidebar-width) - 4px);
 
 		padding: 25px;
 	}
