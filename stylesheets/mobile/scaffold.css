@@ -2,8 +2,6 @@
 {
 	background: var(--navbar-background);
 
-	border-bottom: ridge 2px var(--navbar-border-color);
-
 	width: 100%;
 
 	padding: 12px;
@@ -114,8 +112,8 @@
 
 	max-width: 292px;
 
-	border-right: ridge 2px var(--navbar-border-color);
-	border-bottom: ridge 2px var(--navbar-border-color);
+	border-right: solid 2px var(--navbar-border-color);
+	border-bottom: solid 2px var(--navbar-border-color);
 
 	border-radius: 0 0 8px 0;
 

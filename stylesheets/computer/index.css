@@ -14,6 +14,9 @@
 
 	.mainBodyDiv
 	{
+		border-right: solid 2px var(--navbar-border-color);
+		border-left: solid 2px var(--navbar-border-color);
+
 		flex-direction: row-reverse;
 	}
 

@@ -237,6 +237,9 @@ h2::after
 {
 	width: 100%;
 
+	border-top: solid 2px var(--navbar-border-color);
+	border-bottom: solid 2px var(--navbar-border-color);
+
 	align-items: stretch;
 	flex-grow: 1;
 

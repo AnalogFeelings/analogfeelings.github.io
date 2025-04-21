@@ -64,7 +64,7 @@
 		border-radius: 0;
 		border-bottom: none;
 		border-right: none;
-		border-left: ridge 2px var(--navbar-border-color);
+		border-left: solid 2px var(--navbar-border-color);
 
 		box-shadow: none;
 
