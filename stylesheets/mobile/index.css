@@ -222,12 +222,17 @@ h2::after
 
 .hidden
 {
-	display: none;
+	display: none !important;
 }
 
 .filterDisabled
 {
-	image-rendering: pixelated;
+	image-rendering: pixelated !important;
+}
+
+.roundingDisabled
+{
+	border-radius: 0 !important;
 }
 
 .mainBodyDiv
@@ -240,6 +245,8 @@ h2::after
 
 	align-items: stretch;
 	flex-grow: 1;
+
+	overflow: auto;
 
 	column-gap: 0;
 }
