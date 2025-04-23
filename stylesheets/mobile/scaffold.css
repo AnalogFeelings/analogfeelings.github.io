@@ -1,8 +1,3 @@
-:root
-{
-	--sidebar-width: 292px;
-}
-
 .topBar
 {
 	background: var(--body-background);
@@ -115,8 +110,8 @@
 	flex-direction: column;
 	align-items: stretch;
 
-	min-width: var(--sidebar-width);
-	max-width: var(--sidebar-width);
+	min-width: 292px;
+	max-width: 292px;
 
 	border-right: solid 2px var(--navbar-border-color);
 	border-bottom: solid 2px var(--navbar-border-color);

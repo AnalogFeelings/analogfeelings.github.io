@@ -28,8 +28,6 @@
 	{
 		font-size: 1em;
 
-		max-width: calc(var(--computer-max-width) - var(--sidebar-width) - 4px);
-
 		padding: 25px;
 	}
 
@@ -41,11 +39,6 @@
 	.bodyContent > h1:first-of-type
 	{
 		margin-top: 5px;
-	}
-
-	.bodyContent img
-	{
-		width: auto;
 	}
 
 	.separatorDiv

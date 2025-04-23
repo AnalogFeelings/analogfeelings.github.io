@@ -1,10 +1,5 @@
 @media only screen and (min-width: 1135px)
 {
-	:root
-	{
-		--sidebar-width: 282px;
-	}
-
 	.topBar
 	{
 		background: var(--navbar-background);
@@ -66,8 +61,8 @@
 		display: flex;
 		position: static;
 
-		min-width: var(--sidebar-width);
-		max-width: var(--sidebar-width);
+		min-width: 282px;
+		max-width: 282px;
 
 		border-radius: 0;
 		border-bottom: none;

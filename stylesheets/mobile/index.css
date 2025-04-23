@@ -247,6 +247,8 @@ h2::after
 	font-size: 0.9em;
 
 	width: 100%;
+	min-width: 0;
+
 	padding: 15px;
 
 	background-color: var(--body-background);
@@ -265,10 +267,9 @@ h2::after
 .bodyContent img
 {
 	width: 100%;
-}
 
-.bodyContent > img
-{
+	object-fit: contain;
+
 	border-radius: 8px;
 }
 
