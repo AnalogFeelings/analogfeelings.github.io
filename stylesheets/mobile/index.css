@@ -236,6 +236,8 @@ h2::after
 
 	border-top: solid 2px var(--navbar-border-color);
 
+	image-rendering: initial;
+
 	align-items: stretch;
 	flex-grow: 1;
 
