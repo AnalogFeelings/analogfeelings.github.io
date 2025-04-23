@@ -17,9 +17,9 @@
 
 	.mainBodyDiv
 	{
-		border-right: solid 2px var(--navbar-border-color);
-		border-left: solid 2px var(--navbar-border-color);
-		border-bottom: solid 2px var(--navbar-border-color);
+		border-right: solid 2px var(--thin-color);
+		border-left: solid 2px var(--thin-color);
+		border-bottom: solid 2px var(--thin-color);
 
 		flex-direction: row-reverse;
 	}

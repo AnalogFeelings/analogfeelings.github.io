@@ -113,8 +113,8 @@
 	min-width: 292px;
 	max-width: 292px;
 
-	border-right: solid 2px var(--navbar-border-color);
-	border-bottom: solid 2px var(--navbar-border-color);
+	border-right: solid 2px var(--thin-color);
+	border-bottom: solid 2px var(--thin-color);
 
 	border-radius: 0 0 8px 0;
 

@@ -15,7 +15,6 @@
 
 	--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 	--navbar-gradient-start: #2F3279;
-	--navbar-border-color: lightgray;
 	--navbar-link-color: #2F3279;
 	--navbar-link-active: #FF0000;
 
@@ -60,7 +59,6 @@
 
 	--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 	--navbar-gradient-start: #6494C3;
-	--navbar-border-color: dimgray;
 	--navbar-link-color: #79B6FF;
 	--navbar-link-active: #FF8080;
 

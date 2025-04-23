@@ -239,7 +239,7 @@ h2::after
 {
 	width: 100%;
 
-	border-top: solid 2px var(--navbar-border-color);
+	border-top: solid 2px var(--thin-color);
 
 	image-rendering: initial;
 

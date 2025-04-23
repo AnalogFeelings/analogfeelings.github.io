@@ -67,7 +67,7 @@
 		border-radius: 0;
 		border-bottom: none;
 		border-right: none;
-		border-left: solid 2px var(--navbar-border-color);
+		border-left: solid 2px var(--thin-color);
 
 		box-shadow: none;
 
