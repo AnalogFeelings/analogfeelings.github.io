@@ -21,6 +21,8 @@
 		border-left: solid 2px var(--thin-color);
 		border-bottom: solid 2px var(--thin-color);
 
+		border-radius: 8px;
+
 		flex-direction: row-reverse;
 	}
 

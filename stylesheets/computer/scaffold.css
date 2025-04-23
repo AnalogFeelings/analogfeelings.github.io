@@ -4,6 +4,11 @@
 	{
 		background: var(--navbar-background);
 
+		border: solid 2px var(--thin-color);
+		border-radius: 8px;
+
+		margin-bottom: -2px;
+
 		padding: 20px;
 
 		column-gap: 0;
