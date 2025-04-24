@@ -10,6 +10,8 @@ body
 	display: flex;
 	flex-direction: column;
 
+	background-color: var(--body-background);
+
 	color-scheme: light;
 	color: var(--body-foreground);
 
