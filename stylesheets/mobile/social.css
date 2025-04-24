@@ -16,9 +16,9 @@
 	background-image: var(--github-icon);
 }
 
-.socialMediaIcon.tumblr
+.socialMediaIcon.mail
 {
-	background-image: var(--tumblr-icon);
+	background-image: url("/resources/social/protonmail.svg");
 }
 
 .socialMediaIcon.mastodon
