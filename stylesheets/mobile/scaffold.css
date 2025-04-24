@@ -24,7 +24,6 @@
 	line-height: normal;
 
 	font-family: PTSerif-BoldItalic, serif;
-	font-style: italic;
 
 	margin-top: 0;
 	margin-bottom: 0;
@@ -59,7 +58,6 @@
 	display: none;
 
 	font-family: PTSerif-Italic, serif;
-	font-style: italic;
 }
 
 .topBarBurger
