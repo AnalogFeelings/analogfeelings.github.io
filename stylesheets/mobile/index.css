@@ -48,6 +48,8 @@ fieldset
 fieldset:not(.specialFieldset)
 {
 	margin-bottom: 16px;
+
+	border-color: var(--thin-color);
 }
 
 label
