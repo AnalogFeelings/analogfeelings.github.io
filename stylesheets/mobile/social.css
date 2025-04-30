@@ -9,34 +9,34 @@
 	background-size: 32px 32px;
 	background-position: center;
 	background-repeat: no-repeat;
-}
 
-.socialMediaIcon.github
-{
-	background-image: var(--github-icon);
-}
+	&.github
+	{
+		background-image: var(--github-icon);
+	}
 
-.socialMediaIcon.mail
-{
-	background-image: url("/resources/social/protonmail.svg");
-}
+	&.mail
+	{
+		background-image: url("/resources/social/protonmail.svg");
+	}
 
-.socialMediaIcon.mastodon
-{
-	background-image: url("/resources/social/mastodon.svg");
-}
+	&.mastodon
+	{
+		background-image: url("/resources/social/mastodon.svg");
+	}
 
-.socialMediaIcon.reddit
-{
-	background-image: url("/resources/social/reddit.svg");
-}
+	&.reddit
+	{
+		background-image: url("/resources/social/reddit.svg");
+	}
 
-.socialMediaIcon.youtube
-{
-	background-image: url("/resources/social/youtube.svg");
-}
+	&.youtube
+	{
+		background-image: url("/resources/social/youtube.svg");
+	}
 
-.socialMediaIcon.itch
-{
-	background-image: url("/resources/social/itch.svg");
+	&.itch
+	{
+		background-image: url("/resources/social/itch.svg");
+	}
 }

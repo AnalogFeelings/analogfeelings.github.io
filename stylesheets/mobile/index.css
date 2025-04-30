@@ -43,13 +43,13 @@ fieldset
 
 	border-radius: 8px;
 	border-style: solid;
-}
 
-fieldset:not(.specialFieldset)
-{
-	margin-bottom: 16px;
+	&:not(.specialFieldset)
+	{
+		margin-bottom: 16px;
 
-	border-color: var(--thin-color);
+		border-color: var(--thin-color);
+	}
 }
 
 label
@@ -61,16 +61,16 @@ label
 a
 {
 	color: var(--link-color);
-}
 
-a:visited
-{
-	color: var(--link-visited);
-}
+	&:visited
+	{
+		color: var(--link-visited);
+	}
 
-a:active
-{
-	color: var(--link-active);
+	&:active
+	{
+		color: var(--link-active);
+	}
 }
 
 h2
@@ -107,111 +107,108 @@ h2::after
 	column-gap: 6px;
 }
 
-[class^=fieldRow]+[class^=fieldRow]
-{
-	margin-top: 6px
-}
-
 .specialFieldset
 {
 	padding-bottom: 12px;
 
 	border-style: solid;
 	border-radius: 8px;
-}
 
-.specialFieldset > legend
-{
-	padding: 4px;
-	border-radius: 8px;
-}
+	& > legend
+	{
+		padding: 4px;
+		border-radius: 8px;
 
-.specialFieldset > legend > img
-{
-	display: inline;
-	position: relative;
+		border: 2px solid var(--thin-color);
 
-	vertical-align: middle;
+		& > img
+		{
+			display: inline;
+			position: relative;
 
-	width: 22px;
-	height: 22px;
+			vertical-align: middle;
 
-	bottom: 1px;
-}
+			width: 22px;
+			height: 22px;
 
-.specialFieldset > legend > b
-{
-	position: relative;
+			bottom: 1px;
+		}
 
-	top: 1px;
+		& > b
+		{
+			position: relative;
+
+			top: 1px;
+		}
+	}
 }
 
 .warningFieldset
 {
 	background-color: var(--warning-background-color);
 	border-color: var(--warning-border-color);
-}
 
-.warningFieldset > legend
-{
-	border: 2px solid var(--warning-border-color);
-	background-color: var(--warning-background-color);
-}
+	& > legend
+	{
+		border-color: var(--warning-border-color);
+		background-color: var(--warning-background-color);
 
-.warningFieldset > legend > img
-{
-	content: url("/resources/annotations/warning.svg");
+		& > img
+		{
+			content: url("/resources/annotations/warning.svg");
+		}
+	}
 }
 
 .importantFieldset
 {
 	background-color: var(--important-background-color);
 	border-color: var(--important-border-color);
-}
 
-.importantFieldset > legend
-{
-	border: 2px solid var(--important-border-color);
-	background-color: var(--important-background-color);
-}
+	& > legend
+	{
+		border-color: var(--important-border-color);
+		background-color: var(--important-background-color);
 
-.importantFieldset > legend > img
-{
-	content: url("/resources/annotations/important.svg");
+		& > img
+		{
+			content: url("/resources/annotations/important.svg");
+		}
+	}
 }
 
 .remarksFieldset
 {
 	background-color: var(--remarks-background-color);
 	border-color: var(--remarks-border-color);
-}
 
-.remarksFieldset > legend
-{
-	border: 2px solid var(--remarks-border-color);
-	background-color: var(--remarks-background-color);
-}
+	& > legend
+	{
+		border-color: var(--remarks-border-color);
+		background-color: var(--remarks-background-color);
 
-.remarksFieldset > legend > img
-{
-	content: url("/resources/annotations/remark.svg");
+		& > img
+		{
+			content: url("/resources/annotations/remark.svg");
+		}
+	}
 }
 
 .dangerFieldset
 {
 	background-color: var(--danger-background-color);
 	border-color: var(--danger-border-color);
-}
 
-.dangerFieldset > legend
-{
-	border: 2px solid var(--danger-border-color);
-	background-color: var(--danger-background-color);
-}
+	& > legend
+	{
+		border-color: var(--danger-border-color);
+		background-color: var(--danger-background-color);
 
-.dangerFieldset > legend > img
-{
-	content: url("/resources/annotations/danger.svg");
+		& > img
+		{
+			content: url("/resources/annotations/danger.svg");
+		}
+	}
 }
 
 /* Style external links */
@@ -237,6 +234,19 @@ h2::after
 .roundingDisabled
 {
 	border-radius: 0 !important;
+}
+
+.separatorDiv
+{
+	width: 95%;
+	height: 2px;
+
+	min-height: 2px;
+
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+	background: linear-gradient(90deg, transparent 0%, var(--separator-color) 50%, transparent 100%);
 }
 
 .mainBodyDiv
@@ -265,44 +275,25 @@ h2::after
 	padding: 15px;
 
 	background-color: var(--body-background);
-}
 
-.bodyContent > h1
-{
-	font-size: 1.5em;
-}
+	& > h1
+	{
+		font-size: 1.5em;
 
-.bodyContent > h1:first-of-type
-{
-	margin-top: 0;
-}
+		&:first-of-type
+		{
+			margin-top: 0;
+		}
+	}
 
-.bodyContent img
-{
-	width: 100%;
+	& img
+	{
+		width: 100%;
 
-	object-fit: contain;
+		object-fit: contain;
 
-	border-radius: 8px;
-}
-
-.separatorDiv
-{
-	width: 95%;
-	height: 2px;
-
-	min-height: 2px;
-
-	margin-top: 15px;
-	margin-bottom: 15px;
-
-	background: linear-gradient(90deg, transparent 0%, var(--separator-color) 50%, transparent 100%);
-}
-
-.bodyContent > .separatorDiv
-{
-	margin-top: 40px;
-	margin-bottom: 40px;
+		border-radius: 8px;
+	}
 }
 
 .postInformation
@@ -333,10 +324,10 @@ h2::after
 	position: relative;
 
 	bottom: 0.08em;
-}
 
-.postInformationBullet:after
-{
-	content: "\a";
-	white-space: pre;
+	&::after
+	{
+		content: "\a";
+		white-space: pre;
+	}
 }
