@@ -12,26 +12,26 @@
 		padding: 20px;
 
 		column-gap: 0;
-	}
 
-	.topBar > img
-	{
-		display: inline;
+		& > img
+		{
+			display: inline;
 
-		margin-right: 40px;
+			margin-right: 40px;
 
-		width: 96px;
-		height: 96px;
+			width: 96px;
+			height: 96px;
+		}
 	}
 
 	.topBarTextTop
 	{
 		font-size: 2.5em;
-	}
 
-	.topBarTextTop::after
-	{
-		content: none;
+		&::after
+		{
+			content: none;
+		}
 	}
 
 	.topBarTextBottom
@@ -39,21 +39,21 @@
 		display: block;
 
 		font-size: 1.1em;
-	}
 
-	.topBarTextBottom::after
-	{
-		display: block;
-		content: '';
+		&::after
+		{
+			display: block;
+			content: '';
 
-		margin-top: 12px;
+			margin-top: 12px;
 
-		min-height: 4px;
-		min-width: 115%;
+			min-height: 4px;
+			min-width: 115%;
 
-		border-radius: 4px;
+			border-radius: 4px;
 
-		background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
+			background: linear-gradient(90deg, var(--navbar-gradient-start), transparent);
+		}
 	}
 
 	.topBarBurger
@@ -84,11 +84,11 @@
 	.sideBarSection
 	{
 		margin: 5px 15px;
-	}
 
-	.sideBarSection > ul:not(.fancyTreeview)
-	{
-		padding-left: 20px;
+		& > ul:not(.fancyTreeview)
+		{
+			padding-left: 20px;
+		}
 	}
 
 	.sideBarSocial

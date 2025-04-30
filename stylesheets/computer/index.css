@@ -8,11 +8,11 @@
 		background-size: cover;
 
 		align-items: center;
-	}
 
-	body > *
-	{
-		max-width: 1200px;
+		& > *
+		{
+			max-width: 1200px;
+		}
 	}
 
 	.mainBodyDiv
@@ -31,16 +31,16 @@
 		font-size: 1em;
 
 		padding: 25px;
-	}
 
-	.bodyContent > h1
-	{
-		font-size: 2em;
-	}
+		& > h1
+		{
+			font-size: 2em;
 
-	.bodyContent > h1:first-of-type
-	{
-		margin-top: 5px;
+			&:first-of-type
+			{
+				margin-top: 5px;
+			}
+		}
 	}
 
 	.separatorDiv
@@ -62,12 +62,12 @@
 
 		margin-right: 4px;
 		margin-left: 4px;
-	}
 
-	.postInformationBullet:after
-	{
-		content: "\2022";
+		&::after
+		{
+			content: "\2022";
 
-		position: relative;
+			position: relative;
+		}
 	}
 }
