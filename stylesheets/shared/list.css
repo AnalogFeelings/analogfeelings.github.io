@@ -17,19 +17,19 @@
 	padding: 12px;
 
 	align-items: center;
-}
 
-.listItem:not(:last-child)
-{
-	border-bottom: 2px solid var(--thin-color);
-}
+	&:not(:last-child)
+	{
+		border-bottom: 2px solid var(--thin-color);
+	}
 
-.listItem > img
-{
-	object-fit: contain;
+	& > img
+	{
+		object-fit: contain;
 
-	width: 64px !important;
-	height: 64px !important;
+		width: 64px !important;
+		height: 64px !important;
+	}
 }
 
 .listItemVertical
