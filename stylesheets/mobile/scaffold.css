@@ -173,22 +173,22 @@
 
 		padding-left: 25px;
 	}
+}
 
-	& > p
+.sideBarCopyright > p
+{
+	font-size: 0.9em;
+
+	color: var(--thin-color);
+
+	&:first-child
 	{
-		font-size: 0.9em;
+		margin-top: 0;
+	}
 
-		color: var(--thin-color);
-
-		&:first-child
-		{
-			margin-top: 0;
-		}
-
-		&:last-child
-		{
-			margin-bottom: 0;
-		}
+	&:last-child
+	{
+		margin-bottom: 0;
 	}
 }
 
