@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+
+		<title>Rendering Skybox Panoramas With POV-Ray - Nora's Hideout</title>
+
+		<link href="/stylesheets/shared/variables.css" rel="stylesheet">
+		<link href="/stylesheets/shared/fonts.css" rel="stylesheet">
+
+		<link href="/stylesheets/mobile/social.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/index.css" rel="stylesheet">
+		<link href="/stylesheets/mobile/scaffold.css" rel="stylesheet">
+
+		<link href="/stylesheets/computer/social.css" rel="stylesheet">
+		<link href="/stylesheets/computer/index.css" rel="stylesheet">
+		<link href="/stylesheets/computer/scaffold.css" rel="stylesheet">
+
+		<link href="/lib/prism/prism.css" rel="stylesheet" />
+
+		<script src="/javascript/common.js"></script>
+		<script src="/javascript/generic.js"></script>
+
+		<link href="/resources/favicon.png" rel="icon">
+		<link href="/rss.xml" rel="alternate" title="Subscribe to the blog feed!" type="application/rss+xml">
+
+		<meta content="Rendering Skybox Panoramas With POV-Ray" name="og:title">
+		<meta content="https://analogfeelings.xyz/" name="og:url">
+		<meta content="A knowledge article on rendering POV-Ray scenes into several files that can be turned into a panorama." name="og:description">
+		<meta content="https://analogfeelings.xyz/resources/bannercropped.png" name="og:image">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="#396BA5" name="theme-color">
+		<link href="https://analogfeelings.xyz/resources/oembed/default-data.json" type="application/json+oembed">
+	</head>
+
+	<body>
+		<div data-include="topbar"></div>
+
+		<div class="mainBodyDiv fieldRow">
+			<div data-include="sidebar"></div>
+			<div class="bodyContent line-numbers">
+				<h1>
+					Rendering Skybox Panoramas With POV-Ray
+				</h1>
+				<p class="postInformation">
+					Written on <b>2025-05-15 14:28</b>
+					<span class="postInformationBullet"></span>
+					Never Edited
+				</p>
+
+				<p>
+					Recently I've had a craving for retro-looking skyboxes in modern game engines, and started investigating ways to render them in
+					POV-Ray, as it's free and easily accessible for all operating systems.
+				</p>
+				<p>
+					After some VERY short web surfing session, I found my answer in an old
+					<a href="https://news.povray.org/povray.general/thread/%3C45112973%40news.povray.org%3E/?ttop=444299&toff=2800">POV-Ray forum post's</a>
+					replies. So instead of writing a post about it, i'm gonna make a knowledge article!
+				</p>
+
+				<fieldset class="specialFieldset importantFieldset">
+					<legend>
+						<img src=""/>
+						<b>Important</b>
+					</legend>
+					This setup assumes your scene uses Y as up (as you should, looking at blender specifically).
+				</fieldset>
+
+				<h2>
+					Preparing and Rendering the Scene
+				</h2>
+
+				<p>
+					Remove your scene's camera, but remember its position for later. No need to remember the FOV, as skybox rendering requires an FOV of 90.
+					<br>
+					Place the following code anywhere in your scene, and replace the "X,Y,Z" with your original camera's position.
+				</p>
+
+				<pre data-src="./resources/code/camera.c"></pre>
+
+				<p>
+					Make sure the target resolution's aspect ratio is <b>1:1</b> and add the command line options <b>+kfi0 +kff5</b> to the render settings.
+					<br>
+					I personally use <b>1024x1024</b> as it seems to give enough detail without making scenes slower to render, remember a lot of scenes use expensive
+					radiosity and even the most modern CPUs struggle with it.
+				</p>
+
+				<p>
+					Start rendering, and once it's done you will see 6 PNG files appear in the same directory as your .pov file. Each output file is the .pov file's name,
+					suffixed by the frame number and ".png".
+					<br>
+					The frame number mapping is commented above each frame declaration in the code.
+				</p>
+
+				<p>
+					You can now use these files in software like Unity, or hell even old games like Half-Life 1. To use them in Blender or Godot you must turn these
+					into a panorama first, explained in the section below.
+				</p>
+
+				<h2>
+					Converting to a Panorama
+				</h2>
+
+				<p>
+					I've been recommended this <a href="https://danilw.github.io/GLSL-howto/cubemap_to_panorama_js/cubemap_to_panorama.html">website</a> to convert 6 sided
+					cubemaps to a panorama, so this is what we are going to use.
+				</p>
+
+				<p>
+					First of all, set all these fields to <b>0</b> as otherwise the panorama will not render correctly.
+				</p>
+
+				<img src="./resources/rotation.png"/>
+
+				<p>
+					Next, upload your files using the frame mapping in the code above.
+				</p>
+
+				<img src="./resources/files.png"/>
+
+				<p>
+					The output image should be fine, you can choose to render it as a sphere too for preview.
+					<br>
+					I used a simple sky scene for this, and the results look great!
+				</p>
+
+				<img src="./resources/panorama.png"/>
+
+				<div data-include="report"></div>
+			</div>
+		</div>
+
+		<script src="/lib/prism/prism.js"></script>
+	</body>
+</html>
+
+

@@ -1,5 +1,12 @@
 [
     {
+        "date": "2025-05-15 14:28",
+        "edited": null,
+        "url": "/knowledge/rendering-skybox-panoramas-povray",
+        "title": "Rendering Skybox Panoramas With POV-Ray",
+        "description": "A knowledge article on rendering POV-Ray scenes into several files that can be turned into a panorama."
+    },
+    {
         "date": "2024-09-18 14:47",
         "edited": "2024-10-06 16:42",
         "url": "/knowledge/writing-a-screensaver",
