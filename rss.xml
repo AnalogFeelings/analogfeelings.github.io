@@ -13,6 +13,12 @@
         </image>
 
         <item>
+            <title>Rendering Skybox Panoramas With POV-Ray</title>
+            <link>https://analogfeelings.xyz/knowledge/rendering-skybox-panoramas-povray/</link>
+            <pubDate>Thu, May 15 2025 14:28:00 GMT</pubDate>
+            <description>A knowledge article on rendering POV-Ray scenes into several files that can be turned into a panorama.</description>
+        </item>
+        <item>
             <title>Writing a Windows Screensaver</title>
             <link>https://analogfeelings.xyz/knowledge/writing-a-screensaver/</link>
             <pubDate>Wed, Sep 18 2024 14:47:00 GMT</pubDate>
