@@ -46,6 +46,8 @@
 	color: transparent;
 	background-clip: text;
 
+	width: fit-content;
+
 	&::after
 	{
 		display: block;
