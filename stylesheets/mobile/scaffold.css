@@ -30,12 +30,21 @@
 
 	-webkit-user-select: none;
 	user-select: none;
+
+	& > p
+	{
+		margin: 0;
+	}
 }
 
 .topBarTextTop
 {
 	font-size: 1.8em;
 	font-weight: bold;
+
+	background: var(--pride-flag);
+	color: transparent;
+	background-clip: text;
 
 	&::after
 	{

@@ -12,6 +12,8 @@
 		--body-background: #FFFFFF;
 		--body-foreground: black;
 
+		--pride-flag: linear-gradient(90deg, #E60000, #FF8E00, #CCBF00, #00821B, #004BFF, #780089);
+
 		--navbar-background: linear-gradient(var(--body-background), #E7E7E7);
 		--navbar-gradient-start: #2F3279;
 		--navbar-link-color: #2F3279;
@@ -59,6 +61,8 @@
 
 		--body-background: #202020;
 		--body-foreground: lightgray;
+
+		--pride-flag: linear-gradient(90deg, #FEC3C3, #FFDEB6, #FFFBBD, #C5EEBE, #B2D4FF, #CCB0EE);
 
 		--navbar-background: linear-gradient(var(--body-background), var(--body-background));
 		--navbar-gradient-start: #6494C3;
