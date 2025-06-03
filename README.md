@@ -11,8 +11,13 @@
 This is the main repository for my public [website](https://analogfeelings.xyz/)! Development happens in the **main** branch, and is merged
 into the **publish** branch to deploy.
 
-## :incoming_envelope: Pull Requests
+# :incoming_envelope: Pull Requests
 I do not accept pull requests for anything that involves new content, only fixes for existing content such as missing closing tags, typos, etc.
+
+# :moneybag: Donate Anonymously
+You can acquire my wallet address through my [donation page](https://analogfeelings.xyz/donate.html).
+
+Any donation is highly appreciated!
 
 # :balance_scale: License
 The website code is licensed under the GPL version 3.0.
