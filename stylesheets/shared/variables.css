@@ -53,6 +53,10 @@
 		{
 			--body-wallpaper: url(/resources/wallpapers/light/analogbanner.png);
 		}
+		&[data-applied-wallpaper="indigo"]
+		{
+			--body-wallpaper: url(/resources/wallpapers/light/indigowarmth.png);
+		}
 	}
 
 	&[data-applied-mode="dark"]
@@ -102,6 +106,10 @@
 		&[data-applied-wallpaper="analog"]
 		{
 			--body-wallpaper: url(/resources/wallpapers/dark/analogbanner.png);
+		}
+		&[data-applied-wallpaper="indigo"]
+		{
+			--body-wallpaper: url(/resources/wallpapers/dark/indigowarmth.png);
 		}
 	}
 }

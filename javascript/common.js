@@ -8,6 +8,10 @@ const NAVLINK_DISABLED = "disabled";
 const NAVLINK_CONTAINER = "navlinkAdContainer";
 const NAVLINK_STORAGE = "navlink";
 
+const ANALOG_WALLPAPER = "analog";
+const INDIGO_WALLPAPER = "indigo";
+const WALLPAPER_STORAGE = "wallpaper";
+
 /**
  * Loads the basics for a generic page.
  */
@@ -60,12 +64,52 @@ function SetNavlinkPreference(enabled)
 }
 
 /**
+ * Loads the navlink ads.
+ */
+function LoadNavlink()
+{
+    let preference = GetNavlinkPreference();
+
+    ChangeNavlinkDisplay(preference);
+}
+
+/**
  * Changes the wallpaper in the DOM.
  * @param wallpaper The selected wallpaper.
  */
 function ChangeDisplayWallpaper(wallpaper)
 {
-    document.documentElement.dataset.appliedWallpaper = "analog";
+    document.documentElement.dataset.appliedWallpaper = wallpaper;
+}
+
+/**
+ * Gets the user's preferred wallpaper from the local storage.
+ * @returns {string|string} The preferred wallpaper, or "analog" if none.
+ */
+function GetWallpaperPreference()
+{
+    let stored = localStorage.getItem(WALLPAPER_STORAGE);
+
+    switch(stored)
+    {
+        case ANALOG_WALLPAPER:
+        case INDIGO_WALLPAPER:
+            return stored;
+        default:
+            localStorage.setItem(WALLPAPER_STORAGE, ANALOG_WALLPAPER);
+            return ANALOG_WALLPAPER;
+    }
+}
+
+/**
+ * Sets the user's preferred wallpaper to local storage.
+ * @param {string} wallpaper The selected wallpaper.
+ */
+function SetWallpaperPreference(wallpaper)
+{
+    localStorage.setItem(WALLPAPER_STORAGE, wallpaper);
+
+    ChangeDisplayWallpaper(wallpaper);
 }
 
 /**
@@ -73,7 +117,9 @@ function ChangeDisplayWallpaper(wallpaper)
  */
 function LoadWallpaper()
 {
-    ChangeDisplayWallpaper("");
+    let preference = GetWallpaperPreference();
+
+    ChangeDisplayWallpaper(preference);
 }
 
 /**
@@ -150,16 +196,6 @@ function LoadTheme()
     let preference = GetThemePreference();
 
     ChangeDisplayTheme(preference);
-}
-
-/**
- * Loads the navlink ads.
- */
-function LoadNavlink()
-{
-    let preference = GetNavlinkPreference();
-
-    ChangeNavlinkDisplay(preference);
 }
 
 /**

@@ -1,5 +1,10 @@
 const THEME_DROPDOWN_ID = "themeDropdown";
+const WALLPAPER_DROPDOWN_ID = "wallpaperDropdown";
 const NAVLINK_DROPDOWN_ID = "navlinkDropdown";
+
+let themeDropdown;
+let wallpaperDropdown;
+let navlinkDropdown;
 
 LoadTheme();
 LoadWallpaper();
@@ -10,11 +15,15 @@ async function PageStartup()
 {
 	await LoadBasics();
 
-	let themeDropdown = document.getElementById(THEME_DROPDOWN_ID);
-	let navlinkDropdown = document.getElementById(NAVLINK_DROPDOWN_ID);
+	themeDropdown = document.getElementById(THEME_DROPDOWN_ID);
+	wallpaperDropdown = document.getElementById(WALLPAPER_DROPDOWN_ID);
+	navlinkDropdown = document.getElementById(NAVLINK_DROPDOWN_ID);
 
 	themeDropdown.value = GetThemePreference();
 	themeDropdown.addEventListener("change", OnThemeChanged);
+
+	wallpaperDropdown.value = GetWallpaperPreference();
+	wallpaperDropdown.addEventListener("change", OnWallpaperChanged);
 
 	navlinkDropdown.value = GetNavlinkPreference();
 	navlinkDropdown.addEventListener("change", OnNavlinkChanged);
@@ -25,8 +34,7 @@ async function PageStartup()
  */
 function OnThemeChanged()
 {
-	let dropdown = document.getElementById(THEME_DROPDOWN_ID);
-	let value = dropdown.value;
+	let value = themeDropdown.value;
 
 	switch (value)
 	{
@@ -42,12 +50,30 @@ function OnThemeChanged()
 }
 
 /**
+ * Handles wallpaper selection.
+ */
+function OnWallpaperChanged()
+{
+	let value = wallpaperDropdown.value;
+
+	switch (value)
+	{
+		case ANALOG_WALLPAPER:
+		case INDIGO_WALLPAPER:
+			SetWallpaperPreference(value);
+			break;
+		default:
+			SetWallpaperPreference(ANALOG_WALLPAPER);
+			break;
+	}
+}
+
+/**
  * Handles navlink visibility selection.
  */
 function OnNavlinkChanged()
 {
-	let dropdown = document.getElementById(NAVLINK_DROPDOWN_ID);
-	let value = dropdown.value;
+	let value = navlinkDropdown.value;
 
 	switch(value)
 	{
