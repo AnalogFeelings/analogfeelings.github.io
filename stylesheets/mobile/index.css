@@ -132,6 +132,8 @@ h2::after
 			height: 22px;
 
 			bottom: 1px;
+
+			border-radius: 0;
 		}
 
 		& > b
