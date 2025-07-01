@@ -40,11 +40,6 @@
 .topBarTextTop
 {
 	font-size: 1.8em;
-	font-weight: bold;
-
-	background: var(--pride-flag);
-	color: transparent;
-	background-clip: text;
 
 	width: fit-content;
 
